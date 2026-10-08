@@ -62,21 +62,21 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-[#08182B]/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-200">
-      <div className="relative bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-slate-200/90">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-[#0C0A09]/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-200">
+      <div className="relative bg-[#FAF9F6] rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-[#E5E0D5]">
         
         {/* Close Button */}
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-950 text-white flex items-center justify-center transition-colors shadow-md cursor-pointer"
+          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-[#0C0A09]/80 hover:bg-[#0C0A09] text-white border border-[#BFA13B]/30 flex items-center justify-center transition-colors shadow-md cursor-pointer"
           aria-label="Close dialog"
         >
           <X className="w-4.5 h-4.5" />
         </button>
 
         {/* Modal Hero Banner */}
-        <div className="relative h-60 sm:h-72 w-full overflow-hidden bg-slate-900">
+        <div className="relative h-60 sm:h-72 w-full overflow-hidden bg-stone-950">
           <Image
             src={pkg.image}
             alt={pkg.title}
@@ -84,27 +84,27 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
             sizes="100vw"
             className="object-cover opacity-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#08182B] via-[#08182B]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0C0A09] via-[#0C0A09]/40 to-transparent" />
 
           <div className="absolute bottom-5 left-5 right-5 text-white space-y-1.5">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="bg-amber-400 text-slate-950 font-bold text-xs px-2.5 py-0.5 rounded-full shadow-xs">
+              <span className="bg-[#BFA13B] text-stone-950 font-bold text-xs px-2.5 py-0.5 rounded-full shadow-xs">
                 {pkg.category === "indian" ? "Indian Tour Package" : "International Tour Package"}
               </span>
               <span className="bg-white/20 backdrop-blur-md text-white font-medium text-xs px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-white/20">
-                <MapPin className="w-3 h-3 text-sky-400" />
+                <MapPin className="w-3 h-3 text-[#E8D08D]" />
                 {pkg.destination}
               </span>
               <span className="bg-white/20 backdrop-blur-md text-white font-medium text-xs px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-white/20">
-                <Clock className="w-3 h-3 text-amber-400" />
+                <Clock className="w-3 h-3 text-[#E8D08D]" />
                 {pkg.duration}
               </span>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            <h2 className="text-xl sm:2xl font-serif font-bold text-white tracking-tight">
               {pkg.title}
             </h2>
-            <p className="text-xs sm:text-sm text-sky-100/90 font-normal">
+            <p className="text-xs sm:text-sm text-stone-200/90 font-normal">
               {pkg.subtitle}
             </p>
           </div>
@@ -118,47 +118,47 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
             
             {/* Overview */}
             <div>
-              <h3 className="text-xs font-black uppercase tracking-wider text-sky-900 mb-2">
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#BFA13B] mb-2">
                 Trip Overview
               </h3>
-              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
                 {pkg.overview}
               </p>
             </div>
 
             {/* Signature Features */}
-            <div className="bg-sky-50/70 border border-sky-200 rounded-2xl p-4.5 space-y-2.5">
-              <div className="flex items-center gap-2 text-xs font-black text-sky-950 uppercase tracking-wider">
-                <Sparkles className="w-4 h-4 text-sky-600" />
+            <div className="bg-[#FBF7EE] border border-[#BFA13B]/30 rounded-2xl p-4.5 space-y-2.5">
+              <div className="flex items-center gap-2 text-xs font-bold text-stone-900 uppercase tracking-wider">
+                <Sparkles className="w-4 h-4 text-[#BFA13B]" />
                 <span>Altitude Signature Travel Experience:</span>
               </div>
-              <p className="text-xs sm:text-sm text-slate-700 font-medium">
+              <p className="text-xs sm:text-sm text-stone-700 font-medium">
                 🎯 <strong>Free Day:</strong> {pkg.freeDayNote}
               </p>
-              <p className="text-xs sm:text-sm text-slate-700 font-medium">
+              <p className="text-xs sm:text-sm text-stone-700 font-medium">
                 🍲 <strong>Local Cuisine:</strong> {pkg.localFoodHighlight}
               </p>
             </div>
 
             {/* Day by Day Itinerary */}
             <div>
-              <h3 className="text-xs font-black uppercase tracking-wider text-sky-900 mb-3">
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#BFA13B] mb-3">
                 Day-by-Day Journey Itinerary
               </h3>
               <div className="space-y-3">
                 {pkg.itinerary.map((day) => (
                   <div
                     key={day.day}
-                    className="p-4 rounded-2xl border border-sky-100 bg-sky-50/40 flex gap-3.5"
+                    className="p-4 rounded-2xl border border-[#E5E0D5] bg-white flex gap-3.5 shadow-2xs"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-[#08182B] text-amber-400 font-black text-xs flex items-center justify-center shrink-0 shadow-xs">
+                    <div className="w-9 h-9 rounded-xl bg-[#0C0A09] text-[#E8D08D] font-serif font-bold text-xs flex items-center justify-center shrink-0 border border-[#BFA13B]/30 shadow-xs">
                       D{day.day}
                     </div>
                     <div>
-                      <h4 className="text-xs sm:text-sm font-black text-[#08182B]">
+                      <h4 className="text-xs sm:text-sm font-serif font-bold text-stone-900">
                         {day.title}
                       </h4>
-                      <p className="text-xs text-slate-600 mt-1 leading-relaxed font-normal">
+                      <p className="text-xs text-stone-600 mt-1 leading-relaxed font-normal">
                         {day.description}
                       </p>
                     </div>
@@ -169,28 +169,28 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
 
             {/* Inclusions & Exclusions */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="bg-emerald-50/70 border border-emerald-200 rounded-2xl p-4 space-y-2">
-                <h4 className="text-xs font-black uppercase tracking-wider text-emerald-900">
+              <div className="bg-white border border-[#E5E0D5] rounded-2xl p-4 space-y-2 shadow-2xs">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-stone-900">
                   What&apos;s Included:
                 </h4>
-                <ul className="space-y-1.5 text-xs text-slate-700 font-medium">
+                <ul className="space-y-1.5 text-xs text-stone-700 font-medium">
                   {pkg.inclusions.map((inc, i) => (
                     <li key={i} className="flex items-start gap-1.5">
-                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                      <Check className="w-3.5 h-3.5 text-[#BFA13B] shrink-0 mt-0.5" />
                       <span>{inc}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
-                <h4 className="text-xs font-black uppercase tracking-wider text-slate-500">
+              <div className="bg-white border border-[#E5E0D5] rounded-2xl p-4 space-y-2 shadow-2xs">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-stone-400">
                   Exclusions:
                 </h4>
-                <ul className="space-y-1.5 text-xs text-slate-600">
+                <ul className="space-y-1.5 text-xs text-stone-600">
                   {pkg.exclusions.map((exc, i) => (
                     <li key={i} className="flex items-start gap-1.5">
-                      <span className="text-slate-400 text-xs shrink-0">•</span>
+                      <span className="text-stone-300 text-xs shrink-0">•</span>
                       <span>{exc}</span>
                     </li>
                   ))}
@@ -204,44 +204,44 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
           <div className="lg:col-span-5 space-y-5">
             
             {/* Price Box */}
-            <div className="bg-[#08182B] text-white rounded-[24px] p-5 shadow-xl space-y-1 text-center border border-sky-900">
-              <span className="text-xs uppercase tracking-widest text-sky-400 font-bold">
+            <div className="bg-[#0C0A09] text-white rounded-[24px] p-5 shadow-xl space-y-1 text-center border border-[#BFA13B]/30">
+              <span className="text-[11px] uppercase tracking-widest text-[#E8D08D] font-bold">
                 Special Package Pricing
               </span>
-              <div className="text-3xl font-black text-amber-400">
+              <div className="text-3xl font-serif font-bold text-white">
                 {pkg.priceStarting}
-                <span className="text-xs font-normal text-sky-200"> / person</span>
+                <span className="text-xs font-sans font-normal text-stone-400"> / person</span>
               </div>
-              <p className="text-[11px] text-sky-300">
+              <p className="text-[11px] text-stone-300">
                 Includes Handpicked Stays, Transfers &amp; Breakfast
               </p>
             </div>
 
             {/* Inquiry Form */}
-            <div className="bg-white border-2 border-amber-400 rounded-[28px] p-5 shadow-lg space-y-3">
+            <div className="bg-white border border-[#E5E0D5] rounded-[24px] p-5 sm:p-6 shadow-sm space-y-3">
               <div className="text-center">
-                <h4 className="text-base font-black text-[#08182B]">
+                <h4 className="text-base font-serif font-bold text-stone-900">
                   Inquire for This Package
                 </h4>
-                <p className="text-xs text-slate-500 font-medium">
+                <p className="text-xs text-stone-500 font-medium">
                   Get a personalized quote &amp; free day itinerary from our Delhi team.
                 </p>
               </div>
 
               {submitted ? (
                 <div className="py-8 text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-inner">
-                    <CheckCircle2 className="w-8 h-8" />
+                  <div className="w-12 h-12 rounded-full bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center mx-auto border border-[#BFA13B]/40">
+                    <CheckCircle2 className="w-7 h-7" />
                   </div>
-                  <h5 className="text-sm font-bold text-slate-900">Inquiry Received</h5>
-                  <p className="text-xs text-slate-600">
+                  <h5 className="text-sm font-serif font-bold text-stone-900">Inquiry Received</h5>
+                  <p className="text-xs text-stone-600">
                     We will call or WhatsApp you with exact options within 2 hours.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <div>
-                    <label className="block text-[11px] font-black uppercase tracking-wider text-slate-700 mb-1">
+                    <label className="block text-[11px] font-bold uppercase tracking-wider text-stone-700 mb-1">
                       Full Name
                     </label>
                     <input
@@ -251,12 +251,12 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 bg-sky-50/50 border border-sky-200 rounded-xl text-xs font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      className="w-full px-3.5 py-2.5 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-black uppercase tracking-wider text-slate-700 mb-1">
+                    <label className="block text-[11px] font-bold uppercase tracking-wider text-stone-700 mb-1">
                       Phone Number
                     </label>
                     <input
@@ -266,12 +266,12 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                       placeholder="+91 98XXX XXXXX"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3.5 py-2.5 bg-sky-50/50 border border-sky-200 rounded-xl text-xs font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      className="w-full px-3.5 py-2.5 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-700 mb-1">
+                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 mb-1">
                       Email Address
                     </label>
                     <input
@@ -280,13 +280,13 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                       placeholder="name@email.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2 bg-slate-50/70 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      className="w-full px-3.5 py-2 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-medium text-stone-900 focus:outline-none focus:border-[#BFA13B]"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-700 mb-1">
+                      <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 mb-1">
                         Travel Month
                       </label>
                       <input
@@ -295,11 +295,11 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                         placeholder="e.g. May 2026"
                         value={formData.travelMonth}
                         onChange={(e) => setFormData({ ...formData, travelMonth: e.target.value })}
-                        className="w-full px-3 py-2 bg-slate-50/70 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full px-3 py-2 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-medium text-stone-900 focus:outline-none focus:border-[#BFA13B]"
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-700 mb-1">
+                      <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 mb-1">
                         Guests
                       </label>
                       <input
@@ -308,7 +308,7 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                         placeholder="2 Adults"
                         value={formData.guests}
                         onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                        className="w-full px-3 py-2 bg-slate-50/70 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full px-3 py-2 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-medium text-stone-900 focus:outline-none focus:border-[#BFA13B]"
                       />
                     </div>
                   </div>
@@ -316,17 +316,17 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-xs hover:shadow transition-all flex items-center justify-center gap-1.5 border border-amber-300 cursor-pointer active:scale-98"
+                    className="w-full py-3 px-4 rounded-xl font-serif font-bold text-xs uppercase tracking-wider bg-[#0C0A09] hover:bg-stone-900 text-[#E8D08D] shadow-xs hover:shadow transition-all flex items-center justify-center gap-1.5 border border-[#BFA13B]/40 cursor-pointer active:scale-98"
                   >
-                    <Send className="w-3.5 h-3.5 fill-slate-950 text-slate-950" />
+                    <Send className="w-3.5 h-3.5 text-[#BFA13B]" />
                     <span>Inquiry Now for This Package</span>
                   </button>
                 </form>
               )}
             </div>
 
-            <div className="text-center text-xs text-slate-500 flex items-center justify-center gap-1 font-medium">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+            <div className="text-center text-xs text-stone-500 flex items-center justify-center gap-1 font-medium">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#BFA13B]" />
               <span>Transparent Pricing • No Obligation Quote</span>
             </div>
 

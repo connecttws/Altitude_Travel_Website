@@ -705,7 +705,7 @@ export default function KandyBentotaClientPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8FBFF] text-slate-800 flex flex-col selection:bg-emerald-200 selection:text-emerald-950">
+    <div className="min-h-screen bg-[#FAF9F6] text-stone-900 flex flex-col selection:bg-[#BFA13B]/20 selection:text-stone-950">
       
       {/* Global Header */}
       <Navbar
@@ -723,40 +723,40 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* HERO SECTION: 3D MOVING PHOTOS + CEYLON BADGE + VERBATIM H1               */}
         {/* ========================================================================= */}
-        <section className="relative pt-[128px] pb-10 sm:pt-[132px] sm:pb-12 lg:pt-[136px] lg:pb-14 bg-gradient-to-b from-[#EEF7F2] via-[#F4FBF7] to-white border-b border-emerald-200/60 overflow-hidden">
+        <section className="relative pt-[128px] pb-10 sm:pt-[132px] sm:pb-12 lg:pt-[136px] lg:pb-14 bg-[#FAF9F6] border-b border-[#E5E0D5] overflow-hidden">
           
-          {/* Subtle Emerald Atmosphere Glows */}
-          <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-emerald-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
-          <div className="absolute top-1/3 -left-20 w-[420px] h-[420px] bg-amber-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
+          {/* Subtle Warm Luxury Atmosphere Glows */}
+          <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
+          <div className="absolute top-1/3 -left-20 w-[420px] h-[420px] bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Top Bar: Sinhala Cultural Badge */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-emerald-200/60">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#E5E0D5]">
               
-              <div className="inline-flex items-center gap-2.5 sm:gap-3 bg-gradient-to-r from-emerald-50 via-teal-50 to-amber-50/70 border border-emerald-300/80 px-4 py-1.5 rounded-full shadow-xs">
-                <span className="text-emerald-700 font-bold text-sm tracking-wide">🇱🇰</span>
-                <span className="font-serif text-emerald-950 text-base sm:text-lg font-bold tracking-wide italic">
+              <div className="inline-flex items-center gap-2.5 sm:gap-3 bg-[#FBF7EE] border border-[#BFA13B]/40 px-4 py-1.5 rounded-full shadow-2xs">
+                <span className="text-[#BFA13B] font-bold text-sm tracking-wide">🇱🇰</span>
+                <span className="font-serif text-stone-900 text-base sm:text-lg font-bold tracking-wide italic">
                   ආයුබෝවන් (Ayubowan) — Long Life &amp; Warm Hospitality
                 </span>
-                <span className="text-emerald-600/60 hidden sm:inline">•</span>
-                <span className="text-xs sm:text-sm font-semibold text-slate-800">
+                <span className="text-[#BFA13B]/60 hidden sm:inline">•</span>
+                <span className="text-xs sm:text-sm font-serif font-bold text-stone-800">
                   The Pearl of the Indian Ocean
                 </span>
               </div>
 
               {/* Flight & Travel Pills */}
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
-                <span className="bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs flex items-center gap-1.5">
-                  <Plane className="w-3.5 h-3.5 text-emerald-600" />
+              <div className="flex items-center gap-2 text-xs font-semibold text-stone-600">
+                <span className="bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs flex items-center gap-1.5">
+                  <Plane className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>3.5h Direct Flight from Delhi (CMB)</span>
                 </span>
-                <span className="hidden sm:inline-flex bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs items-center gap-1.5">
-                  <Gem className="w-3.5 h-3.5 text-amber-500" />
-                  <span>Currency: <strong>LKR</strong></span>
+                <span className="hidden sm:inline-flex bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs items-center gap-1.5">
+                  <Gem className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  <span>Currency: <strong className="text-stone-900">LKR</strong></span>
                 </span>
-                <span className="hidden md:inline-flex bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full border border-emerald-200 shadow-2xs items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                <span className="hidden md:inline-flex bg-[#FBF7EE] text-stone-900 px-3 py-1 rounded-full border border-[#BFA13B]/40 shadow-2xs items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Sri Lanka ETA / Easy Entry for Indians</span>
                 </span>
               </div>
@@ -769,23 +769,28 @@ export default function KandyBentotaClientPage() {
               {/* Left Column: VERBATIM H1 & INTRODUCTORY COPY */}
               <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
                 
-                {/* Eyebrow Pill */}
-                <div className="inline-flex items-center gap-2 self-start bg-white/90 backdrop-blur-md border border-emerald-200/80 text-emerald-950 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                  <Compass className="w-3.5 h-3.5 text-emerald-700" />
+                {/* Eyebrow Micro-caps */}
+                <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Curated Sri Lanka Holidays • Connaught Place, Delhi Planning Desk</span>
                 </div>
 
-                {/* EXACT H1 HEADING */}
-                <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#08182B] tracking-tight leading-[1.18]">
+                {/* SIGNATURE EDITORIAL H1 HEADING */}
+                <h1 className="text-3xl sm:text-5xl lg:text-[48px] font-serif font-bold text-[#1C1917] tracking-tight leading-[1.14]">
                   Kandy Bentota Tour Packages |{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-teal-800 to-amber-700">
+                  <span className="italic font-normal text-shining-gold">
                     Explore the Best of Sri Lanka
                   </span>
                 </h1>
 
+                {/* Dynamic Moving Accent Line */}
+                <div className="moving-line-track max-w-[160px]">
+                  <div className="moving-line-beam" />
+                </div>
+
                 {/* VERBATIM INTRODUCTORY PARAGRAPHS */}
-                <div className="space-y-3.5 text-sm sm:text-[15px] text-slate-600 leading-relaxed font-normal">
-                  <p className="text-base sm:text-lg font-medium text-slate-800 leading-relaxed">
+                <div className="space-y-3.5 text-sm sm:text-[15px] text-stone-600 leading-relaxed font-normal">
+                  <p className="text-base sm:text-lg font-serif font-medium text-stone-900 leading-relaxed">
                     Discover two very different sides of Sri Lanka with our Kandy Bentota tour packages. Explore Kandy&apos;s rich culture, historic temples, scenic hills, and local experiences before relaxing on Bentota&apos;s beautiful beaches.
                   </p>
                   <p>
@@ -795,49 +800,49 @@ export default function KandyBentotaClientPage() {
 
                 {/* Core Pillars Ribbon */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Building className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Sacred Tooth Temple</h4>
-                      <p className="text-[11px] text-slate-500">UNESCO Kandy Heritage</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Sacred Tooth Temple</h4>
+                      <p className="text-[11px] text-stone-500">UNESCO Kandy Heritage</p>
                     </div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center shrink-0 border border-sky-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Waves className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Bentota Beach Sands</h4>
-                      <p className="text-[11px] text-slate-500">Golden Coast &amp; Waves</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Bentota Beach Sands</h4>
+                      <p className="text-[11px] text-stone-500">Golden Coast &amp; Waves</p>
                     </div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Trees className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Madu River &amp; Flora</h4>
-                      <p className="text-[11px] text-slate-500">Botanical &amp; Mangroves</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Madu River &amp; Flora</h4>
+                      <p className="text-[11px] text-stone-500">Botanical &amp; Mangroves</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Popular Discovery Badges */}
                 <div className="pt-1 flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mr-1">
+                  <span className="text-[11px] font-bold tracking-wider text-stone-400 uppercase mr-1">
                     Featured Highlights:
                   </span>
                   {["Tooth Relic Temple", "Kandy Lake", "Peradeniya Botanical Gardens", "Bentota Beach", "Madu River Safari", "Brief Garden", "Kosgoda Turtle Hatchery"].map(
                     (place, idx) => (
                       <span
                         key={idx}
-                        className="text-xs font-semibold px-3 py-1 rounded-lg bg-white text-slate-800 border border-slate-200/80 shadow-2xs flex items-center gap-1.5"
+                        className="text-xs font-semibold px-3 py-1 rounded-lg bg-white text-stone-800 border border-[#E5E0D5] shadow-2xs flex items-center gap-1.5"
                       >
-                        <Sparkles className="w-3 h-3 text-emerald-600" />
+                        <Sparkles className="w-3 h-3 text-[#BFA13B]" />
                         <span>{place}</span>
                       </span>
                     )
@@ -850,15 +855,15 @@ export default function KandyBentotaClientPage() {
               <div className="lg:col-span-5 space-y-6" id="kandy-inquiry-box">
                 
                 {/* 3D Moving Position Photos Showcase */}
-                <div className="relative h-[290px] sm:h-[320px] rounded-2xl p-4 bg-gradient-to-tr from-[#08182B] via-[#0E2820] to-[#08182B] overflow-hidden shadow-xl border border-emerald-900/60 flex items-center justify-center">
+                <div className="relative h-[290px] sm:h-[320px] rounded-2xl p-4 bg-gradient-to-tr from-[#0C0A09] via-stone-900 to-[#0C0A09] overflow-hidden shadow-xl border border-[#BFA13B]/30 flex items-center justify-center">
                   
-                  {/* Subtle Background Emerald Glow */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.22),transparent_60%)]" />
+                  {/* Subtle Background Golden Glow */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(191,161,59,0.22),transparent_60%)]" />
                   
                   {/* Top Floating Badge */}
                   <div className="absolute top-3.5 left-4 z-20">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-white/15 backdrop-blur-md text-emerald-300 px-3 py-1 rounded-full border border-white/20">
-                      <Sparkles className="w-3 h-3 text-emerald-400" />
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-white/10 backdrop-blur-md text-[#E8D08D] px-3 py-1 rounded-full border border-white/20">
+                      <Sparkles className="w-3 h-3 text-[#BFA13B]" />
                       <span>Live 3D Attractions Showcase</span>
                     </span>
                   </div>
@@ -875,15 +880,15 @@ export default function KandyBentotaClientPage() {
                         sizes="200px"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent" />
                       <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                        <span className="text-[10px] font-bold text-emerald-400 block">UNESCO Sacred Site</span>
+                        <span className="text-[10px] font-bold text-[#BFA13B] block">UNESCO Sacred Site</span>
                         <h4 className="text-xs font-bold leading-tight">Temple of the Tooth</h4>
                       </div>
                     </div>
 
                     {/* Card 2: Center 3D Floating Hero - Bentota Beach & Sands */}
-                    <div className="relative w-[180px] sm:w-[210px] h-[230px] sm:h-[250px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-2 border-amber-400 animate-3d-center z-20 group cursor-pointer">
+                    <div className="relative w-[180px] sm:w-[210px] h-[230px] sm:h-[250px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-2 border-[#BFA13B] animate-3d-center z-20 group cursor-pointer">
                       <Image
                         src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
                         alt="Bentota golden sand beach and tropical palm trees Sri Lanka"
@@ -891,12 +896,12 @@ export default function KandyBentotaClientPage() {
                         sizes="240px"
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#08182B]/95 via-[#08182B]/30 to-transparent" />
-                      <div className="absolute top-2.5 right-2.5 bg-amber-400 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow-xs">
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/30 to-transparent" />
+                      <div className="absolute top-2.5 right-2.5 bg-[#BFA13B] text-stone-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow-xs">
                         MUST VISIT
                       </div>
                       <div className="absolute bottom-3 left-3 right-3 text-white">
-                        <span className="text-[10.5px] font-bold text-amber-300 block">Golden Southern Coast</span>
+                        <span className="text-[10.5px] font-bold text-[#E8D08D] block">Golden Southern Coast</span>
                         <h4 className="text-sm font-bold leading-tight">Bentota Beach Sands</h4>
                       </div>
                     </div>
@@ -910,9 +915,9 @@ export default function KandyBentotaClientPage() {
                         sizes="200px"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent" />
                       <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                        <span className="text-[10px] font-bold text-emerald-400 block">Mangrove Safari</span>
+                        <span className="text-[10px] font-bold text-[#BFA13B] block">Mangrove Safari</span>
                         <h4 className="text-xs font-bold leading-tight">Madu River Cruise</h4>
                       </div>
                     </div>
@@ -921,124 +926,131 @@ export default function KandyBentotaClientPage() {
 
                 </div>
 
-                {/* Quick Concierge Inquiry Card */}
-                <div className="rounded-2xl bg-white p-6 sm:p-7 shadow-[0_10px_30px_-5px_rgba(15,23,42,0.08)] border border-slate-200/90">
-                  <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
-                        Sri Lanka Tour Inquiry
+                {/* Quick Concierge Inquiry Card with Moving Border Beam */}
+                <div className="border-beam-card shadow-[0_16px_40px_-6px_rgba(28,25,23,0.12)]">
+                  <div className="border-beam-inner p-6 sm:p-7">
+                    <div className="flex items-center justify-between pb-3 mb-2 border-b border-[#E5E0D5]">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-gold-pulse" />
+                        <span className="text-xs font-bold uppercase tracking-wider text-stone-900 font-serif">
+                          Sri Lanka Tour Inquiry
+                        </span>
+                      </div>
+                      <span className="text-[11px] font-semibold text-stone-900 bg-[#FBF7EE] px-2 py-0.5 rounded-md border border-[#BFA13B]/40">
+                        Delhi Desk Online
                       </span>
                     </div>
-                    <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
-                      Delhi Desk Online
-                    </span>
-                  </div>
 
-                  {submitted ? (
-                    <div className="py-6 text-center space-y-3">
-                      <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
-                        <CheckCircle2 className="w-6 h-6" />
-                      </div>
-                      <h4 className="text-base font-bold text-slate-900">Inquiry Received</h4>
-                      <p className="text-xs text-slate-600 max-w-xs mx-auto">
-                        Thank you! Our Sri Lanka destination specialist from Connaught Place, Delhi will contact you shortly with custom package options and direct flight itineraries.
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => setSubmitted(false)}
-                        className="mt-2 px-4 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl"
-                      >
-                        Submit Another Inquiry
-                      </button>
+                    {/* Dynamic Moving Laser Beam Line */}
+                    <div className="moving-line-track mb-3">
+                      <div className="moving-line-beam" />
                     </div>
-                  ) : (
-                    <form onSubmit={handleSubmitInquiry} className="space-y-3">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Your Name *
-                          </label>
-                          <input
-                            type="text"
-                            required
-                            placeholder="e.g. Ankit Singhal"
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
-                          />
+
+                    {submitted ? (
+                      <div className="py-6 text-center space-y-3">
+                        <div className="w-12 h-12 rounded-full bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center mx-auto border border-[#BFA13B]/40">
+                          <CheckCircle2 className="w-6 h-6" />
                         </div>
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Phone Number *
-                          </label>
-                          <input
-                            type="tel"
-                            required
-                            placeholder="+91 98100 XXXXX"
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
-                          />
-                        </div>
+                        <h4 className="text-base font-serif font-bold text-stone-900">Inquiry Received</h4>
+                        <p className="text-xs text-stone-600 max-w-xs mx-auto">
+                          Thank you! Our Sri Lanka destination specialist from Connaught Place, Delhi will contact you shortly with custom package options and direct flight itineraries.
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setSubmitted(false)}
+                          className="mt-2 px-4 py-1.5 text-xs font-semibold text-stone-700 bg-stone-100 hover:bg-stone-200 rounded-xl"
+                        >
+                          Submit Another Inquiry
+                        </button>
                       </div>
-
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Package Type
-                          </label>
-                          <select
-                            value={formData.packageType}
-                            onChange={(e) => setFormData({ ...formData, packageType: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
-                          >
-                            <option value="Kandy Bentota 4 Nights / 5 Days">Kandy Bentota 4N / 5D</option>
-                            <option value="Kandy Bentota 5 Nights / 6 Days">Kandy Bentota 5N / 6D (Recommended)</option>
-                            <option value="Kandy Bentota Honeymoon Package">Kandy Bentota Honeymoon Package</option>
-                            <option value="Kandy Bentota Family Holiday Package">Kandy Bentota Family Holiday</option>
-                            <option value="Kandy Bentota Beach Holiday">Kandy Bentota Beach Holiday</option>
-                            <option value="Kandy Bentota Private Tour">Kandy Bentota Private Tour</option>
-                            <option value="Custom Kandy Bentota Tour Package">Custom Kandy Bentota Tour</option>
-                          </select>
+                    ) : (
+                      <form onSubmit={handleSubmitInquiry} className="space-y-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                          <div>
+                            <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
+                              Your Name *
+                            </label>
+                            <input
+                              type="text"
+                              required
+                              placeholder="e.g. Ankit Singhal"
+                              value={formData.name}
+                              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
+                              Phone Number *
+                            </label>
+                            <input
+                              type="tel"
+                              required
+                              placeholder="+91 98100 XXXXX"
+                              value={formData.phone}
+                              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            />
+                          </div>
                         </div>
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Number of Guests
-                          </label>
-                          <select
-                            value={formData.guests}
-                            onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
-                          >
-                            <option value="2 Adults (Couple)">2 Adults (Couple)</option>
-                            <option value="Family with Kids">Family with Kids</option>
-                            <option value="Group of Friends (4+)">Group of Friends (4+)</option>
-                            <option value="Solo Traveler">Solo Traveler</option>
-                          </select>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                          <div>
+                            <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
+                              Package Type
+                            </label>
+                            <select
+                              value={formData.packageType}
+                              onChange={(e) => setFormData({ ...formData, packageType: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            >
+                              <option value="Kandy Bentota 4 Nights / 5 Days">Kandy Bentota 4N / 5D</option>
+                              <option value="Kandy Bentota 5 Nights / 6 Days">Kandy Bentota 5N / 6D (Recommended)</option>
+                              <option value="Kandy Bentota Honeymoon Package">Kandy Bentota Honeymoon Package</option>
+                              <option value="Kandy Bentota Family Holiday Package">Kandy Bentota Family Holiday</option>
+                              <option value="Kandy Bentota Beach Holiday">Kandy Bentota Beach Holiday</option>
+                              <option value="Kandy Bentota Private Tour">Kandy Bentota Private Tour</option>
+                              <option value="Custom Kandy Bentota Tour Package">Custom Kandy Bentota Tour</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
+                              Number of Guests
+                            </label>
+                            <select
+                              value={formData.guests}
+                              onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            >
+                              <option value="2 Adults (Couple)">2 Adults (Couple)</option>
+                              <option value="Family with Kids">Family with Kids</option>
+                              <option value="Group of Friends (4+)">Group of Friends (4+)</option>
+                              <option value="Solo Traveler">Solo Traveler</option>
+                            </select>
+                          </div>
                         </div>
-                      </div>
 
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full py-3 px-5 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-md transition-all flex items-center justify-center gap-2 border border-emerald-500 cursor-pointer"
-                      >
-                        {isSubmitting ? (
-                          <span>Submitting Sri Lanka Inquiry...</span>
-                        ) : (
-                          <>
-                            <Send className="w-3.5 h-3.5 text-white fill-white" />
-                            <span>Request Custom Sri Lanka Quote</span>
-                          </>
-                        )}
-                      </button>
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="w-full py-3.5 px-5 rounded-xl font-serif font-bold text-xs sm:text-sm tracking-wide bg-shining-gold shining-sweep hover:brightness-105 active:scale-[0.99] text-stone-950 shadow-[0_8px_25px_rgba(212,175,55,0.4)] transition-all flex items-center justify-center gap-2 border border-[#BFA13B]/40 cursor-pointer"
+                        >
+                          {isSubmitting ? (
+                            <span>Submitting Sri Lanka Inquiry...</span>
+                          ) : (
+                            <>
+                              <Send className="w-3.5 h-3.5 text-stone-950" />
+                              <span>Request Custom Sri Lanka Quote</span>
+                            </>
+                          )}
+                        </button>
 
-                      <p className="text-[10.5px] text-center text-slate-400 font-medium">
-                        100% Privacy • No Pushy Calls • Handcrafted Quotes by Altitude Travel Co.
-                      </p>
-                    </form>
-                  )}
+                        <p className="text-[10.5px] text-center text-stone-400 font-medium">
+                          100% Privacy • No Pushy Calls • Handcrafted Quotes by Altitude Travel Co.
+                        </p>
+                      </form>
+                    )}
+                  </div>
                 </div>
 
               </div>
@@ -1051,29 +1063,29 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 1: EXPLORE KANDY BENTOTA TOUR PACKAGES                            */}
         {/* ========================================================================= */}
-        <section id="explore-kandy-bentota" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="explore-kandy-bentota" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Specialized Planning by Altitude Travel Co.</span>
               </div>
 
               {/* EXACT SECTION HEADING */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Explore Kandy Bentota <span className="text-emerald-700">Tour Packages</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Explore Kandy Bentota <span className="italic font-normal text-[#BFA13B]">Tour Packages</span>
               </h2>
 
               {/* VERBATIM TEXT FROM PROMPT */}
-              <div className="space-y-3 text-base text-slate-600 leading-relaxed font-normal">
+              <div className="space-y-3 text-base text-stone-600 leading-relaxed font-normal">
                 <p>
                   Altitude Travel Co. offers thoughtfully planned Kandy Bentota tour packages for travellers who want to experience both the cultural and coastal sides of Sri Lanka.
                 </p>
                 <p>
                   Explore Kandy&apos;s famous landmarks, temples, markets, and scenic surroundings before heading towards Bentota for beaches, water activities, riverside experiences, and relaxation.
                 </p>
-                <p className="font-medium text-slate-800">
+                <p className="font-serif font-semibold text-stone-900">
                   Whether you are planning a family holiday, honeymoon, friends&apos; trip, or a private getaway, we can help create an itinerary around your travel dates, budget, interests, and preferred travel style.
                 </p>
               </div>
@@ -1081,25 +1093,25 @@ export default function KandyBentotaClientPage() {
 
             {/* Quick Benefits Strip */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
-              <div className="p-3.5 bg-[#F8FBFF] rounded-xl border border-slate-200 text-center space-y-1">
+              <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🏛️</span>
-                <h4 className="text-xs font-bold text-slate-900">Kandy Cultural Hills</h4>
-                <p className="text-[11px] text-slate-500">Tooth Relic &amp; Gardens</p>
+                <h4 className="text-xs font-serif font-bold text-stone-900">Kandy Cultural Hills</h4>
+                <p className="text-[11px] text-stone-500">Tooth Relic &amp; Gardens</p>
               </div>
-              <div className="p-3.5 bg-[#F8FBFF] rounded-xl border border-slate-200 text-center space-y-1">
+              <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🏖️</span>
-                <h4 className="text-xs font-bold text-slate-900">Bentota Golden Coast</h4>
-                <p className="text-[11px] text-slate-500">Beaches &amp; Madu River</p>
+                <h4 className="text-xs font-serif font-bold text-stone-900">Bentota Golden Coast</h4>
+                <p className="text-[11px] text-stone-500">Beaches &amp; Madu River</p>
               </div>
-              <div className="p-3.5 bg-[#F8FBFF] rounded-xl border border-slate-200 text-center space-y-1">
+              <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🚗</span>
-                <h4 className="text-xs font-bold text-slate-900">Private Chauffeur Fleet</h4>
-                <p className="text-[11px] text-slate-500">Pickups from Colombo (CMB)</p>
+                <h4 className="text-xs font-serif font-bold text-stone-900">Private Chauffeur Fleet</h4>
+                <p className="text-[11px] text-stone-500">Pickups from Colombo (CMB)</p>
               </div>
-              <div className="p-3.5 bg-[#F8FBFF] rounded-xl border border-slate-200 text-center space-y-1">
+              <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🛡️</span>
-                <h4 className="text-xs font-bold text-slate-900">Transparent Pricing</h4>
-                <p className="text-[11px] text-slate-500">Zero Hidden Charges</p>
+                <h4 className="text-xs font-serif font-bold text-stone-900">Transparent Pricing</h4>
+                <p className="text-[11px] text-stone-500">Zero Hidden Charges</p>
               </div>
             </div>
 
@@ -1109,20 +1121,20 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 2: PACKAGE CARDS / IMAGE SECTION (7 EXAMPLES)                     */}
         {/* ========================================================================= */}
-        <section id="kandy-bentota-packages-grid" className="py-10 sm:py-12 lg:py-14 bg-[#F8FBFF] border-b border-slate-200/80">
+        <section id="kandy-bentota-packages-grid" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Gem className="w-3.5 h-3.5 text-emerald-700" />
-                <span>Featured Package Examples</span>
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Gem className="w-3.5 h-3.5 text-[#BFA13B]" />
+                <span>Featured Itineraries</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Featured Kandy Bentota <span className="text-emerald-700">Tour Packages</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Featured Kandy Bentota <span className="italic font-normal text-[#BFA13B]">Tour Packages</span>
               </h2>
 
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Choose from our popular package examples below, or let us tailor your own itinerary.
               </p>
 
@@ -1138,10 +1150,10 @@ export default function KandyBentotaClientPage() {
                     key={tab.id}
                     type="button"
                     onClick={() => setActivePackageFilter(tab.id)}
-                    className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                       activePackageFilter === tab.id
-                        ? "bg-[#08182B] text-amber-300 shadow-xs"
-                        : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"
+                        ? "bg-[#0C0A09] text-[#E8D08D] shadow-xs"
+                        : "bg-white text-stone-600 border border-[#E5E0D5] hover:bg-[#FAF9F6]"
                     }`}
                   >
                     {tab.label}
@@ -1160,92 +1172,104 @@ export default function KandyBentotaClientPage() {
                   if (activePackageFilter === "family") return p.id.includes("family");
                   return true;
                 })
-                .map((pkg) => (
-                  <div
-                    key={pkg.id}
-                    className="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
-                  >
-                    <div className="relative h-52 sm:h-56 w-full overflow-hidden">
-                      <Image
-                        src={pkg.image}
-                        alt={pkg.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20" />
-                      
-                      <span className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
-                        {pkg.tag}
-                      </span>
+                .map((pkg) => {
+                  const numericPrice = parseInt(pkg.priceStarting.replace(/[^\d]/g, ""), 10);
+                  const originalPrice = numericPrice ? Math.round(numericPrice * 1.24) : null;
 
-                      <span className="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
-                        <Clock className="w-3 h-3 text-amber-300" />
-                        <span>{pkg.duration}</span>
-                      </span>
+                  return (
+                    <div
+                      key={pkg.id}
+                      className="bg-white rounded-2xl overflow-hidden border border-[#E5E0D5] shadow-2xs hover:shadow-md transition-all flex flex-col justify-between group"
+                    >
+                      <div className="relative h-52 sm:h-56 w-full overflow-hidden">
+                        <Image
+                          src={pkg.image}
+                          alt={pkg.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-stone-950/20" />
+                        
+                        <span className="absolute top-3 left-3 bg-[#BFA13B] text-stone-950 text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                          {pkg.tag}
+                        </span>
 
-                      <div className="absolute bottom-3 left-3 right-3 text-white">
-                        <span className="text-xs text-emerald-200 block font-medium">{pkg.subtitle}</span>
-                        <h3 className="text-lg font-bold text-white leading-snug">{pkg.cardTitle}</h3>
+                        <span className="absolute top-3 right-3 bg-[#0C0A09]/80 backdrop-blur-md text-[#E8D08D] text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 border border-[#BFA13B]/20">
+                          <Clock className="w-3 h-3 text-[#BFA13B]" />
+                          <span>{pkg.duration}</span>
+                        </span>
+
+                        <div className="absolute bottom-3 left-3 right-3 text-white">
+                          <span className="text-xs text-[#E8D08D] block font-medium">{pkg.subtitle}</span>
+                          <h3 className="text-lg font-serif font-bold text-white leading-snug">{pkg.cardTitle}</h3>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                      <div className="space-y-3">
-                        <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                          {pkg.shortDescription}
-                        </p>
+                      <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div className="space-y-3">
+                          <p className="text-xs text-stone-600 leading-relaxed font-normal">
+                            {pkg.shortDescription}
+                          </p>
 
-                        <div className="p-2.5 bg-emerald-50/70 rounded-xl border border-emerald-200/60 text-[11px] font-semibold text-emerald-950 flex items-center gap-2">
-                          <Sparkles className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                          <span>{pkg.freeDayNote}</span>
+                          <div className="p-2.5 bg-[#FAF9F6] rounded-xl border border-[#BFA13B]/30 text-[11px] font-semibold text-stone-900 flex items-center gap-2">
+                            <Sparkles className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+                            <span>{pkg.freeDayNote}</span>
+                          </div>
+
+                          <div className="space-y-1.5 pt-1">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-stone-400 block">
+                              Key Inclusions:
+                            </span>
+                            {pkg.iconicLandmarks.slice(0, 3).map((lm, i) => (
+                              <div key={i} className="text-xs text-stone-700 flex items-center gap-1.5 font-medium">
+                                <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+                                <span className="truncate">{lm}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
 
-                        <div className="space-y-1.5 pt-1">
-                          <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
-                            Key Inclusions:
-                          </span>
-                          {pkg.iconicLandmarks.slice(0, 3).map((lm, i) => (
-                            <div key={i} className="text-xs text-slate-700 flex items-center gap-1.5 font-medium">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                              <span className="truncate">{lm}</span>
+                        <div className="pt-4 border-t border-[#E5E0D5] flex items-center justify-between">
+                          <div>
+                            <span className="text-[10px] text-stone-400 block font-semibold uppercase tracking-wider">Starting From</span>
+                            <div className="flex items-baseline gap-2">
+                              {originalPrice && (
+                                <span className="text-xs text-stone-400 line-through">
+                                  ₹{originalPrice.toLocaleString("en-IN")}
+                                </span>
+                              )}
+                              <span className="text-xl font-serif font-bold text-[#1C1917]">{pkg.priceStarting}</span>
                             </div>
-                          ))}
+                            <span className="text-[10.5px] text-stone-500 block">/ person (ex Delhi)</span>
+                          </div>
+
+                          <button
+                            type="button"
+                            onClick={() => handleOpenPackageModal(pkg)}
+                            className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#0C0A09] hover:bg-stone-900 text-[#BFA13B] transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer border border-[#BFA13B]/30"
+                          >
+                            <span>View Details</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </button>
                         </div>
+
                       </div>
-
-                      <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                        <div>
-                          <span className="text-[10px] text-slate-400 block font-semibold uppercase">Starting From</span>
-                          <span className="text-xl font-bold text-[#08182B]">{pkg.priceStarting}</span>
-                          <span className="text-[10.5px] text-slate-500 block">/ person (ex Delhi)</span>
-                        </div>
-
-                        <button
-                          type="button"
-                          onClick={() => handleOpenPackageModal(pkg)}
-                          className="px-4 py-2 rounded-xl text-xs font-bold bg-[#08182B] hover:bg-emerald-950 text-amber-300 hover:text-amber-200 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer"
-                        >
-                          <span>View Package CTA</span>
-                          <ArrowRight className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
             </div>
 
             {/* Slider Option – Show More Kandy Bentota Packages (Prompt verbatim requirement) */}
-            <div className="mt-8 p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-              <div className="flex items-center gap-2.5 text-xs text-emerald-950 font-medium">
-                <Info className="w-4 h-4 text-emerald-700 shrink-0" />
+            <div className="mt-8 p-5 rounded-2xl bg-white border border-[#E5E0D5] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-2xs">
+              <div className="flex items-center gap-3 text-xs text-stone-800 font-medium">
+                <Info className="w-4 h-4 text-[#BFA13B] shrink-0" />
                 <span>Slider Option – Show More Kandy Bentota Packages: Want to include Nuwara Eliya tea country, Galle Dutch Fort, or Sigiriya Rock Fortress?</span>
               </div>
               <button
                 type="button"
                 onClick={() => setIsCustomModalOpen(true)}
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-700 hover:bg-emerald-800 text-white transition-all shadow-xs shrink-0 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl text-xs font-serif font-bold bg-[#0C0A09] hover:bg-stone-900 text-[#E8D08D] border border-[#BFA13B]/40 transition-all shadow-xs shrink-0 cursor-pointer"
               >
                 Customize My Sri Lanka Package
               </button>
@@ -1257,22 +1281,22 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 3: BEST PLACES TO VISIT IN KANDY AND BENTOTA (H2 & H3s)           */}
         {/* ========================================================================= */}
-        <section id="best-places-to-visit" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="best-places-to-visit" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/80 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <MapPin className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <MapPin className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Sri Lanka Destination Guide</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Best Places to Visit in <span className="text-emerald-700">Kandy and Bentota</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Best Places to Visit in <span className="italic font-normal text-[#BFA13B]">Kandy and Bentota</span>
               </h2>
 
               {/* VERBATIM INTRO FROM PROMPT */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Kandy and Bentota offer a combination of culture, history, nature, beaches, and local experiences. From Kandy&apos;s famous temples and scenic hills to Bentota&apos;s beaches and riverside attractions, there is plenty to explore during your Sri Lanka trip.
               </p>
             </div>
@@ -1284,7 +1308,7 @@ export default function KandyBentotaClientPage() {
                 return (
                   <div
                     key={place.id}
-                    className={`bg-[#F8FBFF] rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col md:flex-row gap-6 items-center ${
+                    className={`bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-2xs flex flex-col md:flex-row gap-6 items-center ${
                       isEven ? "md:flex-row-reverse" : ""
                     }`}
                   >
@@ -1296,27 +1320,27 @@ export default function KandyBentotaClientPage() {
                         sizes="(max-width: 768px) 100vw, 40vw"
                         className="object-cover"
                       />
-                      <span className="absolute top-3 left-3 bg-[#08182B] text-amber-300 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                      <span className="absolute top-3 left-3 bg-[#0C0A09] text-[#E8D08D] border border-[#BFA13B]/30 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                         {place.tag}
                       </span>
                     </div>
 
                     <div className="flex-1 space-y-3 text-left">
                       {/* EXACT H3 HEADING */}
-                      <h3 className="text-2xl font-bold text-[#08182B] flex items-center gap-2">
+                      <h3 className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2">
                         <span>{place.title}</span>
                       </h3>
 
                       {/* VERBATIM PROMPT COPY */}
-                      <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                      <p className="text-sm text-stone-700 leading-relaxed font-normal">
                         {place.verbatimText}
                       </p>
 
                       {/* ELABORATED DETAILS */}
-                      <div className="pt-2 border-t border-slate-200/60 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                      <div className="pt-2 border-t border-[#E5E0D5] grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-600">
                         {place.elaborations.map((item, i) => (
                           <div key={i} className="flex items-center gap-1.5 font-medium">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                             <span>{item}</span>
                           </div>
                         ))}
@@ -1329,16 +1353,16 @@ export default function KandyBentotaClientPage() {
 
             {/* Slider Option – Show More Places (Prompt verbatim) */}
             <div className="mt-8 text-center">
-              <p className="text-xs text-slate-500 font-semibold mb-3">
+              <p className="text-xs text-stone-500 font-semibold mb-3">
                 Also exploring Sigiriya Rock, Nuwara Eliya Tea Hills, or Galle Dutch Fort?
               </p>
               <button
                 type="button"
                 onClick={() => setIsCustomModalOpen(true)}
-                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 shadow-2xs inline-flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-[#FAF9F6] text-stone-800 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
                 <span>Slider Option – Show More Places</span>
-                <ArrowRight className="w-3.5 h-3.5 text-emerald-600" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
               </button>
             </div>
 
@@ -1348,26 +1372,26 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 4: THINGS TO DO IN KANDY AND BENTOTA (12 ITEMS FROM PROMPT)       */}
         {/* ========================================================================= */}
-        <section id="things-to-do" className="py-10 sm:py-12 lg:py-14 bg-[#EEF4FA] border-b border-sky-200/80">
+        <section id="things-to-do" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-sky-100 border border-sky-300 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Compass className="w-3.5 h-3.5 text-sky-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Activities &amp; Highlights</span>
               </div>
 
               {/* EXACT SECTION TITLE */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Things to Do in <span className="text-sky-700">Kandy and Bentota</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Things to Do in <span className="italic font-normal text-[#BFA13B]">Kandy and Bentota</span>
               </h2>
 
               {/* VERBATIM INTRO FROM PROMPT */}
-              <div className="space-y-1 text-base text-slate-600 leading-relaxed font-normal">
+              <div className="space-y-1 text-base text-stone-600 leading-relaxed font-normal">
                 <p>
                   A Kandy Bentota holiday offers you the chance to combine cultural sightseeing with a relaxing beach break.
                 </p>
-                <p className="font-medium text-slate-700">
+                <p className="font-serif font-semibold text-stone-800">
                   Here are just a few of the many experiences on offer:
                 </p>
               </div>
@@ -1380,17 +1404,17 @@ export default function KandyBentotaClientPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-300 transition-all shadow-2xs group flex flex-col justify-between"
+                    className="p-4 rounded-xl bg-white border border-[#E5E0D5] hover:border-[#BFA13B]/60 transition-all shadow-2xs group flex flex-col justify-between"
                   >
                     <div>
-                      <div className={`w-8 h-8 rounded-lg ${item.color} flex items-center justify-center mb-2.5`}>
+                      <div className="w-8 h-8 rounded-lg bg-[#FAF9F6] text-[#BFA13B] border border-[#BFA13B]/20 flex items-center justify-center mb-2.5">
                         <Icon className="w-4 h-4" />
                       </div>
-                      <h3 className="text-xs sm:text-sm font-bold text-[#08182B] leading-snug group-hover:text-emerald-700 transition-colors mb-1">
+                      <h3 className="text-xs sm:text-sm font-serif font-bold text-stone-900 leading-snug group-hover:text-[#BFA13B] transition-colors mb-1">
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-[11px] text-slate-500 font-normal leading-relaxed pt-1">
+                    <p className="text-[11px] text-stone-500 font-normal leading-relaxed pt-1">
                       {item.desc}
                     </p>
                   </div>
@@ -1404,22 +1428,22 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 5: BEST KANDY BENTOTA PACKAGES FOR EVERY TRAVELLER (H2)           */}
         {/* ========================================================================= */}
-        <section id="packages-for-every-traveller" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="packages-for-every-traveller" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Users className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Users className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Tailored for You</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Best Kandy Bentota Tour Packages for <span className="text-emerald-700">Every Traveller</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Best Kandy Bentota Tour Packages for <span className="italic font-normal text-[#BFA13B]">Every Traveller</span>
               </h2>
 
               {/* VERBATIM PROMPT INTRO */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Whether you are travelling with family, your partner, friends, or as a group, Altitude Travel Co. can help you choose a Kandy Bentota tour package that suits your holiday plans.
               </p>
             </div>
@@ -1431,39 +1455,39 @@ export default function KandyBentotaClientPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                    className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E5E0D5] shadow-2xs hover:shadow-md transition-all flex flex-col justify-between"
                   >
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/40">
                           {type.tag}
                         </span>
-                        <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700">
+                        <div className="w-8 h-8 rounded-lg bg-white border border-[#E5E0D5] flex items-center justify-center text-[#BFA13B]">
                           <Icon className="w-4 h-4" />
                         </div>
                       </div>
 
                       {/* EXACT TITLE */}
-                      <h3 className="text-lg font-bold text-[#08182B] leading-snug">
+                      <h3 className="text-lg font-serif font-bold text-stone-900 leading-snug">
                         {type.title}
                       </h3>
 
                       {/* VERBATIM COPY */}
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
                         {type.desc}
                       </p>
 
-                      <div className="pt-2 border-t border-slate-100 space-y-1.5">
+                      <div className="pt-2 border-t border-[#E5E0D5] space-y-1.5">
                         {type.highlights.map((h, i) => (
-                          <div key={i} className="flex items-center gap-1.5 text-xs text-slate-700 font-medium">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                          <div key={i} className="flex items-center gap-1.5 text-xs text-stone-700 font-medium">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                             <span>{h}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    <div className="pt-5 mt-4 border-t border-slate-100">
+                    <div className="pt-5 mt-4 border-t border-[#E5E0D5]">
                       <button
                         type="button"
                         onClick={() => {
@@ -1473,7 +1497,7 @@ export default function KandyBentotaClientPage() {
                             formElem.scrollIntoView({ behavior: "smooth", block: "center" });
                           }
                         }}
-                        className="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-[#08182B] hover:bg-emerald-950 text-amber-300 hover:text-amber-200 transition-colors shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                        className="w-full py-2.5 px-4 rounded-xl text-xs font-serif font-bold bg-[#0C0A09] hover:bg-stone-900 text-[#E8D08D] border border-[#BFA13B]/40 transition-colors shadow-xs flex items-center justify-center gap-2 cursor-pointer"
                       >
                         <span>Enquire for {type.tag}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -1489,10 +1513,10 @@ export default function KandyBentotaClientPage() {
               <button
                 type="button"
                 onClick={() => setIsCustomModalOpen(true)}
-                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border border-emerald-200 shadow-2xs inline-flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl text-xs font-serif font-bold bg-white hover:bg-[#FAF9F6] text-stone-900 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
                 <span>Slider Option – Show More Packages</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
               </button>
             </div>
 
@@ -1502,23 +1526,27 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 6: WHY CHOOSE ALTITUDE TRAVEL CO. FOR YOUR KANDY BENTOTA TRIP (H2)*/}
         {/* ========================================================================= */}
-        <section id="why-choose-altitude" className="py-10 sm:py-12 lg:py-14 bg-[#F8FBFF] border-b border-slate-200/80">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="why-choose-altitude" className="py-10 sm:py-12 lg:py-14 bg-[#0C0A09] text-white border-b border-[#BFA13B]/20 relative overflow-hidden">
+          
+          {/* Ambient Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#BFA13B]/10 rounded-full blur-3xl pointer-events-none -z-0" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#E8D08D]">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>The Altitude Travel Standard</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-white tracking-tight leading-tight">
                 Why Choose Altitude Travel Co. for Your{" "}
-                <span className="text-emerald-700">Kandy Bentota Trip?</span>
+                <span className="italic font-normal text-[#E8D08D]">Kandy Bentota Trip?</span>
               </h2>
 
               {/* VERBATIM PROMPT INTRO */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-300 leading-relaxed font-normal">
                 Altitude Travel Co. helps travellers experience Sri Lanka beyond a standard sightseeing itinerary. We combine cultural attractions, local experiences, nature, beaches, and free time to create a balanced Kandy Bentota holiday.
               </p>
             </div>
@@ -1528,16 +1556,16 @@ export default function KandyBentotaClientPage() {
               {whyChoosePillars.map((p, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition-all flex flex-col justify-between"
+                  className="p-5 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-[#BFA13B]/40 transition-all flex flex-col justify-between shadow-2xs"
                 >
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-emerald-700">
+                    <div className="flex items-center gap-2 text-[#BFA13B]">
                       <CheckCircle2 className="w-4 h-4 shrink-0" />
-                      <h3 className="text-sm sm:text-base font-bold text-[#08182B]">
+                      <h3 className="text-sm sm:text-base font-serif font-bold text-[#E8D08D]">
                         {p.title}
                       </h3>
                     </div>
-                    <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal pl-6">
+                    <p className="text-xs sm:text-[13px] text-stone-300 leading-relaxed font-normal pl-6">
                       {p.desc}
                     </p>
                   </div>
@@ -1551,22 +1579,22 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 7: WHAT OUR TRAVELLERS SAY ABOUT ALTITUDE TRAVEL CO. (H2)         */}
         {/* ========================================================================= */}
-        <section id="what-travellers-say" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="what-travellers-say" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Star className="w-3.5 h-3.5 fill-[#BFA13B] text-[#BFA13B]" />
                 <span>Verified Client Reviews</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
                 What Our Travellers Say About{" "}
-                <span className="text-emerald-700">Altitude Travel Co.</span>
+                <span className="italic font-normal text-[#BFA13B]">Altitude Travel Co.</span>
               </h2>
 
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Authentic client testimonials from travelers who explored Sri Lanka with Altitude Travel Co.
               </p>
             </div>
@@ -1576,11 +1604,11 @@ export default function KandyBentotaClientPage() {
               {testimonials.map((t, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#F8FBFF] rounded-2xl p-6 border border-slate-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+                  className="bg-white rounded-2xl p-6 border border-[#E5E0D5] shadow-2xs hover:shadow-md transition-all flex flex-col justify-between"
                 >
                   <div className="space-y-4">
                     <div className="flex items-center gap-3.5">
-                      <div className="relative w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-slate-200 shrink-0 shadow-xs">
+                      <div className="relative w-12 h-12 rounded-full border-2 border-[#E5E0D5] overflow-hidden bg-stone-200 shrink-0 shadow-xs">
                         <Image
                           src={t.avatarImage}
                           alt={t.name}
@@ -1591,28 +1619,28 @@ export default function KandyBentotaClientPage() {
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-base font-bold text-[#08182B] truncate">{t.name}</h4>
-                        <div className="text-xs text-emerald-800 font-medium truncate">{t.country}</div>
-                        <div className="flex items-center text-amber-400 mt-0.5">
+                        <h4 className="text-base font-serif font-bold text-stone-900 truncate">{t.name}</h4>
+                        <div className="text-xs text-stone-500 font-medium truncate">{t.country}</div>
+                        <div className="flex items-center text-[#BFA13B] mt-0.5">
                           {[...Array(t.rating)].map((_, i) => (
-                            <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
+                            <Star key={i} className="w-3.5 h-3.5 fill-[#BFA13B]" />
                           ))}
                         </div>
                       </div>
                     </div>
 
                     <div className="relative pt-1">
-                      <Quote className="w-7 h-7 text-emerald-200/50 absolute -top-2 -left-1 pointer-events-none" />
-                      <p className="relative z-10 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal italic">
+                      <Quote className="w-7 h-7 text-[#BFA13B]/15 absolute -top-2 -left-1 pointer-events-none" />
+                      <p className="relative z-10 text-xs sm:text-sm text-stone-700 leading-relaxed font-normal italic">
                         &ldquo;{t.review}&rdquo;
                       </p>
                     </div>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-xs text-slate-400">
+                  <div className="mt-4 pt-3 border-t border-[#E5E0D5] flex items-center justify-between text-xs text-stone-400">
                     <span className="font-medium">{t.date}</span>
-                    <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-emerald-600" /> Verified Booking
+                    <span className="text-[11px] font-semibold text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/40 flex items-center gap-1">
+                      <ShieldCheck className="w-3 h-3 text-[#BFA13B]" /> Verified Booking
                     </span>
                   </div>
                 </div>
@@ -1625,23 +1653,23 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 8: KANDY BENTOTA TOUR AND TRAVEL (EDITORIAL NARRATIVE)            */}
         {/* ========================================================================= */}
-        <section id="agency-editorial" className="py-10 sm:py-12 lg:py-14 bg-gradient-to-b from-[#F5FAF7] to-[#F8FBFF] border-b border-slate-200/80">
+        <section id="agency-editorial" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
             
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-300 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Briefcase className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Briefcase className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>About Altitude Travel Co.</span>
               </div>
 
               {/* EXACT SECTION TITLE */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Kandy Bentota Tour <span className="text-emerald-700">and Travel</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Kandy Bentota Tour <span className="italic font-normal text-[#BFA13B]">and Travel</span>
               </h2>
             </div>
 
             {/* VERBATIM EDITORIAL NARRATIVE */}
-            <div className="space-y-4 text-base text-slate-600 leading-relaxed font-normal bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm">
+            <div className="space-y-4 text-base text-stone-600 leading-relaxed font-normal bg-white p-6 sm:p-8 rounded-2xl border border-[#E5E0D5] shadow-2xs">
               <p>
                 Altitude Travel Co. helps travellers plan memorable Sri Lanka holidays combining the cultural charm of Kandy with the relaxing coastal atmosphere of Bentota.
               </p>
@@ -1657,7 +1685,7 @@ export default function KandyBentotaClientPage() {
               <p>
                 We believe a good Sri Lanka holiday should offer a balance between sightseeing and relaxation. That&apos;s why our itineraries can include cultural experiences in Kandy, beach time in Bentota, local food, nature, activities, and free time.
               </p>
-              <p className="font-semibold text-slate-800">
+              <p className="font-serif font-semibold text-stone-900">
                 With Altitude Travel Co., you can plan a Kandy Bentota trip that matches your interests, budget, and travel style.
               </p>
             </div>
@@ -1668,21 +1696,21 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 9: SERVICES WE OFFER FOR KANDY BENTOTA TRIPS (H2)                 */}
         {/* ========================================================================= */}
-        <section id="services-we-offer" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="services-we-offer" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Briefcase className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Briefcase className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Comprehensive Travel Support</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Services We Offer for <span className="text-emerald-700">Kandy Bentota Trips</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Services We Offer for <span className="italic font-normal text-[#BFA13B]">Kandy Bentota Trips</span>
               </h2>
 
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Everything you need for a comfortable, stress-free Sri Lanka holiday handled under one roof.
               </p>
             </div>
@@ -1694,20 +1722,20 @@ export default function KandyBentotaClientPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-5 rounded-2xl bg-[#F8FBFF] border border-slate-200/90 shadow-xs hover:border-emerald-300 transition-all flex flex-col justify-between"
+                    className="p-5 rounded-2xl bg-[#FAF9F6] border border-[#E5E0D5] shadow-2xs hover:border-[#BFA13B]/60 transition-all flex flex-col justify-between"
                   >
                     <div className="space-y-3">
-                      <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-200">
+                      <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center border border-[#BFA13B]/30">
                         <Icon className="w-5 h-5" />
                       </div>
 
                       {/* EXACT SERVICE TITLE */}
-                      <h3 className="text-base font-bold text-[#08182B]">
+                      <h3 className="text-base font-serif font-bold text-stone-900">
                         {srv.title}
                       </h3>
 
                       {/* VERBATIM COPY */}
-                      <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
+                      <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed font-normal">
                         {srv.desc}
                       </p>
                     </div>
@@ -1722,21 +1750,21 @@ export default function KandyBentotaClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 10: FAQ’S (10 QUESTIONS & VERBATIM ANSWERS)                       */}
         {/* ========================================================================= */}
-        <section id="kandy-bentota-faqs" className="py-10 sm:py-12 lg:py-14 bg-[#EEF4FA] border-b border-sky-200/80">
+        <section id="kandy-bentota-faqs" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-sky-100 border border-sky-300 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <HelpCircle className="w-3.5 h-3.5 text-sky-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <HelpCircle className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Frequently Asked Questions</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                FAQ’S About <span className="text-emerald-700">Kandy Bentota Travel</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                FAQ’S About <span className="italic font-normal text-[#BFA13B]">Kandy Bentota Travel</span>
               </h2>
 
-              <p className="text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+              <p className="text-base text-stone-600 max-w-2xl mx-auto font-normal leading-relaxed">
                 Clear answers for planning and booking your Sri Lanka holiday with Altitude Travel Co.
               </p>
             </div>
@@ -1748,7 +1776,7 @@ export default function KandyBentotaClientPage() {
                 return (
                   <div
                     key={idx}
-                    className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300"
+                    className="bg-white rounded-2xl border border-[#E5E0D5] shadow-2xs overflow-hidden transition-all duration-200 hover:border-[#BFA13B]/50"
                   >
                     <button
                       type="button"
@@ -1757,13 +1785,13 @@ export default function KandyBentotaClientPage() {
                       aria-expanded={isOpen}
                     >
                       {/* EXACT QUESTION */}
-                      <h3 className="text-base sm:text-[17px] font-bold text-[#08182B] hover:text-emerald-700 transition-colors leading-snug">
+                      <h3 className="text-base sm:text-[17px] font-serif font-bold text-stone-900 hover:text-[#BFA13B] transition-colors leading-snug">
                         {faq.q}
                       </h3>
 
                       <div
                         className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                          isOpen ? "bg-amber-400 text-slate-950 rotate-180" : "bg-slate-100 text-slate-600"
+                          isOpen ? "bg-[#0C0A09] text-[#E8D08D] rotate-180" : "bg-stone-100 text-stone-600"
                         }`}
                       >
                         <ChevronDown className="w-4 h-4" />
@@ -1771,7 +1799,7 @@ export default function KandyBentotaClientPage() {
                     </button>
 
                     {isOpen && (
-                      <div className="px-5 sm:px-6 pb-5 pt-1 text-slate-600 text-sm sm:text-[15px] leading-relaxed border-t border-slate-100 font-normal">
+                      <div className="px-5 sm:px-6 pb-5 pt-1 text-stone-600 text-sm sm:text-[15px] leading-relaxed border-t border-[#E5E0D5] font-normal">
                         <p>{faq.a}</p>
                       </div>
                     )}
@@ -1787,61 +1815,61 @@ export default function KandyBentotaClientPage() {
         {/* SECTION 11: PLAN YOUR KANDY BENTOTA TRIP WITH ALTITUDE TRAVEL CO. (CTA)   */}
         {/* User: Inquiry Now CTA Plus form for customer                              */}
         {/* ========================================================================= */}
-        <section id="plan-kandy-trip" className="py-10 sm:py-12 lg:py-14 bg-gradient-to-b from-[#EEF7F2] to-white">
+        <section id="plan-kandy-trip" className="py-10 sm:py-12 lg:py-14 bg-gradient-to-b from-[#FAF9F6] to-[#FBF7EE]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             
             <div className="text-center space-y-3">
-              <div className="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-300 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Start Planning Your Sri Lanka Journey</span>
               </div>
 
               {/* EXACT SECTION HEADING */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Plan Your Kandy Bentota Trip with <span className="text-emerald-700">Altitude Travel Co.</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Plan Your Kandy Bentota Trip with <span className="italic font-normal text-[#BFA13B]">Altitude Travel Co.</span>
               </h2>
 
               {/* VERBATIM COPY FROM PROMPT */}
-              <div className="space-y-2 text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
-                <p className="font-semibold text-slate-900">
+              <div className="space-y-2 text-base sm:text-lg text-stone-600 leading-relaxed font-normal max-w-2xl mx-auto">
+                <p className="font-serif font-semibold text-stone-900">
                   Ready to explore Sri Lanka?
                 </p>
                 <p>
                   From Kandy&apos;s temples, culture, and scenic surroundings to Bentota&apos;s beaches, water activities, and relaxing coastal experiences, let Altitude Travel Co. help you plan a memorable Sri Lanka holiday.
                 </p>
-                <p className="text-sm sm:text-base text-slate-700 font-medium">
+                <p className="text-sm sm:text-base text-stone-700 font-medium">
                   Create a Kandy-to-Bentota itinerary around your travel style, budget, interests, and preferred experiences.
                 </p>
               </div>
             </div>
 
             {/* DEDICATED CUSTOMER BOOKING FORM */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-200/90 max-w-2xl mx-auto">
-              <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-slate-100">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-[#E5E0D5] max-w-2xl mx-auto">
+              <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#E5E0D5]">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-slate-800">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#BFA13B]" />
+                  <h3 className="text-sm font-serif font-bold uppercase tracking-wider text-stone-900">
                     Inquiry Now — Customized Sri Lanka Package
                   </h3>
                 </div>
-                <span className="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">
+                <span className="text-xs font-semibold text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-md border border-[#BFA13B]/40">
                   Fast Response
                 </span>
               </div>
 
               {bottomSubmitted ? (
                 <div className="py-8 text-center space-y-3">
-                  <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+                  <div className="w-14 h-14 rounded-full bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center mx-auto border border-[#BFA13B]/40">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900">Your Sri Lanka Trip Request Is In!</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 max-w-sm mx-auto">
+                  <h4 className="text-lg font-serif font-bold text-stone-900">Your Sri Lanka Trip Request Is In!</h4>
+                  <p className="text-xs sm:text-sm text-stone-600 max-w-sm mx-auto">
                     Thank you! Our senior Sri Lanka travel specialist from Connaught Place, New Delhi will get back to you shortly with a personalized itinerary and clear, transparent pricing.
                   </p>
                   <button
                     type="button"
                     onClick={() => setBottomSubmitted(false)}
-                    className="mt-3 px-5 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl"
+                    className="mt-3 px-5 py-2 text-xs font-semibold text-stone-700 bg-stone-100 hover:bg-stone-200 rounded-xl"
                   >
                     Submit Another Request
                   </button>
@@ -1850,7 +1878,7 @@ export default function KandyBentotaClientPage() {
                 <form onSubmit={handleBottomFormSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
                         Full Name *
                       </label>
                       <input
@@ -1859,11 +1887,11 @@ export default function KandyBentotaClientPage() {
                         placeholder="e.g. Ankit Singhal"
                         value={bottomFormData.name}
                         onChange={(e) => setBottomFormData({ ...bottomFormData, name: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
                         Phone Number *
                       </label>
                       <input
@@ -1872,14 +1900,14 @@ export default function KandyBentotaClientPage() {
                         placeholder="+91 98100 XXXXX"
                         value={bottomFormData.phone}
                         onChange={(e) => setBottomFormData({ ...bottomFormData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
                         Approximate Travel Dates
                       </label>
                       <input
@@ -1887,17 +1915,17 @@ export default function KandyBentotaClientPage() {
                         placeholder="e.g. 10th to 16th December"
                         value={bottomFormData.travelDates}
                         onChange={(e) => setBottomFormData({ ...bottomFormData, travelDates: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                      <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
                         Travel Style
                       </label>
                       <select
                         value={bottomFormData.travelStyle}
                         onChange={(e) => setBottomFormData({ ...bottomFormData, travelStyle: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
+                        className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none"
                       >
                         <option value="Family Holiday">Family Holiday (Kids / Parents)</option>
                         <option value="Honeymoon / Couple">Honeymoon / Couple Retreat</option>
@@ -1910,7 +1938,7 @@ export default function KandyBentotaClientPage() {
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                    <label className="block text-[11px] font-bold text-stone-700 uppercase tracking-wider mb-1">
                       Custom Preferences or Specific Interests
                     </label>
                     <textarea
@@ -1918,26 +1946,26 @@ export default function KandyBentotaClientPage() {
                       placeholder="e.g. Want tea factory visit in Kandy, Madu River boat cruise, beachfront resort in Bentota, Indian food options..."
                       value={bottomFormData.customRequirements}
                       onChange={(e) => setBottomFormData({ ...bottomFormData, customRequirements: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none resize-none"
+                      className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] text-stone-900 focus:bg-white focus:border-[#BFA13B] focus:outline-none resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={bottomSubmitting}
-                    className="w-full py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-md transition-all flex items-center justify-center gap-2 border border-emerald-500 cursor-pointer"
+                    className="w-full py-3.5 px-6 rounded-xl font-serif font-bold text-xs sm:text-sm tracking-wide bg-[#0C0A09] hover:bg-stone-900 text-[#E8D08D] shadow-md transition-all flex items-center justify-center gap-2 border border-[#BFA13B]/40 cursor-pointer"
                   >
                     {bottomSubmitting ? (
                       <span>Sending Your Request...</span>
                     ) : (
                       <>
-                        <Send className="w-4 h-4 text-white fill-white" />
+                        <Send className="w-4 h-4 text-[#BFA13B]" />
                         <span>Inquiry Now — Get My Customized Sri Lanka Quote</span>
                       </>
                     )}
                   </button>
 
-                  <p className="text-[11px] text-center text-slate-400 font-medium">
+                  <p className="text-[11px] text-center text-stone-400 font-medium">
                     100% Privacy Protected • No Pushy Calls • Handcrafted Quotes by Altitude Travel Co.
                   </p>
                 </form>
@@ -1945,15 +1973,15 @@ export default function KandyBentotaClientPage() {
             </div>
 
             {/* Direct Concierge Call & WhatsApp Strip */}
-            <div className="p-6 rounded-2xl bg-gradient-to-tr from-[#08182B] via-[#0E2820] to-[#08182B] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div className="p-6 rounded-2xl bg-gradient-to-tr from-[#0C0A09] via-stone-900 to-[#0C0A09] border border-[#BFA13B]/30 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
               <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#E8D08D]">
                   Direct Delhi Concierge
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
                   Speak Directly With Our Sri Lanka Travel Specialist
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300">
+                <p className="text-xs sm:text-sm text-stone-300">
                   Instant quotes, flight options ex-Delhi, and personalized hotel recommendations.
                 </p>
               </div>
@@ -1961,9 +1989,9 @@ export default function KandyBentotaClientPage() {
               <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
                 <a
                   href="tel:+919810024680"
-                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 flex items-center gap-2 transition-colors cursor-pointer"
+                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-serif font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 flex items-center gap-2 transition-colors cursor-pointer"
                 >
-                  <PhoneCall className="w-4 h-4 text-amber-400" />
+                  <PhoneCall className="w-4 h-4 text-[#BFA13B]" />
                   <span>Call +91 98100 24680</span>
                 </a>
 
@@ -1971,9 +1999,9 @@ export default function KandyBentotaClientPage() {
                   href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Kandy%20Bentota%20Sri%20Lanka%20tour%20package."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-500 hover:bg-emerald-600 text-white flex items-center gap-2 transition-all shadow-md cursor-pointer"
+                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-serif font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 flex items-center gap-2 transition-all shadow-md cursor-pointer"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4 text-stone-950" />
                   <span>WhatsApp Concierge</span>
                 </a>
               </div>

@@ -38,7 +38,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FBFF] text-slate-800 flex flex-col selection:bg-sky-200 selection:text-sky-950">
+    <div className="min-h-screen bg-[#FAF9F6] text-stone-900 flex flex-col selection:bg-[#BFA13B]/20 selection:text-stone-950">
       
       {/* Global Header & Mega Navigation */}
       <Navbar

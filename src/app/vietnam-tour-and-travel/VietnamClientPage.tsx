@@ -223,7 +223,7 @@ export default function VietnamClientPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8FBFF] text-slate-800 flex flex-col selection:bg-emerald-200 selection:text-emerald-950">
+    <div className="min-h-screen bg-[#FAF9F6] text-stone-900 flex flex-col selection:bg-[#BFA13B]/20 selection:text-stone-950">
       
       {/* Global Header */}
       <Navbar
@@ -241,37 +241,37 @@ export default function VietnamClientPage() {
         {/* ========================================================================= */}
         {/* HERO SECTION: 3D MOVING PHOTOS + VIETNAMESE CALLIGRAPHY + VERBATIM H1     */}
         {/* ========================================================================= */}
-        <section className="relative pt-[128px] pb-10 sm:pt-[132px] sm:pb-12 lg:pt-[136px] lg:pb-14 bg-gradient-to-b from-[#EEF7F2] via-[#F4FBF7] to-white border-b border-slate-200/80 overflow-hidden">
+        <section className="relative pt-[128px] pb-10 sm:pt-[132px] sm:pb-12 lg:pt-[136px] lg:pb-14 bg-[#FAF9F6] border-b border-[#E5E0D5] overflow-hidden">
           
-          {/* Subtle Emerald Atmosphere Glows */}
-          <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-emerald-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
-          <div className="absolute top-1/3 -left-20 w-[420px] h-[420px] bg-amber-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
+          {/* Subtle Atmosphere Glows */}
+          <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
+          <div className="absolute top-1/3 -left-20 w-[420px] h-[420px] bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Top Bar: Vietnamese-Inspired Elegant Font Badge */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-emerald-200/50">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#E5E0D5]">
               
               {/* ELEGANT VIETNAMESE-INSPIRED BADGE */}
-              <div className="inline-flex items-center gap-2.5 sm:gap-3 bg-gradient-to-r from-emerald-50 via-teal-50 to-amber-50/70 border border-emerald-300/80 px-4 py-1.5 rounded-full shadow-xs">
-                <span className="text-emerald-700 font-bold text-sm tracking-wide">🏮</span>
-                <span className="font-serif text-emerald-950 text-base sm:text-lg font-bold tracking-wide italic">
+              <div className="inline-flex items-center gap-2.5 sm:gap-3 bg-[#FBF7EE] border border-[#BFA13B]/40 px-4 py-1.5 rounded-full shadow-2xs">
+                <span className="text-[#BFA13B] font-bold text-sm tracking-wide">✦</span>
+                <span className="font-serif text-stone-900 text-base sm:text-lg font-bold tracking-wide italic">
                   Khám phá vẻ đẹp diệu kỳ của Việt Nam
                 </span>
-                <span className="text-emerald-600/60 hidden sm:inline">•</span>
-                <span className="text-xs sm:text-sm font-semibold text-slate-800">
+                <span className="text-[#BFA13B]/60 hidden sm:inline">•</span>
+                <span className="text-xs sm:text-sm font-serif font-bold text-stone-800">
                   Discover the Magic of Vietnam
                 </span>
               </div>
 
               {/* Currency & Direct Flight Pills */}
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
-                <span className="bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs flex items-center gap-1.5">
-                  <Gem className="w-3.5 h-3.5 text-amber-500" />
-                  <span>Currency: <strong>Vietnamese Dong (VND)</strong></span>
+              <div className="flex items-center gap-2 text-xs font-semibold text-stone-600">
+                <span className="bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs flex items-center gap-1.5">
+                  <Gem className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  <span>Currency: <strong className="text-stone-900">Vietnamese Dong (VND)</strong></span>
                 </span>
-                <span className="hidden sm:inline-flex bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs items-center gap-1.5">
-                  <Plane className="w-3.5 h-3.5 text-emerald-600" />
+                <span className="hidden sm:inline-flex bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs items-center gap-1.5">
+                  <Plane className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>4.5h Direct Flight from Delhi</span>
                 </span>
               </div>
@@ -284,22 +284,27 @@ export default function VietnamClientPage() {
               {/* Left Column: Editorial Narrative & EXACT H1 */}
               <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
                 
-                {/* Eyebrow Pill */}
-                <div className="inline-flex items-center gap-2 self-start bg-white/90 backdrop-blur-md border border-emerald-200/80 text-emerald-950 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                  <Compass className="w-3.5 h-3.5 text-emerald-700" />
+                {/* Eyebrow Micro-caps */}
+                <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Curated Southeast Asia Holidays • Connaught Place, Delhi Planning Desk</span>
                 </div>
 
-                {/* EXACT H1 HEADING */}
-                <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#08182B] tracking-tight leading-[1.18]">
+                {/* SIGNATURE EDITORIAL H1 HEADING */}
+                <h1 className="text-3xl sm:text-5xl lg:text-[48px] font-serif font-bold text-[#1C1917] tracking-tight leading-[1.14]">
                   Vietnam Tour and Travel:{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-teal-800 to-amber-700">
+                  <span className="italic font-normal text-shining-gold">
                     Explore the Best of Vietnam
                   </span>
                 </h1>
 
+                {/* Dynamic Moving Accent Line */}
+                <div className="moving-line-track max-w-[160px]">
+                  <div className="moving-line-beam" />
+                </div>
+
                 {/* Subtitle Highlight */}
-                <p className="text-base sm:text-lg font-medium text-emerald-950/90 leading-relaxed">
+                <p className="text-base sm:text-lg font-serif font-semibold text-stone-800 leading-relaxed">
                   Discover the Best of Vietnam — Explore Vietnam with our expert-guided tours. Visit Hanoi, Ha Long Bay, Ho Chi Minh City, beautiful beaches, and experience the best of Vietnam.
                 </p>
 
@@ -318,49 +323,49 @@ export default function VietnamClientPage() {
 
                 {/* Core Pillars Ribbon */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Ship className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Ha Long Bay Cruise</h4>
-                      <p className="text-[11px] text-slate-500">Emerald Karsts &amp; Caves</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Ha Long Bay Cruise</h4>
+                      <p className="text-[11px] text-stone-500">Emerald Karsts &amp; Caves</p>
                     </div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Sparkles className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Hoi An Lantern Town</h4>
-                      <p className="text-[11px] text-slate-500">Ancient Riverfront Glow</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Hoi An Lantern Town</h4>
+                      <p className="text-[11px] text-stone-500">Ancient Riverfront Glow</p>
                     </div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center shrink-0 border border-sky-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Palmtree className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Ba Na Hills &amp; Beaches</h4>
-                      <p className="text-[11px] text-slate-500">Golden Bridge &amp; Da Nang</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Ba Na Hills &amp; Beaches</h4>
+                      <p className="text-[11px] text-stone-500">Golden Bridge &amp; Da Nang</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Popular Discovery Badges */}
                 <div className="pt-1 flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mr-1">
+                  <span className="text-[11px] font-bold tracking-wider text-stone-400 uppercase mr-1">
                     Featured Destinations:
                   </span>
                   {["Hanoi Old Quarter", "Ha Long Bay", "Hoi An Ancient Town", "Da Nang Beaches", "Ho Chi Minh City", "Cu Chi Tunnels"].map(
                     (place, idx) => (
                       <span
                         key={idx}
-                        className="text-xs font-semibold px-3 py-1 rounded-lg bg-white text-slate-800 border border-slate-200/80 shadow-2xs flex items-center gap-1.5"
+                        className="text-xs font-semibold px-3 py-1 rounded-lg bg-white text-stone-800 border border-[#E5E0D5] shadow-2xs flex items-center gap-1.5"
                       >
-                        <Sparkles className="w-3 h-3 text-emerald-600" />
+                        <Sparkles className="w-3 h-3 text-[#BFA13B]" />
                         <span>{place}</span>
                       </span>
                     )
@@ -377,15 +382,15 @@ export default function VietnamClientPage() {
                 {/* User: "We can use 3d animation to show each place in Vietnam's*/}
                 {/*        major attractions moving through the hero section."   */}
                 {/* ============================================================= */}
-                <div className="relative h-[290px] sm:h-[320px] rounded-2xl p-4 bg-gradient-to-tr from-[#08182B] via-[#0E2820] to-[#08182B] overflow-hidden shadow-xl border border-emerald-900/60 flex items-center justify-center">
+                <div className="relative h-[290px] sm:h-[320px] rounded-2xl p-4 bg-gradient-to-tr from-[#0C0A09] via-stone-900 to-[#0C0A09] overflow-hidden shadow-xl border border-[#BFA13B]/30 flex items-center justify-center">
                   
-                  {/* Subtle Background Emerald Glow */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.25),transparent_60%)]" />
+                  {/* Subtle Background Golden Glow */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(191,161,59,0.22),transparent_60%)]" />
                   
                   {/* Top Floating Badge */}
                   <div className="absolute top-3.5 left-4 z-20">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-white/15 backdrop-blur-md text-emerald-300 px-3 py-1 rounded-full border border-white/20">
-                      <Sparkles className="w-3 h-3 text-emerald-400" />
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-white/10 backdrop-blur-md text-[#E8D08D] px-3 py-1 rounded-full border border-white/20">
+                      <Sparkles className="w-3 h-3 text-[#BFA13B]" />
                       <span>Live 3D Attractions Showcase</span>
                     </span>
                   </div>
@@ -402,15 +407,15 @@ export default function VietnamClientPage() {
                         sizes="200px"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent" />
                       <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                        <span className="text-[10px] font-bold text-emerald-400 block">UNESCO Wonder</span>
+                        <span className="text-[10px] font-bold text-[#BFA13B] block">UNESCO Wonder</span>
                         <h4 className="text-xs font-bold leading-tight">Ha Long Bay Cruise</h4>
                       </div>
                     </div>
 
                     {/* Card 2: Center 3D Floating Hero - Hoi An River Lanterns */}
-                    <div className="relative w-[180px] sm:w-[210px] h-[230px] sm:h-[250px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-2 border-amber-400 animate-3d-center z-20 group cursor-pointer">
+                    <div className="relative w-[180px] sm:w-[210px] h-[230px] sm:h-[250px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-2 border-[#BFA13B] animate-3d-center z-20 group cursor-pointer">
                       <Image
                         src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
                         alt="Hoi An glowing night lanterns and riverboat"
@@ -418,12 +423,12 @@ export default function VietnamClientPage() {
                         sizes="240px"
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#08182B]/95 via-[#08182B]/30 to-transparent" />
-                      <div className="absolute top-2.5 right-2.5 bg-amber-400 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow-xs">
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/30 to-transparent" />
+                      <div className="absolute top-2.5 right-2.5 bg-[#BFA13B] text-stone-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow-xs">
                         MUST VISIT
                       </div>
                       <div className="absolute bottom-3 left-3 right-3 text-white">
-                        <span className="text-[10.5px] font-bold text-amber-300 block">Ancient Heritage Town</span>
+                        <span className="text-[10.5px] font-bold text-[#E8D08D] block">Ancient Heritage Town</span>
                         <h4 className="text-sm font-bold leading-tight">Hoi An Lanterns</h4>
                       </div>
                     </div>
@@ -448,121 +453,128 @@ export default function VietnamClientPage() {
 
                 </div>
 
-                {/* Quick Concierge Inquiry Card */}
-                <div className="rounded-2xl bg-white p-6 sm:p-7 shadow-[0_10px_30px_-5px_rgba(15,23,42,0.08)] border border-slate-200/90">
-                  <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
-                        Vietnam Tour Inquiry
+                {/* Quick Concierge Inquiry Card with Moving Border Beam */}
+                <div className="border-beam-card shadow-[0_16px_40px_-6px_rgba(28,25,23,0.12)]">
+                  <div className="border-beam-inner p-6 sm:p-7">
+                    <div className="flex items-center justify-between pb-3 mb-2 border-b border-[#E5E0D5]">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-gold-pulse" />
+                        <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
+                          Vietnam Tour Inquiry
+                        </span>
+                      </div>
+                      <span className="text-[11px] font-bold text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/40">
+                        Delhi Desk Online
                       </span>
                     </div>
-                    <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-100">
-                      Delhi Desk Online
-                    </span>
-                  </div>
 
-                  {submitted ? (
-                    <div className="py-6 text-center space-y-3">
-                      <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
-                        <CheckCircle2 className="w-6 h-6" />
-                      </div>
-                      <h4 className="text-base font-bold text-slate-900">Inquiry Received</h4>
-                      <p className="text-xs text-slate-600 max-w-xs mx-auto">
-                        Thank you! Our Vietnam travel planner from Connaught Place, Delhi will contact you shortly with custom itineraries and flight options.
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => setSubmitted(false)}
-                        className="mt-2 px-4 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl"
-                      >
-                        Submit Another Inquiry
-                      </button>
+                    {/* Dynamic Moving Laser Beam Line */}
+                    <div className="moving-line-track mb-3">
+                      <div className="moving-line-beam" />
                     </div>
-                  ) : (
-                    <form onSubmit={handleSubmitInquiry} className="space-y-3">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Your Name *
-                          </label>
-                          <input
-                            type="text"
-                            required
-                            placeholder="e.g. Aman Gupta"
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
-                          />
+
+                    {submitted ? (
+                      <div className="py-6 text-center space-y-3">
+                        <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+                          <CheckCircle2 className="w-6 h-6" />
                         </div>
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Phone Number *
-                          </label>
-                          <input
-                            type="tel"
-                            required
-                            placeholder="+91 98100 XXXXX"
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
-                          />
-                        </div>
+                        <h4 className="text-base font-bold text-slate-900">Inquiry Received</h4>
+                        <p className="text-xs text-slate-600 max-w-xs mx-auto">
+                          Thank you! Our Vietnam travel planner from Connaught Place, Delhi will contact you shortly with custom itineraries and flight options.
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setSubmitted(false)}
+                          className="mt-2 px-4 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl"
+                        >
+                          Submit Another Inquiry
+                        </button>
                       </div>
-
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Trip Duration
-                          </label>
-                          <select
-                            value={formData.travelMonth}
-                            onChange={(e) => setFormData({ ...formData, travelMonth: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
-                          >
-                            <option value="7 Days / 6 Nights">7 Days / 6 Nights (North & Central)</option>
-                            <option value="9 Days / 8 Nights">9 Days / 8 Nights (Classic North to South)</option>
-                            <option value="10 Days / 9 Nights">10 Days / 9 Nights (Grand Discovery)</option>
-                            <option value="Custom Duration">Custom Duration</option>
-                          </select>
+                    ) : (
+                      <form onSubmit={handleSubmitInquiry} className="space-y-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                          <div>
+                            <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                              Your Name *
+                            </label>
+                            <input
+                              type="text"
+                              required
+                              placeholder="e.g. Aman Gupta"
+                              value={formData.name}
+                              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                              Phone Number *
+                            </label>
+                            <input
+                              type="tel"
+                              required
+                              placeholder="+91 98100 XXXXX"
+                              value={formData.phone}
+                              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            />
+                          </div>
                         </div>
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Number of Guests
-                          </label>
-                          <select
-                            value={formData.guests}
-                            onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-500 focus:outline-none"
-                          >
-                            <option value="2 Adults (Couple)">2 Adults (Couple)</option>
-                            <option value="Family with Kids">Family with Kids</option>
-                            <option value="Group of Friends (4+)">Group of Friends (4+)</option>
-                            <option value="Solo Traveler">Solo Traveler</option>
-                          </select>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                          <div>
+                            <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                              Trip Duration
+                            </label>
+                            <select
+                              value={formData.travelMonth}
+                              onChange={(e) => setFormData({ ...formData, travelMonth: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            >
+                              <option value="7 Days / 6 Nights">7 Days / 6 Nights (North & Central)</option>
+                              <option value="9 Days / 8 Nights">9 Days / 8 Nights (Classic North to South)</option>
+                              <option value="10 Days / 9 Nights">10 Days / 9 Nights (Grand Discovery)</option>
+                              <option value="Custom Duration">Custom Duration</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                              Number of Guests
+                            </label>
+                            <select
+                              value={formData.guests}
+                              onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            >
+                              <option value="2 Adults (Couple)">2 Adults (Couple)</option>
+                              <option value="Family with Kids">Family with Kids</option>
+                              <option value="Group of Friends (4+)">Group of Friends (4+)</option>
+                              <option value="Solo Traveler">Solo Traveler</option>
+                            </select>
+                          </div>
                         </div>
-                      </div>
 
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full py-3 px-5 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-md transition-all flex items-center justify-center gap-2 border border-emerald-400 cursor-pointer"
-                      >
-                        {isSubmitting ? (
-                          <span>Submitting Vietnam Inquiry...</span>
-                        ) : (
-                          <>
-                            <Send className="w-3.5 h-3.5 text-white fill-white" />
-                            <span>Request Custom Vietnam Package Quote</span>
-                          </>
-                        )}
-                      </button>
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="w-full py-3.5 px-5 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-shining-gold shining-sweep hover:brightness-105 active:scale-[0.99] text-stone-950 shadow-[0_8px_25px_rgba(212,175,55,0.4)] transition-all flex items-center justify-center gap-2 border border-[#BFA13B]/40 cursor-pointer"
+                        >
+                          {isSubmitting ? (
+                            <span>Submitting Vietnam Inquiry...</span>
+                          ) : (
+                            <>
+                              <Send className="w-3.5 h-3.5 text-stone-950 fill-stone-950" />
+                              <span>Request Custom Vietnam Package Quote</span>
+                            </>
+                          )}
+                        </button>
 
-                      <p className="text-[10.5px] text-center text-slate-400 font-medium">
-                        100% Privacy • No Spam • Handcrafted Quotes from Delhi Office
-                      </p>
-                    </form>
-                  )}
+                        <p className="text-[10.5px] text-center text-slate-400 font-medium">
+                          100% Privacy • No Spam • Handcrafted Quotes from Delhi Office
+                        </p>
+                      </form>
+                    )}
+                  </div>
                 </div>
 
               </div>
@@ -575,22 +587,22 @@ export default function VietnamClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 1: WHY VISIT VIETNAM? (H2)                                        */}
         {/* ========================================================================= */}
-        <section id="why-visit-vietnam" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="why-visit-vietnam" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
-                <span>Enchanting Southeast Asia</span>
+              <div className="inline-flex items-center gap-2 bg-[#FBF7EE] border border-[#BFA13B]/40 text-[#BFA13B] px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
+                <span className="tracking-wide">Enchanting Southeast Asia</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Why visit <span className="text-emerald-700">Vietnam?</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Why visit <span className="italic font-normal text-[#BFA13B]">Vietnam?</span>
               </h2>
 
               {/* VERBATIM TEXT FROM PROMPT */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Vietnam is great for those who want to have a cultural, adventurous, nature-loving, relaxing and culinary experience.
               </p>
             </div>
@@ -598,29 +610,29 @@ export default function VietnamClientPage() {
             {/* 9 Reasons Cards Grid (Verbatim from User prompt) */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 mb-10">
               {[
-                { title: "Beautiful beaches and islands", desc: "White sands in Da Nang, Phu Quoc tropical palms & Nha Trang turquoise bays.", icon: Waves, color: "text-sky-600 bg-sky-50" },
-                { title: "Rich culture and history", desc: "Thousand-year-old dynastic temples, water puppetry & French colonial architecture.", icon: Award, color: "text-amber-600 bg-amber-50" },
-                { title: "Beautiful scenery and nature", desc: "UNESCO limestone karsts of Ha Long Bay & emerald terraced rice fields.", icon: Palmtree, color: "text-emerald-600 bg-emerald-50" },
-                { title: "Delicious Vietnamese food", desc: "World-famous Pho noodle soup, crusty Banh Mi baguettes & rich egg coffee.", icon: UtensilsCrossed, color: "text-rose-600 bg-rose-50" },
-                { title: "Cheap things and experiences", desc: "Unmatched luxury value for boutique stays, tailoring, and dining.", icon: Gem, color: "text-indigo-600 bg-indigo-50" },
-                { title: "Historic places and cities", desc: "Imperial Citadel of Hue, Hanoi 36 guild streets & historic Cu Chi tunnels.", icon: Building, color: "text-teal-600 bg-teal-50" },
-                { title: "Adventurous activities and experiences", desc: "Kayaking through secret sea caves, Ba Na Hills cable cars & basket boat rides.", icon: Sun, color: "text-orange-600 bg-orange-50" },
-                { title: "Traditional markets and culture", desc: "Vibrant night lantern river markets, floating Mekong boats & silk bazaars.", icon: ShoppingBag, color: "text-purple-600 bg-purple-50" },
-                { title: "Perfect for families", desc: "Safe, welcoming locals, family-friendly cruises & diverse interactive activities.", icon: HeartHandshake, color: "text-blue-600 bg-blue-50" },
+                { title: "Beautiful beaches and islands", desc: "White sands in Da Nang, Phu Quoc tropical palms & Nha Trang turquoise bays.", icon: Waves },
+                { title: "Rich culture and history", desc: "Thousand-year-old dynastic temples, water puppetry & French colonial architecture.", icon: Award },
+                { title: "Beautiful scenery and nature", desc: "UNESCO limestone karsts of Ha Long Bay & emerald terraced rice fields.", icon: Palmtree },
+                { title: "Delicious Vietnamese food", desc: "World-famous Pho noodle soup, crusty Banh Mi baguettes & rich egg coffee.", icon: UtensilsCrossed },
+                { title: "Cheap things and experiences", desc: "Unmatched luxury value for boutique stays, tailoring, and dining.", icon: Gem },
+                { title: "Historic places and cities", desc: "Imperial Citadel of Hue, Hanoi 36 guild streets & historic Cu Chi tunnels.", icon: Building },
+                { title: "Adventurous activities and experiences", desc: "Kayaking through secret sea caves, Ba Na Hills cable cars & basket boat rides.", icon: Sun },
+                { title: "Traditional markets and culture", desc: "Vibrant night lantern river markets, floating Mekong boats & silk bazaars.", icon: ShoppingBag },
+                { title: "Perfect for families", desc: "Safe, welcoming locals, family-friendly cruises & diverse interactive activities.", icon: HeartHandshake },
               ].map((item, idx) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={idx}
-                    className="p-4 sm:p-5 rounded-2xl bg-[#F8FBFF] border border-slate-200/80 hover:border-emerald-300 transition-all shadow-2xs group"
+                    className="p-4 sm:p-5 rounded-2xl bg-[#FBF7EE] border border-[#E5E0D5] hover:border-[#BFA13B]/50 hover:bg-white transition-all shadow-2xs group"
                   >
-                    <div className={`w-9 h-9 rounded-xl ${item.color} flex items-center justify-center mb-2.5`}>
+                    <div className="w-9 h-9 rounded-xl bg-white border border-[#BFA13B]/30 text-[#BFA13B] flex items-center justify-center mb-2.5">
                       <Icon className="w-4.5 h-4.5" />
                     </div>
-                    <h3 className="text-sm sm:text-base font-bold text-[#08182B] mb-1 leading-snug group-hover:text-emerald-700 transition-colors">
+                    <h3 className="text-sm sm:text-base font-serif font-bold text-[#1C1917] mb-1 leading-snug group-hover:text-[#BFA13B] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-slate-500 font-normal leading-relaxed">
+                    <p className="text-xs text-stone-600 font-normal leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -629,7 +641,7 @@ export default function VietnamClientPage() {
             </div>
 
             {/* VERBATIM CLOSING PARAGRAPH FOR WHY VISIT VIETNAM */}
-            <div className="bg-emerald-50/70 rounded-2xl p-5 border border-emerald-200/80 text-center text-xs sm:text-sm font-semibold text-emerald-950 max-w-4xl mx-auto">
+            <div className="bg-[#FBF7EE] rounded-2xl p-5 border border-[#BFA13B]/30 text-center text-xs sm:text-sm font-medium text-stone-800 max-w-4xl mx-auto shadow-2xs">
               Vietnam has a lot to offer for everyone who wants to immerse themselves into a cultural and traditional country, but also explore and discover new things in a modern and globalized world.
             </div>
 
@@ -640,22 +652,22 @@ export default function VietnamClientPage() {
         {/* SECTION 2: BEST PLACES TO VISIT IN VIETNAM (H2) - ELABORATED IN DETAIL    */}
         {/* User: "Note: Elaborate each place in proper format and detail"             */}
         {/* ========================================================================= */}
-        <section id="best-places-to-visit" className="py-10 sm:py-12 lg:py-14 bg-[#EEF4FA] border-b border-sky-200/80">
+        <section id="best-places-to-visit" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200/80 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Compass className="w-3.5 h-3.5 text-sky-700" />
-                <span>Detailed Destination Guide</span>
+              <div className="inline-flex items-center gap-2 bg-white border border-[#BFA13B]/30 text-[#BFA13B] px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
+                <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
+                <span className="tracking-wide">Detailed Destination Guide</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Best Places to Visit in <span className="text-emerald-700">Vietnam</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Best Places to Visit in <span className="italic font-normal text-[#BFA13B]">Vietnam</span>
               </h2>
 
               {/* VERBATIM INTRODUCTORY COPY */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Vietnam is a country with a lot of different places to visit. Here is the list of the most popular destinations you may want to consider adding to your Vietnam tour:
               </p>
             </div>
@@ -664,8 +676,8 @@ export default function VietnamClientPage() {
             <div className="space-y-8 max-w-5xl mx-auto">
               
               {/* Place 1: Hanoi - H3 */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col md:flex-row gap-6 items-center">
-                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs">
+              <div className="bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col md:flex-row gap-6 items-center">
+                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs border border-[#E5E0D5]">
                   <Image
                     src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
                     alt="Hanoi Old Quarter streets and Hoan Kiem Lake"
@@ -673,35 +685,35 @@ export default function VietnamClientPage() {
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <span className="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                  <span className="absolute top-3 left-3 bg-[#0C0A09] text-[#BFA13B] border border-[#BFA13B]/30 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     The Historic Capital
                   </span>
                 </div>
                 <div className="flex-1 space-y-3 text-left">
                   {/* EXACT H3 */}
-                  <h3 className="text-2xl font-bold text-[#08182B] flex items-center gap-2">
+                  <h3 className="text-2xl font-serif font-bold text-[#1C1917] flex items-center gap-2">
                     <span>Hanoi</span>
                   </h3>
                   {/* VERBATIM PROMPT COPY */}
-                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  <p className="text-sm text-stone-700 leading-relaxed font-normal">
                     Hanoi is the capital of Vietnam, which is famous for its ancient streets, traditional architecture, local markets and vibrant food scene. Explore the alleys of the Old Quarter, Hoan Kiem Lake, and many other places unique to this city.
                   </p>
                   {/* ELABORATED DETAILS */}
-                  <div className="pt-2 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                  <div className="pt-2 border-t border-[#E5E0D5] grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-600">
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>36 Ancient Guild Streets &amp; French Quarter</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Hoan Kiem Lake &amp; Ngoc Son Island Temple</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Famous Train Street &amp; Egg Coffee Cafes</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Temple of Literature (1070 AD first university)</span>
                     </div>
                   </div>
@@ -709,8 +721,8 @@ export default function VietnamClientPage() {
               </div>
 
               {/* Place 2: Ha Long Bay - H3 */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col md:flex-row-reverse gap-6 items-center">
-                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs">
+              <div className="bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col md:flex-row-reverse gap-6 items-center">
+                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs border border-[#E5E0D5]">
                   <Image
                     src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80"
                     alt="Ha Long Bay emerald limestone islands and junk boats"
@@ -718,35 +730,35 @@ export default function VietnamClientPage() {
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <span className="absolute top-3 right-3 bg-amber-400 text-slate-950 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                  <span className="absolute top-3 right-3 bg-[#0C0A09] text-[#BFA13B] border border-[#BFA13B]/30 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     UNESCO World Heritage
                   </span>
                 </div>
                 <div className="flex-1 space-y-3 text-left">
                   {/* EXACT H3 */}
-                  <h3 className="text-2xl font-bold text-[#08182B] flex items-center gap-2">
+                  <h3 className="text-2xl font-serif font-bold text-[#1C1917] flex items-center gap-2">
                     <span>Ha Long Bay</span>
                   </h3>
                   {/* VERBATIM PROMPT COPY */}
-                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  <p className="text-sm text-stone-700 leading-relaxed font-normal">
                     Ha Long Bay is famous for its emerald waters and unique landscape of limestone islands. The best way to explore this place is by taking a boat tour on the bay’s waters.
                   </p>
                   {/* ELABORATED DETAILS */}
-                  <div className="pt-2 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                  <div className="pt-2 border-t border-[#E5E0D5] grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-600">
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Overnight Luxury Junk Boat Cruise with Balcony</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Kayaking through Sung Sot &amp; Luon Cave Lagoons</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Ti Top Island Panoramic Summit Viewpoint</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Morning Tai Chi &amp; Sunset Seafood Dinner Deck</span>
                     </div>
                   </div>
@@ -754,8 +766,8 @@ export default function VietnamClientPage() {
               </div>
 
               {/* Place 3: Ho Chi Minh City - H3 */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col md:flex-row gap-6 items-center">
-                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs">
+              <div className="bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col md:flex-row gap-6 items-center">
+                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs border border-[#E5E0D5]">
                   <Image
                     src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=800&q=80"
                     alt="Ho Chi Minh City skyline, Ben Thanh Market and French architecture"
@@ -763,35 +775,35 @@ export default function VietnamClientPage() {
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <span className="absolute top-3 left-3 bg-[#08182B] text-sky-300 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                  <span className="absolute top-3 left-3 bg-[#0C0A09] text-[#BFA13B] border border-[#BFA13B]/30 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     Vibrant Metropolis
                   </span>
                 </div>
                 <div className="flex-1 space-y-3 text-left">
                   {/* EXACT H3 */}
-                  <h3 className="text-2xl font-bold text-[#08182B] flex items-center gap-2">
+                  <h3 className="text-2xl font-serif font-bold text-[#1C1917] flex items-center gap-2">
                     <span>Ho Chi Minh City</span>
                   </h3>
                   {/* VERBATIM PROMPT COPY */}
-                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  <p className="text-sm text-stone-700 leading-relaxed font-normal">
                     Ho Chi Minh City is a busy city offering a mix of ancient temples and skyscrapers, shops, cafes, and local eateries.
                   </p>
                   {/* ELABORATED DETAILS */}
-                  <div className="pt-2 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                  <div className="pt-2 border-t border-[#E5E0D5] grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-600">
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Historic Cu Chi Underground Tunnels Excursion</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Notre Dame Cathedral &amp; Central Post Office</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Bustling Ben Thanh Market Bargain Shopping</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Day Trip to Mekong Delta Floating Markets</span>
                     </div>
                   </div>
@@ -799,8 +811,8 @@ export default function VietnamClientPage() {
               </div>
 
               {/* Place 4: Hoi An - H3 */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col md:flex-row-reverse gap-6 items-center">
-                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs">
+              <div className="bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col md:flex-row-reverse gap-6 items-center">
+                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs border border-[#E5E0D5]">
                   <Image
                     src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80"
                     alt="Hoi An ancient river town with glowing night lanterns"
@@ -808,35 +820,35 @@ export default function VietnamClientPage() {
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <span className="absolute top-3 right-3 bg-amber-500 text-slate-950 text-[11px] font-black px-3 py-1 rounded-full shadow-xs">
+                  <span className="absolute top-3 right-3 bg-[#0C0A09] text-[#BFA13B] border border-[#BFA13B]/30 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     The Lantern Town
                   </span>
                 </div>
                 <div className="flex-1 space-y-3 text-left">
                   {/* EXACT H3 */}
-                  <h3 className="text-2xl font-bold text-[#08182B] flex items-center gap-2">
+                  <h3 className="text-2xl font-serif font-bold text-[#1C1917] flex items-center gap-2">
                     <span>Hoi An</span>
                   </h3>
                   {/* VERBATIM PROMPT COPY */}
-                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  <p className="text-sm text-stone-700 leading-relaxed font-normal">
                     Hoi An is a small ancient town located along the river, decorated with lanterns in various shapes and colors, offering a chance to shop for local souvenirs and taste local specialties in the evening.
                   </p>
                   {/* ELABORATED DETAILS */}
-                  <div className="pt-2 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                  <div className="pt-2 border-t border-[#E5E0D5] grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-600">
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>UNESCO Ancient Town &amp; Japanese Covered Bridge</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Evening Thu Bon Riverboat Floating Lantern Release</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>World-Renowned 24-Hour Custom Silk Tailor Shops</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Bicycle Rides through Paddy Fields to An Bang Beach</span>
                     </div>
                   </div>
@@ -844,8 +856,8 @@ export default function VietnamClientPage() {
               </div>
 
               {/* Place 5: Da Nang - H3 */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col md:flex-row gap-6 items-center">
-                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs">
+              <div className="bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col md:flex-row gap-6 items-center">
+                <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs border border-[#E5E0D5]">
                   <Image
                     src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=800&q=80"
                     alt="Da Nang Golden Bridge Ba Na Hills and My Khe Beach"
@@ -853,35 +865,35 @@ export default function VietnamClientPage() {
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <span className="absolute top-3 left-3 bg-sky-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                  <span className="absolute top-3 left-3 bg-[#0C0A09] text-[#BFA13B] border border-[#BFA13B]/30 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
                     Coastal Wonder
                   </span>
                 </div>
                 <div className="flex-1 space-y-3 text-left">
                   {/* EXACT H3 */}
-                  <h3 className="text-2xl font-bold text-[#08182B] flex items-center gap-2">
+                  <h3 className="text-2xl font-serif font-bold text-[#1C1917] flex items-center gap-2">
                     <span>Da Nang</span>
                   </h3>
                   {/* VERBATIM PROMPT COPY */}
-                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  <p className="text-sm text-stone-700 leading-relaxed font-normal">
                     Da Nang is a large city with wonderful beaches and numerous attractions. It also serves as a great starting point for exploring other nearby regions.
                   </p>
                   {/* ELABORATED DETAILS */}
-                  <div className="pt-2 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                  <div className="pt-2 border-t border-[#E5E0D5] grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-600">
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Giant Hands Golden Bridge at Ba Na Hills</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Pristine White Sands along My Khe Beach</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Sacred Caves &amp; Pagodas at Marble Mountains</span>
                     </div>
                     <div className="flex items-center gap-1.5 font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                       <span>Illuminated Weekend Fire-Breathing Dragon Bridge</span>
                     </div>
                   </div>
@@ -896,22 +908,22 @@ export default function VietnamClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 3: BEST TIME TO VISIT VIETNAM (H2)                                */}
         {/* ========================================================================= */}
-        <section id="best-time-to-visit" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="best-time-to-visit" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Calendar className="w-3.5 h-3.5 text-amber-700" />
-                <span>Weather &amp; Seasons</span>
+              <div className="inline-flex items-center gap-2 bg-[#FBF7EE] border border-[#BFA13B]/40 text-[#BFA13B] px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
+                <Calendar className="w-3.5 h-3.5 text-[#BFA13B]" />
+                <span className="tracking-wide">Weather &amp; Seasons</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Best Time to Visit <span className="text-emerald-700">Vietnam</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Best Time to Visit <span className="italic font-normal text-[#BFA13B]">Vietnam</span>
               </h2>
 
               {/* VERBATIM COPY FROM PROMPT */}
-              <div className="space-y-3 text-base text-slate-600 leading-relaxed font-normal">
+              <div className="space-y-3 text-base text-stone-600 leading-relaxed font-normal">
                 <p>
                   The best time to go to Vietnam depends on where you want to go because it can get pretty cold in the morning and hot in the afternoon in some places.
                 </p>
@@ -924,26 +936,26 @@ export default function VietnamClientPage() {
             {/* 3 Climate Regions Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50/70 to-teal-50/30 border border-emerald-200 shadow-xs">
-                <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider block mb-1">North Vietnam</span>
-                <h3 className="text-lg font-bold text-[#08182B] mb-2">Hanoi &amp; Ha Long Bay</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <div className="p-6 rounded-2xl bg-[#FBF7EE] border border-[#E5E0D5] shadow-xs">
+                <span className="text-[11px] font-bold tracking-[0.2em] text-[#BFA13B] uppercase block mb-1">North Vietnam</span>
+                <h3 className="text-lg font-serif font-bold text-[#1C1917] mb-2">Hanoi &amp; Ha Long Bay</h3>
+                <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                   <strong>Spring (March–April)</strong> and <strong>Autumn (September–November)</strong> offer pleasant temperatures (22°C–28°C), clear skies, and calm waters ideal for cruising Ha Long Bay.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-sky-50/70 to-blue-50/30 border border-sky-200 shadow-xs">
-                <span className="text-xs font-bold text-sky-800 uppercase tracking-wider block mb-1">Central Vietnam</span>
-                <h3 className="text-lg font-bold text-[#08182B] mb-2">Da Nang &amp; Hoi An</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <div className="p-6 rounded-2xl bg-[#FBF7EE] border border-[#E5E0D5] shadow-xs">
+                <span className="text-[11px] font-bold tracking-[0.2em] text-[#BFA13B] uppercase block mb-1">Central Vietnam</span>
+                <h3 className="text-lg font-serif font-bold text-[#1C1917] mb-2">Da Nang &amp; Hoi An</h3>
+                <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                   <strong>February to August</strong> is sunny and dry with crystal-clear seas, perfect for cycling through Hoi An and beach relaxing at My Khe Beach in Da Nang.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-50/70 to-yellow-50/30 border border-amber-200 shadow-xs">
-                <span className="text-xs font-bold text-amber-800 uppercase tracking-wider block mb-1">South Vietnam</span>
-                <h3 className="text-lg font-bold text-[#08182B] mb-2">Ho Chi Minh &amp; Mekong</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <div className="p-6 rounded-2xl bg-[#FBF7EE] border border-[#E5E0D5] shadow-xs">
+                <span className="text-[11px] font-bold tracking-[0.2em] text-[#BFA13B] uppercase block mb-1">South Vietnam</span>
+                <h3 className="text-lg font-serif font-bold text-[#1C1917] mb-2">Ho Chi Minh &amp; Mekong</h3>
+                <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                   <strong>November to April</strong> brings the dry season with steady warmth, blue skies, and optimal conditions for exploring urban street markets and Mekong canals.
                 </p>
               </div>
@@ -951,8 +963,8 @@ export default function VietnamClientPage() {
             </div>
 
             {/* VERBATIM CLOSING WEATHER CALLOUT */}
-            <div className="mt-8 bg-sky-50/60 p-4 rounded-xl border border-sky-200 text-center text-xs sm:text-sm font-semibold text-sky-950 max-w-2xl mx-auto flex items-center justify-center gap-2">
-              <Info className="w-4 h-4 text-sky-700 shrink-0" />
+            <div className="mt-8 bg-[#FBF7EE] p-4 rounded-xl border border-[#BFA13B]/30 text-center text-xs sm:text-sm font-medium text-stone-800 max-w-2xl mx-auto flex items-center justify-center gap-2">
+              <Info className="w-4 h-4 text-[#BFA13B] shrink-0" />
               <span>So if you&apos;re going out on adventures, take notice! Checking the weather in your intended destinations ahead of time can help you find the best time to go on your Vietnam tour.</span>
             </div>
 
@@ -963,22 +975,22 @@ export default function VietnamClientPage() {
         {/* SECTION 4: BEST VIETNAM TOUR PACKAGES (H2) & 12 INCLUSIONS GRID           */}
         {/* User requested: Should look like this (12 Inclusions)                     */}
         {/* ========================================================================= */}
-        <section id="vietnam-tour-packages" className="py-10 sm:py-12 lg:py-14 bg-[#F8FBFF] border-b border-slate-200/80">
+        <section id="vietnam-tour-packages" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Gem className="w-3.5 h-3.5 text-emerald-700" />
-                <span>All-Inclusive Handcrafted Itineraries</span>
+              <div className="inline-flex items-center gap-2 bg-white border border-[#BFA13B]/30 text-[#BFA13B] px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
+                <Gem className="w-3.5 h-3.5 text-[#BFA13B]" />
+                <span className="tracking-wide">All-Inclusive Handcrafted Itineraries</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Best Vietnam <span className="text-emerald-700">Tour Packages</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Best Vietnam <span className="italic font-normal text-[#BFA13B]">Tour Packages</span>
               </h2>
 
               {/* VERBATIM PROMPT COPY */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Vietnam tour packages are an excellent option to help plan your holiday, as they can bring together several important elements of the trip.
               </p>
             </div>
@@ -988,12 +1000,12 @@ export default function VietnamClientPage() {
             {/* ✈️ Flights, 🏨 Accommodation, 🚐 Airport Transfers, 🗺️ Sightseeing Tours,*/}
             {/* 🚢 Ha Long Bay Cruise, 🎟️ Activities & Entry Tickets, 🍜 Meals, etc. */}
             {/* ===================================================================== */}
-            <div className="mb-12 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm max-w-5xl mx-auto">
+            <div className="mb-12 bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs max-w-5xl mx-auto">
               <div className="text-center mb-6">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 block mb-1">
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#BFA13B] block mb-1">
                   Complete Altitude Travel Assurance
                 </span>
-                <h3 className="text-xl font-bold text-[#08182B]">
+                <h3 className="text-xl font-serif font-bold text-[#1C1917]">
                   What&apos;s Included in Our Handcrafted Vietnam Packages
                 </h3>
               </div>
@@ -1015,94 +1027,104 @@ export default function VietnamClientPage() {
                 ].map((inc, i) => (
                   <div
                     key={i}
-                    className="p-3.5 rounded-xl bg-[#F8FBFF] border border-slate-200/80 hover:border-emerald-300 transition-all flex items-center gap-3 shadow-2xs"
+                    className="p-3.5 rounded-xl bg-[#FBF7EE] border border-[#E5E0D5] hover:border-[#BFA13B]/50 transition-all flex items-center gap-3 shadow-2xs"
                   >
                     <span className="text-2xl shrink-0">{inc.icon}</span>
                     <div>
-                      <h4 className="text-xs font-bold text-slate-900 leading-snug">{inc.label}</h4>
-                      <p className="text-[10.5px] text-slate-500 font-medium leading-tight">{inc.desc}</p>
+                      <h4 className="text-xs font-bold text-[#1C1917] leading-snug">{inc.label}</h4>
+                      <p className="text-[10.5px] text-stone-500 font-medium leading-tight">{inc.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Curated Vietnam Packages Cards Grid */}
+            {/* Curated Vietnam Packages Cards Grid with Strikethrough Pricing */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {vietnamPackages.map((pkg) => (
-                <div
-                  key={pkg.id}
-                  className="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
-                >
-                  <div className="relative h-52 sm:h-56 w-full overflow-hidden">
-                    <Image
-                      src={pkg.image}
-                      alt={pkg.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20" />
-                    
-                    <span className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
-                      {pkg.tag}
-                    </span>
+              {vietnamPackages.map((pkg) => {
+                const numericPrice = parseInt(pkg.priceStarting.replace(/[^\d]/g, ""), 10);
+                const originalPrice = numericPrice ? Math.round(numericPrice * 1.24) : null;
 
-                    <span className="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-amber-300" />
-                      <span>{pkg.duration}</span>
-                    </span>
+                return (
+                  <div
+                    key={pkg.id}
+                    className="bg-[#FAF9F6] rounded-2xl overflow-hidden border border-[#E5E0D5] shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group hover:border-[#BFA13B]/40"
+                  >
+                    <div className="relative h-52 sm:h-56 w-full overflow-hidden">
+                      <Image
+                        src={pkg.image}
+                        alt={pkg.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                      
+                      <span className="absolute top-3 left-3 bg-[#0C0A09]/85 backdrop-blur-md text-[#BFA13B] border border-[#BFA13B]/30 text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                        {pkg.tag}
+                      </span>
 
-                    <div className="absolute bottom-3 left-3 right-3 text-white">
-                      <span className="text-xs text-emerald-200 block font-medium">{pkg.subtitle}</span>
-                      <h3 className="text-lg font-bold text-white leading-snug">{pkg.cardTitle}</h3>
+                      <span className="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 border border-white/10">
+                        <Clock className="w-3 h-3 text-[#BFA13B]" />
+                        <span>{pkg.duration}</span>
+                      </span>
+
+                      <div className="absolute bottom-3 left-3 right-3 text-white">
+                        <span className="text-xs text-[#E8D08D] block font-medium">{pkg.subtitle}</span>
+                        <h3 className="text-lg font-serif font-bold text-white leading-snug">{pkg.cardTitle}</h3>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                    <div className="space-y-3">
-                      <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                        {pkg.shortDescription}
-                      </p>
+                    <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                      <div className="space-y-3">
+                        <p className="text-xs text-stone-600 leading-relaxed font-normal">
+                          {pkg.shortDescription}
+                        </p>
 
-                      <div className="p-2.5 bg-emerald-50/70 rounded-xl border border-emerald-200/60 text-[11px] font-semibold text-emerald-950 flex items-center gap-2">
-                        <Sparkles className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                        <span>{pkg.freeDayNote}</span>
+                        <div className="p-2.5 bg-[#FBF7EE] rounded-xl border border-[#BFA13B]/30 text-[11px] font-semibold text-stone-900 flex items-center gap-2">
+                          <Sparkles className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+                          <span>{pkg.freeDayNote}</span>
+                        </div>
+
+                        <div className="space-y-1.5 pt-1">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-stone-400 block">
+                            Key Inclusions:
+                          </span>
+                          {pkg.iconicLandmarks.slice(0, 3).map((lm, i) => (
+                            <div key={i} className="text-xs text-stone-700 flex items-center gap-1.5 font-medium">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+                              <span className="truncate">{lm}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
 
-                      <div className="space-y-1.5 pt-1">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
-                          Key Inclusions:
-                        </span>
-                        {pkg.iconicLandmarks.slice(0, 3).map((lm, i) => (
-                          <div key={i} className="text-xs text-slate-700 flex items-center gap-1.5 font-medium">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                            <span className="truncate">{lm}</span>
+                      <div className="pt-4 border-t border-[#E5E0D5] flex items-center justify-between">
+                        <div>
+                          <span className="text-[10px] text-stone-400 block font-semibold uppercase tracking-wider">Starting From</span>
+                          <div className="flex items-baseline gap-2">
+                            <span className="text-xl font-serif font-bold text-[#1C1917]">{pkg.priceStarting}</span>
+                            {originalPrice && (
+                              <span className="text-xs text-stone-400 line-through">₹{originalPrice.toLocaleString("en-IN")}</span>
+                            )}
                           </div>
-                        ))}
+                          <span className="text-[10.5px] text-stone-500 block">/ person (ex Delhi)</span>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => handleOpenPackageModal(pkg)}
+                          className="px-4 py-2 rounded-xl text-xs font-bold bg-[#0C0A09] hover:bg-[#1C1917] text-[#BFA13B] border border-[#BFA13B]/30 hover:border-[#BFA13B] transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer"
+                        >
+                          <span>View Itinerary</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </button>
                       </div>
+
                     </div>
-
-                    <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                      <div>
-                        <span className="text-[10px] text-slate-400 block font-semibold uppercase">Starting From</span>
-                        <span className="text-xl font-bold text-[#08182B]">{pkg.priceStarting}</span>
-                        <span className="text-[10.5px] text-slate-500 block">/ person (ex Delhi)</span>
-                      </div>
-
-                      <button
-                        type="button"
-                        onClick={() => handleOpenPackageModal(pkg)}
-                        className="px-4 py-2 rounded-xl text-xs font-bold bg-[#08182B] hover:bg-emerald-900 text-amber-300 hover:text-amber-200 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer"
-                      >
-                        <span>View Itinerary</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
           </div>
@@ -1111,21 +1133,21 @@ export default function VietnamClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 5: FAQ’S (H2) - 5 EXACT QUESTIONS & VERBATIM ANSWERS               */}
         {/* ========================================================================= */}
-        <section id="vietnam-faqs" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="vietnam-faqs" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <HelpCircle className="w-3.5 h-3.5 text-emerald-700" />
-                <span>Frequently Asked Questions</span>
+              <div className="inline-flex items-center gap-2 bg-[#FBF7EE] border border-[#BFA13B]/40 text-[#BFA13B] px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
+                <HelpCircle className="w-3.5 h-3.5 text-[#BFA13B]" />
+                <span className="tracking-wide">Frequently Asked Questions</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                FAQ’S About <span className="text-emerald-700">Vietnam Travel</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                FAQ’S About <span className="italic font-normal text-[#BFA13B]">Vietnam Travel</span>
               </h2>
 
-              <p className="text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+              <p className="text-base text-stone-600 max-w-2xl mx-auto font-normal leading-relaxed">
                 Clear answers for planning and booking your Vietnam tour package from Delhi.
               </p>
             </div>
@@ -1137,7 +1159,7 @@ export default function VietnamClientPage() {
                 return (
                   <div
                     key={idx}
-                    className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300"
+                    className="bg-[#FBF7EE] rounded-2xl border border-[#E5E0D5] shadow-xs overflow-hidden transition-all duration-200 hover:border-[#BFA13B]/40"
                   >
                     <button
                       type="button"
@@ -1146,13 +1168,13 @@ export default function VietnamClientPage() {
                       aria-expanded={isOpen}
                     >
                       {/* EXACT H3 HEADING */}
-                      <h3 className="text-base sm:text-[17px] font-bold text-[#08182B] hover:text-emerald-700 transition-colors leading-snug">
+                      <h3 className="text-base sm:text-[17px] font-serif font-bold text-[#1C1917] hover:text-[#BFA13B] transition-colors leading-snug">
                         {faq.q}
                       </h3>
 
                       <div
                         className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                          isOpen ? "bg-amber-400 text-slate-950 rotate-180" : "bg-slate-100 text-slate-600"
+                          isOpen ? "bg-[#0C0A09] text-[#BFA13B] rotate-180" : "bg-stone-200/60 text-stone-600"
                         }`}
                       >
                         <ChevronDown className="w-4 h-4" />
@@ -1160,7 +1182,7 @@ export default function VietnamClientPage() {
                     </button>
 
                     {isOpen && (
-                      <div className="px-5 sm:px-6 pb-5 pt-1 text-slate-600 text-sm sm:text-[15px] leading-relaxed border-t border-slate-100 font-normal">
+                      <div className="px-5 sm:px-6 pb-5 pt-1 text-stone-600 text-sm sm:text-[15px] leading-relaxed border-t border-[#E5E0D5] font-normal">
                         <p>{faq.a}</p>
                       </div>
                     )}
@@ -1175,32 +1197,32 @@ export default function VietnamClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 6: CONCIERGE BOOKING CTA BANNER                                   */}
         {/* ========================================================================= */}
-        <section id="vietnam-booking" className="py-10 sm:py-12 lg:py-14 bg-gradient-to-b from-[#EEF7F2] to-white">
+        <section id="vietnam-booking" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             
-            <div className="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-300 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
-              <span>Bespoke Vietnam Planning</span>
+            <div className="inline-flex items-center gap-2 bg-[#FBF7EE] border border-[#BFA13B]/40 text-[#BFA13B] px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
+              <span className="tracking-wide">Bespoke Vietnam Planning</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-              Ready to Explore <span className="text-emerald-700">Vietnam?</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+              Ready to Explore <span className="italic font-normal text-[#BFA13B]">Vietnam?</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal max-w-2xl mx-auto">
               Connect directly with our senior destination specialists in Connaught Place, New Delhi. We curate flights, luxury Ha Long Bay junk boats, E-Visas, and handpicked stays with transparent pricing and zero hidden fees.
             </p>
 
             {/* Concierge Action Box */}
-            <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-tr from-[#08182B] via-[#0E2820] to-[#08182B] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-[#0C0A09] border border-[#BFA13B]/30 text-white shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
               <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#BFA13B]">
                   Direct Delhi Concierge
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
                   Plan Your Handcrafted Vietnam Itinerary
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300">
+                <p className="text-xs sm:text-sm text-stone-400">
                   Custom dates, family trips, honeymoon retreats &amp; E-Visa support.
                 </p>
               </div>
@@ -1210,7 +1232,7 @@ export default function VietnamClientPage() {
                   href="tel:+919810024680"
                   className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 flex items-center gap-2 transition-colors cursor-pointer"
                 >
-                  <PhoneCall className="w-4 h-4 text-amber-400" />
+                  <PhoneCall className="w-4 h-4 text-[#BFA13B]" />
                   <span>Call +91 98100 24680</span>
                 </a>
 
@@ -1218,7 +1240,7 @@ export default function VietnamClientPage() {
                   href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Vietnam%20tour%20package."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-500 hover:bg-emerald-600 text-white flex items-center gap-2 transition-all shadow-md cursor-pointer"
+                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-[#BFA13B] hover:bg-[#d4b343] text-stone-950 flex items-center gap-2 transition-all shadow-md cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>WhatsApp Concierge</span>

@@ -42,26 +42,26 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faqs" className="py-10 sm:py-12 lg:py-14 bg-white border-y border-slate-200/80 relative overflow-hidden">
+    <section id="faqs" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-y border-[#E5E0D5] relative overflow-hidden">
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-sky-200/20 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-          <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200/80 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-            <HelpCircle className="w-3.5 h-3.5 text-sky-700" />
+          <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+            <HelpCircle className="w-3.5 h-3.5 text-[#BFA13B]" />
             <span>Clear Guidance &amp; Insights</span>
           </div>
 
-          {/* Heading with 1 Psychological Highlight */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-            Frequently Asked Questions About <span className="text-sky-700">Altitude Travel</span>
+          {/* Clean Modern Website Style Heading */}
+          <h2 className="text-2xl sm:text-4xl lg:text-[38px] font-bold text-stone-950 tracking-tight leading-tight">
+            Frequently Asked Questions — <span className="text-[#A67C1E]">Altitude Travel</span>
           </h2>
 
-          <p className="text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+          <p className="text-[15px] sm:text-base text-stone-800 max-w-2xl mx-auto font-normal leading-relaxed">
             Everything you need to know about planning, booking, and travelling with Altitude Travel Co. from Delhi.
           </p>
         </div>
@@ -74,22 +74,22 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-200 hover:border-sky-300"
+                className="bg-white rounded-2xl border border-[#E5E0D5] shadow-xs overflow-hidden transition-all duration-200 hover:border-[#BFA13B]"
               >
                 <button
                   type="button"
                   onClick={() => toggleFaq(idx)}
-                  className="w-full py-4.5 sm:py-5 px-5 sm:px-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
+                  className="w-full py-4.5 sm:py-5 px-5 sm:px-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer group"
                   aria-expanded={isOpen}
                 >
-                  {/* EXACT H3 HEADING */}
-                  <h3 className="text-base sm:text-[17px] font-bold text-[#08182B] hover:text-sky-700 transition-colors leading-snug">
+                  {/* EXACT H3 HEADING: Modern bold website style */}
+                  <h3 className="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-[#A67C1E] transition-colors leading-snug">
                     {faq.q}
                   </h3>
 
                   <div
                     className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                      isOpen ? "bg-amber-400 text-slate-950 rotate-180" : "bg-slate-100 text-slate-600"
+                      isOpen ? "bg-[#BFA13B] text-stone-950 rotate-180 font-bold" : "bg-[#FAF9F6] text-stone-600 border border-[#E5E0D5]"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -97,7 +97,7 @@ export default function FaqSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-5 pt-1 text-slate-600 text-sm sm:text-[15px] leading-relaxed border-t border-slate-100 font-normal">
+                  <div className="px-5 sm:px-6 pb-5 pt-1 text-stone-800 text-[14.5px] sm:text-base leading-relaxed border-t border-[#E5E0D5] font-normal">
                     <p>{faq.a}</p>
                   </div>
                 )}
@@ -107,16 +107,16 @@ export default function FaqSection() {
         </div>
 
         {/* Have more questions CTA Box */}
-        <div className="mt-8 bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="mt-8 bg-white rounded-2xl p-6 border border-[#E5E0D5] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
-            <h4 className="text-base font-bold text-[#08182B]">Have a specific query about your upcoming trip?</h4>
-            <p className="text-xs sm:text-sm text-slate-500 font-normal mt-0.5">Speak directly with our senior destination planners in Connaught Place, Delhi.</p>
+            <h4 className="text-base font-serif font-bold text-[#1C1917]">Have a specific query about your upcoming trip?</h4>
+            <p className="text-xs sm:text-sm text-stone-500 font-normal mt-0.5">Speak directly with our senior destination planners in Connaught Place, Delhi.</p>
           </div>
           <a
             href="tel:+919810024680"
-            className="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#08182B] hover:bg-slate-900 text-amber-300 hover:text-amber-200 flex items-center gap-2 shadow-xs shrink-0 border border-slate-800 cursor-pointer"
+            className="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#BFA13B] hover:bg-[#A6832A] text-stone-950 flex items-center gap-2 shadow-xs shrink-0 border border-[#BFA13B] cursor-pointer transition-all"
           >
-            <PhoneCall className="w-3.5 h-3.5 text-amber-400" />
+            <PhoneCall className="w-3.5 h-3.5 text-stone-950" />
             <span>Call +91 98100 24680</span>
           </a>
         </div>

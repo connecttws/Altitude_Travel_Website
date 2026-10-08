@@ -27,53 +27,31 @@ export default function IndianPackagesSection({
   };
 
   return (
-    <section id="indian-packages" className="py-10 sm:py-12 lg:py-14 bg-[#EEF4FA] border-b border-sky-200/80 relative overflow-hidden">
+    <section id="indian-packages" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5] relative overflow-hidden">
       
-      {/* Decorative Tree & Scenic Mountain Line Shapes */}
-      <div className="absolute top-0 right-10 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl pointer-events-none -z-10" />
+      {/* Decorative Warm Ambient Glow */}
+      <div className="absolute top-0 right-10 w-96 h-96 bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
-          <div className="max-w-3xl space-y-3">
-            
-            {/* Pill Eyebrow */}
-            <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200/80 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-              <Bus className="w-3.5 h-3.5 text-sky-700" />
-              <span>Luxury AC Coach, Cabs &amp; Stays From Delhi</span>
-            </div>
-
-            {/* Psychological Heading with 1 Clear Highlight */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-              Best Indian Tour Packages — <span className="text-sky-700">Discover India&apos;s Hidden Gems</span>
-            </h2>
-
-            {/* Short Supporting Description (1-2 lines) */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-              Thoughtfully planned escapes blending iconic heritage with regional cuisine, luxury coach travel from Delhi, and unhurried free time.
-            </p>
+        <div className="max-w-3xl space-y-3 mb-6 sm:mb-8">
+          
+          {/* Eyebrow Micro-caps */}
+          <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#BFA13B] whitespace-nowrap">
+            <Bus className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+            <span>Luxury AC Coach, Cabs &amp; Stays From Delhi</span>
           </div>
 
-          {/* Slider Arrow Controls */}
-          <div className="flex items-center gap-2 shrink-0">
-            <button
-              type="button"
-              onClick={() => scroll("left")}
-              className="w-11 h-11 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-sky-800 shadow-xs flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer"
-              aria-label="Previous Indian tours"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              type="button"
-              onClick={() => scroll("right")}
-              className="w-11 h-11 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-sky-800 shadow-xs flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer"
-              aria-label="Next Indian tours"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+          {/* Clean Modern Website Style Heading */}
+          <h2 className="text-2xl sm:text-4xl lg:text-[38px] font-bold text-stone-950 tracking-tight leading-tight">
+            Best Indian Tour Packages — <span className="text-[#A67C1E]">Hidden Gems</span>
+          </h2>
+
+          {/* Short Supporting Description: High contrast, easy to read */}
+          <p className="text-[15px] sm:text-base text-stone-800 leading-relaxed font-normal">
+            Thoughtfully planned escapes blending iconic heritage with regional cuisine, luxury coach travel from Delhi, and unhurried free time.
+          </p>
         </div>
 
         {/* Horizontal Slider with Curved Cards */}
@@ -93,6 +71,26 @@ export default function IndianPackagesSection({
               />
             </div>
           ))}
+        </div>
+
+        {/* Desktop Downside Carousel Controls (Hidden on Mobile Touch) */}
+        <div className="hidden md:flex items-center justify-center gap-3 pt-6">
+          <button
+            type="button"
+            onClick={() => scroll("left")}
+            className="w-11 h-11 rounded-full border border-[#E5E0D5] bg-white hover:bg-[#0C0A09] text-stone-800 hover:text-[#BFA13B] shadow-xs flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer hover:border-[#BFA13B]/40 hover:shadow-md"
+            aria-label="Previous Indian tours"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => scroll("right")}
+            className="w-11 h-11 rounded-full border border-[#E5E0D5] bg-white hover:bg-[#0C0A09] text-stone-800 hover:text-[#BFA13B] shadow-xs flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer hover:border-[#BFA13B]/40 hover:shadow-md"
+            aria-label="Next Indian tours"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
 
       </div>

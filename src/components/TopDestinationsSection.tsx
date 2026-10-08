@@ -42,55 +42,37 @@ export default function TopDestinationsSection({
   };
 
   return (
-    <section id="top-destinations" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80 relative overflow-hidden">
+    <section id="top-destinations" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5] relative overflow-hidden">
       
-      {/* Background Soft Sky Glow & Wave Watermark */}
-      <div className="absolute top-10 -right-20 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute bottom-10 -left-20 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
+      {/* Background Soft Glow */}
+      <div className="absolute top-10 -right-20 w-96 h-96 bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute bottom-10 -left-20 w-96 h-96 bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-5 sm:mb-8">
-          <div className="max-w-3xl space-y-3">
-            
-            {/* Pill Eyebrow */}
-            <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200/80 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-              <Compass className="w-3.5 h-3.5 text-sky-700" />
-              <span>Curated Destinations</span>
-              <span className="text-amber-700">• 1 Free Day Included</span>
-            </div>
-
-            {/* Psychological Heading with 1 Clear Highlight */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-              Top Destinations &amp; <span className="text-sky-700">Curated Escapes</span>
-            </h2>
-
-            {/* Short Supporting Description (1-2 lines) */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-              Curated journeys designed around places you&apos;ll never forget — combining iconic sights, local food, and time to unwind.
-            </p>
+        <div className="max-w-3xl space-y-3 mb-5 sm:mb-8">
+          
+          {/* Eyebrow Micro-caps */}
+          <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#BFA13B] whitespace-nowrap">
+            <Compass className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+            <span>Curated Destinations • 1 Free Day Included</span>
           </div>
 
-          {/* Slider Arrow Controls */}
-          <div className="flex items-center gap-2 shrink-0">
-            <button
-              type="button"
-              onClick={() => scroll("left")}
-              className="w-11 h-11 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-sky-800 shadow-xs flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer"
-              aria-label="Previous tours"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              type="button"
-              onClick={() => scroll("right")}
-              className="w-11 h-11 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-sky-800 shadow-xs flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer"
-              aria-label="Next tours"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+          {/* Clean Modern Website Style Heading */}
+          <h2 className="text-2xl sm:text-4xl lg:text-[38px] font-bold text-stone-950 tracking-tight leading-tight">
+            Top Destinations &amp; <span className="text-[#A67C1E]">Curated Escapes</span>
+          </h2>
+
+          {/* Dynamic Moving Accent Line */}
+          <div className="moving-line-track max-w-[200px]">
+            <div className="moving-line-beam" />
           </div>
+
+          {/* Short Supporting Description: High contrast, easy to read */}
+          <p className="text-[15px] sm:text-base text-stone-800 leading-relaxed font-normal">
+            Curated journeys designed around places you&apos;ll never forget — combining iconic sights, local food, and time to unwind.
+          </p>
         </div>
 
         {/* Filter Tabs in Sleek Editorial Pills */}
@@ -98,10 +80,10 @@ export default function TopDestinationsSection({
           <button
             type="button"
             onClick={() => setActiveTab("all")}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 cursor-pointer flex items-center gap-1.5 ${
+            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 cursor-pointer flex items-center gap-1.5 ${
               activeTab === "all"
-                ? "bg-[#08182B] text-amber-300 shadow-xs border border-[#08182B]"
-                : "bg-white text-slate-600 hover:bg-slate-50 border border-slate-200/80 shadow-xs"
+                ? "bg-[#0C0A09] text-[#BFA13B] shadow-xs border border-[#BFA13B]/40"
+                : "bg-white text-stone-700 hover:text-[#BFA13B] hover:bg-[#FBF7EE] border border-[#E5E0D5] shadow-xs"
             }`}
           >
             <span>All Featured Packages</span>
@@ -110,10 +92,10 @@ export default function TopDestinationsSection({
           <button
             type="button"
             onClick={() => setActiveTab("indian")}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 cursor-pointer flex items-center gap-1.5 ${
+            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 cursor-pointer flex items-center gap-1.5 ${
               activeTab === "indian"
-                ? "bg-[#08182B] text-amber-300 shadow-xs border border-[#08182B]"
-                : "bg-white text-slate-600 hover:bg-slate-50 border border-slate-200/80 shadow-xs"
+                ? "bg-[#0C0A09] text-[#BFA13B] shadow-xs border border-[#BFA13B]/40"
+                : "bg-white text-stone-700 hover:text-[#BFA13B] hover:bg-[#FBF7EE] border border-[#E5E0D5] shadow-xs"
             }`}
           >
             <Bus className="w-3.5 h-3.5" />
@@ -123,10 +105,10 @@ export default function TopDestinationsSection({
           <button
             type="button"
             onClick={() => setActiveTab("international")}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 cursor-pointer flex items-center gap-1.5 ${
+            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 cursor-pointer flex items-center gap-1.5 ${
               activeTab === "international"
-                ? "bg-[#08182B] text-amber-300 shadow-xs border border-[#08182B]"
-                : "bg-white text-slate-600 hover:bg-slate-50 border border-slate-200/80 shadow-xs"
+                ? "bg-[#0C0A09] text-[#BFA13B] shadow-xs border border-[#BFA13B]/40"
+                : "bg-white text-stone-700 hover:text-[#BFA13B] hover:bg-[#FBF7EE] border border-[#E5E0D5] shadow-xs"
             }`}
           >
             <Plane className="w-3.5 h-3.5" />
@@ -152,6 +134,26 @@ export default function TopDestinationsSection({
               />
             </div>
           ))}
+        </div>
+
+        {/* Desktop Downside Carousel Controls (Hidden on Mobile Touch) */}
+        <div className="hidden md:flex items-center justify-center gap-3 pt-6">
+          <button
+            type="button"
+            onClick={() => scroll("left")}
+            className="w-11 h-11 rounded-full border border-[#E5E0D5] bg-white hover:bg-[#0C0A09] text-stone-800 hover:text-[#BFA13B] shadow-xs flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer hover:border-[#BFA13B]/40 hover:shadow-md"
+            aria-label="Previous destination cards"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => scroll("right")}
+            className="w-11 h-11 rounded-full border border-[#E5E0D5] bg-white hover:bg-[#0C0A09] text-stone-800 hover:text-[#BFA13B] shadow-xs flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer hover:border-[#BFA13B]/40 hover:shadow-md"
+            aria-label="Next destination cards"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
 
       </div>

@@ -658,7 +658,7 @@ export default function ThailandClientPage() {
       : thailandPackages;
 
   return (
-    <div className="min-h-screen bg-[#F8FBFF] text-slate-800 flex flex-col selection:bg-amber-200 selection:text-amber-950">
+    <div className="min-h-screen bg-[#FAF9F6] text-stone-900 flex flex-col selection:bg-[#BFA13B]/20 selection:text-stone-950">
       
       {/* Global Header */}
       <Navbar
@@ -676,41 +676,41 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* HERO SECTION: 3D MOVING ATTRACTIONS + THAI SCRIPT + VERBATIM H1          */}
         {/* ========================================================================= */}
-        <section className="relative pt-[128px] pb-10 sm:pt-[132px] sm:pb-12 lg:pt-[136px] lg:pb-14 bg-gradient-to-b from-[#FFF9EE] via-[#FDFBF7] to-white border-b border-amber-200/60 overflow-hidden">
+        <section className="relative pt-[128px] pb-10 sm:pt-[132px] sm:pb-12 lg:pt-[136px] lg:pb-14 bg-[#FAF9F6] border-b border-[#E5E0D5] overflow-hidden">
           
-          {/* Subtle Golden & Azure Glows */}
-          <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-amber-200/30 rounded-full blur-3xl pointer-events-none -z-10" />
-          <div className="absolute top-1/3 -left-20 w-[420px] h-[420px] bg-sky-200/35 rounded-full blur-3xl pointer-events-none -z-10" />
+          {/* Subtle Warm Luxury Atmosphere Glows */}
+          <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
+          <div className="absolute top-1/3 -left-20 w-[420px] h-[420px] bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Top Bar: Thai-Inspired Greeting Badge */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-amber-200/60">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#E5E0D5]">
               
               {/* ELEGANT THAI GREETING BADGE */}
-              <div className="inline-flex items-center gap-2.5 sm:gap-3 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-50/70 border border-amber-300/80 px-4 py-1.5 rounded-full shadow-xs">
-                <span className="text-amber-700 font-bold text-sm tracking-wide">🌺</span>
-                <span className="font-serif text-amber-950 text-base sm:text-lg font-bold tracking-wide italic">
+              <div className="inline-flex items-center gap-2.5 sm:gap-3 bg-[#FBF7EE] border border-[#BFA13B]/40 px-4 py-1.5 rounded-full shadow-2xs">
+                <span className="text-[#BFA13B] font-bold text-sm tracking-wide">🌺</span>
+                <span className="font-serif text-stone-900 text-base sm:text-lg font-bold tracking-wide italic">
                   สวัสดี (Sawasdee) — Discover the Land of Smiles
                 </span>
-                <span className="text-amber-600/60 hidden sm:inline">•</span>
-                <span className="text-xs sm:text-sm font-semibold text-slate-800">
+                <span className="text-[#BFA13B]/60 hidden sm:inline">•</span>
+                <span className="text-xs sm:text-sm font-serif font-bold text-stone-800">
                   Thailand Tour Packages
                 </span>
               </div>
 
               {/* Currency & Direct Flight Information */}
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
-                <span className="bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs flex items-center gap-1.5">
-                  <Gem className="w-3.5 h-3.5 text-amber-500" />
-                  <span>Currency: <strong>Thai Baht (THB)</strong></span>
+              <div className="flex items-center gap-2 text-xs font-semibold text-stone-600">
+                <span className="bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs flex items-center gap-1.5">
+                  <Gem className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  <span>Currency: <strong className="text-stone-900">Thai Baht (THB)</strong></span>
                 </span>
-                <span className="hidden sm:inline-flex bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs items-center gap-1.5">
-                  <Plane className="w-3.5 h-3.5 text-sky-600" />
+                <span className="hidden sm:inline-flex bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs items-center gap-1.5">
+                  <Plane className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>4.0h Direct Flight from Delhi</span>
                 </span>
-                <span className="hidden md:inline-flex bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full border border-emerald-200 shadow-2xs items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                <span className="hidden md:inline-flex bg-[#FBF7EE] text-stone-900 px-3 py-1 rounded-full border border-[#BFA13B]/40 shadow-2xs items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Visa-Free / Easy Entry for Indians</span>
                 </span>
               </div>
@@ -723,23 +723,28 @@ export default function ThailandClientPage() {
               {/* Left Column: VERBATIM H1 & INTRODUCTORY COPY */}
               <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
                 
-                {/* Eyebrow Pill */}
-                <div className="inline-flex items-center gap-2 self-start bg-white/90 backdrop-blur-md border border-amber-200/80 text-amber-950 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                  <Compass className="w-3.5 h-3.5 text-amber-700" />
+                {/* Eyebrow Micro-caps */}
+                <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Curated Southeast Asia Holidays • Connaught Place, Delhi Planning Desk</span>
                 </div>
 
-                {/* EXACT H1 HEADING */}
-                <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#08182B] tracking-tight leading-[1.18]">
+                {/* SIGNATURE EDITORIAL H1 HEADING */}
+                <h1 className="text-3xl sm:text-5xl lg:text-[48px] font-serif font-bold text-[#1C1917] tracking-tight leading-[1.14]">
                   Thailand Tour Packages |{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-orange-600 to-sky-700">
+                  <span className="italic font-normal text-shining-gold">
                     Explore the Best of Thailand
                   </span>
                 </h1>
 
+                {/* Dynamic Moving Accent Line */}
+                <div className="moving-line-track max-w-[160px]">
+                  <div className="moving-line-beam" />
+                </div>
+
                 {/* VERBATIM INTRODUCTORY PARAGRAPHS */}
-                <div className="space-y-3.5 text-sm sm:text-[15px] text-slate-600 leading-relaxed font-normal">
-                  <p className="text-base sm:text-lg font-medium text-slate-800 leading-relaxed">
+                <div className="space-y-3.5 text-sm sm:text-[15px] text-stone-600 leading-relaxed font-normal">
+                  <p className="text-base sm:text-lg font-serif font-medium text-stone-900 leading-relaxed">
                     Discover the best of Thailand with our Thailand tour packages. Explore Bangkok&apos;s vibrant city life, Phuket&apos;s beautiful beaches, Pattaya&apos;s exciting attractions, and Krabi&apos;s stunning natural surroundings.
                   </p>
                   <p>
@@ -749,49 +754,49 @@ export default function ThailandClientPage() {
 
                 {/* Core Experience Badges Ribbon */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Sun className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Phuket &amp; Phi Phi</h4>
-                      <p className="text-[11px] text-slate-500">Andaman Islands &amp; Sun</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Phuket &amp; Phi Phi</h4>
+                      <p className="text-[11px] text-stone-500">Andaman Islands &amp; Sun</p>
                     </div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center shrink-0 border border-sky-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Building className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Bangkok &amp; Temples</h4>
-                      <p className="text-[11px] text-slate-500">Grand Palace &amp; Shopping</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Bangkok &amp; Temples</h4>
+                      <p className="text-[11px] text-stone-500">Grand Palace &amp; Shopping</p>
                     </div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center shrink-0 border border-teal-200">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#E5E0D5] shadow-2xs flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center shrink-0 border border-[#BFA13B]/30">
                       <Palmtree className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#08182B]">Krabi &amp; Pattaya</h4>
-                      <p className="text-[11px] text-slate-500">Cliffs, Watersports &amp; Fun</p>
+                      <h4 className="text-xs font-serif font-bold text-stone-900">Krabi &amp; Pattaya</h4>
+                      <p className="text-[11px] text-stone-500">Cliffs, Watersports &amp; Fun</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Popular Discovery Badges */}
                 <div className="pt-1 flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mr-1">
+                  <span className="text-[11px] font-bold tracking-wider text-stone-400 uppercase mr-1">
                     Top Destinations:
                   </span>
                   {["Bangkok", "Phuket", "Pattaya", "Krabi", "Chiang Mai", "Koh Samui", "Phi Phi Islands"].map(
                     (place, idx) => (
                       <span
                         key={idx}
-                        className="text-xs font-semibold px-3 py-1 rounded-lg bg-white text-slate-800 border border-slate-200/80 shadow-2xs flex items-center gap-1.5"
+                        className="text-xs font-semibold px-3 py-1 rounded-lg bg-white text-stone-800 border border-[#E5E0D5] shadow-2xs flex items-center gap-1.5"
                       >
-                        <Sparkles className="w-3 h-3 text-amber-500" />
+                        <Sparkles className="w-3 h-3 text-[#BFA13B]" />
                         <span>{place}</span>
                       </span>
                     )
@@ -804,15 +809,15 @@ export default function ThailandClientPage() {
               <div className="lg:col-span-5 space-y-6" id="thailand-inquiry-box">
                 
                 {/* 3D Moving Position Photos Showcase */}
-                <div className="relative h-[290px] sm:h-[320px] rounded-2xl p-4 bg-gradient-to-tr from-[#08182B] via-[#162938] to-[#08182B] overflow-hidden shadow-xl border border-sky-900/60 flex items-center justify-center">
+                <div className="relative h-[290px] sm:h-[320px] rounded-2xl p-4 bg-gradient-to-tr from-[#0C0A09] via-stone-900 to-[#0C0A09] overflow-hidden shadow-xl border border-[#BFA13B]/30 flex items-center justify-center">
                   
                   {/* Subtle Background Golden Glow */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.22),transparent_60%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(191,161,59,0.22),transparent_60%)]" />
                   
                   {/* Top Floating Badge */}
                   <div className="absolute top-3.5 left-4 z-20">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-white/15 backdrop-blur-md text-amber-300 px-3 py-1 rounded-full border border-white/20">
-                      <Sparkles className="w-3 h-3 text-amber-400" />
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-white/10 backdrop-blur-md text-[#E8D08D] px-3 py-1 rounded-full border border-white/20">
+                      <Sparkles className="w-3 h-3 text-[#BFA13B]" />
                       <span>Live 3D Attractions Showcase</span>
                     </span>
                   </div>
@@ -829,15 +834,15 @@ export default function ThailandClientPage() {
                         sizes="200px"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent" />
                       <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                        <span className="text-[10px] font-bold text-amber-400 block">Natural Wonder</span>
+                        <span className="text-[10px] font-bold text-[#BFA13B] block">Natural Wonder</span>
                         <h4 className="text-xs font-bold leading-tight">Krabi Limestone Cliffs</h4>
                       </div>
                     </div>
 
                     {/* Card 2: Center 3D Floating Hero - Phuket Phi Phi Island */}
-                    <div className="relative w-[180px] sm:w-[210px] h-[230px] sm:h-[250px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-2 border-amber-400 animate-3d-center z-20 group cursor-pointer">
+                    <div className="relative w-[180px] sm:w-[210px] h-[230px] sm:h-[250px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-2 border-[#BFA13B] animate-3d-center z-20 group cursor-pointer">
                       <Image
                         src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=600&q=80"
                         alt="Phuket Phi Phi Island and Maya Bay turquoise water"
@@ -845,12 +850,12 @@ export default function ThailandClientPage() {
                         sizes="240px"
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#08182B]/95 via-[#08182B]/30 to-transparent" />
-                      <div className="absolute top-2.5 right-2.5 bg-amber-400 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow-xs">
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/30 to-transparent" />
+                      <div className="absolute top-2.5 right-2.5 bg-[#BFA13B] text-stone-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow-xs">
                         MUST VISIT
                       </div>
                       <div className="absolute bottom-3 left-3 right-3 text-white">
-                        <span className="text-[10.5px] font-bold text-sky-300 block">Andaman Archipelago</span>
+                        <span className="text-[10.5px] font-bold text-[#E8D08D] block">Andaman Archipelago</span>
                         <h4 className="text-sm font-bold leading-tight">Phi Phi &amp; Maya Bay</h4>
                       </div>
                     </div>
@@ -864,9 +869,9 @@ export default function ThailandClientPage() {
                         sizes="200px"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent" />
                       <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                        <span className="text-[10px] font-bold text-amber-400 block">Capital Heritage</span>
+                        <span className="text-[10px] font-bold text-[#BFA13B] block">Capital Heritage</span>
                         <h4 className="text-xs font-bold leading-tight">Bangkok Wat Arun</h4>
                       </div>
                     </div>
@@ -875,124 +880,131 @@ export default function ThailandClientPage() {
 
                 </div>
 
-                {/* Quick Concierge Inquiry Card */}
-                <div className="rounded-2xl bg-white p-6 sm:p-7 shadow-[0_10px_30px_-5px_rgba(15,23,42,0.08)] border border-slate-200/90">
-                  <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
-                        Thailand Tour Inquiry
+                {/* Quick Concierge Inquiry Card with Moving Border Beam */}
+                <div className="border-beam-card shadow-[0_16px_40px_-6px_rgba(28,25,23,0.12)]">
+                  <div className="border-beam-inner p-6 sm:p-7">
+                    <div className="flex items-center justify-between pb-3 mb-2 border-b border-[#E5E0D5]">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-gold-pulse" />
+                        <span className="text-xs font-bold uppercase tracking-wider text-stone-900">
+                          Thailand Tour Inquiry
+                        </span>
+                      </div>
+                      <span className="text-[11px] font-bold text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/40">
+                        Delhi Desk Online
                       </span>
                     </div>
-                    <span className="text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">
-                      Delhi Desk Online
-                    </span>
-                  </div>
 
-                  {submitted ? (
-                    <div className="py-6 text-center space-y-3">
-                      <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
-                        <CheckCircle2 className="w-6 h-6" />
-                      </div>
-                      <h4 className="text-base font-bold text-slate-900">Inquiry Received</h4>
-                      <p className="text-xs text-slate-600 max-w-xs mx-auto">
-                        Thank you! Our Thailand travel specialist from Connaught Place, Delhi will contact you shortly with customized package itineraries and best flight deals.
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => setSubmitted(false)}
-                        className="mt-2 px-4 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl"
-                      >
-                        Submit Another Inquiry
-                      </button>
+                    {/* Dynamic Moving Laser Beam Line */}
+                    <div className="moving-line-track mb-3">
+                      <div className="moving-line-beam" />
                     </div>
-                  ) : (
-                    <form onSubmit={handleSubmitInquiry} className="space-y-3">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Your Name *
-                          </label>
-                          <input
-                            type="text"
-                            required
-                            placeholder="e.g. Rahul Sharma"
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:outline-none"
-                          />
+
+                    {submitted ? (
+                      <div className="py-6 text-center space-y-3">
+                        <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+                          <CheckCircle2 className="w-6 h-6" />
                         </div>
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Phone Number *
-                          </label>
-                          <input
-                            type="tel"
-                            required
-                            placeholder="+91 98100 XXXXX"
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:outline-none"
-                          />
-                        </div>
+                        <h4 className="text-base font-bold text-stone-900">Inquiry Received</h4>
+                        <p className="text-xs text-stone-600 max-w-xs mx-auto">
+                          Thank you! Our Thailand travel specialist from Connaught Place, Delhi will contact you shortly with customized package itineraries and best flight deals.
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setSubmitted(false)}
+                          className="mt-2 px-4 py-1.5 text-xs font-semibold text-stone-700 bg-stone-100 hover:bg-stone-200 rounded-xl"
+                        >
+                          Submit Another Inquiry
+                        </button>
                       </div>
-
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Package Type
-                          </label>
-                          <select
-                            value={formData.packageType}
-                            onChange={(e) => setFormData({ ...formData, packageType: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:outline-none"
-                          >
-                            <option value="Thailand 4 Nights / 5 Days">Thailand 4N / 5D (BKK + Pattaya)</option>
-                            <option value="Thailand 5 Nights / 6 Days">Thailand 5N / 6D (Phuket + Krabi)</option>
-                            <option value="Thailand 6 Nights / 7 Days">Thailand 6N / 7D (BKK + Pattaya Leisure)</option>
-                            <option value="Thailand Honeymoon Package">Thailand Honeymoon Package</option>
-                            <option value="Thailand Family Holiday Package">Thailand Family Holiday Package</option>
-                            <option value="Thailand Beach Holiday Package">Thailand Beach Holiday Package</option>
-                            <option value="Custom Thailand Tour Package">Custom Thailand Tour Package</option>
-                          </select>
+                    ) : (
+                      <form onSubmit={handleSubmitInquiry} className="space-y-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                          <div>
+                            <label className="block text-[11px] font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                              Your Name *
+                            </label>
+                            <input
+                              type="text"
+                              required
+                              placeholder="e.g. Rahul Sharma"
+                              value={formData.name}
+                              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-[11px] font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                              Phone Number *
+                            </label>
+                            <input
+                              type="tel"
+                              required
+                              placeholder="+91 98100 XXXXX"
+                              value={formData.phone}
+                              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            />
+                          </div>
                         </div>
-                        <div>
-                          <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                            Number of Guests
-                          </label>
-                          <select
-                            value={formData.guests}
-                            onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                            className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:outline-none"
-                          >
-                            <option value="2 Adults (Couple)">2 Adults (Couple)</option>
-                            <option value="Family with Kids">Family with Kids</option>
-                            <option value="Group of Friends (4+)">Group of Friends (4+)</option>
-                            <option value="Solo Traveler">Solo Traveler</option>
-                          </select>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                          <div>
+                            <label className="block text-[11px] font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                              Package Type
+                            </label>
+                            <select
+                              value={formData.packageType}
+                              onChange={(e) => setFormData({ ...formData, packageType: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            >
+                              <option value="Thailand 4 Nights / 5 Days">Thailand 4N / 5D (BKK + Pattaya)</option>
+                              <option value="Thailand 5 Nights / 6 Days">Thailand 5N / 6D (Phuket + Krabi)</option>
+                              <option value="Thailand 6 Nights / 7 Days">Thailand 6N / 7D (BKK + Pattaya Leisure)</option>
+                              <option value="Thailand Honeymoon Package">Thailand Honeymoon Package</option>
+                              <option value="Thailand Family Holiday Package">Thailand Family Holiday Package</option>
+                              <option value="Thailand Beach Holiday Package">Thailand Beach Holiday Package</option>
+                              <option value="Custom Thailand Tour Package">Custom Thailand Tour Package</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label className="block text-[11px] font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                              Number of Guests
+                            </label>
+                            <select
+                              value={formData.guests}
+                              onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
+                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
+                            >
+                              <option value="2 Adults (Couple)">2 Adults (Couple)</option>
+                              <option value="Family with Kids">Family with Kids</option>
+                              <option value="Group of Friends (4+)">Group of Friends (4+)</option>
+                              <option value="Solo Traveler">Solo Traveler</option>
+                            </select>
+                          </div>
                         </div>
-                      </div>
 
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full py-3 px-5 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-gradient-to-r from-amber-500 via-amber-600 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white shadow-md transition-all flex items-center justify-center gap-2 border border-amber-400 cursor-pointer"
-                      >
-                        {isSubmitting ? (
-                          <span>Submitting Thailand Inquiry...</span>
-                        ) : (
-                          <>
-                            <Send className="w-3.5 h-3.5 text-white fill-white" />
-                            <span>Request Custom Thailand Package Quote</span>
-                          </>
-                        )}
-                      </button>
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="w-full py-3.5 px-5 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-shining-gold shining-sweep hover:brightness-105 active:scale-[0.99] text-stone-950 shadow-[0_8px_25px_rgba(212,175,55,0.4)] transition-all flex items-center justify-center gap-2 border border-[#BFA13B]/40 cursor-pointer"
+                        >
+                          {isSubmitting ? (
+                            <span>Submitting Thailand Inquiry...</span>
+                          ) : (
+                            <>
+                              <Send className="w-3.5 h-3.5 text-stone-950" />
+                              <span>Request Custom Thailand Package Quote</span>
+                            </>
+                          )}
+                        </button>
 
-                      <p className="text-[10.5px] text-center text-slate-400 font-medium">
-                        100% Privacy • No Spam • Handcrafted Quotes from Delhi Office
-                      </p>
-                    </form>
-                  )}
+                        <p className="text-[10.5px] text-center text-stone-400 font-medium">
+                          100% Privacy • No Spam • Handcrafted Quotes from Delhi Office
+                        </p>
+                      </form>
+                    )}
+                  </div>
                 </div>
 
               </div>
@@ -1005,29 +1017,29 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 1: EXPLORE THAILAND TOUR PACKAGES (H2)                            */}
         {/* ========================================================================= */}
-        <section id="explore-thailand" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="explore-thailand" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Specialized Planning from Delhi Desk</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Explore Thailand <span className="text-amber-600">Tour Packages</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Explore Thailand <span className="italic font-normal text-[#BFA13B]">Tour Packages</span>
               </h2>
 
               {/* VERBATIM TEXT FROM PROMPT */}
-              <div className="space-y-3 text-base text-slate-600 leading-relaxed font-normal">
+              <div className="space-y-3 text-base text-stone-600 leading-relaxed font-normal">
                 <p>
                   Altitude Travel Co. specializes in thoughtfully planned Thailand tour packages for those interested in experiencing the country&apos;s beaches, cities, culture, nature, and exciting activities.
                 </p>
                 <p>
                   See Bangkok&apos;s famous landmarks, enjoy the beaches in Phuket, have fun in Pattaya, or discover the beautiful islands and natural attractions of Krabi.
                 </p>
-                <p className="font-medium text-slate-800">
+                <p className="font-serif font-semibold text-stone-900">
                   Whether you are planning a family holiday, honeymoon, friends&apos; group, or an exclusive getaway, we can help plan your itinerary according to your travel dates, budget, interests, and preferred style of travel.
                 </p>
               </div>
@@ -1035,25 +1047,25 @@ export default function ThailandClientPage() {
 
             {/* Inclusions Strip */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto mb-10">
-              <div className="p-3.5 bg-[#F8FBFF] rounded-xl border border-slate-200 text-center space-y-1">
+              <div className="p-3.5 bg-white rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">✈️</span>
-                <h4 className="text-xs font-bold text-slate-900">Direct Flights</h4>
-                <p className="text-[11px] text-slate-500">Non-stop from Delhi</p>
+                <h4 className="text-xs font-serif font-bold text-stone-900">Direct Flights</h4>
+                <p className="text-[11px] text-stone-500">Non-stop from Delhi</p>
               </div>
-              <div className="p-3.5 bg-[#F8FBFF] rounded-xl border border-slate-200 text-center space-y-1">
+              <div className="p-3.5 bg-white rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🏨</span>
-                <h4 className="text-xs font-bold text-slate-900">4 &amp; 5-Star Stays</h4>
-                <p className="text-[11px] text-slate-500">Beachfront &amp; City Center</p>
+                <h4 className="text-xs font-serif font-bold text-stone-900">4 &amp; 5-Star Stays</h4>
+                <p className="text-[11px] text-stone-500">Beachfront &amp; City Center</p>
               </div>
-              <div className="p-3.5 bg-[#F8FBFF] rounded-xl border border-slate-200 text-center space-y-1">
+              <div className="p-3.5 bg-white rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🚤</span>
-                <h4 className="text-xs font-bold text-slate-900">Speedboat Tours</h4>
-                <p className="text-[11px] text-slate-500">Phi Phi &amp; Coral Island</p>
+                <h4 className="text-xs font-serif font-bold text-stone-900">Speedboat Tours</h4>
+                <p className="text-[11px] text-stone-500">Phi Phi &amp; Coral Island</p>
               </div>
-              <div className="p-3.5 bg-[#F8FBFF] rounded-xl border border-slate-200 text-center space-y-1">
+              <div className="p-3.5 bg-white rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🛡️</span>
-                <h4 className="text-xs font-bold text-slate-900">24/7 Delhi Care</h4>
-                <p className="text-[11px] text-slate-500">Dedicated Support Desk</p>
+                <h4 className="text-xs font-serif font-bold text-stone-900">24/7 Delhi Care</h4>
+                <p className="text-[11px] text-stone-500">Dedicated Support Desk</p>
               </div>
             </div>
 
@@ -1063,20 +1075,20 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 2: PACKAGE CARDS / IMAGE SECTION (9 PACKAGE EXAMPLES)            */}
         {/* ========================================================================= */}
-        <section id="thailand-packages-grid" className="py-10 sm:py-12 lg:py-14 bg-[#F8FBFF] border-b border-slate-200/80">
+        <section id="thailand-packages-grid" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Gem className="w-3.5 h-3.5 text-sky-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Gem className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Featured Itineraries</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Featured Thailand <span className="text-amber-600">Holiday Packages</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Featured Thailand <span className="italic font-normal text-[#BFA13B]">Holiday Packages</span>
               </h2>
 
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Choose from our popular package examples below, or let us tailor your own itinerary.
               </p>
 
@@ -1092,10 +1104,10 @@ export default function ThailandClientPage() {
                     key={tab.id}
                     type="button"
                     onClick={() => setActivePackageFilter(tab.id)}
-                    className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                       activePackageFilter === tab.id
-                        ? "bg-[#08182B] text-amber-300 shadow-xs"
-                        : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"
+                        ? "bg-[#0C0A09] text-[#E8D08D] shadow-xs"
+                        : "bg-white text-stone-600 border border-[#E5E0D5] hover:bg-[#FAF9F6]"
                     }`}
                   >
                     {tab.label}
@@ -1106,92 +1118,104 @@ export default function ThailandClientPage() {
 
             {/* 9 Package Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredPackages.map((pkg) => (
-                <div
-                  key={pkg.id}
-                  className="bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
-                >
-                  <div className="relative h-52 sm:h-56 w-full overflow-hidden">
-                    <Image
-                      src={pkg.image}
-                      alt={pkg.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20" />
-                    
-                    <span className="absolute top-3 left-3 bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full shadow-xs">
-                      {pkg.tag}
-                    </span>
+              {filteredPackages.map((pkg) => {
+                const numericPrice = parseInt(pkg.priceStarting.replace(/[^\d]/g, ""), 10);
+                const originalPrice = numericPrice ? Math.round(numericPrice * 1.24) : null;
 
-                    <span className="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-amber-300" />
-                      <span>{pkg.duration}</span>
-                    </span>
+                return (
+                  <div
+                    key={pkg.id}
+                    className="bg-white rounded-2xl overflow-hidden border border-[#E5E0D5] hover:border-[#BFA13B] shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+                  >
+                    <div className="relative aspect-[16/10] w-full overflow-hidden">
+                      <Image
+                        src={pkg.image}
+                        alt={pkg.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-stone-950/20" />
+                      
+                      <span className="absolute top-3 left-3 bg-[#BFA13B] text-stone-950 text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                        {pkg.tag}
+                      </span>
 
-                    <div className="absolute bottom-3 left-3 right-3 text-white">
-                      <span className="text-xs text-amber-200 block font-medium">{pkg.subtitle}</span>
-                      <h3 className="text-lg font-bold text-white leading-snug">{pkg.cardTitle}</h3>
+                      <span className="absolute top-3 right-3 bg-[#0C0A09]/80 backdrop-blur-md text-[#E8D08D] text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 border border-[#BFA13B]/20">
+                        <Clock className="w-3 h-3 text-[#BFA13B]" />
+                        <span>{pkg.duration}</span>
+                      </span>
+
+                      <div className="absolute bottom-3 left-3 right-3 text-white">
+                        <span className="text-xs text-[#E8D08D] block font-medium">{pkg.subtitle}</span>
+                        <h3 className="text-lg font-serif font-bold text-white leading-snug">{pkg.cardTitle}</h3>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                    <div className="space-y-3">
-                      <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                        {pkg.shortDescription}
-                      </p>
+                    <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                      <div className="space-y-3">
+                        <p className="text-xs text-stone-600 leading-relaxed font-normal">
+                          {pkg.shortDescription}
+                        </p>
 
-                      <div className="p-2.5 bg-amber-50/70 rounded-xl border border-amber-200/60 text-[11px] font-semibold text-amber-950 flex items-center gap-2">
-                        <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                        <span>{pkg.freeDayNote}</span>
+                        <div className="p-2.5 bg-[#FBF7EE] rounded-xl border border-[#BFA13B]/30 text-[11px] font-semibold text-stone-900 flex items-center gap-2">
+                          <Sparkles className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+                          <span>{pkg.freeDayNote}</span>
+                        </div>
+
+                        <div className="space-y-1.5 pt-1">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-stone-400 block">
+                            Key Inclusions:
+                          </span>
+                          {pkg.iconicLandmarks.slice(0, 3).map((lm, i) => (
+                            <div key={i} className="text-xs text-stone-700 flex items-center gap-1.5 font-medium">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+                              <span className="truncate">{lm}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
 
-                      <div className="space-y-1.5 pt-1">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
-                          Key Inclusions:
-                        </span>
-                        {pkg.iconicLandmarks.slice(0, 3).map((lm, i) => (
-                          <div key={i} className="text-xs text-slate-700 flex items-center gap-1.5 font-medium">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                            <span className="truncate">{lm}</span>
+                      <div className="pt-4 border-t border-[#E5E0D5] flex items-center justify-between">
+                        <div>
+                          <span className="text-[10px] text-stone-400 block font-semibold uppercase tracking-wider">Starting From</span>
+                          <div className="flex items-baseline gap-2">
+                            {originalPrice && (
+                              <span className="text-xs text-stone-400 line-through">
+                                ₹{originalPrice.toLocaleString("en-IN")}
+                              </span>
+                            )}
+                            <span className="text-xl font-serif font-bold text-[#1C1917]">{pkg.priceStarting}</span>
                           </div>
-                        ))}
+                          <span className="text-[10.5px] text-stone-500 block">/ person (ex Delhi)</span>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => handleOpenPackageModal(pkg)}
+                          className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#0C0A09] hover:bg-stone-900 text-[#BFA13B] transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer border border-[#BFA13B]/30"
+                        >
+                          <span>View Details</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </button>
                       </div>
+
                     </div>
-
-                    <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                      <div>
-                        <span className="text-[10px] text-slate-400 block font-semibold uppercase">Starting From</span>
-                        <span className="text-xl font-bold text-[#08182B]">{pkg.priceStarting}</span>
-                        <span className="text-[10.5px] text-slate-500 block">/ person (ex Delhi)</span>
-                      </div>
-
-                      <button
-                        type="button"
-                        onClick={() => handleOpenPackageModal(pkg)}
-                        className="px-4 py-2 rounded-xl text-xs font-bold bg-[#08182B] hover:bg-amber-950 text-amber-300 hover:text-amber-200 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer"
-                      >
-                        <span>View Package CTA</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Slider / Show More Callout (Prompt: Slider Option – Show More Thailand Packages) */}
-            <div className="mt-8 p-4 rounded-2xl bg-amber-50/70 border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-              <div className="flex items-center gap-2.5 text-xs text-amber-950 font-medium">
-                <Info className="w-4 h-4 text-amber-700 shrink-0" />
+            <div className="mt-8 p-5 rounded-2xl bg-white border border-[#E5E0D5] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+              <div className="flex items-center gap-2.5 text-xs text-stone-800 font-medium">
+                <Info className="w-4 h-4 text-[#BFA13B] shrink-0" />
                 <span>Need a different duration or combined multi-country itinerary? We create bespoke itineraries for any dates.</span>
               </div>
               <button
                 type="button"
                 onClick={() => setIsCustomModalOpen(true)}
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-amber-600 hover:bg-amber-700 text-white transition-all shadow-xs shrink-0 cursor-pointer"
+                className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 transition-all shadow-xs shrink-0 cursor-pointer"
               >
                 Customize My Thailand Package
               </button>
@@ -1203,22 +1227,22 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 3: BEST PLACES TO VISIT IN THAILAND (H2 & H3s)                    */}
         {/* ========================================================================= */}
-        <section id="best-places-to-visit" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="best-places-to-visit" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200/80 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <MapPin className="w-3.5 h-3.5 text-sky-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <MapPin className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Destination Guide</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Best Places to Visit in <span className="text-amber-600">Thailand</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Best Places to Visit in <span className="italic font-normal text-[#BFA13B]">Thailand</span>
               </h2>
 
               {/* VERBATIM INTRO TEXT FROM PROMPT */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Thailand offers a combination of vibrant cities, beautiful beaches, cultural attractions, islands, nature, and local experiences. From Bangkok&apos;s famous landmarks to Phuket and Krabi&apos;s beaches, there is plenty to explore during your Thailand trip.
               </p>
             </div>
@@ -1230,7 +1254,7 @@ export default function ThailandClientPage() {
                 return (
                   <div
                     key={place.id}
-                    className={`bg-[#F8FBFF] rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col md:flex-row gap-6 items-center ${
+                    className={`bg-white rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col md:flex-row gap-6 items-center ${
                       isEven ? "md:flex-row-reverse" : ""
                     }`}
                   >
@@ -1242,27 +1266,27 @@ export default function ThailandClientPage() {
                         sizes="(max-width: 768px) 100vw, 40vw"
                         className="object-cover"
                       />
-                      <span className="absolute top-3 left-3 bg-[#08182B] text-amber-300 text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                      <span className="absolute top-3 left-3 bg-[#0C0A09] text-[#E8D08D] text-[11px] font-bold px-3 py-1 rounded-full shadow-xs border border-[#BFA13B]/30">
                         {place.tag}
                       </span>
                     </div>
 
                     <div className="flex-1 space-y-3 text-left">
                       {/* EXACT H3 HEADING */}
-                      <h3 className="text-2xl font-bold text-[#08182B] flex items-center gap-2">
+                      <h3 className="text-2xl font-serif font-bold text-[#1C1917] flex items-center gap-2">
                         <span>{place.title}</span>
                       </h3>
 
                       {/* VERBATIM PROMPT COPY */}
-                      <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                      <p className="text-sm text-stone-600 leading-relaxed font-normal">
                         {place.verbatimText}
                       </p>
 
                       {/* ELABORATED HIGHLIGHTS */}
-                      <div className="pt-2 border-t border-slate-200/60 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                      <div className="pt-2 border-t border-[#E5E0D5] grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-600">
                         {place.elaborations.map((item, i) => (
                           <div key={i} className="flex items-center gap-1.5 font-medium">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                             <span>{item}</span>
                           </div>
                         ))}
@@ -1275,16 +1299,16 @@ export default function ThailandClientPage() {
 
             {/* Slider Option – Show More Places */}
             <div className="mt-8 text-center">
-              <p className="text-xs text-slate-500 font-semibold mb-3">
+              <p className="text-xs text-stone-500 font-semibold mb-3">
                 Also exploring Hua Hin, Koh Phangan, Pai, or Ayutthaya?
               </p>
               <button
                 type="button"
                 onClick={() => setIsCustomModalOpen(true)}
-                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 shadow-2xs inline-flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-[#FAF9F6] text-stone-900 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
                 <span>Slider Option – Show More Places &amp; Offbeat Islands</span>
-                <ArrowRight className="w-3.5 h-3.5 text-amber-600" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
               </button>
             </div>
 
@@ -1294,26 +1318,26 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 4: THINGS TO DO IN THAILAND (H2) - 14 ITEMS FROM PROMPT          */}
         {/* ========================================================================= */}
-        <section id="things-to-do" className="py-10 sm:py-12 lg:py-14 bg-[#EEF4FA] border-b border-sky-200/80">
+        <section id="things-to-do" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-sky-100 border border-sky-300 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Compass className="w-3.5 h-3.5 text-sky-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Activities &amp; Highlights</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Things to Do in <span className="text-sky-700">Thailand</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Things to Do in <span className="italic font-normal text-[#BFA13B]">Thailand</span>
               </h2>
 
               {/* VERBATIM PROMPT INTRO */}
-              <div className="space-y-1 text-base text-slate-600 leading-relaxed font-normal">
+              <div className="space-y-1 text-base text-stone-600 leading-relaxed font-normal">
                 <p>
                   A Thailand holiday offers you the chance to combine sightseeing, cultural experiences, beach relaxation, shopping, food, and adventure.
                 </p>
-                <p className="font-medium text-slate-700">
+                <p className="font-serif font-semibold text-stone-900">
                   Here are just a few of the many experiences on offer:
                 </p>
               </div>
@@ -1326,17 +1350,17 @@ export default function ThailandClientPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-amber-300 transition-all shadow-2xs group flex flex-col justify-between"
+                    className="p-4 rounded-xl bg-white border border-[#E5E0D5] hover:border-[#BFA13B] transition-all shadow-2xs group flex flex-col justify-between"
                   >
                     <div>
-                      <div className={`w-8 h-8 rounded-lg ${item.color} flex items-center justify-center mb-2.5`}>
+                      <div className="w-8 h-8 rounded-lg bg-[#FBF7EE] border border-[#BFA13B]/30 text-[#BFA13B] flex items-center justify-center mb-2.5">
                         <Icon className="w-4 h-4" />
                       </div>
-                      <h3 className="text-xs sm:text-sm font-bold text-[#08182B] leading-snug group-hover:text-amber-700 transition-colors mb-1">
+                      <h3 className="text-xs sm:text-sm font-serif font-bold text-[#1C1917] leading-snug group-hover:text-[#BFA13B] transition-colors mb-1">
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-[11px] text-slate-500 font-normal leading-relaxed pt-1">
+                    <p className="text-[11px] text-stone-500 font-normal leading-relaxed pt-1">
                       {item.desc}
                     </p>
                   </div>
@@ -1350,22 +1374,22 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 5: BEST THAILAND PACKAGES FOR EVERY TRAVELLER (H2 & H3s)          */}
         {/* ========================================================================= */}
-        <section id="packages-for-every-traveller" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80">
+        <section id="packages-for-every-traveller" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Users className="w-3.5 h-3.5 text-amber-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Users className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Tailored for You</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                Best Thailand Tour Packages for <span className="text-amber-600">Every Traveller</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Best Thailand Tour Packages for <span className="italic font-normal text-[#BFA13B]">Every Traveller</span>
               </h2>
 
               {/* VERBATIM PROMPT INTRO */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Whether you are travelling with family, your partner, friends, or as a group, Altitude Travel Co. can help you choose a Thailand tour package that suits your holiday plans.
               </p>
             </div>
@@ -1377,39 +1401,39 @@ export default function ThailandClientPage() {
                 return (
                   <div
                     key={idx}
-                    className="p-6 rounded-2xl bg-gradient-to-br bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                    className="p-6 rounded-2xl bg-white border border-[#E5E0D5] hover:border-[#BFA13B] shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
                   >
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/30">
                           {type.tag}
                         </span>
-                        <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700">
+                        <div className="w-8 h-8 rounded-lg bg-[#FAF9F6] border border-[#E5E0D5] flex items-center justify-center text-[#BFA13B]">
                           <Icon className="w-4 h-4" />
                         </div>
                       </div>
 
                       {/* EXACT H3 HEADING */}
-                      <h3 className="text-lg font-bold text-[#08182B] leading-snug">
+                      <h3 className="text-lg font-serif font-bold text-[#1C1917] leading-snug">
                         {type.title}
                       </h3>
 
                       {/* VERBATIM COPY */}
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
                         {type.desc}
                       </p>
 
-                      <div className="pt-2 border-t border-slate-100 space-y-1.5">
+                      <div className="pt-2 border-t border-[#E5E0D5] space-y-1.5">
                         {type.highlights.map((h, i) => (
-                          <div key={i} className="flex items-center gap-1.5 text-xs text-slate-700 font-medium">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                          <div key={i} className="flex items-center gap-1.5 text-xs text-stone-700 font-medium">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                             <span>{h}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    <div className="pt-5 mt-4 border-t border-slate-100">
+                    <div className="pt-5 mt-4 border-t border-[#E5E0D5]">
                       <button
                         type="button"
                         onClick={() => {
@@ -1419,7 +1443,7 @@ export default function ThailandClientPage() {
                             formElem.scrollIntoView({ behavior: "smooth", block: "center" });
                           }
                         }}
-                        className="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-[#08182B] hover:bg-amber-950 text-amber-300 hover:text-amber-200 transition-colors shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                        className="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-[#0C0A09] hover:bg-stone-900 text-[#BFA13B] transition-colors shadow-xs flex items-center justify-center gap-2 cursor-pointer border border-[#BFA13B]/30"
                       >
                         <span>Enquire for {type.tag}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -1435,10 +1459,10 @@ export default function ThailandClientPage() {
               <button
                 type="button"
                 onClick={() => setIsCustomModalOpen(true)}
-                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 shadow-2xs inline-flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-[#FAF9F6] text-stone-900 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
                 <span>Slider Option – Show More Custom Thailand Packages</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
               </button>
             </div>
 
@@ -1448,23 +1472,23 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 6: WHY CHOOSE ALTITUDE TRAVEL CO. FOR YOUR THAILAND TRIP? (H2)    */}
         {/* ========================================================================= */}
-        <section id="why-choose-altitude" className="py-10 sm:py-12 lg:py-14 bg-[#F8FBFF] border-b border-slate-200/80">
+        <section id="why-choose-altitude" className="py-12 sm:py-14 lg:py-16 bg-[#0C0A09] text-white border-b border-[#BFA13B]/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#E8D08D]">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>The Altitude Travel Standard</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-white tracking-tight leading-tight">
                 Why Choose Altitude Travel Co. for Your{" "}
-                <span className="text-amber-600">Thailand Trip?</span>
+                <span className="italic font-normal text-[#E8D08D]">Thailand Trip?</span>
               </h2>
 
               {/* VERBATIM PROMPT INTRO */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-300 leading-relaxed font-normal">
                 Altitude Travel Co. helps travellers experience Thailand beyond a standard sightseeing itinerary. We combine popular attractions, beaches, local experiences, nature, activities, and free time to create a balanced Thailand holiday.
               </p>
             </div>
@@ -1474,16 +1498,16 @@ export default function ThailandClientPage() {
               {whyChoosePillars.map((p, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-300 transition-all flex flex-col justify-between"
+                  className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-[#BFA13B]/40 transition-all flex flex-col justify-between"
                 >
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-amber-600">
-                      <CheckCircle2 className="w-4 h-4 shrink-0" />
-                      <h3 className="text-sm sm:text-base font-bold text-[#08182B]">
+                    <div className="flex items-center gap-2 text-[#E8D08D]">
+                      <CheckCircle2 className="w-4 h-4 shrink-0 text-[#BFA13B]" />
+                      <h3 className="text-sm sm:text-base font-serif font-bold text-white">
                         {p.title}
                       </h3>
                     </div>
-                    <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal pl-6">
+                    <p className="text-xs sm:text-[13px] text-stone-300 leading-relaxed font-normal pl-6">
                       {p.desc}
                     </p>
                   </div>
@@ -1497,23 +1521,23 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 7: WHAT OUR TRAVELLERS SAY ABOUT ALTITUDE TRAVEL CO. (H2)        */}
         {/* ========================================================================= */}
-        <section id="what-travellers-say" className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-200/80 relative overflow-hidden">
+        <section id="what-travellers-say" className="py-10 sm:py-12 lg:py-14 bg-[#FBF7EE] border-b border-[#E5E0D5] relative overflow-hidden">
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Star className="w-3.5 h-3.5 fill-[#BFA13B] text-[#BFA13B]" />
                 <span>Verified Client Reviews</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
                 What Our Travellers Say About{" "}
-                <span className="text-amber-600">Altitude Travel Co.</span>
+                <span className="italic font-normal text-[#BFA13B]">Altitude Travel Co.</span>
               </h2>
 
-              <p className="text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-base text-stone-600 leading-relaxed font-normal">
                 Real feedback from Delhi families, couples, and friends who experienced Thailand with guaranteed free time.
               </p>
             </div>
@@ -1523,11 +1547,11 @@ export default function ThailandClientPage() {
               {TESTIMONIALS_DATA.map((t) => (
                 <div
                   key={t.id}
-                  className="bg-[#F8FBFF] rounded-2xl p-6 sm:p-7 border border-slate-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+                  className="bg-white rounded-2xl p-6 sm:p-7 border border-[#E5E0D5] shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
                 >
                   <div className="space-y-4">
                     <div className="flex items-center gap-3.5">
-                      <div className="relative w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-slate-200 shrink-0 shadow-xs">
+                      <div className="relative w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-stone-200 shrink-0 shadow-xs">
                         {t.avatarImage ? (
                           <Image
                             src={t.avatarImage}
@@ -1537,7 +1561,7 @@ export default function ThailandClientPage() {
                             className="object-cover"
                           />
                         ) : (
-                          <div className="w-full h-full flex items-center justify-center bg-amber-100 text-amber-800 font-bold text-xs">
+                          <div className="w-full h-full flex items-center justify-center bg-[#FBF7EE] text-[#BFA13B] font-bold text-xs">
                             {t.avatarPlaceholderText}
                           </div>
                         )}
@@ -1545,33 +1569,33 @@ export default function ThailandClientPage() {
 
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center justify-between gap-2">
-                          <h4 className="text-base font-bold text-[#08182B] truncate">{t.clientName}</h4>
-                          <div className="flex items-center text-amber-400 shrink-0">
+                          <h4 className="text-base font-serif font-bold text-[#1C1917] truncate">{t.clientName}</h4>
+                          <div className="flex items-center text-[#BFA13B] shrink-0">
                             {[...Array(t.rating)].map((_, i) => (
-                              <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
+                              <Star key={i} className="w-3.5 h-3.5 fill-[#BFA13B]" />
                             ))}
                           </div>
                         </div>
-                        <div className="text-xs text-slate-500">{t.location}</div>
-                        <div className="flex items-center gap-1 text-xs font-semibold text-amber-800 mt-0.5">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <div className="text-xs text-stone-500">{t.location}</div>
+                        <div className="flex items-center gap-1 text-xs font-semibold text-stone-800 mt-0.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                           <span className="truncate">{t.tripName}</span>
                         </div>
                       </div>
                     </div>
 
                     <div className="relative pt-1">
-                      <Quote className="w-7 h-7 text-amber-200/50 absolute -top-2 -left-1 pointer-events-none" />
-                      <p className="relative z-10 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal italic">
+                      <Quote className="w-7 h-7 text-[#BFA13B]/20 absolute -top-2 -left-1 pointer-events-none" />
+                      <p className="relative z-10 text-xs sm:text-sm text-stone-700 leading-relaxed font-normal italic">
                         &ldquo;{t.review}&rdquo;
                       </p>
                     </div>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-xs text-slate-400">
+                  <div className="mt-4 pt-3 border-t border-[#E5E0D5] flex items-center justify-between text-xs text-stone-400">
                     <span className="font-medium">{t.date}</span>
-                    <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-emerald-600" /> Verified Booking • Delhi Desk
+                    <span className="text-[11px] font-semibold text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/30 flex items-center gap-1">
+                      <ShieldCheck className="w-3 h-3 text-[#BFA13B]" /> Verified Booking • Delhi Desk
                     </span>
                   </div>
                 </div>
@@ -1584,21 +1608,21 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 8: FAQ’S (H2) - 8 EXACT QUESTIONS & VERBATIM ANSWERS (H3s)         */}
         {/* ========================================================================= */}
-        <section id="thailand-faqs" className="py-10 sm:py-12 lg:py-14 bg-[#EEF4FA] border-b border-sky-200/80">
+        <section id="thailand-faqs" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-sky-100 border border-sky-300 text-sky-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-                <HelpCircle className="w-3.5 h-3.5 text-sky-700" />
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <HelpCircle className="w-3.5 h-3.5 text-[#BFA13B]" />
                 <span>Frequently Asked Questions</span>
               </div>
 
               {/* EXACT H2 */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-                FAQ’S About <span className="text-amber-600">Thailand Tour Packages</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                FAQ’S About <span className="italic font-normal text-[#BFA13B]">Thailand Tour Packages</span>
               </h2>
 
-              <p className="text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+              <p className="text-base text-stone-600 max-w-2xl mx-auto font-normal leading-relaxed">
                 Clear answers for planning and booking your Thailand holiday from India with Altitude Travel Co.
               </p>
             </div>
@@ -1610,7 +1634,7 @@ export default function ThailandClientPage() {
                 return (
                   <div
                     key={idx}
-                    className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-200 hover:border-amber-300"
+                    className="bg-white rounded-2xl border border-[#E5E0D5] shadow-xs overflow-hidden transition-all duration-200 hover:border-[#BFA13B]/50"
                   >
                     <button
                       type="button"
@@ -1619,13 +1643,13 @@ export default function ThailandClientPage() {
                       aria-expanded={isOpen}
                     >
                       {/* EXACT H3 HEADING */}
-                      <h3 className="text-base sm:text-[17px] font-bold text-[#08182B] hover:text-amber-700 transition-colors leading-snug">
+                      <h3 className="text-base sm:text-[17px] font-serif font-bold text-[#1C1917] hover:text-[#BFA13B] transition-colors leading-snug">
                         {faq.q}
                       </h3>
 
                       <div
                         className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                          isOpen ? "bg-amber-400 text-slate-950 rotate-180" : "bg-slate-100 text-slate-600"
+                          isOpen ? "bg-[#BFA13B] text-stone-950 rotate-180" : "bg-stone-100 text-stone-600"
                         }`}
                       >
                         <ChevronDown className="w-4 h-4" />
@@ -1633,7 +1657,7 @@ export default function ThailandClientPage() {
                     </button>
 
                     {isOpen && (
-                      <div className="px-5 sm:px-6 pb-5 pt-1 text-slate-600 text-sm sm:text-[15px] leading-relaxed border-t border-slate-100 font-normal">
+                      <div className="px-5 sm:px-6 pb-5 pt-1 text-stone-600 text-sm sm:text-[15px] leading-relaxed border-t border-[#E5E0D5] font-normal">
                         <p>{faq.a}</p>
                       </div>
                     )}
@@ -1648,34 +1672,34 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 9: PLAN YOUR THAILAND TOUR WITH ALTITUDE TRAVEL CO. (CTA)         */}
         {/* ========================================================================= */}
-        <section id="plan-thailand-tour-cta" className="py-10 sm:py-12 lg:py-14 bg-gradient-to-b from-[#FFF9EE] to-white">
+        <section id="plan-thailand-tour-cta" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             
-            <div className="inline-flex items-center gap-2 bg-amber-100 border border-amber-300 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+            <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+              <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
               <span>Dedicated Thailand Travel Planning</span>
             </div>
 
             {/* EXACT SECTION TITLE */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#08182B] tracking-tight leading-tight">
-              Plan Your Thailand Tour with <span className="text-amber-600">Altitude Travel Co.</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+              Plan Your Thailand Tour with <span className="italic font-normal text-[#BFA13B]">Altitude Travel Co.</span>
             </h2>
 
             {/* VERBATIM COPY FROM PROMPT */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal max-w-2xl mx-auto">
               Start planning your Thailand holiday with Altitude Travel Co. Whether you are looking for a family vacation, honeymoon, beach holiday, adventure trip, or customised Thailand tour, we can help create an itinerary based on your travel preferences. Explore Thailand your way with comfortable stays, planned sightseeing, exciting experiences, and dedicated travel support.
             </p>
 
             {/* Concierge Action Box */}
-            <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-tr from-[#08182B] via-[#162938] to-[#08182B] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-[#0C0A09] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left border border-[#BFA13B]/30">
               <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#E8D08D]">
                   Connaught Place, Delhi Planning Desk
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
                   Get a Free Custom Thailand Quote
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300">
+                <p className="text-xs sm:text-sm text-stone-300">
                   Custom dates, hotel categories, Indian food recommendations &amp; private fleet transfers.
                 </p>
               </div>
@@ -1684,7 +1708,7 @@ export default function ThailandClientPage() {
                 <button
                   type="button"
                   onClick={() => setIsCustomModalOpen(true)}
-                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 flex items-center gap-2 transition-all shadow-md cursor-pointer"
+                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 flex items-center gap-2 transition-all shadow-md cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Plan Your Thailand Trip / Get a Quote</span>
@@ -1694,7 +1718,7 @@ export default function ThailandClientPage() {
                   href="tel:+919810024680"
                   className="px-4 py-3 rounded-xl text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 flex items-center gap-2 transition-colors cursor-pointer"
                 >
-                  <PhoneCall className="w-4 h-4 text-amber-400" />
+                  <PhoneCall className="w-4 h-4 text-[#BFA13B]" />
                   <span>Call +91 98100 24680</span>
                 </a>
 
@@ -1702,7 +1726,7 @@ export default function ThailandClientPage() {
                   href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Thailand%20tour%20package."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-500 hover:bg-emerald-600 text-white flex items-center gap-2 transition-all shadow-md cursor-pointer"
+                  className="px-4 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 hover:bg-emerald-700 text-white flex items-center gap-2 transition-all shadow-md cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>WhatsApp Concierge</span>
