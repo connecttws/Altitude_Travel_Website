@@ -17,7 +17,16 @@ import {
   CheckCircle2,
   Bus,
   Palmtree,
+  Phone,
 } from "lucide-react";
+
+function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.48-8.413Z" />
+    </svg>
+  );
+}
 
 interface PackageModalProps {
   pkg: TourPackage | null;
@@ -26,40 +35,7 @@ interface PackageModalProps {
 }
 
 export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps) {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    travelMonth: "Upcoming Month",
-    guests: "2 Adults (Couple)",
-    notes: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
   if (!isOpen || !pkg) return null;
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      await fetch("/api/inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          destination: pkg.title,
-          tripType: `${pkg.category.toUpperCase()} Package Inquiry`,
-        }),
-      });
-      setSubmitted(true);
-    } catch (err) {
-      console.error(err);
-      setSubmitted(true);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-[#0C0A09]/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-200">
@@ -217,117 +193,60 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
               </p>
             </div>
 
-            {/* Inquiry Form */}
-            <div className="bg-white border border-[#E5E0D5] rounded-[24px] p-5 sm:p-6 shadow-sm space-y-3">
-              <div className="text-center">
-                <h4 className="text-base font-serif font-bold text-stone-900">
+            {/* 100% Form-Free WhatsApp & Direct Call Booking Hub */}
+            <div className="bg-white border border-[#E5E0D5] rounded-[24px] p-5 sm:p-6 shadow-sm space-y-4">
+              <div className="text-center space-y-1">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10.5px] font-bold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span>Delhi Desk Online • Instant WhatsApp Reply</span>
+                </div>
+                <h4 className="text-lg font-bold text-stone-900 tracking-tight">
                   Inquire for This Package
                 </h4>
-                <p className="text-xs text-stone-500 font-medium">
-                  Get a personalized quote &amp; free day itinerary from our Delhi team.
+                <p className="text-xs text-stone-600 font-normal">
+                  Connect with our Connaught Place travel planners. Get the customized day-by-day plan, hotel upgrades &amp; best quotes directly on WhatsApp.
                 </p>
               </div>
 
-              {submitted ? (
-                <div className="py-8 text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center mx-auto border border-[#BFA13B]/40">
-                    <CheckCircle2 className="w-7 h-7" />
-                  </div>
-                  <h5 className="text-sm font-serif font-bold text-stone-900">Inquiry Received</h5>
-                  <p className="text-xs text-stone-600">
-                    We will call or WhatsApp you with exact options within 2 hours.
-                  </p>
+              {/* Package Snapshot Pill */}
+              <div className="bg-[#FAF9F6] p-3 rounded-xl border border-[#E5E0D5] flex items-center justify-between text-xs">
+                <div>
+                  <span className="font-bold text-stone-900 block truncate max-w-[200px]">{pkg.title}</span>
+                  <span className="text-stone-500 text-[11px]">{pkg.duration} • 1 Free Day Guaranteed</span>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <div>
-                    <label className="block text-[11px] font-bold uppercase tracking-wider text-stone-700 mb-1">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      placeholder="Your name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                    />
-                  </div>
+                <div className="text-right">
+                  <span className="text-[10px] uppercase text-stone-400 block font-semibold">Starting</span>
+                  <span className="font-extrabold text-[#9E7418] text-sm">{pkg.priceStarting}</span>
+                </div>
+              </div>
 
-                  <div>
-                    <label className="block text-[11px] font-bold uppercase tracking-wider text-stone-700 mb-1">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      placeholder="+91 98XXX XXXXX"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3.5 py-2.5 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                    />
-                  </div>
+              {/* Direct Booking Actions */}
+              <div className="space-y-2 pt-1">
+                <a
+                  href={`https://wa.me/919810024680?text=${encodeURIComponent(
+                    `Hi Altitude Travel! I want to inquire about the "${pkg.title}" package (${pkg.duration}, starting at ${pkg.priceStarting}). Please share the day-by-day itinerary and best price options!`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 px-4 rounded-xl font-bold text-xs sm:text-sm bg-[#25D366] hover:bg-[#20bd5a] active:scale-[0.99] text-white flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(37,211,102,0.3)] transition-all border border-[#25D366]/40 cursor-pointer"
+                >
+                  <WhatsAppIcon className="w-4.5 h-4.5 fill-white shrink-0" />
+                  <span>Chat on WhatsApp for This Package</span>
+                </a>
 
-                  <div>
-                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 mb-1">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="name@email.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-medium text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                    />
-                  </div>
+                <a
+                  href="tel:+919810024680"
+                  className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs bg-white hover:bg-stone-50 text-stone-900 border border-[#E5E0D5] flex items-center justify-center gap-2 shadow-2xs transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  <span>Call Delhi Desk: +91 98100 24680</span>
+                </a>
+              </div>
 
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 mb-1">
-                        Travel Month
-                      </label>
-                      <input
-                        type="text"
-                        name="travelDate"
-                        placeholder="e.g. May 2026"
-                        value={formData.travelMonth}
-                        onChange={(e) => setFormData({ ...formData, travelMonth: e.target.value })}
-                        className="w-full px-3 py-2 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-medium text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[11px] font-semibold uppercase tracking-wider text-stone-700 mb-1">
-                        Guests
-                      </label>
-                      <input
-                        type="text"
-                        name="guests"
-                        placeholder="2 Adults"
-                        value={formData.guests}
-                        onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                        className="w-full px-3 py-2 bg-[#FAF9F6] border border-[#E5E0D5] rounded-xl text-xs font-medium text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                      />
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-3 px-4 rounded-xl font-serif font-bold text-xs uppercase tracking-wider bg-[#0C0A09] hover:bg-stone-900 text-[#E8D08D] shadow-xs hover:shadow transition-all flex items-center justify-center gap-1.5 border border-[#BFA13B]/40 cursor-pointer active:scale-98"
-                  >
-                    <Send className="w-3.5 h-3.5 text-[#BFA13B]" />
-                    <span>Inquiry Now for This Package</span>
-                  </button>
-                </form>
-              )}
-            </div>
-
-            <div className="text-center text-xs text-stone-500 flex items-center justify-center gap-1 font-medium">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#BFA13B]" />
-              <span>Transparent Pricing • No Obligation Quote</span>
+              <div className="text-center text-[11px] text-stone-500 flex items-center justify-center gap-1.5 pt-1 border-t border-stone-100 font-medium">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Direct WhatsApp Desk • 100% Transparent • Zero Hidden Costs</span>
+              </div>
             </div>
 
           </div>

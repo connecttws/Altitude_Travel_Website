@@ -5,15 +5,21 @@ import {
   X,
   Compass,
   Sliders,
-  Send,
   Calendar,
   Users,
-  CheckCircle2,
   ShieldCheck,
   Sparkles,
-  Bus,
-  Palmtree,
+  Phone,
+  CheckCircle2,
 } from "lucide-react";
+
+function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.48-8.413Z" />
+    </svg>
+  );
+}
 
 interface CustomTripModalProps {
   isOpen: boolean;
@@ -21,243 +27,187 @@ interface CustomTripModalProps {
 }
 
 export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProps) {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    destination: "",
-    duration: "5 to 7 Days",
-    tripType: "Family Holiday",
-    hotelTier: "4-Star Boutique",
-    budget: "₹50,000 - ₹1,00,000",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [destination, setDestination] = useState("Kashmir & Ladakh");
+  const [duration, setDuration] = useState("5 to 7 Days (Popular)");
+  const [tripType, setTripType] = useState("Family Holiday");
+  const [hotelTier, setHotelTier] = useState("4-Star Boutique (Recommended)");
 
   if (!isOpen) return null;
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      await fetch("/api/inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          tripType: `Custom Trip: ${formData.tripType} (${formData.hotelTier})`,
-        }),
-      });
-      setSubmitted(true);
-    } catch (err) {
-      console.error(err);
-      setSubmitted(true);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const quickDests = [
+    "Kashmir & Ladakh",
+    "Dubai & Abu Dhabi",
+    "Switzerland Alps",
+    "Goa Beaches",
+    "Thailand & Phuket",
+    "Bali Private Villas",
+    "Vietnam Halong",
+    "Rajasthan Havelis",
+  ];
+
+  const whatsappMessage = `Hi Altitude Travel! I want to plan a custom trip to ${destination} for ${duration} (${tripType}, ${hotelTier}). Please share customized itinerary options and pricing from your Delhi desk!`;
+  const whatsappUrl = `https://wa.me/919810024680?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-[#0C0A09]/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-200">
-      <div className="relative bg-[#FAF9F6] rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-[#E5E0D5]">
+      <div className="relative bg-[#FAF9F6] rounded-2xl max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-[#E5E0D5] p-5 sm:p-7">
         
         {/* Close Button */}
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-stone-200/60 hover:bg-stone-200 text-stone-700 flex items-center justify-center transition-colors cursor-pointer"
-          aria-label="Close dialog"
+          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-600 flex items-center justify-center transition-colors cursor-pointer"
+          aria-label="Close modal"
         >
-          <X className="w-4.5 h-4.5" />
+          <X className="w-5 h-5" />
         </button>
 
         {/* Modal Header */}
-        <div className="text-center space-y-2 mb-6">
-          <div className="inline-flex items-center gap-2 bg-[#FBF7EE] text-stone-900 border border-[#BFA13B]/40 px-3.5 py-1 rounded-full text-xs font-semibold shadow-2xs">
-            <Sliders className="w-3.5 h-3.5 text-[#BFA13B]" />
-            <span>Tailor-Made Tour Planner • Delhi Desk</span>
+        <div className="text-center space-y-2 mb-5">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF9F6] border border-[#BFA13B]/30 text-[#A67C1E] text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
+            <span>Instant WhatsApp Custom Planner</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1C1917] tracking-tight">
-            Build Your Custom Tour Package
+
+          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">
+            Design Your Bespoke Itinerary
           </h2>
-          <p className="text-xs sm:text-sm text-stone-600 max-w-lg mx-auto font-normal leading-relaxed">
-            Share your destination, dates, budget and interests. Altitude Travel Co. will design an itinerary tailored precisely to you, including our signature free day.
+
+          <p className="text-xs sm:text-sm text-stone-600 max-w-md mx-auto font-normal leading-relaxed">
+            Select your preferences below to connect directly with our Connaught Place travel planners on WhatsApp with handcrafted itineraries and zero waiting time.
           </p>
         </div>
 
-        {submitted ? (
-          <div className="py-12 text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-[#FBF7EE] text-[#BFA13B] flex items-center justify-center mx-auto border border-[#BFA13B]/40">
-              <CheckCircle2 className="w-10 h-10" />
-            </div>
-            <h3 className="text-xl font-serif font-bold text-stone-900">Custom Request Received!</h3>
-            <p className="text-sm text-stone-600 max-w-md mx-auto">
-              Thank you! Our custom itinerary specialist in Delhi is reviewing your requirements and will reach out with a handcrafted day-by-day plan and transparent quote.
-            </p>
-            <button
-              type="button"
-              onClick={onClose}
-              className="mt-4 px-6 py-3 text-xs font-serif font-bold bg-[#0C0A09] text-[#E8D08D] border border-[#BFA13B]/40 rounded-xl shadow-md cursor-pointer"
-            >
-              Done
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
+        {/* 100% Form-Free Interactive Customizer */}
+        <div className="space-y-4">
+          
+          {/* Destination Selector */}
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">
+              1. Choose or Enter Destination
+            </label>
+            <input
+              type="text"
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
+              placeholder="e.g. Kashmir, Dubai, Switzerland, Maldives"
+              className="w-full px-3.5 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-xs sm:text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
+            />
             
-            {/* Destination & Duration */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
-                  Target Destination(s)
-                </label>
-                <input
-                  type="text"
-                  name="destination"
-                  required
-                  placeholder="e.g. Kashmir + Ladakh or Switzerland + Paris"
-                  value={formData.destination}
-                  onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                  className="w-full px-4 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
-                  Trip Duration
-                </label>
-                <select
-                  value={formData.duration}
-                  onChange={(e) => setFormData({ ...formData, duration: e.target.value })}
-                  className="w-full px-4 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
+            {/* Quick chips */}
+            <div className="flex flex-wrap gap-1.5 mt-2">
+              {quickDests.map((q) => (
+                <button
+                  key={q}
+                  type="button"
+                  onClick={() => setDestination(q)}
+                  className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
+                    destination === q
+                      ? "bg-[#0C0A09] text-[#BFA13B] border-[#BFA13B]"
+                      : "bg-white text-stone-700 border-[#E5E0D5] hover:bg-[#FAF9F6]"
+                  }`}
                 >
-                  <option value="3 to 4 Days (Quick Getaway)">3 to 4 Days (Quick Getaway)</option>
-                  <option value="5 to 7 Days (Popular)">5 to 7 Days (Popular)</option>
-                  <option value="8 to 10 Days (Comprehensive)">8 to 10 Days (Comprehensive)</option>
-                  <option value="12+ Days (Grand Tour)">12+ Days (Grand Tour)</option>
-                </select>
-              </div>
+                  {q}
+                </button>
+              ))}
             </div>
+          </div>
 
-            {/* Travel Style & Hotel Preference */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
-                  Travel Occasion / Group
-                </label>
-                <select
-                  value={formData.tripType}
-                  onChange={(e) => setFormData({ ...formData, tripType: e.target.value })}
-                  className="w-full px-4 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
-                >
-                  <option value="Honeymoon / Couple">Honeymoon / Couple</option>
-                  <option value="Family Holiday">Family Holiday</option>
-                  <option value="Friends Getaway">Friends Getaway</option>
-                  <option value="Senior Citizens Trip">Senior Citizens Trip</option>
-                  <option value="Solo Explorer">Solo Explorer</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
-                  Preferred Hotel Tier
-                </label>
-                <select
-                  value={formData.hotelTier}
-                  onChange={(e) => setFormData({ ...formData, hotelTier: e.target.value })}
-                  className="w-full px-4 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
-                >
-                  <option value="3-Star Premium & Cozy">3-Star Premium &amp; Cozy</option>
-                  <option value="4-Star Boutique (Recommended)">4-Star Boutique (Recommended)</option>
-                  <option value="5-Star Luxury & Palaces">5-Star Luxury &amp; Palaces</option>
-                  <option value="Heritage Havelis / Houseboats">Heritage Havelis / Unique Stays</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Personal Details */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="Full name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
-                  Phone / WhatsApp
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  required
-                  placeholder="+91 98XXX XXXXX"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-                />
-              </div>
-            </div>
-
-            {/* Additional details */}
+          {/* Duration & Occasion */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
-                Specific Interests or Sightseeing Wishes
+                2. Trip Duration
               </label>
-              <textarea
-                rows={2}
-                name="message"
-                placeholder="e.g. Include vegetarian meals, offbeat market visits, or relaxed morning departures..."
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-3.5 py-2 bg-white border border-[#E5E0D5] rounded-xl text-xs sm:text-sm font-normal text-stone-900 focus:outline-none focus:border-[#BFA13B] resize-none"
-              />
-            </div>
-
-            {/* Submit CTA */}
-            <div className="pt-1">
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-3.5 px-6 rounded-xl font-serif font-bold text-xs uppercase tracking-wider bg-[#0C0A09] hover:bg-stone-900 text-[#E8D08D] shadow-xs hover:shadow transition-all flex items-center justify-center gap-2 border border-[#BFA13B]/40 cursor-pointer active:scale-98"
+              <select
+                value={duration}
+                onChange={(e) => setDuration(e.target.value)}
+                className="w-full px-3 py-2 bg-white border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
               >
-                <Send className="w-4 h-4 text-[#BFA13B]" />
-                <span>Inquiry Now for Custom Package</span>
-              </button>
+                <option value="3 to 4 Days (Quick Getaway)">3 to 4 Days (Quick Getaway)</option>
+                <option value="5 to 7 Days (Popular)">5 to 7 Days (Popular)</option>
+                <option value="8 to 10 Days (Comprehensive)">8 to 10 Days (Comprehensive)</option>
+                <option value="12+ Days (Grand Tour)">12+ Days (Grand Tour)</option>
+              </select>
             </div>
 
-            <div className="text-center text-xs text-stone-500 flex items-center justify-center gap-1 font-medium">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#BFA13B]" />
-              <span>No extra planning charge • Free itinerary revision</span>
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
+                3. Travel Group
+              </label>
+              <select
+                value={tripType}
+                onChange={(e) => setTripType(e.target.value)}
+                className="w-full px-3 py-2 bg-white border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
+              >
+                <option value="Couple / Honeymoon">Couple / Honeymoon</option>
+                <option value="Family Holiday">Family Holiday</option>
+                <option value="Friends Getaway">Friends Getaway</option>
+                <option value="Senior Citizens Trip">Senior Citizens Trip</option>
+                <option value="Solo Explorer">Solo Explorer</option>
+              </select>
             </div>
+          </div>
 
-          </form>
-        )}
+          {/* Hotel Tier */}
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
+              4. Preferred Stay Category
+            </label>
+            <select
+              value={hotelTier}
+              onChange={(e) => setHotelTier(e.target.value)}
+              className="w-full px-3 py-2 bg-white border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
+            >
+              <option value="3-Star Premium & Cozy">3-Star Premium &amp; Cozy</option>
+              <option value="4-Star Boutique (Recommended)">4-Star Boutique (Recommended)</option>
+              <option value="5-Star Luxury & Palaces">5-Star Luxury &amp; Palaces</option>
+              <option value="Heritage Havelis / Houseboats">Heritage Havelis / Unique Stays</option>
+            </select>
+          </div>
+
+          {/* WhatsApp Message Preview Pill */}
+          <div className="bg-[#FAF9F6] p-3 rounded-xl border border-[#E5E0D5] text-xs text-stone-600 flex items-start gap-2">
+            <span className="text-emerald-600 font-bold shrink-0">💬 Pre-filled Message:</span>
+            <span className="italic text-stone-700">
+              &quot;Hi Altitude Travel! I want to plan a custom trip to {destination} for {duration} ({tripType}, {hotelTier})...&quot;
+            </span>
+          </div>
+
+          {/* Direct WhatsApp & Call Action Buttons */}
+          <div className="space-y-2 pt-1">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3.5 px-5 rounded-xl font-bold text-sm bg-[#25D366] hover:bg-[#20bd5a] active:scale-[0.99] text-white flex items-center justify-center gap-2.5 shadow-[0_8px_25px_rgba(37,211,102,0.35)] transition-all border border-[#25D366]/40 cursor-pointer"
+            >
+              <WhatsAppIcon className="w-5 h-5 fill-white shrink-0" />
+              <span>Chat on WhatsApp — Send Custom Request</span>
+            </a>
+
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href="tel:+919810024680"
+                className="py-2.5 px-3 rounded-xl font-semibold text-xs bg-white text-stone-900 border border-[#E5E0D5] flex items-center justify-center gap-1.5 shadow-2xs hover:bg-[#FAF9F6]"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+                <span className="truncate">Call: +91 98100 24680</span>
+              </a>
+
+              <div className="py-2.5 px-3 rounded-xl text-[11px] font-semibold bg-[#FAF9F6] text-stone-800 border border-[#E5E0D5] flex items-center justify-center gap-1.5 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                <span className="truncate">Desk Online • Instant Reply</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center text-[11px] text-stone-500 flex items-center justify-center gap-1.5 pt-1 border-t border-stone-200 font-medium">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+            <span>100% Free Custom Planning • 1 Guaranteed Free Day • 0 Hidden Costs</span>
+          </div>
+
+        </div>
 
       </div>
     </div>

@@ -27,14 +27,8 @@ export default function HomePage() {
   };
 
   const handleInquirePackage = (pkg: TourPackage) => {
-    // Scrolls to the Hero Inquiry Form and pre-selects the package or opens modal
     setSelectedPackage(pkg);
-    const heroForm = document.getElementById("hero-inquiry-form");
-    if (heroForm) {
-      heroForm.scrollIntoView({ behavior: "smooth", block: "center" });
-    } else {
-      setIsPackageModalOpen(true);
-    }
+    setIsPackageModalOpen(true);
   };
 
   return (
@@ -44,9 +38,15 @@ export default function HomePage() {
       <Navbar
         onOpenCustomModal={() => setIsCustomModalOpen(true)}
         onOpenInquiryModal={() => {
-          const heroForm = document.getElementById("hero-inquiry-form");
-          if (heroForm) {
-            heroForm.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (typeof window !== "undefined" && window.innerWidth < 1024) {
+            setIsCustomModalOpen(true);
+          } else {
+            const heroForm = document.getElementById("hero-inquiry-form");
+            if (heroForm) {
+              heroForm.scrollIntoView({ behavior: "smooth", block: "center" });
+            } else {
+              setIsCustomModalOpen(true);
+            }
           }
         }}
       />
