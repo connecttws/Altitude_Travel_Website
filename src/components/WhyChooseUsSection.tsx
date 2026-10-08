@@ -117,7 +117,7 @@ export default function WhyChooseUsSection() {
         {/* Horizontal Photo Carousel / Slider */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto pb-3 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory"
+          className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0"
         >
           {pillars.map((pillar, idx) => {
             const IconComponent = pillar.icon;
@@ -126,7 +126,7 @@ export default function WhyChooseUsSection() {
             return (
               <div
                 key={idx}
-                className="w-[300px] sm:w-[340px] lg:w-[360px] shrink-0 snap-start"
+                className="w-[76vw] max-w-[290px] min-w-[255px] sm:w-[340px] lg:w-[360px] shrink-0 snap-start"
               >
                 <div
                   className={`rounded-2xl overflow-hidden h-full flex flex-col justify-between transition-all duration-300 group border ${

@@ -120,12 +120,12 @@ export default function TopDestinationsSection({
         {/* Horizontal Slider / Carousel with Curved Cards */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto pb-3 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory"
+          className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0"
         >
           {displayedPackages.map((pkg) => (
             <div
               key={pkg.id}
-              className="w-[310px] sm:w-[350px] lg:w-[380px] shrink-0 snap-start"
+              className="w-[76vw] max-w-[290px] min-w-[255px] sm:w-[340px] lg:w-[380px] shrink-0 snap-start"
             >
               <PackageCard
                 pkg={pkg}
