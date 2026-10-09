@@ -444,7 +444,7 @@ export const TESTIMONIALS_DATA = [
     avatarPlaceholderText: "VM",
     avatarImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
     review:
-      "Altitude Travel delivered exactly what they promised: no tourist rush, authentic local Kashmiri Wazwan in Srinagar, and a genuinely relaxing free day where we shopped at our own pace. The private driver was punctual, respectful, and knew every scenic viewpoint. Best tour agency in Delhi!",
+      "Delivered exactly what was promised: zero tourist rush, authentic Kashmiri Wazwan, and a relaxing free day. Punctual private driver and flawless arrangements throughout!",
   },
   {
     id: "review-2",
@@ -456,7 +456,7 @@ export const TESTIMONIALS_DATA = [
     avatarPlaceholderText: "RS",
     avatarImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
     review:
-      "We booked a family trip with my elderly parents and kids. Altitude Travel Co. handled the visa, airport transfers, and desert safari with exceptional care. What we appreciated most was the transparent pricing—no hidden charges appeared anywhere. Having a free day in Dubai gave our family time to breathe and shop comfortably.",
+      "Handled our family vacation with elderly parents and kids seamlessly. Transparent pricing with zero hidden fees, prompt visa turnaround, and a dedicated free day in Dubai.",
   },
   {
     id: "review-3",
@@ -468,7 +468,7 @@ export const TESTIMONIALS_DATA = [
     avatarPlaceholderText: "RP",
     avatarImage: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80",
     review:
-      "Our honeymoon to Switzerland was sheer perfection! The Swiss Travel Pass was seamlessly organized, hotels were steps from the train stations, and their hidden gem recommendation for the Lauterbrunnen waterfalls made our trip unforgettable. Altitude Travel is truly head and shoulders above standard agencies.",
+      "Our Switzerland honeymoon was sheer perfection! Seamless Swiss Travel Pass, hotels steps from train stations, and top-tier local recommendations in Lauterbrunnen.",
   },
   {
     id: "review-4",
@@ -480,7 +480,31 @@ export const TESTIMONIALS_DATA = [
     avatarPlaceholderText: "AM",
     avatarImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
     review:
-      "We wanted an offbeat trip with our college friends without the usual crowded tourist spots. Altitude Travel curated a private SUV trip through Solang, Old Manali cafés, and Kasol. The itinerary felt personal, flexible, and completely stress-free. Highly recommended!",
+      "Curated an incredible offbeat Himachal trip for our group. Private SUV, quaint Old Manali cafés, and scenic trails away from crowd traps. Flexible and completely stress-free!",
+  },
+  {
+    id: "review-5",
+    clientName: "Siddharth & Meera Kapoor",
+    location: "Defence Colony, New Delhi",
+    tripName: "Bali 6-Day Tropical Haven Tour",
+    rating: 5,
+    date: "Travelled April 2026",
+    avatarPlaceholderText: "SK",
+    avatarImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+    review:
+      "Our private pool villa in Seminyak and Ubud tours were planned to perfection. Having a guaranteed free day for beach clubs without rush made it our best holiday yet!",
+  },
+  {
+    id: "review-6",
+    clientName: "Tanvi & Kunal Singhal",
+    location: "Punjabi Bagh, New Delhi",
+    tripName: "Vietnam 6-Day Golden Bridge Tour",
+    rating: 5,
+    date: "Travelled March 2026",
+    avatarPlaceholderText: "TS",
+    avatarImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
+    review:
+      "The luxury Halong Bay cruise and Ba Na Hills day trip were unforgettable! Hassle-free e-visa guidance and responsive 24/7 support from their Delhi team.",
   },
 ];
 

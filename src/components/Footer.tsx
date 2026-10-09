@@ -17,22 +17,13 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
-  const keywords = [
-    "Tour and Travel Agency in Delhi",
-    "best tour and travel agency in delhi",
-    "international tour and travel agency",
-    "international tour packages",
-    "best tour operator in India",
-    "custom tour packages",
-    "indian tour packages",
-  ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer id="contact-footer" className="bg-[#0A0A0A] text-stone-300 pt-10 pb-8 sm:pt-12 sm:pb-10 border-t border-[#BFA13B]/20 relative overflow-hidden">
+    <footer id="contact-footer" className="bg-[#0A0A0A] text-stone-300 pt-10 pb-8 sm:pt-12 sm:pb-10 relative overflow-hidden">
       
       {/* Background Soft Glow */}
       <div className="absolute top-0 right-1/4 w-[600px] h-[300px] bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-0" />
@@ -236,22 +227,6 @@ export default function Footer() {
 
         </div>
 
-        {/* SEO Keywords Tag Cloud */}
-        <div className="py-6 border-b border-white/10">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-stone-400 mr-2">
-              Popular Searches:
-            </span>
-            {keywords.map((kw, i) => (
-              <span
-                key={i}
-                className="text-[11px] bg-stone-900 border border-white/10 text-stone-300 px-3 py-1 rounded-xl font-medium"
-              >
-                {kw}
-              </span>
-            ))}
-          </div>
-        </div>
 
         {/* Copyright & Signoff */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">

@@ -14,6 +14,7 @@ import FaqSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
 import PackageModal from "@/components/PackageModal";
 import CustomTripModal from "@/components/CustomTripModal";
+import SectionDivider from "@/components/SectionDivider";
 import { TourPackage } from "@/data/packages";
 
 export default function HomePage() {
@@ -51,11 +52,14 @@ export default function HomePage() {
         }}
       />
 
-      {/* Main Content Sections */}
+      {/* Main Content Sections with Bespoke Luxury Dividers */}
       <main className="flex-1">
         
-        {/* 1. Hero Section + Yellow Marked Inquiry Form */}
+        {/* 1. Hero Section + Action Buttons */}
         <HeroSection />
+
+        {/* Bespoke Royal Compass Divider */}
+        <SectionDivider variant="emblem" />
 
         {/* 2. Destinations & Packages: Top Destinations and Tour Packages Slider */}
         <TopDestinationsSection
@@ -63,11 +67,17 @@ export default function HomePage() {
           onInquirePackage={handleInquirePackage}
         />
 
+        {/* Editorial 3-Diamonds Divider */}
+        <SectionDivider variant="diamonds" />
+
         {/* 3. Best Indian Tour Packages Slider */}
         <IndianPackagesSection
           onSelectPackage={handleOpenPackageDetails}
           onInquirePackage={handleInquirePackage}
         />
+
+        {/* Ambient Glow Hairline */}
+        <SectionDivider variant="glow" />
 
         {/* 4. Best International Tour Packages Slider */}
         <InternationalPackagesSection
@@ -75,22 +85,40 @@ export default function HomePage() {
           onInquirePackage={handleInquirePackage}
         />
 
-        {/* 5. Why Choose Us: 7 Core Pillars */}
+        {/* Smooth Transition into Dark Section */}
+        <SectionDivider variant="glow" />
+
+        {/* 5. Why Choose Us: 7 Core Pillars (Dark Mode) */}
         <WhyChooseUsSection />
+
+        {/* Smooth Transition out of Dark Section */}
+        <SectionDivider variant="glow" />
 
         {/* 6. Testimonials: Client Photo Space & Authentic Reviews */}
         <TestimonialsSection />
 
-        {/* 7. Authority Editorial: Best Tour and Travel Agency in Delhi (4 Verbatim Paragraphs) */}
+        {/* Bespoke Royal Compass Divider */}
+        <SectionDivider variant="emblem" />
+
+        {/* 7. Authority Editorial: Best Tour and Travel Agency in Delhi */}
         <AboutAgencySection />
+
+        {/* Editorial 3-Diamonds Divider */}
+        <SectionDivider variant="diamonds" />
 
         {/* 8. Services We Offer: 5 Feature Cards */}
         <ServicesSection
           onOpenCustomModal={() => setIsCustomModalOpen(true)}
         />
 
+        {/* Bespoke Royal Compass Divider */}
+        <SectionDivider variant="emblem" />
+
         {/* 9. FAQs: 7 Exact Questions (H3) with Answers */}
         <FaqSection />
+
+        {/* Ambient Glow Transition into Dark Footer */}
+        <SectionDivider variant="glow" />
 
       </main>
 

@@ -93,7 +93,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
   const ActiveIcon = activeService.icon;
 
   return (
-    <section id="services" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5] relative overflow-hidden">
+    <section id="services" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] relative overflow-hidden">
       
       {/* Background Soft Glow */}
       <div className="absolute top-1/2 right-10 w-96 h-96 bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -102,14 +102,14 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#BFA13B] whitespace-nowrap">
-            <Sparkles className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+          <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#7A5200] whitespace-nowrap">
+            <Sparkles className="w-3.5 h-3.5 text-[#7A5200] shrink-0" />
             <span>Comprehensive Travel Solutions</span>
           </div>
 
           {/* Clean Modern Website Style Heading */}
           <h2 className="text-2xl sm:text-4xl lg:text-[38px] font-bold text-stone-950 tracking-tight leading-tight">
-            Services We Offer — <span className="text-[#A67C1E]">Crafted for Every Journey</span>
+            Services We Offer — <span className="text-[#7A5200] drop-shadow-xs">Crafted for Every Journey</span>
           </h2>
 
           <p className="text-[15px] sm:text-base text-stone-800 leading-relaxed font-normal">
@@ -163,7 +163,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
 
                   <ArrowRight
                     className={`w-4 h-4 transition-transform ${
-                      isSelected ? "text-[#A67C1E] translate-x-1" : "text-stone-400 opacity-60"
+                      isSelected ? "text-[#7A5200] translate-x-1" : "text-stone-400 opacity-60"
                     }`}
                   />
                 </button>
@@ -199,7 +199,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
             <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between space-y-4">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-7 h-7 rounded-lg bg-[#FAF9F6] text-[#A67C1E] flex items-center justify-center border border-[#E5E0D5]">
+                  <div className="w-7 h-7 rounded-lg bg-[#FAF9F6] text-[#7A5200] flex items-center justify-center border border-[#E5E0D5]">
                     <ActiveIcon className="w-3.5 h-3.5" />
                   </div>
                   <h3 className="text-lg font-bold text-stone-950 tracking-tight">
@@ -285,7 +285,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
                   <div className="p-4 flex flex-col flex-grow justify-between space-y-3">
                     <div>
                       <div className="flex items-center gap-2 mb-1.5">
-                        <Icon className="w-4 h-4 text-[#A67C1E] shrink-0" />
+                        <Icon className="w-4 h-4 text-[#7A5200] shrink-0" />
                         <h3 className="text-sm font-bold text-stone-950 leading-tight">
                           {srv.title}
                         </h3>

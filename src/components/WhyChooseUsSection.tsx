@@ -88,7 +88,7 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section id="why-choose-us" className="py-10 sm:py-12 lg:py-14 bg-[#0C0A09] text-white relative overflow-hidden border-b border-[#BFA13B]/20">
+    <section id="why-choose-us" className="py-10 sm:py-12 lg:py-14 bg-[#0C0A09] text-white relative overflow-hidden">
       
       {/* Decorative Atmosphere Glows */}
       <div className="absolute top-1/4 -right-20 w-[500px] h-[500px] bg-[#BFA13B]/8 rounded-full blur-3xl pointer-events-none -z-0" />

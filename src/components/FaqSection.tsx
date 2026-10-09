@@ -42,7 +42,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faqs" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-y border-[#E5E0D5] relative overflow-hidden">
+    <section id="faqs" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] relative overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -51,14 +51,14 @@ export default function FaqSection() {
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
-          <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
-            <HelpCircle className="w-3.5 h-3.5 text-[#BFA13B]" />
+          <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] uppercase text-[#7A5200]">
+            <HelpCircle className="w-3.5 h-3.5 text-[#7A5200]" />
             <span>Clear Guidance &amp; Insights</span>
           </div>
 
           {/* Clean Modern Website Style Heading */}
           <h2 className="text-2xl sm:text-4xl lg:text-[38px] font-bold text-stone-950 tracking-tight leading-tight">
-            Frequently Asked Questions — <span className="text-[#A67C1E]">Altitude Travel</span>
+            Frequently Asked Questions — <span className="text-[#7A5200] drop-shadow-xs">Altitude Travel</span>
           </h2>
 
           <p className="text-[15px] sm:text-base text-stone-800 max-w-2xl mx-auto font-normal leading-relaxed">
@@ -83,7 +83,7 @@ export default function FaqSection() {
                   aria-expanded={isOpen}
                 >
                   {/* EXACT H3 HEADING: Modern bold website style */}
-                  <h3 className="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-[#A67C1E] transition-colors leading-snug">
+                  <h3 className="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-[#7A5200] transition-colors leading-snug">
                     {faq.q}
                   </h3>
 

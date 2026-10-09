@@ -18,7 +18,7 @@ export default function AboutAgencySection() {
   const [activeTab, setActiveTab] = useState<"international" | "indian" | "philosophy">("international");
 
   return (
-    <section id="about-agency" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] border-b border-[#E5E0D5] relative overflow-hidden">
+    <section id="about-agency" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6] relative overflow-hidden">
       
       {/* Decorative Atmosphere Glow */}
       <div className="absolute top-1/4 -left-20 w-[480px] h-[480px] bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -82,7 +82,7 @@ export default function AboutAgencySection() {
                 <span className="text-[11px] text-stone-600 font-medium mt-0.5 block">Happy Travellers from Delhi</span>
               </div>
               <div className="bg-white p-3.5 rounded-xl border border-[#E5E0D5] shadow-xs text-center">
-                <span className="text-xl sm:text-2xl font-bold text-[#A67C1E] block tracking-tight">100%</span>
+                <span className="text-xl sm:text-2xl font-bold text-[#7A5200] block tracking-tight">100%</span>
                 <span className="text-[11px] text-stone-600 font-medium mt-0.5 block">Zero Hidden Deductions</span>
               </div>
             </div>
@@ -92,14 +92,14 @@ export default function AboutAgencySection() {
           {/* Right Column: Narrative + Interactive Compact Story Pills */}
           <div className="lg:col-span-7 space-y-4">
             
-            <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#BFA13B] whitespace-nowrap">
-              <HeartHandshake className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+            <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#7A5200] whitespace-nowrap">
+              <HeartHandshake className="w-3.5 h-3.5 text-[#7A5200] shrink-0" />
               <span>Our Delhi Legacy &amp; Philosophy</span>
             </div>
 
             {/* Clean Modern Website Style Heading */}
             <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-stone-950 tracking-tight leading-tight">
-              Best <span className="text-[#A67C1E]">Tour and Travel Agency in Delhi</span>
+              Best <span className="text-[#7A5200] drop-shadow-xs">Tour and Travel Agency in Delhi</span>
             </h2>
 
             {/* EXACT VERBATIM PARAGRAPH 1: Core Lead Introduction */}
@@ -157,13 +157,13 @@ export default function AboutAgencySection() {
                       As an international tour and travel agency, we plan overseas holidays for families, couples, friends and solo travellers. From flights, hotels and transfers to sightseeing and visa assistance, our team handles the details so you can focus on enjoying the destination. Every itinerary is built with local insight, from famous food spots and cafés to markets and offbeat places that most tourists miss.
                     </p>
                     <div className="flex flex-wrap items-center gap-2 pt-1 border-t border-stone-100">
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         Flights, Hotels &amp; Transfers
                       </span>
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         Dedicated Visa Guidance
                       </span>
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         Local Food &amp; Offbeat Spots
                       </span>
                     </div>
@@ -177,13 +177,13 @@ export default function AboutAgencySection() {
                       India is a destination for every kind of traveller, whether you love mountains, beaches, heritage cities, spiritual trails or food journeys. Our Indian tour packages are designed to show you the real character of each region, with comfortable stays, smooth transfers and recommendations from people who know the place well.
                     </p>
                     <div className="flex flex-wrap items-center gap-2 pt-1 border-t border-stone-100">
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         Hills, Beaches &amp; Royal Heritage
                       </span>
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         Handpicked Verified Stays
                       </span>
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         Regional Cuisine &amp; Local Culture
                       </span>
                     </div>
@@ -197,13 +197,13 @@ export default function AboutAgencySection() {
                       We aim to be the best tour operator in India for travellers who want more than a checklist of attractions. Our approach is simple: transparent pricing, honest advice, personal attention and one complete free day in your itinerary, wherever possible. We don&apos;t just sell tours. We curate the complete experience of a destination.
                     </p>
                     <div className="flex flex-wrap items-center gap-2 pt-1 border-t border-stone-100">
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         100% Upfront Transparent Pricing
                       </span>
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         1 Guaranteed Free Day
                       </span>
-                      <span className="text-[11px] font-semibold text-[#A67C1E] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#A67C1E]/20">
+                      <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         Honest Advice &amp; Personal Care
                       </span>
                     </div>

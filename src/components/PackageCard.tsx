@@ -98,16 +98,16 @@ export default function PackageCard({ pkg, onSelect, onInquire, featured = false
         <div>
           {/* Eyebrow & Free Day Badge */}
           <div className="flex items-center justify-between mb-1.5">
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#BFA13B]">
+            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#7A5200]">
               {pkg.tag ? pkg.tag : pkg.destination}
             </span>
-            <span className="text-[10.5px] font-semibold text-[#A6832A] bg-[#FBF7EE] px-2 py-0.5 rounded-md border border-[#BFA13B]/30 shadow-2xs">
+            <span className="text-[10.5px] font-semibold text-[#7A5200] bg-[#FBF7EE] px-2 py-0.5 rounded-md border border-[#7A5200]/30 shadow-2xs">
               1 Free Day
             </span>
           </div>
 
           {/* Short Title: Modern clean sans font */}
-          <h3 className="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-[#A67C1E] transition-colors leading-snug line-clamp-1">
+          <h3 className="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-[#7A5200] transition-colors leading-snug line-clamp-1">
             {pkg.cardTitle || pkg.title}
           </h3>
 
@@ -130,7 +130,7 @@ export default function PackageCard({ pkg, onSelect, onInquire, featured = false
                 </span>
               )}
             </div>
-            <div className="text-base sm:text-lg font-extrabold text-[#9E7418] tracking-tight">
+            <div className="text-base sm:text-lg font-extrabold text-[#7A5200] tracking-tight">
               {pkg.priceStarting}
               <span className="text-[11px] font-normal text-stone-500"> /person</span>
             </div>
@@ -143,7 +143,7 @@ export default function PackageCard({ pkg, onSelect, onInquire, featured = false
                 e.stopPropagation();
                 onSelect(pkg);
               }}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold bg-[#0C0A09] text-[#F5D77F] group-hover:bg-shining-gold group-hover:text-stone-950 shining-sweep rounded-xl transition-all duration-200 border border-[#BFA13B]/30 cursor-pointer shadow-xs group-hover:shadow-[0_4px_16px_rgba(212,175,55,0.35)]"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold bg-[#0C0A09] text-[#F5D77F] hover:bg-[#BFA13B] hover:text-stone-950 group-hover:border-[#BFA13B]/70 shining-sweep rounded-xl transition-all duration-200 border border-[#BFA13B]/30 cursor-pointer shadow-xs hover:shadow-[0_4px_16px_rgba(191,161,59,0.35)]"
             >
               <span>View Details</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />

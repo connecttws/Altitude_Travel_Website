@@ -94,7 +94,7 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
             
             {/* Overview */}
             <div>
-              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#BFA13B] mb-2">
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#7A5200] mb-2">
                 Trip Overview
               </h3>
               <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
@@ -105,7 +105,7 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
             {/* Signature Features */}
             <div className="bg-[#FBF7EE] border border-[#BFA13B]/30 rounded-2xl p-4.5 space-y-2.5">
               <div className="flex items-center gap-2 text-xs font-bold text-stone-900 uppercase tracking-wider">
-                <Sparkles className="w-4 h-4 text-[#BFA13B]" />
+                <Sparkles className="w-4 h-4 text-[#7A5200]" />
                 <span>Altitude Signature Travel Experience:</span>
               </div>
               <p className="text-xs sm:text-sm text-stone-700 font-medium">
@@ -118,7 +118,7 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
 
             {/* Day by Day Itinerary */}
             <div>
-              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#BFA13B] mb-3">
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#7A5200] mb-3">
                 Day-by-Day Journey Itinerary
               </h3>
               <div className="space-y-3">
@@ -152,7 +152,7 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                 <ul className="space-y-1.5 text-xs text-stone-700 font-medium">
                   {pkg.inclusions.map((inc, i) => (
                     <li key={i} className="flex items-start gap-1.5">
-                      <Check className="w-3.5 h-3.5 text-[#BFA13B] shrink-0 mt-0.5" />
+                      <Check className="w-3.5 h-3.5 text-[#7A5200] shrink-0 mt-0.5" />
                       <span>{inc}</span>
                     </li>
                   ))}

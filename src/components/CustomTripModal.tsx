@@ -64,8 +64,8 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
 
         {/* Modal Header */}
         <div className="text-center space-y-2 mb-5">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF9F6] border border-[#BFA13B]/30 text-[#A67C1E] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF9F6] border border-[#7A5200]/30 text-[#7A5200] text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-[#7A5200]" />
             <span>Instant WhatsApp Custom Planner</span>
           </div>
 
