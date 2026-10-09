@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
   Compass,
@@ -26,12 +26,44 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
 
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const navContainerRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseEnter = (dropdown: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setActiveDropdown(dropdown);
+  };
+
+  const handleMouseLeave = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 240); // 240ms grace period prevents dropdown from vanishing during cursor travel
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 15);
     };
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navContainerRef.current && !navContainerRef.current.contains(e.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, []);
 
   const indianDestinations = [
@@ -142,12 +174,12 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
           </Link>
 
           {/* Desktop Navigation Links: Responsive Font Size, Compact Labels on lg, and Strict Single-Line Whitespace */}
-          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 shrink-0">
+          <div ref={navContainerRef} className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 shrink-0">
             
             {/* Home */}
             <Link
               href="/"
-              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#BFA13B] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
+              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
             >
               Home
             </Link>
@@ -155,15 +187,16 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             {/* Indian Tour Packages ▾ Dropdown */}
             <div
               className="relative shrink-0"
-              onMouseEnter={() => setActiveDropdown("indian")}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter("indian")}
+              onMouseLeave={handleMouseLeave}
             >
               <button
                 type="button"
+                onClick={() => setActiveDropdown(activeDropdown === "indian" ? null : "indian")}
                 className={`px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium rounded-lg transition-colors flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
                   activeDropdown === "indian"
-                    ? "text-[#BFA13B] bg-[#FAF9F6]"
-                    : "text-stone-700 hover:text-[#BFA13B] hover:bg-stone-50"
+                    ? "text-[#7A5200] bg-[#FAF9F6] font-bold"
+                    : "text-stone-700 hover:text-[#7A5200] hover:bg-stone-50"
                 }`}
                 aria-expanded={activeDropdown === "indian"}
               >
@@ -171,48 +204,57 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 <span className="hidden xl:inline">Indian Tour Packages</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 ${
-                    activeDropdown === "indian" ? "rotate-180 text-[#BFA13B]" : "text-stone-400"
+                    activeDropdown === "indian" ? "rotate-180 text-[#7A5200]" : "text-stone-400"
                   }`}
                 />
               </button>
 
-              {/* Mega Dropdown Panel */}
+              {/* Mega Dropdown Panel with Zero-Gap Bridge */}
               {activeDropdown === "indian" && (
-                <div className="absolute top-full left-0 w-[540px] bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.16)] border border-[#E5E0D5] p-4.5 mt-1.5 grid grid-cols-2 gap-2 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
-                  <div className="col-span-2 pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#BFA13B]">
-                      Explore Indian Destinations
-                    </span>
-                    <Link
-                      href="#indian-packages"
-                      className="text-[11px] font-semibold text-[#BFA13B] hover:text-[#A6832A] flex items-center gap-1"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      <span>View All Indian Packages</span>
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  </div>
+                <div
+                  className="absolute top-full left-0 w-[540px] pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                  onMouseEnter={() => handleMouseEnter("indian")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {/* Invisible Hover Bridge connecting button to dropdown panel */}
+                  <div className="absolute -top-3 inset-x-0 h-4 bg-transparent pointer-events-auto" />
 
-                  {indianDestinations.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={item.href}
-                      onClick={() => setActiveDropdown(null)}
-                      className="p-2.5 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-[13px] font-semibold text-stone-900 group-hover/item:text-[#BFA13B]">
-                          {item.name}
-                        </span>
-                        <span className="text-[9.5px] font-medium px-2 py-0.5 rounded-full bg-[#FAF9F6] text-[#BFA13B] border border-[#BFA13B]/20 group-hover/item:bg-[#BFA13B]/10">
-                          {item.tag}
-                        </span>
-                      </div>
-                      <span className="text-[11px] text-stone-400 line-clamp-1 mt-0.5">
-                        {item.desc}
+                  <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-4.5 grid grid-cols-2 gap-2">
+                    <div className="col-span-2 pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A5200]">
+                        Explore Indian Destinations
                       </span>
-                    </Link>
-                  ))}
+                      <Link
+                        href="#indian-packages"
+                        className="text-[11px] font-semibold text-[#7A5200] hover:text-[#5C3E00] flex items-center gap-1"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        <span>View All Indian Packages</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+
+                    {indianDestinations.map((item, idx) => (
+                      <Link
+                        key={idx}
+                        href={item.href}
+                        onClick={() => setActiveDropdown(null)}
+                        className="p-2.5 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[13px] font-semibold text-stone-900 group-hover/item:text-[#7A5200]">
+                            {item.name}
+                          </span>
+                          <span className="text-[9.5px] font-medium px-2 py-0.5 rounded-full bg-[#FAF9F6] text-[#7A5200] border border-[#7A5200]/20 group-hover/item:bg-[#7A5200]/10">
+                            {item.tag}
+                          </span>
+                        </div>
+                        <span className="text-[11px] text-stone-400 line-clamp-1 mt-0.5">
+                          {item.desc}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -220,15 +262,16 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             {/* International Tour Packages ▾ Dropdown */}
             <div
               className="relative shrink-0"
-              onMouseEnter={() => setActiveDropdown("international")}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter("international")}
+              onMouseLeave={handleMouseLeave}
             >
               <button
                 type="button"
+                onClick={() => setActiveDropdown(activeDropdown === "international" ? null : "international")}
                 className={`px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium rounded-lg transition-colors flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
                   activeDropdown === "international"
-                    ? "text-[#BFA13B] bg-[#FAF9F6]"
-                    : "text-stone-700 hover:text-[#BFA13B] hover:bg-stone-50"
+                    ? "text-[#7A5200] bg-[#FAF9F6] font-bold"
+                    : "text-stone-700 hover:text-[#7A5200] hover:bg-stone-50"
                 }`}
                 aria-expanded={activeDropdown === "international"}
               >
@@ -236,48 +279,57 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 <span className="hidden xl:inline">International Tour Packages</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 ${
-                    activeDropdown === "international" ? "rotate-180 text-[#BFA13B]" : "text-stone-400"
+                    activeDropdown === "international" ? "rotate-180 text-[#7A5200]" : "text-stone-400"
                   }`}
                 />
               </button>
 
-              {/* Mega Dropdown Panel */}
+              {/* Mega Dropdown Panel with Zero-Gap Bridge */}
               {activeDropdown === "international" && (
-                <div className="absolute top-full left-0 w-[560px] bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.16)] border border-[#E5E0D5] p-4.5 mt-1.5 grid grid-cols-2 gap-2 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
-                  <div className="col-span-2 pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#BFA13B]">
-                      International Holidays from Delhi
-                    </span>
-                    <Link
-                      href="#international-packages"
-                      className="text-[11px] font-semibold text-[#BFA13B] hover:text-[#A6832A] flex items-center gap-1"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      <span>View All International Packages</span>
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  </div>
+                <div
+                  className="absolute top-full left-0 w-[560px] pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                  onMouseEnter={() => handleMouseEnter("international")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {/* Invisible Hover Bridge connecting button to dropdown panel */}
+                  <div className="absolute -top-3 inset-x-0 h-4 bg-transparent pointer-events-auto" />
 
-                  {internationalDestinations.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={item.href}
-                      onClick={() => setActiveDropdown(null)}
-                      className="p-2.5 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-[13px] font-semibold text-stone-900 group-hover/item:text-[#BFA13B]">
-                          {item.name}
-                        </span>
-                        <span className="text-[9.5px] font-medium px-2 py-0.5 rounded-full bg-[#FAF9F6] text-[#BFA13B] border border-[#BFA13B]/20 group-hover/item:bg-[#BFA13B]/10">
-                          {item.tag}
-                        </span>
-                      </div>
-                      <span className="text-[11px] text-stone-400 line-clamp-1 mt-0.5">
-                        {item.desc}
+                  <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-4.5 grid grid-cols-2 gap-2">
+                    <div className="col-span-2 pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A5200]">
+                        International Holidays from Delhi
                       </span>
-                    </Link>
-                  ))}
+                      <Link
+                        href="#international-packages"
+                        className="text-[11px] font-semibold text-[#7A5200] hover:text-[#5C3E00] flex items-center gap-1"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        <span>View All International Packages</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+
+                    {internationalDestinations.map((item, idx) => (
+                      <Link
+                        key={idx}
+                        href={item.href}
+                        onClick={() => setActiveDropdown(null)}
+                        className="p-2.5 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-[13px] font-semibold text-stone-900 group-hover/item:text-[#7A5200]">
+                            {item.name}
+                          </span>
+                          <span className="text-[9.5px] font-medium px-2 py-0.5 rounded-full bg-[#FAF9F6] text-[#7A5200] border border-[#7A5200]/20 group-hover/item:bg-[#7A5200]/10">
+                            {item.tag}
+                          </span>
+                        </div>
+                        <span className="text-[11px] text-stone-400 line-clamp-1 mt-0.5">
+                          {item.desc}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -286,11 +338,11 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             <button
               type="button"
               onClick={onOpenCustomModal}
-              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#BFA13B] rounded-lg hover:bg-stone-50 transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0"
+              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0"
             >
               <span className="xl:hidden">Custom Trips</span>
               <span className="hidden xl:inline">Custom Tour Packages</span>
-              <span className="hidden xl:inline-block text-[9.5px] uppercase tracking-wide font-semibold text-[#BFA13B] bg-[#FAF9F6] px-1.5 py-0.5 rounded-full border border-[#BFA13B]/30 shrink-0">
+              <span className="hidden xl:inline-block text-[9.5px] uppercase tracking-wide font-semibold text-[#7A5200] bg-[#FAF9F6] px-1.5 py-0.5 rounded-full border border-[#7A5200]/30 shrink-0">
                 Tailored
               </span>
             </button>
@@ -298,7 +350,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             {/* About Us - Guaranteed 1 Line */}
             <Link
               href="#about-agency"
-              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#BFA13B] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
+              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
             >
               About Us
             </Link>
@@ -306,7 +358,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             {/* Contact Us */}
             <Link
               href="#contact-footer"
-              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#BFA13B] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
+              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
             >
               Contact Us
             </Link>
