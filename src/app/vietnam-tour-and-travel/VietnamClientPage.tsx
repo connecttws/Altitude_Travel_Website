@@ -46,9 +46,6 @@ export default function VietnamClientPage() {
   const [isPackageModalOpen, setIsPackageModalOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<TourPackage | null>(null);
 
-  // WhatsApp Concierge State
-  const [selectedPreference, setSelectedPreference] = useState("Vietnam 7N/6D Bays & Lanterns");
-
   // FAQ Accordion State
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
@@ -247,7 +244,7 @@ export default function VietnamClientPage() {
             </div>
 
             {/* Main Hero Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
               {/* Left Column: Editorial Narrative & EXACT H1 */}
               <div className="lg:col-span-7 flex flex-col justify-start space-y-4 sm:space-y-5">
@@ -340,17 +337,33 @@ export default function VietnamClientPage() {
                   )}
                 </div>
 
+                {/* Action CTA Buttons */}
+                <div className="pt-2 flex flex-wrap items-center gap-3">
+                  <a
+                    href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Vietnam%20tour%20packages."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-stone-900 hover:bg-stone-800 text-white shadow-md transition-all cursor-pointer"
+                  >
+                    <MessageSquare className="w-4 h-4 text-emerald-400" />
+                    <span>Inquire on WhatsApp</span>
+                  </a>
+                  <a
+                    href="#vietnam-packages-grid"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-white hover:bg-stone-50 text-stone-800 border border-[#E5E0D5] transition-all cursor-pointer"
+                  >
+                    <span>Explore Packages</span>
+                    <ArrowRight className="w-4 h-4 text-[#BFA13B]" />
+                  </a>
+                </div>
+
               </div>
 
-              {/* Right Column: 3D MOVING PHOTOS SHOWCASE + QUICK INQUIRY CARD */}
-              <div className="lg:col-span-5 space-y-6" id="vietnam-inquiry-box">
+              {/* Right Column: 3D MOVING PHOTOS SHOWCASE */}
+              <div className="lg:col-span-5 flex flex-col justify-center" id="vietnam-inquiry-box">
                 
-                {/* ============================================================= */}
-                {/* 3D MOVING POSITION PHOTOS SHOWCASE                          */}
-                {/* User: "We can use 3d animation to show each place in Vietnam's*/}
-                {/*        major attractions moving through the hero section."   */}
-                {/* ============================================================= */}
-                <div className="relative h-[290px] sm:h-[320px] rounded-2xl p-4 bg-gradient-to-tr from-[#0C0A09] via-stone-900 to-[#0C0A09] overflow-hidden shadow-xl border border-[#BFA13B]/30 flex items-center justify-center">
+                {/* 3D Moving Position Photos Showcase */}
+                <div className="relative h-[340px] sm:h-[380px] lg:h-[420px] rounded-2xl p-4 bg-gradient-to-tr from-[#0C0A09] via-stone-900 to-[#0C0A09] overflow-hidden shadow-xl border border-[#BFA13B]/30 flex items-center justify-center">
                   
                   {/* Subtle Background Golden Glow */}
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(191,161,59,0.22),transparent_60%)]" />
@@ -419,94 +432,6 @@ export default function VietnamClientPage() {
 
                   </div>
 
-                </div>
-
-                {/* Instant WhatsApp Trip Concierge Card with Moving Border Beam */}
-                <div className="border-beam-card shadow-[0_16px_40px_-6px_rgba(28,25,23,0.12)]">
-                  <div className="border-beam-inner p-5 sm:p-6 space-y-4">
-                    <div className="flex items-center justify-between pb-3 border-b border-[#E5E0D5]">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
-                          Instant WhatsApp Concierge
-                        </span>
-                      </div>
-                      <span className="text-[11px] font-bold text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/40">
-                        ⚡ 2-Min Reply Desk
-                      </span>
-                    </div>
-
-                    {/* Dynamic Moving Laser Beam Line */}
-                    <div className="moving-line-track">
-                      <div className="moving-line-beam" />
-                    </div>
-
-                    <div>
-                      <h4 className="text-base sm:text-[17px] font-bold text-stone-950 tracking-tight leading-snug">
-                        Plan Your Vietnam Holiday Directly on WhatsApp
-                      </h4>
-                      <p className="text-xs text-stone-600 mt-1 leading-relaxed">
-                        Skip long forms. Connect directly with our Connaught Place travel planners on WhatsApp with instant custom quotes, Ha Long cruises &amp; E-Visas.
-                      </p>
-                    </div>
-
-                    {/* Quick Preference Selector */}
-                    <div className="space-y-2">
-                      <label className="block text-[11px] font-bold uppercase tracking-wider text-stone-500">
-                        Select Your Travel Style:
-                      </label>
-                      <div className="grid grid-cols-2 gap-1.5">
-                        {[
-                          "Vietnam 7N/6D Highlights",
-                          "Ha Long Luxury Cruise",
-                          "Hoi An Silk & Lanterns",
-                          "Family Grand Discovery",
-                        ].map((pref) => (
-                          <button
-                            key={pref}
-                            type="button"
-                            onClick={() => setSelectedPreference(pref)}
-                            className={`py-2 px-2.5 rounded-xl text-xs font-semibold text-center transition-all cursor-pointer border ${
-                              selectedPreference === pref
-                                ? "bg-[#0C0A09] text-[#F5D77F] border-[#BFA13B]/60 shadow-xs"
-                                : "bg-[#FAF9F6] text-stone-700 border-[#E5E0D5] hover:bg-white hover:text-stone-950"
-                            }`}
-                          >
-                            {pref}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Big WhatsApp CTA Button */}
-                    <a
-                      href={`https://wa.me/919810024680?text=${encodeURIComponent(
-                        `Hello Altitude Travel, I want to plan a Vietnam tour package (${selectedPreference}). Please share customized itinerary, cruise options and best quote.`
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full py-3.5 px-5 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-emerald-600 hover:bg-emerald-500 active:scale-[0.99] text-white shadow-[0_8px_25px_rgba(16,185,129,0.35)] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
-                    >
-                      <MessageSquare className="w-4 h-4 fill-white shrink-0" />
-                      <span>Chat on WhatsApp for Custom Quote</span>
-                    </a>
-
-                    {/* Direct Call Option */}
-                    <a
-                      href="tel:+919810024680"
-                      className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs text-stone-700 hover:text-stone-950 bg-stone-50 hover:bg-stone-100 border border-stone-200 transition-colors flex items-center justify-center gap-2 cursor-pointer"
-                    >
-                      <Phone className="w-3.5 h-3.5 text-[#BFA13B]" />
-                      <span>Or Call Delhi Planning Desk: +91 98100 24680</span>
-                    </a>
-
-                    {/* Trust Micro-Bullets */}
-                    <div className="pt-1 flex items-center justify-between text-[10.5px] font-medium text-stone-500 border-t border-stone-100">
-                      <span>✓ 100% Free Custom Quotes</span>
-                      <span>✓ E-Visa Support</span>
-                      <span>✓ Cruise Handpicked</span>
-                    </div>
-                  </div>
                 </div>
 
               </div>

@@ -98,40 +98,33 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="#indian-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Kashmir Tour Packages</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
-                </Link>
-              </li>
-              <li>
-                <Link href="#indian-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Himachal Pradesh Volvo Tours</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
-                </Link>
-              </li>
-              <li>
                 <Link href="/goa-tour-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Goa Tropical Beach Escapes</span>
+                  <span>Goa Tour Packages</span>
+                  <ArrowUpRight className="w-3 h-3 text-[#BFA13B]" />
+                </Link>
+              </li>
+              <li>
+                <Link href="/goa-tour-packages#goa-packages-grid" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
+                  <span>Goa Beach &amp; Shacks Holidays</span>
                   <ArrowUpRight className="w-3 h-3 text-stone-500" />
                 </Link>
               </li>
               <li>
-                <Link href="#indian-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Rajasthan Royal Heritage Tours</span>
+                <Link href="/goa-tour-packages#places-to-visit" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
+                  <span>Goa Heritage &amp; Fort Aguada</span>
                   <ArrowUpRight className="w-3 h-3 text-stone-500" />
                 </Link>
               </li>
               <li>
-                <Link href="#indian-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Kerala Backwaters &amp; Munnar Hills</span>
+                <a
+                  href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20am%20looking%20for%20a%20custom%20Indian%20tour%20package."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300"
+                >
+                  <span>Custom Indian Tour Itinerary</span>
                   <ArrowUpRight className="w-3 h-3 text-stone-500" />
-                </Link>
-              </li>
-              <li>
-                <Link href="#indian-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Ladakh High Pass Expeditions</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -146,37 +139,25 @@ export default function Footer() {
               <li>
                 <Link href="/dubai-tour-and-travel" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
                   <span>Dubai &amp; Abu Dhabi Tour Packages</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
-                </Link>
-              </li>
-              <li>
-                <Link href="#international-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Switzerland Alpine Glaciers &amp; Trains</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
-                </Link>
-              </li>
-              <li>
-                <Link href="#international-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Bali Tropical Sanctuary (Indonesia)</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
+                  <ArrowUpRight className="w-3 h-3 text-[#BFA13B]" />
                 </Link>
               </li>
               <li>
                 <Link href="/thailand-tour-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
                   <span>Thailand &amp; Bangkok Tour Packages</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
-                </Link>
-              </li>
-              <li>
-                <Link href="/kandy-bentota-tour-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
-                  <span>Kandy Bentota Sri Lanka Packages</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
+                  <ArrowUpRight className="w-3 h-3 text-[#BFA13B]" />
                 </Link>
               </li>
               <li>
                 <Link href="/vietnam-tour-and-travel" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
                   <span>Vietnam Heritage &amp; Halong Bay</span>
-                  <ArrowUpRight className="w-3 h-3 text-stone-500" />
+                  <ArrowUpRight className="w-3 h-3 text-[#BFA13B]" />
+                </Link>
+              </li>
+              <li>
+                <Link href="/kandy-bentota-tour-packages" className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300">
+                  <span>Kandy Bentota Sri Lanka Packages</span>
+                  <ArrowUpRight className="w-3 h-3 text-[#BFA13B]" />
                 </Link>
               </li>
             </ul>

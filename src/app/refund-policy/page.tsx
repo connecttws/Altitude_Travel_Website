@@ -6,9 +6,27 @@ import { ArrowLeft, RefreshCw } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Refund & Cancellation Policy | Altitude Travel Co. Delhi",
+  title: "Refund & Cancellation Policy | Altitude Travel Co.",
   description:
     "Read the clear and transparent refund and cancellation policy for Altitude Travel Co. tour packages.",
+  alternates: {
+    canonical: "https://altitudetravel.in/refund-policy",
+  },
+  openGraph: {
+    title: "Refund & Cancellation Policy | Altitude Travel Co.",
+    description:
+      "Read the clear and transparent refund and cancellation policy for Altitude Travel Co. tour packages.",
+    url: "https://altitudetravel.in/refund-policy",
+    siteName: "Altitude Travel Co.",
+    type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary",
+    title: "Refund & Cancellation Policy | Altitude Travel Co.",
+    description:
+      "Read the clear and transparent refund and cancellation policy for Altitude Travel Co. tour packages.",
+  },
 };
 
 export default function RefundPolicyPage() {

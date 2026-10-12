@@ -23,9 +23,13 @@ const amiri = Amiri({
 });
 
 export const metadata: Metadata = {
-  title: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+  metadataBase: new URL("https://altitudetravel.in"),
+  title: {
+    default: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+    template: "%s | Altitude Travel Co.",
+  },
   description:
-    "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today",
+    "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
   keywords: [
     "Tour and Travel Agency in Delhi",
     "best tour and travel agency in delhi",
@@ -36,12 +40,34 @@ export const metadata: Metadata = {
     "indian tour packages",
   ],
   authors: [{ name: "Altitude Travel Co." }],
+  alternates: {
+    canonical: "https://altitudetravel.in",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
     description:
-      "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today",
+      "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
+    url: "https://altitudetravel.in",
+    siteName: "Altitude Travel Co.",
     type: "website",
     locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+    description:
+      "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
   },
 };
 

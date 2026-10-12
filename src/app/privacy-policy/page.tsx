@@ -6,9 +6,27 @@ import { ArrowLeft, Lock } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Altitude Travel Co. Delhi",
+  title: "Privacy Policy | Altitude Travel Co.",
   description:
     "Altitude Travel Co. is committed to protecting your personal information and privacy.",
+  alternates: {
+    canonical: "https://altitudetravel.in/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Altitude Travel Co.",
+    description:
+      "Altitude Travel Co. is committed to protecting your personal information and privacy.",
+    url: "https://altitudetravel.in/privacy-policy",
+    siteName: "Altitude Travel Co.",
+    type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | Altitude Travel Co.",
+    description:
+      "Altitude Travel Co. is committed to protecting your personal information and privacy.",
+  },
 };
 
 export default function PrivacyPolicyPage() {

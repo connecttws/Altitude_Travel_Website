@@ -6,9 +6,27 @@ import { ShieldCheck, ArrowLeft, Compass } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Altitude Travel Co. Delhi",
+  title: "Terms and Conditions | Altitude Travel Co.",
   description:
     "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co., Delhi.",
+  alternates: {
+    canonical: "https://altitudetravel.in/terms",
+  },
+  openGraph: {
+    title: "Terms and Conditions | Altitude Travel Co.",
+    description:
+      "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co., Delhi.",
+    url: "https://altitudetravel.in/terms",
+    siteName: "Altitude Travel Co.",
+    type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms and Conditions | Altitude Travel Co.",
+    description:
+      "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co., Delhi.",
+  },
 };
 
 export default function TermsPage() {

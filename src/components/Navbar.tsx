@@ -67,25 +67,39 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
   }, []);
 
   const indianDestinations = [
-    { name: "Kashmir Valley", desc: "Gulmarg Gondola, Dal Lake Houseboats & Doodhpathri", tag: "Snow & Pines", href: "#indian-packages" },
-    { name: "Goa Coastal & Heritage", desc: "Tropical Palms, Secluded Beaches & Latin Quarter", tag: "Beach & Palms", href: "/goa-tour-packages" },
-    { name: "Himachal Pradesh", desc: "Volvo Coach to Manali, Solang Valley & River Cafés", tag: "Scenic Coach", href: "#indian-packages" },
-    { name: "Rajasthan Royal Heritage", desc: "Jaipur, Jodhpur, Udaipur Lake Palaces & Havelis", tag: "Royal Haveli", href: "#indian-packages" },
-    { name: "Kerala Backwaters & Hills", desc: "Munnar Tea Estates, Alleppey Houseboats & Palms", tag: "Tropical Serene", href: "#indian-packages" },
-    { name: "Ladakh High Passes", desc: "Leh, Pangong Azure Lake, Nubra Valley & Sand Dunes", tag: "High Pass", href: "#indian-packages" },
-    { name: "Uttarakhand Hill Trails", desc: "Rishikesh Ganga Ghats, Nainital Lake & Jim Corbett", tag: "Nature Trail", href: "#indian-packages" },
-    { name: "Andaman Islands", desc: "Havelock Turquoise Waters, Scuba Coral Reefs", tag: "Island Beach", href: "#indian-packages" },
+    {
+      name: "Goa Coastal & Heritage",
+      desc: "Tropical Palms, Secluded Beaches & Latin Quarter",
+      tag: "Beach & Palms",
+      href: "/goa-tour-packages",
+    },
   ];
 
   const internationalDestinations = [
-    { name: "Dubai & Abu Dhabi", desc: "Burj Khalifa, Red Dune Desert Safari & Marina Yachts", tag: "Modern Luxe", href: "/dubai-tour-and-travel" },
-    { name: "Switzerland Alpine Wonder", desc: "Zurich, Lucerne, Interlaken & Swiss Alps Glaciers", tag: "Alpine Dreams", href: "#international-packages" },
-    { name: "Bali Tropical Sanctuary", desc: "Ubud Rice Terraces, Secret Waterfalls & Beach Clubs", tag: "Tropical Island", href: "#international-packages" },
-    { name: "Thailand & Bangkok", desc: "Phuket Beaches, Phi Phi Islands & Bangkok Markets", tag: "Beaches & Food", href: "/thailand-tour-packages" },
-    { name: "Sri Lanka: Kandy & Bentota", desc: "Temple of Tooth, Peradeniya Gardens & Bentota Beach", tag: "Culture & Beach", href: "/kandy-bentota-tour-packages" },
-    { name: "Vietnam Heritage & Bays", desc: "Halong Bay Overnight Cruise & Hoi An River Lanterns", tag: "Bay & Culture", href: "/vietnam-tour-and-travel" },
-    { name: "Maldives Private Atolls", desc: "Overwater Villas, Seaplane & Coral Lagoons", tag: "Ultra Luxe", href: "#international-packages" },
-    { name: "Europe Grand Discovery", desc: "Paris, Rome, Amsterdam & Swiss Panorama Trains", tag: "Classic Grand", href: "#international-packages" },
+    {
+      name: "Dubai & Abu Dhabi",
+      desc: "Burj Khalifa, Red Dune Desert Safari & Marina Yachts",
+      tag: "Modern Luxe",
+      href: "/dubai-tour-and-travel",
+    },
+    {
+      name: "Thailand & Bangkok",
+      desc: "Phuket Beaches, Phi Phi Islands & Bangkok Markets",
+      tag: "Beaches & Food",
+      href: "/thailand-tour-packages",
+    },
+    {
+      name: "Vietnam Heritage & Bays",
+      desc: "Halong Bay Overnight Cruise & Hoi An River Lanterns",
+      tag: "Bay & Culture",
+      href: "/vietnam-tour-and-travel",
+    },
+    {
+      name: "Sri Lanka: Kandy & Bentota",
+      desc: "Temple of Tooth, Peradeniya Gardens & Bentota Beach",
+      tag: "Culture & Beach",
+      href: "/kandy-bentota-tour-packages",
+    },
   ];
 
   return (
@@ -209,29 +223,24 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 />
               </button>
 
-              {/* Mega Dropdown Panel with Zero-Gap Bridge */}
+              {/* Dropdown Panel with Zero-Gap Bridge */}
               {activeDropdown === "indian" && (
                 <div
-                  className="absolute top-full left-0 w-[540px] pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                  className="absolute top-full left-0 w-[360px] pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
                   onMouseEnter={() => handleMouseEnter("indian")}
                   onMouseLeave={handleMouseLeave}
                 >
                   {/* Invisible Hover Bridge connecting button to dropdown panel */}
                   <div className="absolute -top-3 inset-x-0 h-4 bg-transparent pointer-events-auto" />
 
-                  <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-4.5 grid grid-cols-2 gap-2">
-                    <div className="col-span-2 pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
+                  <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-3.5 flex flex-col gap-1.5">
+                    <div className="pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A5200]">
-                        Explore Indian Destinations
+                        Indian Destinations
                       </span>
-                      <Link
-                        href="#indian-packages"
-                        className="text-[11px] font-semibold text-[#7A5200] hover:text-[#5C3E00] flex items-center gap-1"
-                        onClick={() => setActiveDropdown(null)}
-                      >
-                        <span>View All Indian Packages</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
+                      <span className="text-[10px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2 py-0.5 rounded-full border border-[#7A5200]/20">
+                        Verified Tour
+                      </span>
                     </div>
 
                     {indianDestinations.map((item, idx) => (
@@ -239,17 +248,17 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                         key={idx}
                         href={item.href}
                         onClick={() => setActiveDropdown(null)}
-                        className="p-2.5 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
+                        className="p-3 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
                       >
                         <div className="flex items-center justify-between">
-                          <span className="text-[13px] font-semibold text-stone-900 group-hover/item:text-[#7A5200]">
+                          <span className="text-[13.5px] font-semibold text-stone-900 group-hover/item:text-[#7A5200]">
                             {item.name}
                           </span>
                           <span className="text-[9.5px] font-medium px-2 py-0.5 rounded-full bg-[#FAF9F6] text-[#7A5200] border border-[#7A5200]/20 group-hover/item:bg-[#7A5200]/10">
                             {item.tag}
                           </span>
                         </div>
-                        <span className="text-[11px] text-stone-400 line-clamp-1 mt-0.5">
+                        <span className="text-[11px] text-stone-500 line-clamp-1 mt-1">
                           {item.desc}
                         </span>
                       </Link>
@@ -287,26 +296,21 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
               {/* Mega Dropdown Panel with Zero-Gap Bridge */}
               {activeDropdown === "international" && (
                 <div
-                  className="absolute top-full left-0 w-[560px] pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                  className="absolute top-full left-0 w-[540px] pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
                   onMouseEnter={() => handleMouseEnter("international")}
                   onMouseLeave={handleMouseLeave}
                 >
                   {/* Invisible Hover Bridge connecting button to dropdown panel */}
                   <div className="absolute -top-3 inset-x-0 h-4 bg-transparent pointer-events-auto" />
 
-                  <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-4.5 grid grid-cols-2 gap-2">
+                  <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-4 grid grid-cols-2 gap-2">
                     <div className="col-span-2 pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A5200]">
                         International Holidays from Delhi
                       </span>
-                      <Link
-                        href="#international-packages"
-                        className="text-[11px] font-semibold text-[#7A5200] hover:text-[#5C3E00] flex items-center gap-1"
-                        onClick={() => setActiveDropdown(null)}
-                      >
-                        <span>View All International Packages</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
+                      <span className="text-[10px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2 py-0.5 rounded-full border border-[#7A5200]/20">
+                        4 Destinations
+                      </span>
                     </div>
 
                     {internationalDestinations.map((item, idx) => (
@@ -314,7 +318,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                         key={idx}
                         href={item.href}
                         onClick={() => setActiveDropdown(null)}
-                        className="p-2.5 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
+                        className="p-3 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
                       >
                         <div className="flex items-center justify-between">
                           <span className="text-[13px] font-semibold text-stone-900 group-hover/item:text-[#7A5200]">
@@ -324,7 +328,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                             {item.tag}
                           </span>
                         </div>
-                        <span className="text-[11px] text-stone-400 line-clamp-1 mt-0.5">
+                        <span className="text-[11px] text-stone-500 line-clamp-1 mt-1">
                           {item.desc}
                         </span>
                       </Link>
