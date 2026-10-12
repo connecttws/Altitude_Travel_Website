@@ -16,6 +16,7 @@ import {
   Clock,
   CheckCircle2,
   PhoneCall,
+  Phone,
   MessageSquare,
   ShieldCheck,
   ChevronDown,
@@ -45,43 +46,11 @@ export default function VietnamClientPage() {
   const [isPackageModalOpen, setIsPackageModalOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<TourPackage | null>(null);
 
-  // Inquiry Form State
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    destination: "Vietnam (Hanoi, Ha Long Bay & Hoi An)",
-    travelMonth: "Next 30 Days",
-    guests: "2 Adults (Couple)",
-    notes: "Inquiring for Vietnam tour and travel packages from Delhi.",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  // WhatsApp Concierge State
+  const [selectedPreference, setSelectedPreference] = useState("Vietnam 7N/6D Bays & Lanterns");
 
   // FAQ Accordion State
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-
-  const handleSubmitInquiry = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      const response = await fetch("/api/inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        setSubmitted(true);
-      } else {
-        setSubmitted(true);
-      }
-    } catch (err) {
-      console.error(err);
-      setSubmitted(true);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   // Curated Vietnam Tour Packages
   const vietnamPackages: TourPackage[] = [
@@ -241,7 +210,7 @@ export default function VietnamClientPage() {
         {/* ========================================================================= */}
         {/* HERO SECTION: 3D MOVING PHOTOS + VIETNAMESE CALLIGRAPHY + VERBATIM H1     */}
         {/* ========================================================================= */}
-        <section className="relative pt-[128px] pb-10 sm:pt-[132px] sm:pb-12 lg:pt-[136px] lg:pb-14 bg-[#FAF9F6] border-b border-[#E5E0D5] overflow-hidden">
+        <section className="relative pt-[112px] pb-8 sm:pt-[118px] sm:pb-10 lg:pt-[124px] lg:pb-12 bg-[#FAF9F6] border-b border-[#E5E0D5] overflow-hidden">
           
           {/* Subtle Atmosphere Glows */}
           <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-[#BFA13B]/5 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -249,17 +218,16 @@ export default function VietnamClientPage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Top Bar: Vietnamese-Inspired Elegant Font Badge */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#E5E0D5]">
+            {/* Top Bar: Vietnamese Greeting Badge (Simple, clean typography & tight spacing) */}
+            <div className="flex flex-wrap items-center justify-between gap-2.5 mb-2.5 sm:mb-3 pb-2 sm:pb-2.5 border-b border-[#E5E0D5]">
               
-              {/* ELEGANT VIETNAMESE-INSPIRED BADGE */}
-              <div className="inline-flex items-center gap-2.5 sm:gap-3 bg-[#FBF7EE] border border-[#BFA13B]/40 px-4 py-1.5 rounded-full shadow-2xs">
-                <span className="text-[#BFA13B] font-bold text-sm tracking-wide">✦</span>
-                <span className="font-serif text-stone-900 text-base sm:text-lg font-bold tracking-wide italic">
+              <div className="inline-flex items-center gap-2 sm:gap-2.5 bg-[#FBF7EE] border border-[#BFA13B]/40 px-3.5 py-1 rounded-full shadow-2xs">
+                <span className="text-[#BFA13B] font-bold text-xs sm:text-sm tracking-wide">✦</span>
+                <span className="font-sans text-stone-900 text-xs sm:text-[13px] font-bold tracking-normal">
                   Khám phá vẻ đẹp diệu kỳ của Việt Nam
                 </span>
                 <span className="text-[#BFA13B]/60 hidden sm:inline">•</span>
-                <span className="text-xs sm:text-sm font-serif font-bold text-stone-800">
+                <span className="text-xs sm:text-[13px] font-sans font-medium text-stone-600">
                   Discover the Magic of Vietnam
                 </span>
               </div>
@@ -279,10 +247,10 @@ export default function VietnamClientPage() {
             </div>
 
             {/* Main Hero Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start">
               
               {/* Left Column: Editorial Narrative & EXACT H1 */}
-              <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+              <div className="lg:col-span-7 flex flex-col justify-start space-y-4 sm:space-y-5">
                 
                 {/* Eyebrow Micro-caps */}
                 <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
@@ -453,127 +421,91 @@ export default function VietnamClientPage() {
 
                 </div>
 
-                {/* Quick Concierge Inquiry Card with Moving Border Beam */}
+                {/* Instant WhatsApp Trip Concierge Card with Moving Border Beam */}
                 <div className="border-beam-card shadow-[0_16px_40px_-6px_rgba(28,25,23,0.12)]">
-                  <div className="border-beam-inner p-6 sm:p-7">
-                    <div className="flex items-center justify-between pb-3 mb-2 border-b border-[#E5E0D5]">
+                  <div className="border-beam-inner p-5 sm:p-6 space-y-4">
+                    <div className="flex items-center justify-between pb-3 border-b border-[#E5E0D5]">
                       <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-gold-pulse" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                         <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
-                          Vietnam Tour Inquiry
+                          Instant WhatsApp Concierge
                         </span>
                       </div>
                       <span className="text-[11px] font-bold text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/40">
-                        Delhi Desk Online
+                        ⚡ 2-Min Reply Desk
                       </span>
                     </div>
 
                     {/* Dynamic Moving Laser Beam Line */}
-                    <div className="moving-line-track mb-3">
+                    <div className="moving-line-track">
                       <div className="moving-line-beam" />
                     </div>
 
-                    {submitted ? (
-                      <div className="py-6 text-center space-y-3">
-                        <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
-                          <CheckCircle2 className="w-6 h-6" />
-                        </div>
-                        <h4 className="text-base font-bold text-slate-900">Inquiry Received</h4>
-                        <p className="text-xs text-slate-600 max-w-xs mx-auto">
-                          Thank you! Our Vietnam travel planner from Connaught Place, Delhi will contact you shortly with custom itineraries and flight options.
-                        </p>
-                        <button
-                          type="button"
-                          onClick={() => setSubmitted(false)}
-                          className="mt-2 px-4 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl"
-                        >
-                          Submit Another Inquiry
-                        </button>
+                    <div>
+                      <h4 className="text-base sm:text-[17px] font-bold text-stone-950 tracking-tight leading-snug">
+                        Plan Your Vietnam Holiday Directly on WhatsApp
+                      </h4>
+                      <p className="text-xs text-stone-600 mt-1 leading-relaxed">
+                        Skip long forms. Connect directly with our Connaught Place travel planners on WhatsApp with instant custom quotes, Ha Long cruises &amp; E-Visas.
+                      </p>
+                    </div>
+
+                    {/* Quick Preference Selector */}
+                    <div className="space-y-2">
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-stone-500">
+                        Select Your Travel Style:
+                      </label>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        {[
+                          "Vietnam 7N/6D Highlights",
+                          "Ha Long Luxury Cruise",
+                          "Hoi An Silk & Lanterns",
+                          "Family Grand Discovery",
+                        ].map((pref) => (
+                          <button
+                            key={pref}
+                            type="button"
+                            onClick={() => setSelectedPreference(pref)}
+                            className={`py-2 px-2.5 rounded-xl text-xs font-semibold text-center transition-all cursor-pointer border ${
+                              selectedPreference === pref
+                                ? "bg-[#0C0A09] text-[#F5D77F] border-[#BFA13B]/60 shadow-xs"
+                                : "bg-[#FAF9F6] text-stone-700 border-[#E5E0D5] hover:bg-white hover:text-stone-950"
+                            }`}
+                          >
+                            {pref}
+                          </button>
+                        ))}
                       </div>
-                    ) : (
-                      <form onSubmit={handleSubmitInquiry} className="space-y-3">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                          <div>
-                            <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                              Your Name *
-                            </label>
-                            <input
-                              type="text"
-                              required
-                              placeholder="e.g. Aman Gupta"
-                              value={formData.name}
-                              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
-                            />
-                          </div>
-                          <div>
-                            <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                              Phone Number *
-                            </label>
-                            <input
-                              type="tel"
-                              required
-                              placeholder="+91 98100 XXXXX"
-                              value={formData.phone}
-                              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
-                            />
-                          </div>
-                        </div>
+                    </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                          <div>
-                            <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                              Trip Duration
-                            </label>
-                            <select
-                              value={formData.travelMonth}
-                              onChange={(e) => setFormData({ ...formData, travelMonth: e.target.value })}
-                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
-                            >
-                              <option value="7 Days / 6 Nights">7 Days / 6 Nights (North & Central)</option>
-                              <option value="9 Days / 8 Nights">9 Days / 8 Nights (Classic North to South)</option>
-                              <option value="10 Days / 9 Nights">10 Days / 9 Nights (Grand Discovery)</option>
-                              <option value="Custom Duration">Custom Duration</option>
-                            </select>
-                          </div>
-                          <div>
-                            <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                              Number of Guests
-                            </label>
-                            <select
-                              value={formData.guests}
-                              onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                              className="w-full px-3 py-2 text-xs rounded-xl bg-[#FAF9F6] border border-[#E5E0D5] focus:bg-white focus:border-[#BFA13B] focus:outline-none"
-                            >
-                              <option value="2 Adults (Couple)">2 Adults (Couple)</option>
-                              <option value="Family with Kids">Family with Kids</option>
-                              <option value="Group of Friends (4+)">Group of Friends (4+)</option>
-                              <option value="Solo Traveler">Solo Traveler</option>
-                            </select>
-                          </div>
-                        </div>
+                    {/* Big WhatsApp CTA Button */}
+                    <a
+                      href={`https://wa.me/919810024680?text=${encodeURIComponent(
+                        `Hello Altitude Travel, I want to plan a Vietnam tour package (${selectedPreference}). Please share customized itinerary, cruise options and best quote.`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3.5 px-5 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-emerald-600 hover:bg-emerald-500 active:scale-[0.99] text-white shadow-[0_8px_25px_rgba(16,185,129,0.35)] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+                    >
+                      <MessageSquare className="w-4 h-4 fill-white shrink-0" />
+                      <span>Chat on WhatsApp for Custom Quote</span>
+                    </a>
 
-                        <button
-                          type="submit"
-                          disabled={isSubmitting}
-                          className="w-full py-3.5 px-5 rounded-xl font-bold text-xs sm:text-sm tracking-wide bg-shining-gold shining-sweep hover:brightness-105 active:scale-[0.99] text-stone-950 shadow-[0_8px_25px_rgba(212,175,55,0.4)] transition-all flex items-center justify-center gap-2 border border-[#BFA13B]/40 cursor-pointer"
-                        >
-                          {isSubmitting ? (
-                            <span>Submitting Vietnam Inquiry...</span>
-                          ) : (
-                            <>
-                              <Send className="w-3.5 h-3.5 text-stone-950 fill-stone-950" />
-                              <span>Request Custom Vietnam Package Quote</span>
-                            </>
-                          )}
-                        </button>
+                    {/* Direct Call Option */}
+                    <a
+                      href="tel:+919810024680"
+                      className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs text-stone-700 hover:text-stone-950 bg-stone-50 hover:bg-stone-100 border border-stone-200 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <Phone className="w-3.5 h-3.5 text-[#BFA13B]" />
+                      <span>Or Call Delhi Planning Desk: +91 98100 24680</span>
+                    </a>
 
-                        <p className="text-[10.5px] text-center text-slate-400 font-medium">
-                          100% Privacy • No Spam • Handcrafted Quotes from Delhi Office
-                        </p>
-                      </form>
-                    )}
+                    {/* Trust Micro-Bullets */}
+                    <div className="pt-1 flex items-center justify-between text-[10.5px] font-medium text-stone-500 border-t border-stone-100">
+                      <span>✓ 100% Free Custom Quotes</span>
+                      <span>✓ E-Visa Support</span>
+                      <span>✓ Cruise Handpicked</span>
+                    </div>
                   </div>
                 </div>
 
