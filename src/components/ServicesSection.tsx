@@ -254,7 +254,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
 
         {/* MOBILE & TABLET VIEW: Compact Horizontal Carousel (Zero vertical clutter) */}
         <div className="block lg:hidden">
-          <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory">
             {services.map((srv, idx) => {
               const Icon = srv.icon;
 

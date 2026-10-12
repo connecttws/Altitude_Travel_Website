@@ -89,7 +89,7 @@ export default function TestimonialsSection() {
           {/* Horizontal Slider with Cards */}
           <div
             ref={sliderRef}
-            className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 items-stretch"
+            className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth no-scrollbar snap-x snap-mandatory items-stretch"
           >
             {TESTIMONIALS_DATA.map((t) => (
               <div
