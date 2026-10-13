@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Compass,
   MapPin,
@@ -36,21 +37,27 @@ export default function Footer() {
           {/* Column 1: Brand Info & Fleet badges */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0C0A09] border border-[#BFA13B]/30 text-[#BFA13B] flex items-center justify-center font-bold shadow-xs">
-                <Compass className="w-5 h-5 text-[#BFA13B]" />
+              <div className="relative w-11 h-11 rounded-xl bg-white overflow-hidden p-0.5 border border-[#BFA13B]/40 shadow-xs shrink-0 flex items-center justify-center">
+                <Image
+                  src="/logo.jpg"
+                  alt="Altitude Travel Co. Logo"
+                  width={44}
+                  height={44}
+                  className="object-contain w-full h-full"
+                />
               </div>
               <div>
                 <span className="text-xl font-serif font-bold text-white tracking-tight">
                   Altitude Travel<span className="text-[#BFA13B]">.</span>
                 </span>
                 <span className="text-[9.5px] uppercase tracking-[0.2em] text-[#C9A84C] block -mt-0.5 font-semibold">
-                  Connaught Place, New Delhi
+                  Bazpur, Nainital, Uttarakhand
                 </span>
               </div>
             </div>
 
             <p className="text-xs sm:text-[13px] text-stone-400 leading-relaxed max-w-sm font-normal">
-              Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. We combine iconic landmarks with hidden gems, local food, and a complete free day.
+              Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. We combine iconic landmarks with hidden gems, local food, and a complete free day.
             </p>
 
             {/* Travel badges */}
@@ -69,18 +76,18 @@ export default function Footer() {
             <div className="space-y-1.5 pt-2 text-xs">
               <div className="flex items-center gap-2.5 text-stone-300 font-normal">
                 <MapPin className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
-                <span>Connaught Place, Central Delhi, New Delhi 110001, India</span>
+                <span>Bazpur, near Rudrapur, Nainital, Uttarakhand, India</span>
               </div>
               <div className="flex items-center gap-2.5 text-stone-300 font-normal">
                 <Phone className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
-                <a href="tel:+919810024680" className="hover:text-[#BFA13B] transition-colors">
-                  +91 98100 24680 / +91 11 4321 0000
+                <a href="tel:+919639320101" className="hover:text-[#BFA13B] transition-colors">
+                  +91 96393 20101
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-stone-300 font-normal">
                 <Mail className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
-                <a href="mailto:inquiries@altitudetravel.in" className="hover:text-[#BFA13B] transition-colors">
-                  inquiries@altitudetravel.in
+                <a href="mailto:Altitudetravelco@gmail.com" className="hover:text-[#BFA13B] transition-colors">
+                  Altitudetravelco@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-stone-400 text-[11px]">
@@ -117,7 +124,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20am%20looking%20for%20a%20custom%20Indian%20tour%20package."
+                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20looking%20for%20a%20custom%20Indian%20tour%20package."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#BFA13B] transition-colors flex items-center justify-between text-stone-300"

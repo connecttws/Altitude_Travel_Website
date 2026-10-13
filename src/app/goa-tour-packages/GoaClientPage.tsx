@@ -645,50 +645,12 @@ export default function GoaClientPage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Top Bar: Konkani / Susegad Badge (Simple, clean typography & tight spacing) */}
-            <div className="flex flex-wrap items-center justify-between gap-2.5 mb-2.5 sm:mb-3 pb-2 sm:pb-2.5 border-b border-[#E5E0D5]">
-              
-              <div className="inline-flex items-center gap-2 sm:gap-2.5 bg-[#FBF7EE] border border-[#BFA13B]/40 px-3.5 py-1 rounded-full shadow-2xs">
-                <span className="text-[#BFA13B] font-bold text-xs sm:text-sm tracking-wide">🌴</span>
-                <span className="font-sans text-stone-900 text-xs sm:text-[13px] font-bold tracking-normal">
-                  सुस्वागतम् (Suswagatam) — Susegad &amp; Sunshine
-                </span>
-                <span className="text-[#BFA13B]/60 hidden sm:inline">•</span>
-                <span className="text-xs sm:text-[13px] font-sans font-medium text-stone-600">
-                  Discover the Soul of Goa
-                </span>
-              </div>
-
-              {/* Flight & Travel Pills */}
-              <div className="flex items-center gap-2 text-xs font-semibold text-stone-600">
-                <span className="bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs flex items-center gap-1.5">
-                  <Plane className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>2.5h Direct Flight from Delhi</span>
-                </span>
-                <span className="hidden sm:inline-flex bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Mopa (GOX) &amp; Dabolim (GOI)</span>
-                </span>
-                <span className="hidden xl:inline-flex bg-[#FBF7EE] text-stone-900 px-3 py-1 rounded-full border border-[#BFA13B]/40 shadow-2xs items-center gap-1.5">
-                  <Sun className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Best Season: Oct – May</span>
-                </span>
-              </div>
-
-            </div>
-
             {/* Main Hero Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
               {/* Left Column: VERBATIM H1 & INTRODUCTORY COPY */}
               <div className="lg:col-span-7 flex flex-col justify-start space-y-4 sm:space-y-5">
                 
-                {/* Eyebrow Micro-caps */}
-                <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
-                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Curated Indian Coastal Escapes • Connaught Place, Delhi Planning Desk</span>
-                </div>
-
                 {/* SIGNATURE EDITORIAL H1 HEADING */}
                 <h1 className="text-3xl sm:text-5xl lg:text-[48px] font-serif font-bold text-[#1C1917] tracking-tight leading-[1.14]">
                   Goa Tour Packages |{" "}
@@ -696,6 +658,12 @@ export default function GoaClientPage() {
                     Discover the Best of Goa
                   </span>
                 </h1>
+
+                {/* Eyebrow Micro-caps */}
+                <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  <span>Curated Indian Coastal Escapes • Connaught Place, Delhi Planning Desk</span>
+                </div>
 
                 {/* Dynamic Moving Accent Line */}
                 <div className="moving-line-track max-w-[160px]">
@@ -715,7 +683,7 @@ export default function GoaClientPage() {
                 {/* Action CTA Buttons */}
                 <div className="pt-2 flex flex-wrap items-center gap-3">
                   <a
-                    href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Goa%20tour%20packages."
+                    href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Goa%20tour%20packages."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-stone-900 hover:bg-stone-800 text-white shadow-md transition-all cursor-pointer"
@@ -1212,7 +1180,7 @@ export default function GoaClientPage() {
 
                     <div className="pt-5 mt-4 border-t border-[#E5E0D5]">
                       <a
-                        href={`https://wa.me/919810024680?text=${encodeURIComponent(
+                        href={`https://wa.me/919639320101?text=${encodeURIComponent(
                           `Hello Altitude Travel, I want to inquire about the ${type.title} package for Goa.`
                         )}`}
                         target="_blank"
@@ -1572,7 +1540,7 @@ export default function GoaClientPage() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                 <a
-                  href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Goa%20tour%20package.%20Please%20share%20customized%20itinerary%20and%20pricing."
+                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Goa%20tour%20package.%20Please%20share%20customized%20itinerary%20and%20pricing."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2.5 transition-all cursor-pointer"
@@ -1582,11 +1550,11 @@ export default function GoaClientPage() {
                 </a>
 
                 <a
-                  href="tel:+919810024680"
+                  href="tel:+919639320101"
                   className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-200 flex items-center justify-center gap-2 transition-all cursor-pointer"
                 >
                   <Phone className="w-4 h-4 text-[#BFA13B]" />
-                  <span>Call +91 98100 24680</span>
+                  <span>Call +91 96393 20101</span>
                 </a>
               </div>
 

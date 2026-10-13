@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { TourPackage } from "@/data/packages";
-import { MapPin, Clock, Star, ArrowRight, Heart } from "lucide-react";
+import { MapPin, Clock, Star, ArrowRight, Heart, Sparkles } from "lucide-react";
 
 interface PackageCardProps {
   pkg: TourPackage;
@@ -14,15 +14,6 @@ interface PackageCardProps {
 
 export default function PackageCard({ pkg, onSelect, onInquire, featured = false }: PackageCardProps) {
   const [isSaved, setIsSaved] = useState(false);
-
-  const getOriginalPrice = (priceStr: string) => {
-    const num = parseInt(priceStr.replace(/[^0-9]/g, ""), 10);
-    if (!num || isNaN(num)) return null;
-    const original = Math.round((num * 1.24) / 100) * 100;
-    return `₹${original.toLocaleString("en-IN")}`;
-  };
-
-  const originalPrice = getOriginalPrice(pkg.priceStarting);
 
   return (
     <div
@@ -117,23 +108,11 @@ export default function PackageCard({ pkg, onSelect, onInquire, featured = false
           </p>
         </div>
 
-        {/* 3. FOOTER: Strikethrough & Starting Price + Explore Package CTA */}
+        {/* 3. FOOTER: Custom Itinerary & Explore Package CTA */}
         <div className="pt-3.5 border-t border-[#E5E0D5] flex items-center justify-between gap-3">
-          <div>
-            <div className="flex items-center gap-1.5 leading-none mb-0.5">
-              <span className="text-[9.5px] uppercase font-bold tracking-wider text-stone-400">
-                From
-              </span>
-              {originalPrice && (
-                <span className="text-[11px] text-stone-400 line-through font-medium">
-                  {originalPrice}
-                </span>
-              )}
-            </div>
-            <div className="text-base sm:text-lg font-extrabold text-[#7A5200] tracking-tight">
-              {pkg.priceStarting}
-              <span className="text-[11px] font-normal text-stone-500"> /person</span>
-            </div>
+          <div className="flex items-center gap-1.5 text-stone-700">
+            <Sparkles className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+            <span className="text-xs font-semibold text-stone-800">Custom Itinerary</span>
           </div>
 
           <div className="flex items-center gap-1.5">

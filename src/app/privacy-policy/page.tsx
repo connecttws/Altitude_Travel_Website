@@ -100,11 +100,11 @@ export default function PrivacyPolicyPage() {
                 <br />
                 <strong>Altitude Travel Co.</strong>
                 <br />
-                Connaught Place, New Delhi 110001, India
+                Bazpur, near Rudrapur, Nainital, Uttarakhand, India
                 <br />
-                Email: <a href="mailto:inquiries@altitudetravel.in" className="text-amber-700 underline">inquiries@altitudetravel.in</a>
+                Email: <a href="mailto:Altitudetravelco@gmail.com" className="text-amber-700 underline">Altitudetravelco@gmail.com</a>
                 <br />
-                Phone: +91 98100 24680
+                Phone: +91 96393 20101
               </p>
             </section>
           </div>

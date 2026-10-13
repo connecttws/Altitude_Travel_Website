@@ -221,46 +221,12 @@ export default function DubaiClientPage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Top Bar: Dubai Badge (Simple, clean typography & tight spacing) */}
-            <div className="flex flex-wrap items-center justify-between gap-2.5 mb-2.5 sm:mb-3 pb-2 sm:pb-2.5 border-b border-[#E5E0D5]">
-              
-              <div className="inline-flex items-center gap-2 sm:gap-2.5 bg-[#FBF7EE] border border-[#BFA13B]/40 px-3.5 py-1 rounded-full shadow-2xs">
-                <span className="text-[#BFA13B] font-bold text-xs sm:text-sm tracking-wide">✦</span>
-                <span className="font-arabic text-stone-900 text-sm sm:text-[15px] font-bold tracking-normal">
-                  اكتشف سحر دبي
-                </span>
-                <span className="text-[#BFA13B]/60 hidden sm:inline">•</span>
-                <span className="text-xs sm:text-[13px] font-sans font-medium text-stone-600">
-                  Discover the Magic of Dubai
-                </span>
-              </div>
-
-              {/* Currency & Flight Distance Pills */}
-              <div className="flex items-center gap-2 text-xs font-semibold text-stone-600">
-                <span className="bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs flex items-center gap-1.5">
-                  <Gem className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Currency: <strong className="text-stone-900">UAE Dirham (AED)</strong></span>
-                </span>
-                <span className="hidden sm:inline-flex bg-white px-3 py-1 rounded-full border border-[#E5E0D5] shadow-2xs items-center gap-1.5">
-                  <Plane className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>3.5h Non-Stop from Delhi</span>
-                </span>
-              </div>
-
-            </div>
-
             {/* Main Hero Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
               {/* Left Column: Editorial Travel Brand Narrative & EXACT H1 */}
               <div className="lg:col-span-7 flex flex-col justify-start space-y-4 sm:space-y-5">
                 
-                {/* Eyebrow Micro-caps */}
-                <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
-                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Curated UAE Travel • Connaught Place, Delhi Planning Desk</span>
-                </div>
-
                 {/* SIGNATURE EDITORIAL H1 HEADING */}
                 <h1 className="text-3xl sm:text-5xl lg:text-[48px] font-serif font-bold text-[#1C1917] tracking-tight leading-[1.14]">
                   Dubai Tour and Travel:{" "}
@@ -268,6 +234,12 @@ export default function DubaiClientPage() {
                     Explore the Best of Dubai
                   </span>
                 </h1>
+
+                {/* Eyebrow Micro-caps */}
+                <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  <span>Curated UAE Travel • Connaught Place, Delhi Planning Desk</span>
+                </div>
 
                 {/* Dynamic Moving Accent Line */}
                 <div className="moving-line-track max-w-[160px]">
@@ -349,7 +321,7 @@ export default function DubaiClientPage() {
                 {/* Action CTA Buttons */}
                 <div className="pt-2 flex flex-wrap items-center gap-3">
                   <a
-                    href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Dubai%20tour%20packages."
+                    href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Dubai%20tour%20packages."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-stone-900 hover:bg-stone-800 text-white shadow-md transition-all cursor-pointer"
@@ -1283,7 +1255,7 @@ export default function DubaiClientPage() {
 
                 <div className="flex items-center gap-3 shrink-0">
                   <a
-                    href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20am%20planning%20a%20Dubai%20trip%20with%20custom%20flights%20and%20hotels."
+                    href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20planning%20a%20Dubai%20trip%20with%20custom%20flights%20and%20hotels."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#BFA13B] hover:bg-[#d4b343] text-stone-950 flex items-center gap-1.5 transition-all shadow-md"
@@ -1573,15 +1545,15 @@ export default function DubaiClientPage() {
 
               <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
                 <a
-                  href="tel:+919810024680"
+                  href="tel:+919639320101"
                   className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 flex items-center gap-2 transition-colors cursor-pointer"
                 >
                   <PhoneCall className="w-4 h-4 text-[#BFA13B]" />
-                  <span>Call +91 98100 24680</span>
+                  <span>Call +91 96393 20101</span>
                 </a>
 
                 <a
-                  href="https://wa.me/919810024680?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Dubai%20tour%20package."
+                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Dubai%20tour%20package."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-[#BFA13B] hover:bg-[#d4b343] text-stone-950 flex items-center gap-2 transition-all shadow-md cursor-pointer"

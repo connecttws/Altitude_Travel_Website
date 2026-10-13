@@ -179,17 +179,16 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
           {/* Right Column: Pricing & Quick Booking Form */}
           <div className="lg:col-span-5 space-y-5">
             
-            {/* Price Box */}
+            {/* Custom Quote & Inclusions Box */}
             <div className="bg-[#0C0A09] text-white rounded-[24px] p-5 shadow-xl space-y-1 text-center border border-[#BFA13B]/30">
               <span className="text-[11px] uppercase tracking-widest text-[#E8D08D] font-bold">
-                Special Package Pricing
+                Tailored Itinerary &amp; Quotes
               </span>
-              <div className="text-3xl font-serif font-bold text-white">
-                {pkg.priceStarting}
-                <span className="text-xs font-sans font-normal text-stone-400"> / person</span>
+              <div className="text-2xl font-serif font-bold text-white">
+                Custom Pricing on Request
               </div>
               <p className="text-[11px] text-stone-300">
-                Includes Handpicked Stays, Transfers &amp; Breakfast
+                Includes Handpicked Stays, Transfers, Sightseeing &amp; 1 Free Day
               </p>
             </div>
 
@@ -215,16 +214,16 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                   <span className="text-stone-500 text-[11px]">{pkg.duration} • 1 Free Day Guaranteed</span>
                 </div>
                 <div className="text-right">
-                  <span className="text-[10px] uppercase text-stone-400 block font-semibold">Starting</span>
-                  <span className="font-extrabold text-[#9E7418] text-sm">{pkg.priceStarting}</span>
+                  <span className="text-[10px] uppercase text-stone-400 block font-semibold">Pricing</span>
+                  <span className="font-extrabold text-[#7A5200] text-xs">On Request</span>
                 </div>
               </div>
 
               {/* Direct Booking Actions */}
               <div className="space-y-2 pt-1">
                 <a
-                  href={`https://wa.me/919810024680?text=${encodeURIComponent(
-                    `Hi Altitude Travel! I want to inquire about the "${pkg.title}" package (${pkg.duration}, starting at ${pkg.priceStarting}). Please share the day-by-day itinerary and best price options!`
+                  href={`https://wa.me/919639320101?text=${encodeURIComponent(
+                    `Hi Altitude Travel! I want to inquire about the "${pkg.title}" package (${pkg.duration}). Please share the day-by-day itinerary and customized price quote!`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -235,11 +234,11 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                 </a>
 
                 <a
-                  href="tel:+919810024680"
+                  href="tel:+919639320101"
                   className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs bg-white hover:bg-stone-50 text-stone-900 border border-[#E5E0D5] flex items-center justify-center gap-2 shadow-2xs transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Call Delhi Desk: +91 98100 24680</span>
+                  <span>Call Us: +91 96393 20101</span>
                 </a>
               </div>
 

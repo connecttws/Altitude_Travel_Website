@@ -87,7 +87,7 @@ export default function TermsPage() {
 
               <h2 className="text-xl font-bold text-slate-900">6. Contact & Jurisdiction</h2>
               <p>
-                All legal disputes shall be subject to the exclusive jurisdiction of the competent courts in New Delhi, India. For any questions regarding terms, reach us at inquiries@altitudetravel.in or +91 98100 24680.
+                All legal disputes shall be subject to the exclusive jurisdiction of the competent courts in Uttarakhand, India. For any questions regarding terms, reach us at Altitudetravelco@gmail.com or +91 96393 20101.
               </p>
             </section>
           </div>

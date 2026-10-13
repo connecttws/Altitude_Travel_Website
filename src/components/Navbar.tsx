@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Compass,
   ChevronDown,
@@ -120,7 +121,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
 
             <span className="hidden sm:flex items-center gap-1 text-stone-400">
               <MapPin className="w-3 h-3 text-[#BFA13B]" />
-              <span>Connaught Place, New Delhi</span>
+              <span>Bazpur, Nainital, Uttarakhand</span>
             </span>
 
             <span className="text-stone-700 hidden lg:inline">•</span>
@@ -133,7 +134,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
           {/* Right Direct Links */}
           <div className="flex items-center gap-3 sm:gap-4">
             <a
-              href="https://wa.me/919810024680"
+              href="https://wa.me/919639320101"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
@@ -145,11 +146,11 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             <span className="text-stone-700 hidden md:inline">|</span>
 
             <a
-              href="tel:+919810024680"
+              href="tel:+919639320101"
               className="flex items-center gap-1.5 text-stone-100 hover:text-[#C9A84C] font-semibold transition-colors"
             >
               <Phone className="w-3 h-3 text-[#BFA13B]" />
-              <span>+91 98100 24680</span>
+              <span>+91 96393 20101</span>
             </a>
           </div>
 
@@ -169,19 +170,26 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 h-[68px] flex items-center justify-between gap-2 lg:gap-4">
           
-          {/* Brand Logo: Clean, Proportional, Luxury Typographic Mark */}
-          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-            <div className="w-9 h-9 rounded-xl bg-[#0C0A09] text-[#BFA13B] flex items-center justify-center shadow-xs group-hover:scale-105 border border-[#BFA13B]/30 transition-transform duration-200">
-              <Compass className="w-5 h-5" />
+          {/* Brand Logo: Clean, Proportional, Luxury Typographic Mark & Official Emblem */}
+          <Link href="/" className="flex items-center gap-2.5 group shrink-0" aria-label="Altitude Travel Co.">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-white border border-[#E5E0D5] shadow-xs group-hover:scale-105 group-hover:border-[#BFA13B]/50 transition-all duration-200 flex items-center justify-center shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt="Altitude Travel Co. Logo"
+                width={44}
+                height={44}
+                className="object-contain w-full h-full p-0.5"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center leading-none">
-                <span className="text-[17px] xl:text-[19px] font-bold text-[#1C1917] tracking-tight group-hover:text-[#BFA13B] transition-colors whitespace-nowrap">
+                <span className="text-[17px] xl:text-[19px] font-bold text-[#1C1917] tracking-tight group-hover:text-[#BFA13B] transition-colors whitespace-nowrap font-serif">
                   Altitude Travel
                 </span>
                 <span className="text-[#BFA13B] font-bold text-lg leading-none ml-0.5">.</span>
               </div>
-              <span className="text-[8px] xl:text-[8.5px] uppercase tracking-[0.2em] font-semibold text-stone-400 mt-1 whitespace-nowrap">
+              <span className="text-[8px] xl:text-[8.5px] uppercase tracking-[0.2em] font-semibold text-stone-500 mt-1 whitespace-nowrap">
                 Travel Beyond The Tourist Trail
               </span>
             </div>
@@ -530,10 +538,10 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
 
               <div className="pt-2 border-t border-[#E5E0D5]">
                 <a
-                  href="tel:+919810024680"
+                  href="tel:+919639320101"
                   className="w-full py-2.5 bg-[#BFA13B] text-stone-950 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-xs border border-[#BFA13B]"
                 >
-                  <Phone className="w-3.5 h-3.5" /> Call +91 98100 24680
+                  <Phone className="w-3.5 h-3.5" /> Call +91 96393 20101
                 </a>
               </div>
             </div>

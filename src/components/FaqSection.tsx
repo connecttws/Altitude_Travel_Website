@@ -110,14 +110,14 @@ export default function FaqSection() {
         <div className="mt-8 bg-white rounded-2xl p-6 border border-[#E5E0D5] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
             <h4 className="text-base font-serif font-bold text-[#1C1917]">Have a specific query about your upcoming trip?</h4>
-            <p className="text-xs sm:text-sm text-stone-500 font-normal mt-0.5">Speak directly with our senior destination planners in Connaught Place, Delhi.</p>
+            <p className="text-xs sm:text-sm text-stone-500 font-normal mt-0.5">Speak directly with our senior destination planners.</p>
           </div>
           <a
-            href="tel:+919810024680"
+            href="tel:+919639320101"
             className="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#BFA13B] hover:bg-[#A6832A] text-stone-950 flex items-center gap-2 shadow-xs shrink-0 border border-[#BFA13B] cursor-pointer transition-all"
           >
             <PhoneCall className="w-3.5 h-3.5 text-stone-950" />
-            <span>Call +91 98100 24680</span>
+            <span>Call +91 96393 20101</span>
           </a>
         </div>
 

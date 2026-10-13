@@ -45,8 +45,8 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
     "Rajasthan Havelis",
   ];
 
-  const whatsappMessage = `Hi Altitude Travel! I want to plan a custom trip to ${destination} for ${duration} (${tripType}, ${hotelTier}). Please share customized itinerary options and pricing from your Delhi desk!`;
-  const whatsappUrl = `https://wa.me/919810024680?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappMessage = `Hi Altitude Travel! I want to plan a custom trip to ${destination} for ${duration} (${tripType}, ${hotelTier}). Please share customized itinerary options and quotes!`;
+  const whatsappUrl = `https://wa.me/919639320101?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-[#0C0A09]/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-200">
@@ -188,11 +188,11 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
 
             <div className="grid grid-cols-2 gap-2">
               <a
-                href="tel:+919810024680"
+                href="tel:+919639320101"
                 className="py-2.5 px-3 rounded-xl font-semibold text-xs bg-white text-stone-900 border border-[#E5E0D5] flex items-center justify-center gap-1.5 shadow-2xs hover:bg-[#FAF9F6]"
               >
                 <Phone className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
-                <span className="truncate">Call: +91 98100 24680</span>
+                <span className="truncate">Call: +91 96393 20101</span>
               </a>
 
               <div className="py-2.5 px-3 rounded-xl text-[11px] font-semibold bg-[#FAF9F6] text-stone-800 border border-[#E5E0D5] flex items-center justify-center gap-1.5 shadow-2xs">

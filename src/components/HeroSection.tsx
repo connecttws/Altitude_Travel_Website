@@ -26,7 +26,6 @@ export default function HeroSection() {
       title: "Maldives & Bali Private Atolls",
       tag: "Turquoise Lagoons & Overwater Stays",
       subtitle: "Handpicked 5-Star luxury villas, private sunset catamarans & 1 guaranteed free day.",
-      price: "₹28,999",
       image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=85",
       badge: "Signature Escapes",
     },
@@ -37,7 +36,6 @@ export default function HeroSection() {
       title: "Kashmir Valley & Swiss Alpine",
       tag: "Dal Lake Houseboats & Glacier Express",
       subtitle: "Scenic high-mountain coach drives, luxury wooden chalets & unhurried regional dining.",
-      price: "₹18,499",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85",
       badge: "Curated Trails",
     },
@@ -48,7 +46,6 @@ export default function HeroSection() {
       title: "Dubai Marina & Europe Discovery",
       tag: "Desert Safaris & Private Luxury Yachts",
       subtitle: "Burj Khalifa VIP access, premium private transfers, bespoke dining & full visa desk.",
-      price: "₹38,999",
       image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85",
       badge: "Worldwide Luxury",
     },
@@ -215,13 +212,10 @@ export default function HeroSection() {
                     <span className="text-[10.5px] font-bold uppercase tracking-wider text-[#F5D77F]">
                       {currentPreview.tag}
                     </span>
-                    <div className="text-right">
-                      <span className="text-[9px] uppercase font-bold text-stone-300 block leading-none">Starting</span>
-                      <span className="text-base sm:text-lg font-black text-[#FFF0B8] leading-tight">
-                        {currentPreview.price}
-                        <span className="text-[10px] font-normal text-stone-300"> /person</span>
-                      </span>
-                    </div>
+                    <span className="inline-flex items-center gap-1 text-[10.5px] font-semibold text-stone-200 bg-black/40 backdrop-blur-sm px-2.5 py-0.5 rounded-full border border-white/15">
+                      <Sparkles className="w-3 h-3 text-[#F5D77F]" />
+                      Custom Plan
+                    </span>
                   </div>
 
                   <h3 className="text-lg sm:text-xl font-extrabold text-white tracking-tight leading-snug drop-shadow-md">

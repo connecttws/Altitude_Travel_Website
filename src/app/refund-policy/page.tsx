@@ -111,7 +111,7 @@ export default function RefundPolicyPage() {
 
               <h2 className="text-xl font-bold text-slate-900">5. Assistance Desk</h2>
               <p>
-                For cancellation or rescheduling requests, write to <a href="mailto:inquiries@altitudetravel.in" className="text-amber-700 underline font-semibold">inquiries@altitudetravel.in</a> or call our Connaught Place office directly at +91 98100 24680.
+                For cancellation or rescheduling requests, write to <a href="mailto:Altitudetravelco@gmail.com" className="text-amber-700 underline font-semibold">Altitudetravelco@gmail.com</a> or call our office directly at +91 96393 20101.
               </p>
             </section>
           </div>
