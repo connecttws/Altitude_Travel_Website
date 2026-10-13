@@ -99,7 +99,7 @@ export default function VietnamClientPage() {
       priceStarting: "₹58,500",
       rating: 5.0,
       reviewsCount: 186,
-      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=80",
+      image: "https://images.unsplash.com/photo-1679562078540-09ae866ef4bf?auto=format&fit=crop&w=1000&q=80",
       tag: "Most Popular",
       iconicLandmarks: ["Ha Long Bay UNESCO Cruise", "Hoi An Ancient Lantern Town", "Cu Chi Tunnels Saigon", "Mekong Delta Floating Market"],
       hiddenGems: ["Saigon vintage rooftop cafe scene", "Bat Trang ceramic craft village", "Cam Thanh coconut forest basket boat dance"],
@@ -371,7 +371,7 @@ export default function VietnamClientPage() {
                     {/* Card 2: Center 3D Floating Hero - Hoi An River Lanterns */}
                     <div className="relative w-[180px] sm:w-[210px] h-[230px] sm:h-[250px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border-2 border-[#BFA13B] animate-3d-center z-20 group cursor-pointer">
                       <Image
-                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1741274236412-b6760ff6c01b?auto=format&fit=crop&w=600&q=80"
                         alt="Hoi An glowing night lanterns and riverboat"
                         fill
                         sizes="240px"
@@ -511,7 +511,7 @@ export default function VietnamClientPage() {
               <div className="bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col md:flex-row gap-6 items-center">
                 <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs border border-[#E5E0D5]">
                   <Image
-                    src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+                    src="https://images.unsplash.com/photo-1679562078540-09ae866ef4bf?auto=format&fit=crop&w=800&q=80"
                     alt="Hanoi Old Quarter streets and Hoan Kiem Lake"
                     fill
                     sizes="(max-width: 768px) 100vw, 40vw"
@@ -646,7 +646,7 @@ export default function VietnamClientPage() {
               <div className="bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col md:flex-row-reverse gap-6 items-center">
                 <div className="w-full md:w-5/12 relative h-56 sm:h-64 rounded-xl overflow-hidden shrink-0 shadow-xs border border-[#E5E0D5]">
                   <Image
-                    src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80"
+                    src="https://images.unsplash.com/photo-1560113855-2ea616c915ee?auto=format&fit=crop&w=800&q=80"
                     alt="Hoi An ancient river town with glowing night lanterns"
                     fill
                     sizes="(max-width: 768px) 100vw, 40vw"

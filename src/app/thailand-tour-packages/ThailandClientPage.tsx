@@ -319,7 +319,7 @@ export default function ThailandClientPage() {
       priceStarting: "₹22,999",
       rating: 4.8,
       reviewsCount: 280,
-      image: "https://images.unsplash.com/photo-1512553353684-82e3895e6f66?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80",
       tag: "Best Value",
       iconicLandmarks: ["Coral Island Speedboat Tour", "Alcazar Cabaret Show", "Pratunam Wholesale Market", "Wat Traimit Temple"],
       hiddenGems: ["Pattaya Beach Road night bazaar", "Indra Square Indian food hub", "Erawan Shrine prayers"],
@@ -414,7 +414,7 @@ export default function ThailandClientPage() {
       id: "pattaya",
       title: "Pattaya",
       tag: "Coastal Entertainment Hub",
-      image: "https://images.unsplash.com/photo-1512553353684-82e3895e6f66?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "Pattaya is known for its beaches, entertainment, shopping, water activities, and nightlife. It is a popular destination for travellers looking for both relaxation and fun.",
       elaborations: [
@@ -1489,65 +1489,69 @@ export default function ThailandClientPage() {
         {/* ========================================================================= */}
         {/* SECTION 9: PLAN YOUR THAILAND TOUR WITH ALTITUDE TRAVEL CO. (CTA)         */}
         {/* ========================================================================= */}
-        <section id="plan-thailand-tour-cta" className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F6]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <section id="plan-thailand-tour-cta" className="py-10 sm:py-12 lg:py-16 bg-[#FAF9F6]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
             
-            <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
-              <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
-              <span>Dedicated Thailand Travel Planning</span>
+            <div className="text-center space-y-4 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
+                <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
+                <span>Dedicated Thailand Travel Planning</span>
+              </div>
+
+              {/* EXACT SECTION TITLE */}
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
+                Plan Your Thailand Tour with <span className="italic font-normal text-[#BFA13B]">Altitude Travel Co.</span>
+              </h2>
+
+              {/* VERBATIM COPY FROM PROMPT */}
+              <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal">
+                Start planning your Thailand holiday with Altitude Travel Co. Whether you are looking for a family vacation, honeymoon, beach holiday, adventure trip, or customised Thailand tour, we can help create an itinerary based on your travel preferences. Explore Thailand your way with comfortable stays, planned sightseeing, exciting experiences, and dedicated travel support.
+              </p>
             </div>
 
-            {/* EXACT SECTION TITLE */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold text-[#1C1917] tracking-tight leading-tight">
-              Plan Your Thailand Tour with <span className="italic font-normal text-[#BFA13B]">Altitude Travel Co.</span>
-            </h2>
-
-            {/* VERBATIM COPY FROM PROMPT */}
-            <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal max-w-2xl mx-auto">
-              Start planning your Thailand holiday with Altitude Travel Co. Whether you are looking for a family vacation, honeymoon, beach holiday, adventure trip, or customised Thailand tour, we can help create an itinerary based on your travel preferences. Explore Thailand your way with comfortable stays, planned sightseeing, exciting experiences, and dedicated travel support.
-            </p>
-
             {/* Concierge Action Box */}
-            <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-[#0C0A09] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left border border-[#BFA13B]/30">
-              <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#E8D08D]">
+            <div className="mt-8 p-6 sm:p-8 lg:p-9 rounded-2xl bg-[#0C0A09] text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left border border-[#BFA13B]/30">
+              <div className="space-y-1.5 lg:max-w-lg">
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#E8D08D] block">
                   Connaught Place, Delhi Planning Desk
                 </span>
-                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
+                <h3 className="text-xl sm:text-2xl lg:text-[26px] font-serif font-bold text-white tracking-tight leading-snug">
                   Get a Free Custom Thailand Quote
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-300">
+                <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
                   Custom dates, hotel categories, Indian food recommendations &amp; private fleet transfers.
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+              <div className="w-full lg:w-auto flex flex-col sm:flex-row lg:flex-col gap-2.5 shrink-0">
                 <button
                   type="button"
                   onClick={() => setIsCustomModalOpen(true)}
-                  className="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 flex items-center gap-2 transition-all shadow-md cursor-pointer"
+                  className="w-full px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Plan Your Thailand Trip / Get a Quote</span>
                 </button>
 
-                <a
-                  href="tel:+919639320101"
-                  className="px-4 py-3 rounded-xl text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 flex items-center gap-2 transition-colors cursor-pointer"
-                >
-                  <PhoneCall className="w-4 h-4 text-[#BFA13B]" />
-                  <span>Call +91 96393 20101</span>
-                </a>
+                <div className="flex items-center gap-2.5 w-full">
+                  <a
+                    href="tel:+919639320101"
+                    className="flex-1 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 flex items-center justify-center gap-2 transition-colors cursor-pointer whitespace-nowrap"
+                  >
+                    <PhoneCall className="w-4 h-4 text-[#BFA13B]" />
+                    <span>Call +91 96393 20101</span>
+                  </a>
 
-                <a
-                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Thailand%20tour%20package."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 hover:bg-emerald-700 text-white flex items-center gap-2 transition-all shadow-md cursor-pointer"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>WhatsApp Concierge</span>
-                </a>
+                  <a
+                    href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Thailand%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer whitespace-nowrap"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    <span>WhatsApp Concierge</span>
+                  </a>
+                </div>
               </div>
             </div>
 

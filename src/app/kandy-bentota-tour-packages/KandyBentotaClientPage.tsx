@@ -249,7 +249,7 @@ export default function KandyBentotaClientPage() {
       priceStarting: "₹38,000",
       rating: 5.0,
       reviewsCount: 112,
-      image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1755100283596-e4c13e88de71?auto=format&fit=crop&w=800&q=80",
       tag: "VIP Private",
       iconicLandmarks: ["Temple of the Sacred Tooth Relic", "Royal Botanical Gardens Peradeniya", "Bentota Private River Cruise", "Brief Garden Estate"],
       hiddenGems: ["Private tea tasting with master sommelier", "VIP fast-track temple entry", "Secluded river island lunch"],
@@ -283,7 +283,7 @@ export default function KandyBentotaClientPage() {
       priceStarting: "Custom Quote",
       rating: 5.0,
       reviewsCount: 290,
-      image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1711524608131-603ed7f0e83e?auto=format&fit=crop&w=800&q=80",
       tag: "100% Tailor-Made",
       iconicLandmarks: ["Temple of the Tooth", "Bentota Beach", "Optional Galle Dutch Fort", "Optional Nuwara Eliya Tea Country"],
       hiddenGems: ["Custom private villa stays", "Secluded river sandbars", "Curated culinary trails"],
@@ -343,7 +343,7 @@ export default function KandyBentotaClientPage() {
       id: "royal-botanical-gardens",
       title: "Royal Botanical Gardens, Peradeniya",
       tag: "147-Acre Botanical Haven",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1775481725400-46cc882ec8b2?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "The Royal Botanical Gardens are known for their beautiful landscapes, tropical plants, flowers, and peaceful surroundings. It is a great place to enjoy nature while exploring the Kandy region.",
       elaborations: [
@@ -357,7 +357,7 @@ export default function KandyBentotaClientPage() {
       id: "kandy-city",
       title: "Kandy City",
       tag: "Highland Cultural Capital",
-      image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1711524608131-603ed7f0e83e?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "Explore Kandy's local markets, shops, restaurants, cultural attractions, and surrounding hills to experience the everyday character of the city.",
       elaborations: [
@@ -385,7 +385,7 @@ export default function KandyBentotaClientPage() {
       id: "bentota-river",
       title: "Bentota River",
       tag: "Madu & Bentota River Safari",
-      image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1661707745587-c928aa595ee7?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "The Bentota River offers opportunities for boat rides, nature experiences, and water-based activities surrounded by tropical scenery.",
       elaborations: [
@@ -399,7 +399,7 @@ export default function KandyBentotaClientPage() {
       id: "brief-garden",
       title: "Brief Garden",
       tag: "Tropical Architectural Estate",
-      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1775481725400-46cc882ec8b2?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "Located near Bentota, Brief Garden is a beautiful garden attraction known for its landscaped surroundings, tropical plants, art, and peaceful atmosphere.",
       elaborations: [
@@ -413,7 +413,7 @@ export default function KandyBentotaClientPage() {
       id: "bentota-turtle-hatchery",
       title: "Bentota Turtle Hatchery",
       tag: "Wildlife Conservation",
-      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1509747129352-c4244f0b9bf9?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "A turtle hatchery near Bentota offers visitors an opportunity to learn about sea turtles and conservation efforts.",
       elaborations: [
@@ -826,7 +826,7 @@ export default function KandyBentotaClientPage() {
                     {/* Card 3: Right 3D Moving Photo - Madu River Safari & Botanical Gardens */}
                     <div className="absolute -right-2 sm:right-2 w-[160px] sm:w-[190px] h-[210px] sm:h-[230px] rounded-xl overflow-hidden shadow-2xl border-2 border-white/30 animate-3d-right z-10 group cursor-pointer transition-transform">
                       <Image
-                        src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1661707745587-c928aa595ee7?auto=format&fit=crop&w=600&q=80"
                         alt="Bentota Madu River boat safari through lush mangrove islands"
                         fill
                         sizes="200px"

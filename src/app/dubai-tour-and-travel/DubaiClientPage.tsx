@@ -705,25 +705,25 @@ export default function DubaiClientPage() {
                   title: "Sunbathe at the city's beaches",
                   tag: "Turquoise Shorelines",
                   desc: "Relax along Kite Beach and JBR with crystal blue waters, beachside cafés, and view of the Burj Al Arab.",
-                  img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+                  img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=600&q=80",
                 },
                 {
                   title: "Get lost in traditional souks",
                   tag: "Heritage Markets",
                   desc: "Ride a wooden abra boat across Dubai Creek to haggle for authentic saffron, exotic perfumes, and gold jewellery.",
-                  img: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80",
+                  img: "https://images.unsplash.com/photo-1649053930596-29cb47828d87?auto=format&fit=crop&w=600&q=80",
                 },
                 {
                   title: "Try local and international delicacies",
                   tag: "Food & Flavours",
                   desc: "Taste hot Arabic shawarma, creamy hummus, fresh grilled kebabs, mezze platters, and decadent pistachio baklava.",
-                  img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80",
+                  img: "https://images.unsplash.com/photo-1636970962753-e3fbfc7ef1c0?auto=format&fit=crop&w=600&q=80",
                 },
                 {
                   title: "Have fun with water and adventure activities",
                   tag: "Aquatic Thrills",
                   desc: "Enjoy record-breaking slides at Aquaventure Waterpark, indoor skiing at Ski Dubai, or jet ski rides along Palm Jumeirah.",
-                  img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=600&q=80",
+                  img: "https://images.unsplash.com/photo-1503327431567-3ab5e6e79140?auto=format&fit=crop&w=600&q=80",
                 },
               ].map((act, i) => (
                 <div
@@ -1405,7 +1405,7 @@ export default function DubaiClientPage() {
             <div className="bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
               <div className="w-full md:w-1/3 relative h-48 sm:h-52 rounded-xl overflow-hidden shrink-0 border border-[#E5E0D5]">
                 <Image
-                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1636970962753-e3fbfc7ef1c0?auto=format&fit=crop&w=600&q=80"
                   alt="Dubai Arabic Cuisine & Shawarma"
                   fill
                   sizes="(max-width: 768px) 100vw, 30vw"

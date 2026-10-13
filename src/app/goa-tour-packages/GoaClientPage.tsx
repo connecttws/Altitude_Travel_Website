@@ -277,7 +277,7 @@ export default function GoaClientPage() {
       priceStarting: "Custom Quote",
       rating: 5.0,
       reviewsCount: 310,
-      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=800&q=80",
       tag: "100% Tailor-Made",
       iconicLandmarks: ["Luxury Heritage Homestays", "Private Yacht Sunset Charters", "Dudhsagar Jeep Safaris", "Hidden Fontainhas Patios"],
       hiddenGems: ["Island hopping in Chorao & Divar", "Curated Michelin-style Goan culinary tasting", "Private secluded sandbars"],
@@ -351,7 +351,7 @@ export default function GoaClientPage() {
       id: "fort-aguada",
       title: "Fort Aguada",
       tag: "17th-Century Portuguese Citadel",
-      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1584111728495-7d9599602355?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "Visit this historic Portuguese fort for beautiful sea views and a glimpse into Goa's colonial history.",
       elaborations: [
@@ -365,7 +365,7 @@ export default function GoaClientPage() {
       id: "basilica-of-bom-jesus",
       title: "Basilica of Bom Jesus",
       tag: "UNESCO World Heritage",
-      image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1567005753256-c0529035b300?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "One of Goa's most famous heritage attractions, the Basilica of Bom Jesus is an important historic and architectural landmark.",
       elaborations: [
@@ -379,7 +379,7 @@ export default function GoaClientPage() {
       id: "panjim",
       title: "Panjim",
       tag: "Heritage Capital & Latin Quarter",
-      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1648367819123-19d2ffe43f3a?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "Explore the colourful streets, Portuguese-style buildings, local cafés, markets, and cultural attractions of Goa's capital city.",
       elaborations: [
@@ -393,7 +393,7 @@ export default function GoaClientPage() {
       id: "dudhsagar-waterfalls",
       title: "Dudhsagar Waterfalls",
       tag: "Sea of Milk Wonder",
-      image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1667760334198-d3958029a08b?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "For nature and adventure lovers, Dudhsagar Waterfalls offer an exciting experience surrounded by lush greenery.",
       elaborations: [
@@ -407,7 +407,7 @@ export default function GoaClientPage() {
       id: "south-goa-beaches",
       title: "South Goa Beaches",
       tag: "Tranquil Susegad Shores",
-      image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?auto=format&fit=crop&w=800&q=80",
       verbatimText:
         "If you prefer a quieter beach holiday, explore the peaceful beaches of South Goa, known for their relaxed atmosphere and scenic surroundings.",
       elaborations: [
@@ -724,7 +724,7 @@ export default function GoaClientPage() {
                     {/* Card 1: Left 3D Moving Photo - Fontainhas Portuguese Quarter */}
                     <div className="absolute -left-2 sm:left-2 w-[160px] sm:w-[190px] h-[210px] sm:h-[230px] rounded-xl overflow-hidden shadow-2xl border-2 border-white/30 animate-3d-left z-10 group cursor-pointer transition-transform">
                       <Image
-                        src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+                        src="https://images.unsplash.com/photo-1648367819123-19d2ffe43f3a?auto=format&fit=crop&w=600&q=80"
                         alt="Fontainhas Latin Quarter colorful Portuguese villas in Panjim Goa"
                         fill
                         sizes="200px"
