@@ -784,6 +784,7 @@ export default function ThailandClientPage() {
                         alt="Krabi limestone cliffs and turquoise Andaman waters"
                         fill
                         sizes="200px"
+                        priority
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent" />
@@ -800,6 +801,7 @@ export default function ThailandClientPage() {
                         alt="Phuket Phi Phi Island and Maya Bay turquoise water"
                         fill
                         sizes="240px"
+                        priority
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/30 to-transparent" />
@@ -819,6 +821,7 @@ export default function ThailandClientPage() {
                         alt="Bangkok Grand Palace and golden Buddhist pagodas"
                         fill
                         sizes="200px"
+                        priority
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent" />
@@ -944,9 +947,6 @@ export default function ThailandClientPage() {
             {/* 9 Package Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredPackages.map((pkg) => {
-                const numericPrice = parseInt(pkg.priceStarting.replace(/[^\d]/g, ""), 10);
-                const originalPrice = numericPrice ? Math.round(numericPrice * 1.24) : null;
-
                 return (
                   <div
                     key={pkg.id}
@@ -1001,18 +1001,13 @@ export default function ThailandClientPage() {
                         </div>
                       </div>
 
-                      <div className="pt-4 border-t border-[#E5E0D5] flex items-center justify-between">
-                        <div>
-                          <span className="text-[10px] text-stone-400 block font-semibold uppercase tracking-wider">Starting From</span>
-                          <div className="flex items-baseline gap-2">
-                            {originalPrice && (
-                              <span className="text-xs text-stone-400 line-through">
-                                ₹{originalPrice.toLocaleString("en-IN")}
-                              </span>
-                            )}
-                            <span className="text-xl font-serif font-bold text-[#1C1917]">{pkg.priceStarting}</span>
+                      <div className="pt-4 border-t border-[#E5E0D5] flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-1.5 text-stone-700">
+                          <Sparkles className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
+                          <div>
+                            <span className="text-xs font-bold text-stone-900 block">Custom Itinerary</span>
+                            <span className="text-[10.5px] text-stone-500 block">Pricing on Request</span>
                           </div>
-                          <span className="text-[10.5px] text-stone-500 block">/ person (ex Delhi)</span>
                         </div>
 
                         <button

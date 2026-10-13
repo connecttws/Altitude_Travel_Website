@@ -69,12 +69,6 @@ const jsonLd = {
         "@type": "Brand",
         "name": "Altitude Travel Co.",
       },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "INR",
-        "lowPrice": "26999",
-        "offerCount": "6",
-      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
