@@ -85,8 +85,8 @@ export default function HeroSection() {
               <div className="inline-flex items-center gap-2 self-start bg-white/95 backdrop-blur-md border border-[#D4AF37]/50 px-3.5 py-1.5 rounded-full shadow-[0_2px_10px_rgba(212,175,55,0.15)] max-w-full">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
                 <Compass className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
-                <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.12em] uppercase text-stone-900 whitespace-nowrap truncate">
-                  Bazpur, near Rudrapur, Nainital, Uttarakhand, India • Luxury Bespoke Agency
+                <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.12em] uppercase text-stone-900 whitespace-nowrap">
+                  Bazpur, Uttarakhand • Bespoke Agency
                 </span>
                 <span className="text-[9.5px] font-extrabold text-[#7A5200] bg-[#FFF5D6] px-2 py-0.5 rounded-full border border-[#D4AF37]/40 shrink-0 hidden sm:inline-block">
                   Est. 2025
