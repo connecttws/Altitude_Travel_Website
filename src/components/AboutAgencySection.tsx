@@ -51,7 +51,7 @@ export default function AboutAgencySection() {
                     Altitude Travel Co.
                   </h3>
                   <p className="text-xs text-stone-200 line-clamp-1 font-normal">
-                    Connaught Place, New Delhi • Curated agency with guaranteed free days.
+                    Curated travel agency with guaranteed free days.
                   </p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function AboutAgencySection() {
             <div className="grid grid-cols-2 gap-3 pt-2">
               <div className="bg-white p-3.5 rounded-xl border border-[#E5E0D5] shadow-xs text-center">
                 <span className="text-xl sm:text-2xl font-bold text-stone-950 block tracking-tight">10,000+</span>
-                <span className="text-[11px] text-stone-600 font-medium mt-0.5 block">Happy Travellers from Delhi</span>
+                <span className="text-[11px] text-stone-600 font-medium mt-0.5 block">Happy Travellers</span>
               </div>
               <div className="bg-white p-3.5 rounded-xl border border-[#E5E0D5] shadow-xs text-center">
                 <span className="text-xl sm:text-2xl font-bold text-[#7A5200] block tracking-tight">100%</span>
@@ -94,17 +94,17 @@ export default function AboutAgencySection() {
             
             <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#7A5200] whitespace-nowrap">
               <HeartHandshake className="w-3.5 h-3.5 text-[#7A5200] shrink-0" />
-              <span>Our Delhi Legacy &amp; Philosophy</span>
+              <span>Our Agency Legacy &amp; Philosophy</span>
             </div>
 
             {/* Clean Modern Website Style Heading */}
             <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-stone-950 tracking-tight leading-tight">
-              Best <span className="text-[#7A5200] drop-shadow-xs">Tour and Travel Agency in Delhi</span>
+              Best <span className="text-[#7A5200] drop-shadow-xs">Tour and Travel Agency</span>
             </h2>
 
             {/* EXACT VERBATIM PARAGRAPH 1: Core Lead Introduction */}
             <p className="text-[14.5px] sm:text-[15.5px] text-stone-800 leading-relaxed font-normal">
-              Altitude Travel is a tour and travel agency in Delhi that designs curated journeys across India and around the world. We specialise in international tour packages and Indian tour packages that go beyond the standard sightseeing list, combining iconic landmarks with hidden gems, local food, shopping and time to explore at your own pace.
+              Altitude Travel is a tour and travel agency that designs curated journeys across India and around the world. We specialise in international tour packages and Indian tour packages that go beyond the standard sightseeing list, combining iconic landmarks with hidden gems, local food, shopping and time to explore at your own pace.
             </p>
 
             {/* Interactive Pillar Switcher Pills: Eliminates Lengthy Stacking */}
@@ -228,7 +228,7 @@ export default function AboutAgencySection() {
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                <span>Delhi Personal Travel Team</span>
+                <span>Dedicated Personal Travel Team</span>
               </div>
             </div>
 

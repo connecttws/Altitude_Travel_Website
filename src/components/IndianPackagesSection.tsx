@@ -62,7 +62,7 @@ export default function IndianPackagesSection({
           {/* Eyebrow Micro-caps */}
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#7A5200] whitespace-nowrap">
             <Bus className="w-3.5 h-3.5 text-[#7A5200] shrink-0" />
-            <span>Luxury AC Coach, Cabs &amp; Stays From Delhi</span>
+            <span>Luxury AC Coach, Cabs &amp; Premium Stays</span>
           </div>
 
           {/* Clean Modern Website Style Heading */}
@@ -72,7 +72,7 @@ export default function IndianPackagesSection({
 
           {/* Short Supporting Description: High contrast, easy to read */}
           <p className="text-[15px] sm:text-base text-stone-800 leading-relaxed font-normal">
-            Thoughtfully planned escapes blending iconic heritage with regional cuisine, luxury coach travel from Delhi, and unhurried free time.
+            Thoughtfully planned escapes blending iconic heritage with regional cuisine, luxury coach travel, and unhurried free time.
           </p>
         </div>
 

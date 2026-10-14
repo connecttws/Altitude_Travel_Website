@@ -6,16 +6,16 @@ import { ChevronDown, HelpCircle, PhoneCall, ArrowDown } from "lucide-react";
 export default function FaqSection() {
   const faqs = [
     {
-      q: "1. Which is the best tour and travel agency in Delhi?",
-      a: "Altitude Travel is a Delhi-based agency offering curated international and Indian tour packages with local insight, transparent pricing, and personal support.",
+      q: "1. Which is the best tour and travel agency for curated holidays?",
+      a: "Altitude Travel is a boutique agency offering curated international and Indian tour packages with local insight, transparent pricing, and personal support.",
     },
     {
-      q: "2. Is Altitude Travel Co. a trusted tour and travel agency in Delhi?",
+      q: "2. Is Altitude Travel Co. a trusted tour and travel agency?",
       a: "Yes. Altitude Travel works with verified hotels and trusted local partners, shares clear inclusions and exclusions upfront, and has no hidden costs. Our team supports you at every stage, from planning and booking to your return home.",
     },
     {
-      q: "3. Do you offer international tour packages from Delhi?",
-      a: "Yes. Altitude Travel offers international tour packages from Delhi to popular destinations like Dubai, Switzerland, and Bangkok. Each destination has different itinerary options, covering iconic landmarks, local food, shopping, hidden gems, and free time.",
+      q: "3. Do you offer international tour packages?",
+      a: "Yes. Altitude Travel offers international tour packages to popular destinations like Dubai, Switzerland, and Bangkok. Each destination has different itinerary options, covering iconic landmarks, local food, shopping, hidden gems, and free time.",
     },
     {
       q: "4. Do you offer Indian tour packages?",
@@ -62,7 +62,7 @@ export default function FaqSection() {
           </h2>
 
           <p className="text-[15px] sm:text-base text-stone-800 max-w-2xl mx-auto font-normal leading-relaxed">
-            Everything you need to know about planning, booking, and travelling with Altitude Travel Co. from Delhi.
+            Everything you need to know about planning, booking, and travelling with Altitude Travel Co.
           </p>
         </div>
 

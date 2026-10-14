@@ -56,7 +56,7 @@ export default function DubaiClientPage() {
     safari?: string;
     shopping?: string;
   }>({
-    flights: "Direct Flights from Delhi (IndiGo / Emirates)",
+    flights: "Direct Flights (IndiGo / Emirates)",
     hotels: "4-Star Luxury City Hotel with Breakfast",
     transfers: "Private AC Airport & City Transfers",
     tours: ["Burj Khalifa 124th Floor Ticket", "Dubai Marina Yacht Cruise"],
@@ -96,10 +96,10 @@ export default function DubaiClientPage() {
         { day: 2, title: "Modern Dubai City Tour & Burj Khalifa", description: "Half-day city tour covering Palm Jumeirah, Dubai Mall, and sunset entry to Burj Khalifa 124th floor observation deck." },
         { day: 3, title: "Desert Safari with 4x4 Dune Bashing & BBQ", description: "Afternoon 4x4 red dune desert drive, sandboarding, camel rides, and starlit barbecue dinner with belly dance and Tanoura shows." },
         { day: 4, title: "A Complete Free Day for Shopping & Leisure", description: "Enjoy the entire day at your own pace! Explore Dubai Mall, relax at Kite Beach, or visit Dubai Frame." },
-        { day: 5, title: "Souks Exploration & Flight Back to Delhi", description: "Morning traditional Abra ride across Dubai Creek to explore Gold and Spice souks before private airport transfer." },
+        { day: 5, title: "Souks Exploration & Flight Back Home", description: "Morning traditional Abra ride across Dubai Creek to explore Gold and Spice souks before private airport transfer." },
       ],
       inclusions: ["4 Nights in Handpicked 4-Star Hotel", "Daily Buffet Breakfast", "All Sightseeing in Private AC Transfers", "Burj Khalifa 124th Floor Ticket", "Desert Safari with BBQ Dinner", "UAE Tourist Visa Assistance"],
-      exclusions: ["International Flights from Delhi", "Tourism Dirham Fee (payable at hotel)", "Personal shopping and optional activities"],
+      exclusions: ["International Flights", "Tourism Dirham Fee (payable at hotel)", "Personal shopping and optional activities"],
     },
     {
       id: "dubai-abu-dhabi-grand",
@@ -129,10 +129,10 @@ export default function DubaiClientPage() {
         { day: 3, title: "Red Dune Desert Safari & Arabian Nights Feast", description: "Exciting 4x4 dune bashing, quad biking options, henna painting, and BBQ buffet under Arabian stars." },
         { day: 4, title: "A Complete Free Day for Leisure & Exploration", description: "Take the day off! Lounge at JBR Beach, shop tax-free, or indulge in high tea at Atlantis The Palm." },
         { day: 5, title: "Full Day Excursion to Abu Dhabi", description: "Guided tour of the world-famous Sheikh Zayed Grand Mosque, Emirates Palace drive, and Ferrari World photo stop." },
-        { day: 6, title: "Heritage Souks & Departure to Delhi", description: "Explore the Gold & Spice Souks and take your private transfer to Dubai International Airport." },
+        { day: 6, title: "Heritage Souks & Departure", description: "Explore the Gold & Spice Souks and take your private transfer to Dubai International Airport." },
       ],
       inclusions: ["5 Nights in 4/5-Star Dubai Hotel", "Daily Buffet Breakfast", "Abu Dhabi Day Excursion with Grand Mosque", "Desert Safari with BBQ Dinner", "Burj Khalifa Entry Ticket", "UAE Visa Assistance"],
-      exclusions: ["International Flights from Delhi", "Tourism Dirham Fee", "Personal expenses"],
+      exclusions: ["International Flights", "Tourism Dirham Fee", "Personal expenses"],
     },
     {
       id: "dubai-ultra-luxury-retreat",
@@ -163,10 +163,10 @@ export default function DubaiClientPage() {
         { day: 4, title: "A Complete Free Day at Leisure", description: "Relax by your resort infinity pool or indulge in spa wellness treatments." },
         { day: 5, title: "Abu Dhabi Luxury Tour & Louvre Museum", description: "Private day trip to Sheikh Zayed Grand Mosque and Louvre Abu Dhabi museum." },
         { day: 6, title: "Personal Shopping & Fine Dining", description: "Personal shopping concierge service at Dubai Mall Fashion Avenue and farewell dinner." },
-        { day: 7, title: "Private Airport Transfer to Delhi", description: "Breakfast at leisure and luxury airport drop-off." },
+        { day: 7, title: "Private Airport Transfer & Departure", description: "Breakfast at leisure and luxury airport drop-off." },
       ],
       inclusions: ["6 Nights in 5-Star Luxury Hotels", "Private 2-Hour Luxury Yacht Charter", "Burj Khalifa 148th Floor SKY Tickets", "VIP Heritage Desert Safari", "All Private Luxury Transfers", "Complete Visa Support"],
-      exclusions: ["International Flights from Delhi", "Personal shopping", "Tourism Dirham Fee"],
+      exclusions: ["International Flights", "Personal shopping", "Tourism Dirham Fee"],
     },
   ];
 
@@ -238,7 +238,7 @@ export default function DubaiClientPage() {
                 {/* Eyebrow Micro-caps */}
                 <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
                   <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Curated UAE Travel • Connaught Place, Delhi Planning Desk</span>
+                  <span>Curated UAE Travel • Dedicated Planning Desk</span>
                 </div>
 
                 {/* Dynamic Moving Accent Line */}
@@ -862,7 +862,7 @@ export default function DubaiClientPage() {
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
               <div className="inline-flex items-center gap-2 bg-white border border-[#BFA13B]/30 text-[#BFA13B] px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xs">
                 <Gem className="w-3.5 h-3.5 text-[#BFA13B]" />
-                <span className="tracking-wide">Curated Escapes From Delhi</span>
+                <span className="tracking-wide">Curated Escapes</span>
               </div>
 
               {/* EXACT H2 */}
@@ -1009,7 +1009,7 @@ export default function DubaiClientPage() {
             {/* INTERACTIVE 6-STEP CLICKABLE CATEGORY TABS */}
             <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-8">
               {[
-                { id: "flights", label: "✈ Flights", subtitle: "Delhi to Dubai" },
+                { id: "flights", label: "✈ Flights", subtitle: "Direct Flights" },
                 { id: "hotels", label: "🏨 Hotels", subtitle: "Downtown & Marina" },
                 { id: "transfers", label: "🚙 Transfers", subtitle: "Private AC Fleet" },
                 { id: "tours", label: "🎟 Tours", subtitle: "Burj & Monuments" },
@@ -1046,13 +1046,13 @@ export default function DubaiClientPage() {
                   <div className="flex items-center justify-between border-b border-white/10 pb-3">
                     <h3 className="text-lg font-serif font-bold text-[#E8D08D] flex items-center gap-2">
                       <Plane className="w-5 h-5 text-[#BFA13B]" />
-                      <span>Curated Flight Options from Delhi (DEL to DXB)</span>
+                      <span>Curated Flight Options to Dubai (DXB)</span>
                     </h3>
                     <span className="text-xs text-stone-400">Average Flight Time: 3h 40m</span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {[
-                      { name: "Direct Flights from Delhi", desc: "Non-stop morning departures with IndiGo or Emirates. Arrive before noon.", tag: "Recommended" },
+                      { name: "Direct Flight Connections", desc: "Non-stop morning departures with IndiGo or Emirates. Arrive before noon.", tag: "Recommended" },
                       { name: "Connecting / Budget Airlines", desc: "Economical fares via Muscat or Sharjah with coordinated transfers.", tag: "Budget Value" },
                       { name: "Business Class Comfort", desc: "Lie-flat Emirates A380 comfort, lounge access & fast-track check-in.", tag: "Luxury Fly" },
                     ].map((opt, i) => (
@@ -1533,7 +1533,7 @@ export default function DubaiClientPage() {
                   Ready to explore Dubai?
                 </span>
                 <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
-                  Speak Directly with Our Delhi Planners
+                  Speak Directly with Our Travel Planners
                 </h3>
                 <p className="text-xs sm:text-sm text-stone-400">
                   Custom itineraries, flight coordination, visas, and handpicked 4/5-star stays.

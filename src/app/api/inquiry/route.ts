@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "Thank you for reaching out! Our Delhi travel specialist will contact you shortly with your customized itinerary and best quotes.",
+      message: "Thank you for reaching out! Our dedicated travel specialist will contact you shortly with your customized itinerary and best quotes.",
     });
   } catch (error) {
     console.error("Error processing inquiry:", error);

@@ -95,7 +95,7 @@ export default function GoaClientPage() {
         { day: 3, title: "Complete Free Day for Leisure & Sunset Cruise", description: "Leisure day to café-hop in Assagao, shop local souvenirs, or take an evening Mandovi River sunset cruise." },
         { day: 4, title: "Morning Dip & Airport Departure", description: "Breakfast overlooking palms, souvenir cashew shopping, and private drop-off at Goa airport." },
       ],
-      inclusions: ["3 Nights in 4-Star Resort near Baga/Calangute", "Daily Buffet Breakfasts", "Private Airport Pickup & Drop (Mopa/Dabolim)", "Full-Day North Goa Sightseeing Tour", "24/7 Delhi Planning Support Desk"],
+      inclusions: ["3 Nights in 4-Star Resort near Baga/Calangute", "Daily Buffet Breakfasts", "Private Airport Pickup & Drop (Mopa/Dabolim)", "Full-Day North Goa Sightseeing Tour", "24/7 Concierge Planning Support"],
       exclusions: ["Flights to Goa", "Motorized watersports fees", "Personal food & drinks"],
     },
     {
@@ -126,7 +126,7 @@ export default function GoaClientPage() {
         { day: 2, title: "North Goa Beaches, Fort Aguada & Chapora", description: "Explore historic Aguada Fort, Chapora Fort ('Dil Chahta Hai' point), and Anjuna beach sunset." },
         { day: 3, title: "Old Goa UNESCO Heritage & Fontainhas Walk", description: "Visit Basilica of Bom Jesus and Se Cathedral, followed by a guided walking tour through the pastel Latin Quarter of Panjim." },
         { day: 4, title: "A Complete Free Day in Goa", description: "Enjoy Goa at your own pace! Lounge by the pool, rent an open jeep, or take a peaceful drive to South Goa." },
-        { day: 5, title: "Farewell Goa & Flight to Delhi", description: "Breakfast, last-minute spice and cashew shopping in Panjim market, and private transfer to airport." },
+        { day: 5, title: "Farewell Goa & Flight Home", description: "Breakfast, last-minute spice and cashew shopping in Panjim market, and private transfer to airport." },
       ],
       inclusions: ["4 Nights in Handpicked 4-Star Resort", "Daily Breakfast Spread", "Private AC Transport for all Sightseeing & Transfers", "Guided Fontainhas Latin Quarter Walking Tour", "Taxes & 24/7 On-Trip Assistance"],
       exclusions: ["Flights to Goa", "Personal meals & alcohol", "Watersport tickets"],
@@ -224,7 +224,7 @@ export default function GoaClientPage() {
         { day: 1, title: "Arrive in Goa & Squad Shack Party", description: "Group pickup from airport, check-in to party resort, and evening bar crawl along Baga Beach Road." },
         { day: 2, title: "5-in-1 Watersports Combo & Vagator Sunset", description: "Parasailing, jet ski, banana ride, bumper ride & speed boat, followed by sunset at Chapora Fort ('Dil Chahta Hai')." },
         { day: 3, title: "A Complete Free Day for Friends Exploration", description: "Rent scooters or an open Thar, explore Anjuna flea market, chill at Morjim beach clubs, and party till dawn." },
-        { day: 4, title: "Brunch & Group Airport Departure", description: "Late lazy breakfast, group photos, and private airport drop for direct flight home to Delhi." },
+        { day: 4, title: "Brunch & Group Airport Departure", description: "Late lazy breakfast, group photos, and private airport drop for direct flight home." },
       ],
       inclusions: ["3 Nights in 4-Star Resort near Baga/Calangute", "Daily Breakfasts", "5-in-1 Watersports Activity Pass at Baga Beach", "All Group Airport Transfers in Private AC Tempo Traveller / SUV", "24/7 Goa Helpline Support"],
       exclusions: ["Flights to Goa", "Club entry passes & personal alcohol", "Scooter fuel & personal expenses"],
@@ -257,9 +257,9 @@ export default function GoaClientPage() {
         { day: 2, title: "South Goa Scenic Coastlines & Cabo de Rama", description: "Visit historic cliffside Cabo de Rama Fort overlooking turquoise Arabian waters and secluded Agonda beach." },
         { day: 3, title: "A Complete Free Day: The Susegad Experience", description: "Entire day to unwind. Read a book in a hammock, rent a kayak in calm waters, or enjoy beachside yoga." },
         { day: 4, title: "Cola Lagoon Exploration & Sunset Stroll", description: "Optional excursion to Cola Beach where a natural emerald freshwater lagoon meets the ocean." },
-        { day: 5, title: "Farewell South Goa & Return to Delhi", description: "Slow coastal breakfast, souvenir packaging, and private airport drop for direct flight home." },
+        { day: 5, title: "Farewell South Goa & Return Flight", description: "Slow coastal breakfast, souvenir packaging, and private airport drop for direct flight home." },
       ],
-      inclusions: ["4 Nights in Boutique South Goa Beachfront Resort", "Daily Farm-Fresh Breakfast Spread", "Private AC Airport Pickups & Sightseeing Fleet", "Guided South Goa Coastal Discovery Tour", "24/7 Delhi Planning Support"],
+      inclusions: ["4 Nights in Boutique South Goa Beachfront Resort", "Daily Farm-Fresh Breakfast Spread", "Private AC Airport Pickups & Sightseeing Fleet", "Guided South Goa Coastal Discovery Tour", "24/7 Concierge Planning Support"],
       exclusions: ["Flights to Goa", "Kayak rentals & personal meals", "Tips"],
     },
     {
@@ -284,16 +284,16 @@ export default function GoaClientPage() {
       localFoodHighlight: "Custom dining bookings at Goa's most acclaimed fine-dining spots",
       freeDayNote: "Your free days are scheduled according to your exact personal rhythm.",
       overview:
-        "Want to combine North Goa's fine-dining restaurant scene with a private Portuguese villa in South Goa, or celebrate a milestone anniversary with a private yacht charter? Our Delhi travel specialists design your dream Goa trip from scratch.",
+        "Want to combine North Goa's fine-dining restaurant scene with a private Portuguese villa in South Goa, or celebrate a milestone anniversary with a private yacht charter? Our senior travel specialists design your dream Goa trip from scratch.",
       itinerary: [
         { day: 1, title: "VIP Airport Reception & Custom Check-in", description: "Private luxury chauffeur pickup, check-in to your handpicked boutique heritage villa or 5-star beachfront resort." },
         { day: 2, title: "Personalized Sightseeing & Curated Activities", description: "Private English-speaking guides and executive chauffeured transport tailored to your wish list." },
         { day: 3, title: "Culinary Tasting or Water Adventures", description: "Enjoy experiences tailored exclusively for you—from spice plantation trails to private speedboats." },
         { day: 4, title: "Unstructured Leisure at Your Own Pace", description: "Relax with guaranteed free time, curated dining recommendations, and on-call concierge." },
         { day: 5, title: "Secluded Coves or Heritage Architecture", description: "Explore hidden corners of Goa that ordinary tourists never see." },
-        { day: 6, title: "Smooth Departure Curated by Delhi Desk", description: "Private airport transfer, souvenir packaging support, and flight back to Delhi." },
+        { day: 6, title: "Smooth Departure Curated by Concierge Desk", description: "Private airport transfer, souvenir packaging support, and flight back home." },
       ],
-      inclusions: ["Custom Hotel Tier (Boutique Heritage to Ultra-Luxury 5-Star)", "Dedicated Private Chauffeured AC Fleet Throughout", "Tailor-Made Sightseeing & Excursion Passes", "Direct 24/7 Delhi Planning Desk Access", "Itemized Transparent Pricing with Zero Hidden Fees"],
+      inclusions: ["Custom Hotel Tier (Boutique Heritage to Ultra-Luxury 5-Star)", "Dedicated Private Chauffeured AC Fleet Throughout", "Tailor-Made Sightseeing & Excursion Passes", "Direct 24/7 Concierge Planning Desk Access", "Itemized Transparent Pricing with Zero Hidden Fees"],
       exclusions: ["Specified transparently during quote drafting", "No hidden costs"],
     },
   ];
@@ -591,16 +591,16 @@ export default function GoaClientPage() {
   const testimonials = [
     {
       name: "Siddharth & Meera Varma",
-      country: "India (Delhi to Goa Honeymoon)",
+      country: "India (Goa Honeymoon)",
       rating: 5,
       date: "Travelled October 2026",
       avatarImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
       review:
-        "Altitude Travel Co. made our Goa honeymoon unforgettable! The private villa in South Goa was quiet and heavenly. The sunset catamaran sailing was straight out of a dream, and having a whole free day without an annoying tour guide calling us every hour gave us real privacy. Best travel agency in Delhi!",
+        "Altitude Travel Co. made our Goa honeymoon unforgettable! The private villa in South Goa was quiet and heavenly. The sunset catamaran sailing was straight out of a dream, and having a whole free day without an annoying tour guide calling us every hour gave us real privacy. Truly the best travel agency!",
     },
     {
       name: "Rajiv Nambiar & Family",
-      country: "India (Delhi to Goa Family Holiday)",
+      country: "India (Goa Family Holiday)",
       rating: 5,
       date: "Travelled September 2026",
       avatarImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -662,7 +662,7 @@ export default function GoaClientPage() {
                 {/* Eyebrow Micro-caps */}
                 <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
                   <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Curated Indian Coastal Escapes • Connaught Place, Delhi Planning Desk</span>
+                  <span>Curated Indian Coastal Escapes • Dedicated Planning Desk</span>
                 </div>
 
                 {/* Dynamic Moving Accent Line */}
@@ -1529,7 +1529,7 @@ export default function GoaClientPage() {
                   Ready to Craft Your Perfect Goa Holiday?
                 </h4>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-lg mx-auto">
-                  Talk directly with our senior Goa travel specialist in Connaught Place, New Delhi. Get custom dates, North/South beach resort choices, and personalized quotes without filling lengthy forms.
+                  Talk directly with our senior Goa travel specialist. Get custom dates, North/South beach resort choices, and personalized quotes without filling lengthy forms.
                 </p>
               </div>
 

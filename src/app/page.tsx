@@ -3,26 +3,26 @@ import type { Metadata } from "next";
 import HomeClientPage from "./HomeClientPage";
 
 export const metadata: Metadata = {
-  title: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+  title: "Tour and Travel Agency | Altitude Travel Co.",
   description:
-    "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
+    "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
   keywords: [
-    "Tour and Travel Agency in Delhi",
-    "best tour and travel agency in delhi",
+    "Tour and Travel Agency",
+    "best tour and travel agency",
     "international tour and travel agency",
     "international tour packages",
     "best tour operator in India",
     "custom tour packages",
     "indian tour packages",
-    "Delhi travel agency",
+    "curated travel agency",
   ],
   alternates: {
     canonical: "https://altitudetravel.in",
   },
   openGraph: {
-    title: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+    title: "Tour and Travel Agency | Altitude Travel Co.",
     description:
-      "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
+      "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
     url: "https://altitudetravel.in",
     siteName: "Altitude Travel Co.",
     locale: "en_IN",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+    title: "Tour and Travel Agency | Altitude Travel Co.",
     description:
-      "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
+      "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
   },
 };
 
@@ -40,11 +40,11 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   name: "Altitude Travel Co.",
-  alternateName: "Altitude Travel Delhi",
+  alternateName: "Altitude Travel Co.",
   url: "https://altitudetravel.in",
   logo: "https://altitudetravel.in/logo.jpg",
   description:
-    "Altitude Travel Co. is a premier tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips with 1 free day included.",
+    "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips with 1 free day included.",
   telephone: "+919639320101",
   email: "Altitudetravelco@gmail.com",
   address: {

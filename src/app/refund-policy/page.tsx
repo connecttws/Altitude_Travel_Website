@@ -55,7 +55,7 @@ export default function RefundPolicyPage() {
                 Refund &amp; Cancellation Policy
               </h1>
               <p className="text-xs sm:text-sm text-slate-500">
-                Altitude Travel Co., New Delhi • Transparent policies with no hidden deductions
+                Altitude Travel Co. • Transparent policies with no hidden deductions
               </p>
             </div>
 

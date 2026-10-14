@@ -115,14 +115,14 @@ export const INDIAN_TOUR_PACKAGES: TourPackage[] = [
     localFoodHighlight: "Himachali Siddu with ghee & trout fish delicacies in Old Manali",
     freeDayNote: "Day 4 is an unscheduled free day to wander cedar trails or unwind at riverfront cafés.",
     overview:
-      "A soulful Himachali journey combining towering snow-draped passes with offbeat river trails, historic deodar forests, luxury coach travel from Delhi, and plenty of unhurried café time.",
+      "A soulful Himachali journey combining towering snow-draped passes with offbeat river trails, historic deodar forests, luxury coach travel, and plenty of unhurried café time.",
     itinerary: [
-      { day: 1, title: "Drive to Manali & River Stroll", description: "Scenic transfer from Delhi/Chandigarh along the Beas River, evening hotel check-in and bonfire welcome." },
+      { day: 1, title: "Drive to Manali & River Stroll", description: "Scenic transfer along the Beas River, evening hotel check-in and bonfire welcome." },
       { day: 2, title: "Solang Valley Adventure & Atal Tunnel", description: "Explore the engineering marvel of Atal Tunnel and breathtaking views of Sissu waterfalls in Lahaul Valley." },
       { day: 3, title: "Old Manali Culture & Naggar Heritage", description: "Wander through wooden temples, visit Nicholas Roerich art estate, and sample local wood-fired pizzas." },
       { day: 4, title: "Your Free Mountain Day", description: "No alarm clocks! Spend the entire day reading by the river, visiting local apple orchards, or taking a scenic hike." },
       { day: 5, title: "Kasol & Parvati River Charm", description: "Day excursion to Kasol and Manikaran hot springs with Israeli bakery treats and mountain breezes." },
-      { day: 6, title: "Scenic Departure for Delhi", description: "Breakfast with panoramic valley views and comfortable return transfer to Delhi." },
+      { day: 6, title: "Scenic Departure & Farewell", description: "Breakfast with panoramic valley views and comfortable return transfer." },
     ],
     inclusions: ["Deluxe Valley View Stays", "Breakfast & Dinner Buffets", "Private SUV for All Mountain Drives", "Driver Allowances & Tolls", "Local Himachal Guide Assistance"],
     exclusions: ["Paragliding / adventure sports fees", "Lunches and café bills", "Personal expenses"],
@@ -259,10 +259,10 @@ export const INTERNATIONAL_TOUR_PACKAGES: TourPackage[] = [
       { day: 3, title: "Desert Safari with 4x4 Dune Bashing & BBQ Show", description: "Afternoon desert safari, sandboarding, camel rides, and starlit Arabian barbecue banquet with Tanoura & fire show." },
       { day: 4, title: "A Complete Free Day for Shopping & Leisure", description: "Take the entire day off! Shop tax-free at Dubai Mall, lounge at Kite Beach, or visit Dubai Miracle Garden at your pace." },
       { day: 5, title: "Day Excursion to Abu Dhabi & Grand Mosque", description: "Tour the breathtaking Sheikh Zayed Grand Mosque, Ferrari World photo stop, and Corniche waterfront drive." },
-      { day: 6, title: "Souk Exploration & Flight Back to Delhi", description: "Morning Abra boat ride across Dubai Creek to explore spice & gold souks, followed by private airport drop-off." },
+      { day: 6, title: "Souk Exploration & Flight Back", description: "Morning Abra boat ride across Dubai Creek to explore spice & gold souks, followed by private airport drop-off." },
     ],
     inclusions: ["5 Nights in 4/5-Star Dubai City Hotel", "Daily International Buffet Breakfast", "All Sightseeing in Private & Shared AC Transfers", "Desert Safari with BBQ Dinner & Entertainment", "Burj Khalifa 124th Floor Entry Tickets", "UAE Tourist Visa Assistance"],
-    exclusions: ["International Flights from Delhi", "Tourism Dirham Fee (payable at hotel)", "Personal shopping and optional park entries"],
+    exclusions: ["International Flights", "Tourism Dirham Fee (payable at hotel)", "Personal shopping and optional park entries"],
   },
   {
     id: "switzerland-alpine-wonders",
@@ -293,10 +293,10 @@ export const INTERNATIONAL_TOUR_PACKAGES: TourPackage[] = [
       { day: 4, title: "Jungfraujoch: The Top of Europe (3,454m)", description: "Board the Eiger Express tricable gondola to Jungfraujoch. Walk through the Ice Palace and touch eternal snow." },
       { day: 5, title: "A Complete Free Day in Interlaken", description: "Your day to enjoy without a schedule. Paraglide over the Alps, explore Lauterbrunnen waterfalls, or shop for Swiss watches." },
       { day: 6, title: "Bern Medieval Capital & Zurich Return", description: "Day trip to UNESCO-listed Bern clock towers and bear park before returning to Zurich for a farewell Swiss dinner." },
-      { day: 7, title: "Zurich Departure to Delhi", description: "Morning chocolate shopping at Lindt Home of Chocolate, and transfer to Zurich Airport for your flight home." },
+      { day: 7, title: "Zurich Departure & Flight Home", description: "Morning chocolate shopping at Lindt Home of Chocolate, and transfer to Zurich Airport for your flight home." },
     ],
     inclusions: ["6 Nights Handpicked Swiss Alpine Hotels", "Daily European Buffet Breakfast", "All-in-One Consecutive Swiss Travel Pass (2nd Class)", "Excursion to Mount Titlis & Ice Flyer", "Excursion to Jungfraujoch Top of Europe", "Schengen Visa Document Support"],
-    exclusions: ["International Flights Delhi-Zurich-Delhi", "Lunches and dinners not specified", "City tourist taxes (approx CHF 3-5/night)"],
+    exclusions: ["International Flights", "Lunches and dinners not specified", "City tourist taxes (approx CHF 3-5/night)"],
   },
   {
     id: "bangkok-phuket-thailand-escape",
@@ -326,7 +326,7 @@ export const INTERNATIONAL_TOUR_PACKAGES: TourPackage[] = [
       { day: 3, title: "Flight to Phuket & Beach Sunset", description: "Short flight to Phuket, check-in to your resort near Patong/Kata beach, and enjoy beachside Thai seafood." },
       { day: 4, title: "Phi Phi Islands Speedboat Excursion", description: "Speedboat ride to Maya Bay, snorkeling over coral reefs in Pileh Lagoon, and buffet lunch on Phi Phi Don." },
       { day: 5, title: "Your Free Day in Tropical Phuket", description: "Sleep in late! Relax by the infinity pool, take a traditional Thai herbal spa, or explore Phuket Old Town street art." },
-      { day: 6, title: "Phuket Departure to Delhi", description: "Last-minute souvenir shopping, packing, and seamless transfer to Phuket International Airport." },
+      { day: 6, title: "Phuket Departure & Flight Home", description: "Last-minute souvenir shopping, packing, and seamless transfer to Phuket International Airport." },
     ],
     inclusions: ["3 Nights Phuket & 2 Nights Bangkok 4-Star Stays", "Daily Breakfast Spread", "Phi Phi Island Day Trip with Lunch & Snorkel Gear", "Bangkok City & Temples Guided Tour", "Airport & Ferry Transfers in Private AC Vans", "Thailand Visa on Arrival Guidance"],
     exclusions: ["International & Domestic Flights", "Phi Phi National Park Fee (400 THB/person)", "Personal beverages & tips"],
@@ -363,7 +363,7 @@ export const INTERNATIONAL_TOUR_PACKAGES: TourPackage[] = [
       { day: 7, title: "Farewell Bali", description: "Morning swim, tropical fruit breakfast, and private drop-off at Denpasar Airport." },
     ],
     inclusions: ["3 Nights Ubud Jungle Villa + 3 Nights Seminyak Resort", "Daily A la Carte & Buffet Breakfast", "All Sightseeing in Private Air-Conditioned Vehicle", "Bali Swing & Tegallalang Entry", "English Speaking Local Tour Guide", "Indonesian Visa on Arrival Support"],
-    exclusions: ["International Flights from Delhi", "Meals other than breakfast", "Personal watersports & tips"],
+    exclusions: ["International Flights", "Meals other than breakfast", "Personal watersports & tips"],
   },
   {
     id: "singapore-futuristic-city-state",
@@ -392,10 +392,10 @@ export const INTERNATIONAL_TOUR_PACKAGES: TourPackage[] = [
       { day: 2, title: "City Tour & Gardens by the Bay Light Show", description: "See the Merlion, explore Chinatown, and immerse in the Cloud Forest dome and evening Supertree light show." },
       { day: 3, title: "A Complete Free Day for Orchard Road & Leisure", description: "Enjoy Singapore at your pace: shop premier malls along Orchard Road or café hop along colorful Haji Lane." },
       { day: 4, title: "Sentosa Island & Universal Studios Fun", description: "Take the cable car to Sentosa Island, enjoy movie-themed rides at Universal Studios, and evening Wings of Time show." },
-      { day: 5, title: "Jewel Changi Rain Vortex & Departure", description: "Visit the stunning indoor waterfall Rain Vortex at Jewel Changi before boarding your flight back to Delhi." },
+      { day: 5, title: "Jewel Changi Rain Vortex & Departure", description: "Visit the stunning indoor waterfall Rain Vortex at Jewel Changi before boarding your flight back home." },
     ],
     inclusions: ["4 Nights in Centrally Located 4-Star Singapore Hotel", "Daily Buffet Breakfast", "All Shared/Private AC Coach Transfers", "Gardens by the Bay Double Conservatories Pass", "Sentosa Cable Car & Night Safari Tickets", "Singapore Visa Guidance"],
-    exclusions: ["Flights from Delhi", "Universal Studios express pass", "Meals not mentioned"],
+    exclusions: ["International Flights", "Universal Studios express pass", "Meals not mentioned"],
   },
   {
     id: "vietnam-heritage-bays-lanterns",
@@ -426,10 +426,10 @@ export const INTERNATIONAL_TOUR_PACKAGES: TourPackage[] = [
       { day: 4, title: "Halong Sunrise & Flight to Da Nang / Hoi An", description: "Morning Tai Chi on sundeck, disembark and fly to Da Nang; evening check-in to Hoi An riverside hotel." },
       { day: 5, title: "A Complete Free Day in Enchanting Hoi An", description: "Unscheduled free day! Cycle to An Bang beach, get tailored clothes made within 24 hours, or browse lantern markets." },
       { day: 6, title: "Golden Hands Bridge at Ba Na Hills", description: "Ascend via world-record cable car to photograph the famous giant stone hands holding the Golden Bridge." },
-      { day: 7, title: "Da Nang Departure to Delhi", description: "Breakfast overlooking the river and private drop-off at Da Nang International Airport." },
+      { day: 7, title: "Da Nang Departure & Flight Home", description: "Breakfast overlooking the river and private drop-off at Da Nang International Airport." },
     ],
     inclusions: ["4-Star Hotel Stays & 1 Night Luxury Halong Cruise", "All Meals Onboard Cruise + Daily Breakfasts", "Domestic Flight Hanoi to Da Nang", "Ba Na Hills Cable Car & Entry Pass", "Private Airport & Sightseeing Transfers", "Vietnam E-Visa Support"],
-    exclusions: ["International Flights from Delhi", "Kayak rental fees if applicable", "Personal laundry & drinks"],
+    exclusions: ["International Flights", "Kayak rental fees if applicable", "Personal laundry & drinks"],
   },
 ];
 
@@ -437,7 +437,7 @@ export const TESTIMONIALS_DATA = [
   {
     id: "review-1",
     clientName: "Vikram & Ananya Malhotra",
-    location: "Greater Kailash, New Delhi",
+    location: "Greater Kailash",
     tripName: "Kashmir 6-Day Valleys & Houseboat Tour",
     rating: 5,
     date: "Travelled September 2026",
@@ -449,7 +449,7 @@ export const TESTIMONIALS_DATA = [
   {
     id: "review-2",
     clientName: "Dr. Rajeshwar Sharma & Family",
-    location: "Vasant Vihar, New Delhi",
+    location: "Vasant Vihar",
     tripName: "Dubai & Abu Dhabi 6-Day Luxury Tour",
     rating: 5,
     date: "Travelled August 2026",
@@ -461,7 +461,7 @@ export const TESTIMONIALS_DATA = [
   {
     id: "review-3",
     clientName: "Rohan & Priyamvada Sen",
-    location: "Rohini, New Delhi",
+    location: "Rohini",
     tripName: "Switzerland 7-Day Alpine Experience",
     rating: 5,
     date: "Travelled July 2026",
@@ -473,7 +473,7 @@ export const TESTIMONIALS_DATA = [
   {
     id: "review-4",
     clientName: "Amit Mehra & Friends",
-    location: "Noida / Delhi NCR",
+    location: "Noida",
     tripName: "Himachal Highland & Riverfront Tour",
     rating: 5,
     date: "Travelled May 2026",
@@ -485,7 +485,7 @@ export const TESTIMONIALS_DATA = [
   {
     id: "review-5",
     clientName: "Siddharth & Meera Kapoor",
-    location: "Defence Colony, New Delhi",
+    location: "Defence Colony",
     tripName: "Bali 6-Day Tropical Haven Tour",
     rating: 5,
     date: "Travelled April 2026",
@@ -497,14 +497,14 @@ export const TESTIMONIALS_DATA = [
   {
     id: "review-6",
     clientName: "Tanvi & Kunal Singhal",
-    location: "Punjabi Bagh, New Delhi",
+    location: "Punjabi Bagh",
     tripName: "Vietnam 6-Day Golden Bridge Tour",
     rating: 5,
     date: "Travelled March 2026",
     avatarPlaceholderText: "TS",
     avatarImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
     review:
-      "The luxury Halong Bay cruise and Ba Na Hills day trip were unforgettable! Hassle-free e-visa guidance and responsive 24/7 support from their Delhi team.",
+      "The luxury Halong Bay cruise and Ba Na Hills day trip were unforgettable! Hassle-free e-visa guidance and responsive 24/7 support from their travel team.",
   },
 ];
 

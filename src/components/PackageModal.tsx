@@ -197,13 +197,13 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
               <div className="text-center space-y-1">
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10.5px] font-bold">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Delhi Desk Online • Instant WhatsApp Reply</span>
+                  <span>Concierge Desk Online • Instant WhatsApp Reply</span>
                 </div>
                 <h4 className="text-lg font-bold text-stone-900 tracking-tight">
                   Inquire for This Package
                 </h4>
                 <p className="text-xs text-stone-600 font-normal">
-                  Connect with our Connaught Place travel planners. Get the customized day-by-day plan, hotel upgrades &amp; best quotes directly on WhatsApp.
+                  Connect with our dedicated travel planners. Get the customized day-by-day plan, hotel upgrades &amp; best quotes directly on WhatsApp.
                 </p>
               </div>
 

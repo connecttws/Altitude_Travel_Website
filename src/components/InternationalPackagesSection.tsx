@@ -72,7 +72,7 @@ export default function InternationalPackagesSection({
 
           {/* Short Supporting Description: High contrast, easy to read */}
           <p className="text-[15px] sm:text-base text-stone-800 leading-relaxed font-normal">
-            World-class vacations combining iconic city skylines, emerald island bays, authentic dining, and dedicated visa assistance from Delhi.
+            World-class vacations combining iconic city skylines, emerald island bays, authentic dining, and dedicated visa assistance.
           </p>
         </div>
 

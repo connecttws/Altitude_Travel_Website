@@ -100,7 +100,7 @@ export default function HomeClientPage() {
         {/* Bespoke Royal Compass Divider */}
         <SectionDivider variant="emblem" />
 
-        {/* 7. Authority Editorial: Best Tour and Travel Agency in Delhi */}
+        {/* 7. Authority Editorial: Best Tour and Travel Agency */}
         <AboutAgencySection />
 
         {/* Editorial 3-Diamonds Divider */}

@@ -25,14 +25,14 @@ const amiri = Amiri({
 export const metadata: Metadata = {
   metadataBase: new URL("https://altitudetravel.in"),
   title: {
-    default: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+    default: "Tour and Travel Agency | Altitude Travel Co.",
     template: "%s | Altitude Travel Co.",
   },
   description:
-    "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
+    "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
   keywords: [
-    "Tour and Travel Agency in Delhi",
-    "best tour and travel agency in delhi",
+    "Tour and Travel Agency",
+    "best tour and travel agency",
     "international tour and travel agency",
     "international tour packages",
     "best tour operator in India",
@@ -59,9 +59,9 @@ export const metadata: Metadata = {
     apple: "/logo.jpg",
   },
   openGraph: {
-    title: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+    title: "Tour and Travel Agency | Altitude Travel Co.",
     description:
-      "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
+      "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
     url: "https://altitudetravel.in",
     siteName: "Altitude Travel Co.",
     type: "website",
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tour and Travel Agency in Delhi | Altitude Travel Co.",
+    title: "Tour and Travel Agency | Altitude Travel Co.",
     description:
-      "Altitude Travel Co. is a tour and travel agency in Delhi offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
+      "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. Plan yours today.",
   },
 };
 

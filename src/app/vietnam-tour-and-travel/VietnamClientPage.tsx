@@ -80,10 +80,10 @@ export default function VietnamClientPage() {
         { day: 4, title: "Ha Long Sunrise & Flight to Da Nang / Hoi An", description: "Morning Tai Chi on sundeck, disembark and fly to Da Nang; scenic evening check-in to Hoi An riverside heritage resort." },
         { day: 5, title: "A Complete Free Day in Enchanting Hoi An", description: "Unscheduled free day! Cycle to An Bang beach, get bespoke clothes tailored within 24 hours, or take a riverboat lantern ride." },
         { day: 6, title: "Golden Hands Bridge at Ba Na Hills", description: "Ascend via world-record cable car to photograph the famous giant stone hands holding the Golden Bridge, followed by Da Nang Dragon Bridge evening show." },
-        { day: 7, title: "Da Nang Departure to Delhi", description: "Breakfast overlooking the river, local coffee tasting, and private drop-off at Da Nang International Airport." },
+        { day: 7, title: "Da Nang Departure & Flight Home", description: "Breakfast overlooking the river, local coffee tasting, and private drop-off at Da Nang International Airport." },
       ],
       inclusions: ["4-Star Hotel Stays & 1 Night Luxury Ha Long Cruise", "All Meals Onboard Cruise + Daily Buffet Breakfasts", "Domestic Flight Hanoi to Da Nang", "Ba Na Hills Cable Car & Entry Pass", "Private Airport & Sightseeing Transfers", "Vietnam E-Visa Support"],
-      exclusions: ["International Flights from Delhi", "Personal shopping & tailored clothes", "Tips & laundry"],
+      exclusions: ["International Flights", "Personal shopping & tailored clothes", "Tips & laundry"],
     },
     {
       id: "vietnam-classic-north-south",
@@ -116,10 +116,10 @@ export default function VietnamClientPage() {
         { day: 6, title: "A Complete Free Day in Hoi An", description: "Relax at An Bang beach, rent a bicycle through emerald rice paddies, or explore silk lantern ateliers." },
         { day: 7, title: "Fly to Ho Chi Minh City & Colonial Heritage", description: "Morning flight to vibrant Ho Chi Minh City. Visit Notre Dame Cathedral, Central Post Office, and bustling Ben Thanh Market." },
         { day: 8, title: "Historic Cu Chi Tunnels & Mekong Delta Excursion", description: "Explore the historic underground Cu Chi network followed by a tranquil wooden sampan boat ride along Mekong Delta canals." },
-        { day: 9, title: "Farewell Vietnam & Flight to Delhi", description: "Leisurely breakfast, souvenir shopping for Vietnamese drip coffee & silk, and private airport transfer." },
+        { day: 9, title: "Farewell Vietnam & Flight Home", description: "Leisurely breakfast, souvenir shopping for Vietnamese drip coffee & silk, and private airport transfer." },
       ],
       inclusions: ["8 Nights in 4/5-Star Hotels & Luxury Cruise", "2 Domestic Flights (Hanoi-Da Nang & Da Nang-Saigon)", "All Guided Excursions with English-Speaking Guides", "Cu Chi Tunnels & Mekong Delta Day Tour", "All Private Airport Transfers", "Vietnam Visa Guidance"],
-      exclusions: ["International Flights Delhi-Hanoi / Saigon-Delhi", "Personal expenses", "Camera fees if any"],
+      exclusions: ["International Flights", "Personal expenses", "Camera fees if any"],
     },
     {
       id: "vietnam-grand-luxury-discovery",
@@ -153,10 +153,10 @@ export default function VietnamClientPage() {
         { day: 7, title: "Private Flight to Ho Chi Minh City & Rooftop Dinner", description: "Business class domestic flight to Saigon, luxury hotel check-in, and 360-degree skyline dinner." },
         { day: 8, title: "A Complete Free Day in Saigon", description: "Shop premier boutiques on Dong Khoi Street or explore vintage cafes along the French boulevards." },
         { day: 9, title: "Private Mekong Delta Luxury Speedboat Tour", description: "Exclusive speedboat ride through narrow mangrove canals, visiting organic tropical fruit orchards and honey farms." },
-        { day: 10, title: "Private Airport Transfer to Delhi", description: "Breakfast at leisure and private airport transfer for your direct flight home." },
+        { day: 10, title: "Private Airport Transfer & Departure", description: "Breakfast at leisure and private airport transfer for your direct flight home." },
       ],
       inclusions: ["9 Nights in 5-Star Luxury Resorts & Balcony Suite Cruise", "Private Limousine Transfers Throughout", "All VIP Priority Attraction Passes & Cable Cars", "Private Mekong Delta Speedboat Charter", "Dedicated Private Tour Specialist", "Complete Visa Support"],
-      exclusions: ["International Flights from Delhi", "Personal boutique shopping", "Travel insurance"],
+      exclusions: ["International Flights", "Personal boutique shopping", "Travel insurance"],
     },
   ];
 
@@ -232,7 +232,7 @@ export default function VietnamClientPage() {
                 {/* Eyebrow Micro-caps */}
                 <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
                   <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Curated Southeast Asia Holidays • Connaught Place, Delhi Planning Desk</span>
+                  <span>Curated Southeast Asia Holidays • Dedicated Planning Desk</span>
                 </div>
 
                 {/* Dynamic Moving Accent Line */}
@@ -844,7 +844,7 @@ export default function VietnamClientPage() {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5">
                 {[
-                  { icon: "✈️", label: "Flights", desc: "Non-stop Delhi departures" },
+                  { icon: "✈️", label: "Flights", desc: "Direct Flight Connections" },
                   { icon: "🏨", label: "Accommodation", desc: "Handpicked 4 & 5-star stays" },
                   { icon: "🚐", label: "Airport Transfers", desc: "Private AC fleet with driver" },
                   { icon: "🗺️", label: "Sightseeing Tours", desc: "Curated cultural trails" },
@@ -855,7 +855,7 @@ export default function VietnamClientPage() {
                   { icon: "👨‍💼", label: "Tour Guide", desc: "English-speaking experts" },
                   { icon: "🛡️", label: "Travel Insurance", desc: "Comprehensive cover options" },
                   { icon: "📋", label: "Visa Assistance", desc: "Smooth Vietnam E-Visa" },
-                  { icon: "📞", label: "Travel Support", desc: "24/7 Delhi concierge desk" },
+                  { icon: "📞", label: "Travel Support", desc: "24/7 Dedicated concierge desk" },
                 ].map((inc, i) => (
                   <div
                     key={i}
@@ -974,7 +974,7 @@ export default function VietnamClientPage() {
               </h2>
 
               <p className="text-base text-stone-600 max-w-2xl mx-auto font-normal leading-relaxed">
-                Clear answers for planning and booking your Vietnam tour package from Delhi.
+                Clear answers for planning and booking your Vietnam tour package.
               </p>
             </div>
 
@@ -1036,14 +1036,14 @@ export default function VietnamClientPage() {
             </h2>
 
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal max-w-2xl mx-auto">
-              Connect directly with our senior destination specialists in Connaught Place, New Delhi. We curate flights, luxury Ha Long Bay junk boats, E-Visas, and handpicked stays with transparent pricing and zero hidden fees.
+              Connect directly with our senior destination specialists. We curate flights, luxury Ha Long Bay junk boats, E-Visas, and handpicked stays with transparent pricing and zero hidden fees.
             </p>
 
             {/* Concierge Action Box */}
             <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-[#0C0A09] border border-[#BFA13B]/30 text-white shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
               <div className="space-y-1">
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#BFA13B]">
-                  Direct Delhi Concierge
+                  Direct Concierge Desk
                 </span>
                 <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
                   Plan Your Handcrafted Vietnam Itinerary

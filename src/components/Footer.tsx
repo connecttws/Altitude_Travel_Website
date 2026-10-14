@@ -219,12 +219,12 @@ export default function Footer() {
         {/* Copyright & Signoff */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
           <div>
-            © {new Date().getFullYear()} Altitude Travel Co. All rights reserved. Registered Tour and Travel Agency in Delhi, India.
+            © {new Date().getFullYear()} Altitude Travel Co. All rights reserved. Registered Tour and Travel Agency in India.
           </div>
           <div className="flex items-center gap-4 text-stone-300">
             <span className="flex items-center gap-1.5 font-bold">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              Verified Delhi Tour Operator
+              Verified Tour Operator
             </span>
             <span>•</span>
             <span className="text-[#BFA13B] font-bold">

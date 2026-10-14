@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
                 Privacy Policy
               </h1>
               <p className="text-xs sm:text-sm text-slate-500">
-                Altitude Travel Co., New Delhi • Committed to safeguarding client privacy
+                Altitude Travel Co. • Committed to safeguarding client privacy
               </p>
             </div>
 

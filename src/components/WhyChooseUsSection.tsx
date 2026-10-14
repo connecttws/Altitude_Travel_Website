@@ -74,7 +74,7 @@ export default function WhyChooseUsSection() {
       title: "Personal Support",
       description:
         "Our team assists you before, during, and after your trip.",
-      tag: "Delhi 24/7 Desk",
+      tag: "24/7 Concierge Desk",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
     },
     {
@@ -105,12 +105,12 @@ export default function WhyChooseUsSection() {
 
           {/* Clean Modern Website Style Heading */}
           <h2 className="text-2xl sm:text-4xl lg:text-[38px] font-bold text-white tracking-tight leading-tight">
-            Why Altitude Travel Is the <span className="text-[#D4AF37]">Premier Choice in Delhi</span>
+            Why Altitude Travel Is the <span className="text-[#D4AF37]">Premier Choice</span>
           </h2>
 
           {/* Short Supporting Copy: Crisp, highly legible */}
           <p className="text-[15px] sm:text-base text-stone-200 leading-relaxed font-normal">
-            Altitude Travel Co. is a Delhi agency for travellers who want more than a standard sightseeing package — blending iconic landmarks with hidden gems and free time.
+            Altitude Travel Co. is an agency for travellers who want more than a standard sightseeing package — blending iconic landmarks with hidden gems and free time.
           </p>
         </div>
 
@@ -221,7 +221,7 @@ export default function WhyChooseUsSection() {
         <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-[#BFA13B]/30 backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center sm:text-left">
             <h3 className="text-lg sm:text-xl font-bold text-white">Have a specific journey in mind?</h3>
-            <p className="text-xs sm:text-sm text-stone-300">Share your dates, budget and wishlist with our Delhi consultants.</p>
+            <p className="text-xs sm:text-sm text-stone-300">Share your dates, budget and wishlist with our travel consultants.</p>
           </div>
           <a
             href="#custom-tour"

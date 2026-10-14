@@ -83,7 +83,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
         "Our service does not end at booking. Our team is available to help you with itinerary changes, travel questions, and local recommendations throughout your journey. If you need help, you are just a message or call away.",
       tag: "24/7 Concierge",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80",
-      highlights: ["Delhi-Based Travel Desk", "Real-Time Trip Support", "Immediate Phone & WhatsApp"],
+      highlights: ["Dedicated Travel Desk", "Real-Time Trip Support", "Immediate Phone & WhatsApp"],
       btnText: "Connect With Our Team",
       anchor: "#contact-footer",
     },
@@ -113,7 +113,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
           </h2>
 
           <p className="text-[15px] sm:text-base text-stone-800 leading-relaxed font-normal">
-            End-to-end travel craftsmanship tailored for modern travellers in Delhi and across India.
+            End-to-end travel craftsmanship tailored for modern travellers across India.
           </p>
         </div>
 

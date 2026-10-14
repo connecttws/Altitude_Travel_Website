@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
           {/* Eyebrow Micro-caps */}
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#7A5200] whitespace-nowrap">
             <Star className="w-3.5 h-3.5 fill-[#7A5200] text-[#7A5200] shrink-0" />
-            <span>Verified Delhi Client Reviews</span>
+            <span>Verified Client Reviews</span>
           </div>
 
           {/* Clean Modern Website Style Heading */}
@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
 
           {/* Short Supporting Description */}
           <p className="text-[15px] sm:text-base text-stone-800 leading-relaxed font-normal">
-            Real stories from Delhi families and travellers who explored beyond the tourist trail with guaranteed free time.
+            Real stories from families and travellers who explored beyond the tourist trail with guaranteed free time.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ export default function TestimonialsSection() {
                   <div className="mt-4 pt-3 border-t border-[#E5E0D5] flex items-center justify-between text-xs text-stone-400">
                     <span className="font-medium text-stone-500">{t.date}</span>
                     <span className="text-[11px] font-semibold text-stone-900 bg-[#FAF9F6] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/30 flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-emerald-600 shrink-0" /> Verified Booking • Delhi Desk
+                      <ShieldCheck className="w-3 h-3 text-emerald-600 shrink-0" /> Verified Booking • Concierge Desk
                     </span>
                   </div>
                 </div>

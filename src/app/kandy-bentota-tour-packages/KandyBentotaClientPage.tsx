@@ -93,10 +93,10 @@ export default function KandyBentotaClientPage() {
         { day: 2, title: "Kandy Heritage & Royal Botanical Gardens", description: "Guided tour to the Temple of the Sacred Tooth Relic, serene stroll around Kandy Lake, and 147-acre Peradeniya Botanical Gardens with giant palms." },
         { day: 3, title: "Transfer to Bentota & Madu River Boat Safari", description: "Scenic road journey to Bentota on the southern coast. Enjoy a boat safari along the mangrove tunnels of the Madu River and cinnamon islands." },
         { day: 4, title: "A Complete Free Day on Bentota Beach", description: "Spend your day relaxing on the golden sands of Bentota, enjoying jet skiing, or reading by the ocean." },
-        { day: 5, title: "Colombo City Drive & Flight Home to Delhi", description: "Leisurely breakfast, Colombo city orientation with souvenir Ceylon tea shopping, and private airport drop for direct flight to New Delhi." },
+        { day: 5, title: "Colombo City Drive & Flight Home", description: "Leisurely breakfast, Colombo city orientation with souvenir Ceylon tea shopping, and private airport drop for your direct flight home." },
       ],
-      inclusions: ["4 Nights in Handpicked 4-Star Resorts (2N Kandy + 2N Bentota)", "Daily Buffet Breakfasts & Dinners", "Temple of the Tooth Relic & Botanical Gardens Entry Passes", "Madu River Mangrove Boat Safari", "All Private AC Fleet Transfers with English-speaking Chauffeur", "24/7 Delhi Planning Support Desk"],
-      exclusions: ["International Flights from Delhi", "Motorized watersports tickets", "Tips & personal laundry"],
+      inclusions: ["4 Nights in Handpicked 4-Star Resorts (2N Kandy + 2N Bentota)", "Daily Buffet Breakfasts & Dinners", "Temple of the Tooth Relic & Botanical Gardens Entry Passes", "Madu River Mangrove Boat Safari", "All Private AC Fleet Transfers with English-speaking Chauffeur", "24/7 Concierge Planning Support Desk"],
+      exclusions: ["International Flights", "Motorized watersports tickets", "Tips & personal laundry"],
     },
     {
       id: "kandy-bentota-5n-6d",
@@ -127,7 +127,7 @@ export default function KandyBentotaClientPage() {
         { day: 3, title: "Royal Botanical Gardens & Drive to Bentota Beach", description: "Walk through Peradeniya Royal Botanical Gardens, followed by scenic descent to Bentota and beachfront hotel check-in." },
         { day: 4, title: "Bentota River Safari, Turtle Hatchery & Water Fun", description: "Morning Madu River boat cruise, visit Kosgoda Sea Turtle Hatchery, and afternoon for jet skiing or banana boat rides." },
         { day: 5, title: "A Complete Free Day in Bentota", description: "Unhurried free day! Visit the artistic Brief Garden, indulge in an authentic Ayurvedic massage, or enjoy beachside cocktails." },
-        { day: 6, title: "Colombo Shopping & Departure to Delhi", description: "Breakfast, brief drive through Colombo Dutch Hospital heritage quarter for shopping, and private drop-off at airport." },
+        { day: 6, title: "Colombo Shopping & Departure", description: "Breakfast, brief drive through Colombo Dutch Hospital heritage quarter for shopping, and private drop-off at airport." },
       ],
       inclusions: ["5 Nights in Deluxe 4-Star Stays (2N Kandy + 3N Bentota)", "Daily Buffet Breakfasts & Dinners", "Kandyan Cultural Dance Show Tickets", "Madu River Safari & Turtle Hatchery Passes", "Private Air-Conditioned Vehicle for Entire Tour", "Sri Lanka ETA Visa Guidance"],
       exclusions: ["International Flights", "Personal water sports rentals", "Camera fees if any"],
@@ -164,7 +164,7 @@ export default function KandyBentotaClientPage() {
         { day: 6, title: "Leisurely Breakfast & Airport Farewell", description: "Late breakfast, souvenir Ceylon tea and gemstone shopping, and private drop to Colombo airport." },
       ],
       inclusions: ["5 Nights in 5-Star Luxury Resorts / Private Pool Villa", "Daily Gourmet Breakfasts (including 1 Floating Breakfast)", "1 Candlelight 4-Course Beach Dinner with Wine", "Private Madu Riverboat Charter", "Honeymoon Bed Décor, Cake & Fruit Basket", "All Private Chauffeur AC Fleet Transfers"],
-      exclusions: ["International Flights from Delhi", "Personal spa treatments beyond package", "Tips"],
+      exclusions: ["International Flights", "Personal spa treatments beyond package", "Tips"],
     },
     {
       id: "kandy-bentota-family-holiday-package",
@@ -195,10 +195,10 @@ export default function KandyBentotaClientPage() {
         { day: 3, title: "Drive to Bentota & Turtle Conservation Center", description: "Scenic transfer to coastal Bentota. Visit Kosgoda Turtle Hatchery where children can hold baby sea turtles." },
         { day: 4, title: "Bentota Madu River Safari & Watersports", description: "Family boat cruise along Madu River mangrove tunnels with fish therapy stop, followed by afternoon beach fun." },
         { day: 5, title: "A Complete Free Day for Family Relaxation", description: "Relax by the swimming pool, build sandcastles on Bentota beach, or take a gentle catamaran boat ride." },
-        { day: 6, title: "Colombo City Drive & Flight Home to Delhi", description: "Breakfast, drive through Colombo Galle Face Green, souvenir shopping, and private drop-off at airport." },
+        { day: 6, title: "Colombo City Drive & Flight Home", description: "Breakfast, drive through Colombo Galle Face Green, souvenir shopping, and private drop-off at airport." },
       ],
       inclusions: ["5 Nights in Premier Family 4-Star Resorts (2N Kandy + 3N Bentota)", "Daily Buffet Breakfasts & Dinners", "Pinnawala Elephant Orphanage & Turtle Hatchery Passes", "Madu River Family Boat Cruise", "All Private Family AC Coach Transfers with Guide", "Dedicated 24/7 Concierge Support"],
-      exclusions: ["International Flights from Delhi", "Personal water sports rentals", "Tips"],
+      exclusions: ["International Flights", "Personal water sports rentals", "Tips"],
     },
     {
       id: "kandy-bentota-beach-holiday",
@@ -229,10 +229,10 @@ export default function KandyBentotaClientPage() {
         { day: 3, title: "Bentota River Safari & Beach Sunbathing", description: "Morning boat cruise along the mangrove riverways, followed by an open afternoon on the sun loungers." },
         { day: 4, title: "A Complete Free Day by the Sea in Bentota", description: "Swim in the warm Indian Ocean, try jet skiing or windsurfing, or simply read a book under swaying palms." },
         { day: 5, title: "Second Free Day: Susegad Coastal Living", description: "Sleep in, indulge in seaside seafood lunches, explore Brief Garden, or enjoy sunset drinks at a beach bar." },
-        { day: 6, title: "Farewell Bentota & Flight to Delhi", description: "Leisurely coastal breakfast, souvenir packaging, and private drop-off at Colombo International Airport." },
+        { day: 6, title: "Farewell Bentota & Flight Home", description: "Leisurely coastal breakfast, souvenir packaging, and private drop-off at Colombo International Airport." },
       ],
-      inclusions: ["5 Nights in Deluxe Beach Resorts (1N Kandy + 4N Bentota)", "Daily Buffet Breakfasts & Dinners", "Temple of the Tooth Relic Entry Pass", "Madu River Mangrove Boat Tour", "All Private AC Transfers with Chauffeur", "24/7 Delhi Planning Support"],
-      exclusions: ["International Flights from Delhi", "Watersports activity tickets", "Personal expenses"],
+      inclusions: ["5 Nights in Deluxe Beach Resorts (1N Kandy + 4N Bentota)", "Daily Buffet Breakfasts & Dinners", "Temple of the Tooth Relic Entry Pass", "Madu River Mangrove Boat Tour", "All Private AC Transfers with Chauffeur", "24/7 Concierge Planning Support"],
+      exclusions: ["International Flights", "Watersports activity tickets", "Personal expenses"],
     },
     {
       id: "kandy-bentota-private-tour",
@@ -263,10 +263,10 @@ export default function KandyBentotaClientPage() {
         { day: 3, title: "Executive Transfer to Bentota Beach Villa", description: "Scenic drive through southern countryside, check-in to private beachfront villa in Bentota, and sunset drinks." },
         { day: 4, title: "Private Madu Riverboat Charter & Brief Garden", description: "Exclusive chartered boat cruise through mangrove islands followed by private tour of Brief Garden estate." },
         { day: 5, title: "A Complete Free Day with On-Standby Chauffeur", description: "Unscheduled day for relaxation, private spa therapies, or spontaneous coastal excursions." },
-        { day: 6, title: "Colombo Heritage Tour & Flight to Delhi", description: "Drive through Colombo colonial landmarks, high-end shopping at Paradise Road, and private airport drop." },
+        { day: 6, title: "Colombo Heritage Tour & Flight Home", description: "Drive through Colombo colonial landmarks, high-end shopping at Paradise Road, and private airport drop." },
       ],
       inclusions: ["5 Nights in 5-Star Luxury Stays (2N Kandy + 3N Bentota)", "Daily Gourmet Breakfasts & Dinners", "All VIP Entrance Passes & Private Guided Tours", "Private Chartered Madu Riverboat Cruise", "Dedicated Executive AC Vehicle on Standby 24/7", "Comprehensive Travel Support"],
-      exclusions: ["International Flights from Delhi", "Personal shopping & alcoholic drinks", "Tips"],
+      exclusions: ["International Flights", "Personal shopping & alcoholic drinks", "Tips"],
     },
     {
       id: "custom-kandy-bentota-tour-package",
@@ -290,16 +290,16 @@ export default function KandyBentotaClientPage() {
       localFoodHighlight: "Personalized dining reservations at Sri Lanka’s top-rated restaurants",
       freeDayNote: "Your free days are designed entirely to match your own natural pace and preferences.",
       overview:
-        "Want to combine Kandy and Bentota with the tea country hills of Nuwara Eliya, wildlife safaris in Yala, or the historic ramparts of Galle Fort? Our senior Delhi travel planners create your itinerary from scratch with zero compromises.",
+        "Want to combine Kandy and Bentota with the tea country hills of Nuwara Eliya, wildlife safaris in Yala, or the historic ramparts of Galle Fort? Our senior travel planners create your itinerary from scratch with zero compromises.",
       itinerary: [
         { day: 1, title: "Tailored Arrival According to Your Flight", description: "VIP airport reception, meet your dedicated driver-guide, and private transfer to your handpicked stay." },
         { day: 2, title: "Custom Sightseeing & Private Excursions", description: "Sightseeing tailored exclusively to your wish list with private guide and air-conditioned vehicle." },
         { day: 3, title: "Cultural Deep Dives or Hillside Exploration", description: "Explore historic temples, tea estates, or spice gardens at your own pace." },
         { day: 4, title: "Transfer to Coastal Haven & River Cruises", description: "Travel to Bentota or nearby coasts with curated photo stops along the way." },
         { day: 5, title: "Unstructured Leisure at Your Own Rhythm", description: "Relax with guaranteed free time, curated dining recommendations, and on-call concierge." },
-        { day: 6, title: "Seamless Departure Curated by Delhi Desk", description: "Private airport transfers, tax-refund assistance, and smooth direct flight back to Delhi." },
+        { day: 6, title: "Seamless Departure Curated by Concierge Desk", description: "Private airport transfers, tax-refund assistance, and smooth direct flight home." },
       ],
-      inclusions: ["Custom Hotel Tier (Boutique 4-Star to Ultra-Luxury 5-Star)", "Dedicated Private Chauffeured AC Fleet for all Transfers", "Custom Sightseeing with Dedicated Private Guide", "Direct 24/7 Delhi Planning Desk Access", "Visa Guidance & Itemized Transparent Pricing"],
+      inclusions: ["Custom Hotel Tier (Boutique 4-Star to Ultra-Luxury 5-Star)", "Dedicated Private Chauffeured AC Fleet for all Transfers", "Custom Sightseeing with Dedicated Private Guide", "Direct 24/7 Concierge Desk Access", "Visa Guidance & Itemized Transparent Pricing"],
       exclusions: ["Specified transparently during quote drafting", "No hidden costs"],
     },
   ];
@@ -604,12 +604,12 @@ export default function KandyBentotaClientPage() {
   const testimonials = [
     {
       name: "Abhishek & Neha Mathur",
-      country: "Delhi, India (Sri Lanka Honeymoon)",
+      country: "India (Sri Lanka Honeymoon)",
       rating: 5,
       date: "Travelled October 2026",
       avatarImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
       review:
-        "Altitude Travel Co. planned the perfect blend of Kandy's misty tea hills and Bentota's ocean beaches! The private driver was punctual, polite, and shared amazing local insights. The beachfront candlelight dinner in Bentota was pure magic. Highly recommend their Delhi team!",
+        "Altitude Travel Co. planned the perfect blend of Kandy's misty tea hills and Bentota's ocean beaches! The private driver was punctual, polite, and shared amazing local insights. The beachfront candlelight dinner in Bentota was pure magic. Highly recommend their dedicated team!",
     },
     {
       name: "Sanjay Gupta & Family",
@@ -627,7 +627,7 @@ export default function KandyBentotaClientPage() {
       date: "Travelled August 2026",
       avatarImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
       review:
-        "The jet ski and river safari in Bentota was top tier fun! Altitude Travel struck the right balance: guided visits to the Tooth Relic in Kandy followed by total freedom on the beach with zero curfew. Smooth booking experience from Delhi.",
+        "The jet ski and river safari in Bentota was top tier fun! Altitude Travel struck the right balance: guided visits to the Tooth Relic in Kandy followed by total freedom on the beach with zero curfew. Smooth booking experience throughout.",
     },
   ];
 
@@ -675,7 +675,7 @@ export default function KandyBentotaClientPage() {
                 {/* Eyebrow Micro-caps */}
                 <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
                   <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Curated Sri Lanka Holidays • Connaught Place, Delhi Planning Desk</span>
+                  <span>Curated Sri Lanka Holidays • Dedicated Planning Desk</span>
                 </div>
 
                 {/* Dynamic Moving Accent Line */}
@@ -1642,7 +1642,7 @@ export default function KandyBentotaClientPage() {
                   Ready to Plan Your Kandy &amp; Bentota Vacation?
                 </h4>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-lg mx-auto">
-                  Talk directly with our senior Sri Lanka travel specialist in Connaught Place, New Delhi. Get custom dates, beachfront resort choices, and personalized quotes without filling lengthy forms.
+                  Talk directly with our senior Sri Lanka travel specialist. Get custom dates, beachfront resort choices, and personalized quotes without filling lengthy forms.
                 </p>
               </div>
 
@@ -1675,13 +1675,13 @@ export default function KandyBentotaClientPage() {
             <div className="p-6 rounded-2xl bg-gradient-to-tr from-[#0C0A09] via-stone-900 to-[#0C0A09] border border-[#BFA13B]/30 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
               <div className="space-y-1">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#E8D08D]">
-                  Direct Delhi Concierge
+                  Direct Concierge Desk
                 </span>
                 <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
                   Speak Directly With Our Sri Lanka Travel Specialist
                 </h3>
                 <p className="text-xs sm:text-sm text-stone-300">
-                  Instant quotes, flight options ex-Delhi, and personalized hotel recommendations.
+                  Instant quotes, flight coordination, and personalized hotel recommendations.
                 </p>
               </div>
 

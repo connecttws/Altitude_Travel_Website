@@ -86,17 +86,17 @@ export default function HeroSection() {
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
                 <Compass className="w-3.5 h-3.5 text-[#BFA13B] shrink-0" />
                 <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.12em] uppercase text-stone-900 whitespace-nowrap truncate">
-                  Connaught Place, New Delhi • Curated Agency
+                  Bazpur, near Rudrapur, Nainital, Uttarakhand, India • Luxury Bespoke Agency
                 </span>
                 <span className="text-[9.5px] font-extrabold text-[#7A5200] bg-[#FFF5D6] px-2 py-0.5 rounded-full border border-[#D4AF37]/40 shrink-0 hidden sm:inline-block">
-                  Est. 2018
+                  Est. 2025
                 </span>
               </div>
 
               {/* H1 HEADING: Deep Obsidian Black + High-Contrast Dark Bronze-Gold (100% Sharp & Visible) */}
               <h1 className="text-3xl sm:text-4xl md:text-[46px] lg:text-[50px] xl:text-[54px] font-extrabold tracking-tight leading-[1.1] text-stone-950">
                 <span className="block font-black text-[#0A0908]">
-                  Tour and Travel Agency in Delhi
+                  Tour and Travel Agency
                 </span>
                 <span className="block mt-1.5 sm:mt-2 font-black text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] xl:text-[42px] tracking-tight text-[#7A5200] drop-shadow-xs">
                   Travel Beyond the Tourist Trail
@@ -110,7 +110,7 @@ export default function HeroSection() {
 
               {/* EXACT VERBATIM PARAGRAPH: High contrast, easy to read */}
               <p className="text-[15px] sm:text-[16.5px] text-stone-800 leading-relaxed font-normal max-w-2xl">
-                Altitude Travel is a <strong className="font-bold text-stone-950">tour and travel agency in Delhi</strong> offering international and Indian tour packages. We go beyond the usual tourist trail, combining <span className="text-[#7A5200] font-semibold">iconic landmarks with hidden gems</span>, local food, shopping, and <span className="text-[#7A5200] font-semibold">free time</span>, so you experience the destination, not just see it.
+                Altitude Travel is a <strong className="font-bold text-stone-950">tour and travel agency</strong> offering international and Indian tour packages. We go beyond the usual tourist trail, combining <span className="text-[#7A5200] font-semibold">iconic landmarks with hidden gems</span>, local food, shopping, and <span className="text-[#7A5200] font-semibold">free time</span>, so you experience the destination, not just see it.
               </p>
 
               {/* ACTION BUTTONS: Placed directly below paragraph to be 100% visible on the initial screen */}
@@ -128,7 +128,7 @@ export default function HeroSection() {
                   className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm text-stone-900 bg-white hover:bg-stone-50 border border-[#E5E0D5] hover:border-[#D4AF37] shadow-2xs transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Our Delhi Legacy</span>
+                  <span>Our Story &amp; Legacy</span>
                 </a>
               </div>
 
@@ -136,7 +136,7 @@ export default function HeroSection() {
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-1.5 text-xs text-stone-700 font-semibold border-t border-stone-200/80 max-w-xl">
                 <span className="flex items-center gap-1.5 text-stone-900">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                  <span>10,000+ Delhi Travellers</span>
+                  <span>10,000+ Happy Travellers</span>
                 </span>
                 <span className="flex items-center gap-1.5 text-[#7A5200]">
                   <Star className="w-3.5 h-3.5 fill-[#D4AF37] text-[#D4AF37] shrink-0" />
@@ -237,7 +237,7 @@ export default function HeroSection() {
 
                     <span className="text-[10.5px] text-stone-300 font-medium flex items-center gap-1">
                       <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                      Connaught Place Desk
+                      Curated Concierge Desk
                     </span>
                   </div>
                 </div>

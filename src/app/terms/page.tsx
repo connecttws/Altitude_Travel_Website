@@ -8,14 +8,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms and Conditions | Altitude Travel Co.",
   description:
-    "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co., Delhi.",
+    "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co.",
   alternates: {
     canonical: "https://altitudetravel.in/terms",
   },
   openGraph: {
     title: "Terms and Conditions | Altitude Travel Co.",
     description:
-      "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co., Delhi.",
+      "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co.",
     url: "https://altitudetravel.in/terms",
     siteName: "Altitude Travel Co.",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Terms and Conditions | Altitude Travel Co.",
     description:
-      "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co., Delhi.",
+      "Review the terms and conditions for booking Indian and international tour packages with Altitude Travel Co.",
   },
 };
 
@@ -49,7 +49,7 @@ export default function TermsPage() {
             <div className="space-y-3 border-b border-slate-100 pb-6">
               <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                 <Compass className="w-3.5 h-3.5 text-amber-600" />
-                Altitude Travel Co. • Delhi, India
+                Altitude Travel Co. • India
               </div>
               <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
                 Term and Conditions
@@ -62,7 +62,7 @@ export default function TermsPage() {
             <section className="space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
               <h2 className="text-xl font-bold text-slate-900">1. Booking & Agreement</h2>
               <p>
-                By booking any Indian tour package, international tour package, or custom travel itinerary with Altitude Travel Co. (Connaught Place, New Delhi), you agree to comply with and be bound by the terms detailed herein. All quotations and reservations are subject to availability at the time of confirmed deposit.
+                By booking any Indian tour package, international tour package, or custom travel itinerary with Altitude Travel Co., you agree to comply with and be bound by the terms detailed herein. All quotations and reservations are subject to availability at the time of confirmed deposit.
               </p>
 
               <h2 className="text-xl font-bold text-slate-900">2. Transparent Pricing & Inclusions</h2>

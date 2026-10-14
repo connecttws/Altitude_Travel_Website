@@ -74,7 +74,7 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
           </h2>
 
           <p className="text-xs sm:text-sm text-stone-600 max-w-md mx-auto font-normal leading-relaxed">
-            Select your preferences below to connect directly with our Connaught Place travel planners on WhatsApp with handcrafted itineraries and zero waiting time.
+            Select your preferences below to connect directly with our dedicated travel planners on WhatsApp with handcrafted itineraries and zero waiting time.
           </p>
         </div>
 

@@ -114,7 +114,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
           <div className="flex items-center gap-2.5 sm:gap-3">
             <span className="flex items-center gap-1.5 text-[#C9A84C] font-medium tracking-wide">
               <Sparkles className="w-3 h-3 text-[#BFA13B]" />
-              <span>Tour &amp; Travel Agency in Delhi</span>
+              <span>Tour &amp; Travel Agency</span>
             </span>
 
             <span className="text-stone-700 hidden sm:inline">•</span>
@@ -314,7 +314,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                   <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-4 grid grid-cols-2 gap-2">
                     <div className="col-span-2 pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A5200]">
-                        International Holidays from Delhi
+                        International Holidays
                       </span>
                       <span className="text-[10px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2 py-0.5 rounded-full border border-[#7A5200]/20">
                         4 Destinations

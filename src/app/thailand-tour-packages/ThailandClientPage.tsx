@@ -92,10 +92,10 @@ export default function ThailandClientPage() {
         { day: 2, title: "Coral Island (Koh Larn) Speedboat Adventure", description: "Speedboat excursion to Coral Island with parasailing, banana boat, Indian lunch buffet, and beach lounging." },
         { day: 3, title: "Transfer to Bangkok & City Temple Tour", description: "Scenic transfer to Bangkok. Visit Wat Traimit (Golden Buddha) and Wat Benchamabophit (Marble Temple) with evening at Pratunam Market." },
         { day: 4, title: "Free Day for Shopping & Chao Phraya Dinner Cruise", description: "Leisure morning to shop at Platinum Mall or CentralWorld, followed by an evening luxury Chao Phraya Princess Dinner Cruise with live music." },
-        { day: 5, title: "Bangkok Souvenirs & Flight Home to Delhi", description: "Breakfast at leisure, final duty-free shopping, and private transfer to airport for direct flight to New Delhi." },
+        { day: 5, title: "Bangkok Souvenirs & Flight Home", description: "Breakfast at leisure, final duty-free shopping, and private transfer to airport for direct flight home." },
       ],
-      inclusions: ["4 Nights in 4-Star Hotels (2N Pattaya + 2N Bangkok)", "Daily Breakfast & Coral Island Indian Buffet Lunch", "Coral Island Speedboat with Shared Transfers", "Bangkok City & Temple Sightseeing Tour", "Private Airport & Inter-city AC Transfers", "Delhi Desk 24/7 Concierge Support"],
-      exclusions: ["International Flights ex-Delhi", "Personal water sports charges on island", "Tips & GST"],
+      inclusions: ["4 Nights in 4-Star Hotels (2N Pattaya + 2N Bangkok)", "Daily Breakfast & Coral Island Indian Buffet Lunch", "Coral Island Speedboat with Shared Transfers", "Bangkok City & Temple Sightseeing Tour", "Private Airport & Inter-city AC Transfers", "24/7 Concierge Support"],
+      exclusions: ["International Flights", "Personal water sports charges on island", "Tips & GST"],
     },
     {
       id: "thailand-5n-6d",
@@ -126,7 +126,7 @@ export default function ThailandClientPage() {
         { day: 3, title: "Phuket Cultural Tour & Transfer to Krabi", description: "Visit Big Buddha and Wat Chalong, then enjoy a scenic road or ferry transfer to Krabi Ao Nang beachfront." },
         { day: 4, title: "Krabi 4-Islands Speedboat Tour with Box Lunch", description: "Visit Koh Poda, Chicken Island, Tup Island (sandbar walk), and Phra Nang Cave Beach with crystal snorkeling." },
         { day: 5, title: "A Complete Free Day in Krabi", description: "Relax at resort, take a longtail boat to Railay Beach for rock climbing, or visit Tiger Cave Temple." },
-        { day: 6, title: "Krabi Departure to Delhi", description: "Breakfast overlooking limestone cliffs and private transfer to Krabi International Airport for return flight." },
+        { day: 6, title: "Krabi Departure & Return Flight", description: "Breakfast overlooking limestone cliffs and private transfer to Krabi International Airport for return flight." },
       ],
       inclusions: ["5 Nights in Premier 4-Star Resorts (3N Phuket + 2N Krabi)", "Daily Buffet Breakfasts + 2 Island Tour Lunches", "Full Day Phi Phi Islands Speedboat Pass with Snorkel Gear", "Krabi 4 Islands Speedboat Tour with National Park Fees", "Private Airport & Inter-city Transfers", "Thailand Travel Insurance Guidance"],
       exclusions: ["International Flights", "National park cleaning fees (~400 THB/pax)", "Personal expenses"],
@@ -155,13 +155,13 @@ export default function ThailandClientPage() {
       overview:
         "The ultimate family and couples holiday combining Pattaya's coastal sunshine with Bangkok's world-class mega malls and historic river heritage.",
       itinerary: [
-        { day: 1, title: "Delhi to Bangkok & Private Transfer to Pattaya", description: "Arrive in Bangkok, meet private chauffeur, transfer to Pattaya beachfront resort and relax." },
+        { day: 1, title: "Arrive Bangkok & Private Transfer to Pattaya", description: "Arrive in Bangkok, meet private chauffeur, transfer to Pattaya beachfront resort and relax." },
         { day: 2, title: "Coral Island Speedboat Tour with Parasailing", description: "Fast speedboat to Coral Island with water activities, beach chair relaxation, and Indian hot lunch." },
         { day: 3, title: "Nong Nooch Botanical Garden & Free Afternoon", description: "Visit world-class botanical gardens and Thai cultural elephant show, followed by a free afternoon in Pattaya." },
         { day: 4, title: "Scenic Transfer to Bangkok & Temple Discovery", description: "Drive to Bangkok. Visit Wat Arun across the Chao Phraya River and Wat Pho Reclining Buddha." },
         { day: 5, title: "Safari World & Marine Park Full Day Trip", description: "Full day safari open zoo drive with lion feeding, followed by dolphin and sea lion stunts with buffet lunch." },
         { day: 6, title: "Guaranteed Free Day for Bangkok Shopping", description: "Complete free day to explore ICONSIAM, Siam Paragon, Platinum Mall, or take a traditional Thai massage." },
-        { day: 7, title: "Farewell Thailand & Flight to Delhi", description: "Breakfast, checkout, souvenir packaging, and private limousine drop to Bangkok airport." },
+        { day: 7, title: "Farewell Thailand & Flight Home", description: "Breakfast, checkout, souvenir packaging, and private limousine drop to Bangkok airport." },
       ],
       inclusions: ["6 Nights in Deluxe 4-Star Stays (3N Pattaya + 3N Bangkok)", "Daily Breakfast + 2 Lunches (Coral Island & Safari World)", "Safari World & Marine Park Entry Tickets with Safari Coach", "Coral Island Speedboat with Transfers", "Private Chauffeur AC Vehicles for all transfers", "24/7 On-Ground Support Desk"],
       exclusions: ["International Flights", "Personal shopping & water sports", "Tips"],
@@ -195,10 +195,10 @@ export default function ThailandClientPage() {
         { day: 3, title: "Private Sunset Sailing Catamaran Cruise", description: "Sail past Promthep Cape, watch sunset over the Andaman Sea with canapes and chilled champagne." },
         { day: 4, title: "Transfer to Krabi Private Pool Villa", description: "Luxury private transfer to Tubkaek Beach, Krabi. Enjoy your private plunge pool and undisturbed relaxation." },
         { day: 5, title: "Hong Island Lagoon Private Longtail Tour", description: "Private luxury wooden longtail boat to Hong Island emerald lagoon with private couples photo stops." },
-        { day: 6, title: "Departure to Delhi with Cherished Memories", description: "Floating breakfast in villa pool, leisure checkout, and private drop to Krabi airport." },
+        { day: 6, title: "Departure Home with Cherished Memories", description: "Floating breakfast in villa pool, leisure checkout, and private drop to Krabi airport." },
       ],
       inclusions: ["5 Nights in 5-Star Luxury Resorts (3N Phuket + 2N Krabi Pool Villa)", "Daily Breakfasts Including 1 Romantic Floating Breakfast", "1 Candlelight 4-Course Dinner on the Beach", "Private Sunset Catamaran Sailing Tour", "Honeymoon Bed Décor & Complimentary Bottle of Wine", "All Private Airport & Inter-city Transfers"],
-      exclusions: ["International Flights from Delhi", "Personal spa treatments", "Travel insurance"],
+      exclusions: ["International Flights", "Personal spa treatments", "Travel insurance"],
     },
     {
       id: "thailand-family-holiday-package",
@@ -230,10 +230,10 @@ export default function ThailandClientPage() {
         { day: 4, title: "Phang Nga Bay & James Bond Island Boat Tour", description: "Scenic big boat cruise through limestone needles, sea canoeing into sea caves with experienced paddlers." },
         { day: 5, title: "Free Day / Andamanda Phuket Waterpark Fun", description: "Enjoy Thailand's newest mega waterpark with lazy river and wave pool, or relax by the beach." },
         { day: 6, title: "Phuket Cultural Discovery & Night Bazaar", description: "Visit Old Phuket Town colorful Sino-Portuguese streets, Cashew Nut factory, and Chillva Market." },
-        { day: 7, title: "Fly Back to New Delhi", description: "Breakfast, leisurely packing, and private transfer to Phuket airport for direct flight home." },
+        { day: 7, title: "Fly Back Home", description: "Breakfast, leisurely packing, and private transfer to Phuket airport for direct flight home." },
       ],
       inclusions: ["6 Nights in Top Family-Friendly 4-Star Resorts (2N Bangkok + 4N Phuket)", "Daily Buffet Breakfasts & 2 Theme Park Buffet Lunches", "Domestic Flight Bangkok to Phuket with Baggage", "Safari World & Marine Park All-Access Passes", "James Bond Island Cruise with Sea Canoeing", "All Private Family AC Coach Transfers"],
-      exclusions: ["International Flights ex-Delhi", "Personal waterpark locker rentals", "Tips"],
+      exclusions: ["International Flights", "Personal waterpark locker rentals", "Tips"],
     },
     {
       id: "thailand-beach-holiday-package",
@@ -265,7 +265,7 @@ export default function ThailandClientPage() {
         { day: 4, title: "Scenic Ferry to Krabi & Railay Beach Sunset", description: "Cruise by passenger ferry to Krabi. Walk across to iconic Railay Beach as the sun sets behind limestone karsts." },
         { day: 5, title: "Krabi 4-Islands Snorkel & Sandbar Discovery", description: "Speedboat across Koh Poda and Tup Island; walk on the miraculous white sandbar bridging two islands." },
         { day: 6, title: "A Complete Free Day by the Sea in Krabi", description: "Sleep in, rent a paddleboard, enjoy Thai herbal beachside massages, or lounge by the infinity pool." },
-        { day: 7, title: "Transfer to Airport & Fly to Delhi", description: "Farewell tropical breakfast, souvenir shopping, and private drop-off at Krabi airport." },
+        { day: 7, title: "Transfer to Airport & Return Flight", description: "Farewell tropical breakfast, souvenir shopping, and private drop-off at Krabi airport." },
       ],
       inclusions: ["6 Nights in Deluxe Beachfront Resorts", "Daily Breakfasts + Island Tour Lunches", "Phi Phi Islands Deluxe Speedboat Tour", "Krabi 4-Islands Speedboat Tour with Snorkel Mask", "Ferry Transfer Phuket to Krabi", "Private Airport Transfers"],
       exclusions: ["International Airfare", "Personal beach gear rentals", "National park fees"],
@@ -299,10 +299,10 @@ export default function ThailandClientPage() {
         { day: 3, title: "Phuket City Sightseeing & Big Buddha", description: "Half-day cultural tour visiting Big Buddha, Wat Chalong, and colorful heritage streets of Old Phuket Town." },
         { day: 4, title: "Fly to Bangkok & Chao Phraya Dinner Cruise", description: "Morning domestic flight to Bangkok, check-in to city hotel, and evening luxury dinner cruise with live cabaret and skyline views." },
         { day: 5, title: "Bangkok Temples & Free Afternoon Shopping", description: "Guided tour to Golden Buddha and Reclining Buddha, followed by an open afternoon at CentralWorld and Pratunam." },
-        { day: 6, title: "Bangkok Departure to New Delhi", description: "Breakfast, last-minute mango sticky rice treats, and private airport drop for direct flight home." },
+        { day: 6, title: "Bangkok Departure & Return Flight", description: "Breakfast, last-minute mango sticky rice treats, and private airport drop for direct flight home." },
       ],
       inclusions: ["5 Nights in 4-Star Stays (3N Phuket + 2N Bangkok)", "Domestic Flight Phuket to Bangkok with 20kg Baggage", "Daily Breakfasts & 1 Island Buffet Lunch", "Phi Phi Island Speedboat Tour with Equipment", "Chao Phraya Dinner Cruise Ticket", "Private AC Airport & Hotel Transfers"],
-      exclusions: ["International Flights from Delhi", "Personal expenses", "Tips"],
+      exclusions: ["International Flights", "Personal expenses", "Tips"],
     },
     {
       id: "thailand-bangkok-pattaya-package",
@@ -332,10 +332,10 @@ export default function ThailandClientPage() {
         { day: 2, title: "Coral Island by Speedboat & Alcazar Show", description: "Speedboat excursion to Coral Island with lunch, followed by world-famous Alcazar Cabaret performance." },
         { day: 3, title: "Transfer to Bangkok & City Temples", description: "Morning drive to Bangkok. Sightseeing of Wat Traimit Golden Buddha and Wat Pho, with check-in at Pratunam." },
         { day: 4, title: "Free Shopping Day in Bangkok", description: "Full day free for shopping at Platinum Fashion Mall, MBK Center, and Big C supermarket for Thai snacks." },
-        { day: 5, title: "Bangkok to Delhi Departure", description: "Breakfast, hotel checkout, and private vehicle drop to Suvarnabhumi or Don Mueang airport." },
+        { day: 5, title: "Bangkok Departure & Flight Home", description: "Breakfast, hotel checkout, and private vehicle drop to Suvarnabhumi or Don Mueang airport." },
       ],
       inclusions: ["4 Nights in Handpicked 4-Star Hotels (2N Pattaya + 2N Bangkok)", "Daily Breakfasts & 1 Indian Lunch at Coral Island", "Coral Island Speedboat Tour with Pickup", "Alcazar Cabaret Show Standard Seat Pass", "Bangkok City & Temple Sightseeing", "All Private AC Transfers with Driver"],
-      exclusions: ["International Flights from Delhi", "Personal water sports & tips", "GST"],
+      exclusions: ["International Flights", "Personal water sports & tips", "GST"],
     },
     {
       id: "custom-thailand-tour-package",
@@ -359,16 +359,16 @@ export default function ThailandClientPage() {
       localFoodHighlight: "Michelin-starred Thai dining & private chef beachfront barbecues",
       freeDayNote: "Your free days are designed entirely to match your own natural pace and preferences.",
       overview:
-        "Want to combine Chiang Mai's misty hills with Koh Samui's tranquil sands or Bangkok's Michelin dining? Our senior Delhi travel planners create your itinerary from scratch with zero compromises.",
+        "Want to combine Chiang Mai's misty hills with Koh Samui's tranquil sands or Bangkok's Michelin dining? Our senior travel planners create your itinerary from scratch with zero compromises.",
       itinerary: [
         { day: 1, title: "Tailored Arrival According to Your Flight", description: "VIP airport reception, fast-track immigration assistance if requested, and private limousine transfer." },
         { day: 2, title: "Handpicked Sightseeing & Private Excursions", description: "Private English-speaking guides and executive chauffeured transport tailored to your wish list." },
         { day: 3, title: "Island Adventures or Cultural Deep Dives", description: "Fly to your chosen islands or northern cultural havens with curated hotel upgrades." },
         { day: 4, title: "Bespoke Activities: Yacht, Cooking, Diving", description: "Enjoy experiences tailored exclusively for you—from ethical elephant encounters to private island charters." },
         { day: 5, title: "Unstructured Leisure at Your Own Rhythm", description: "Relax with guaranteed free time, curated dining recommendations, and on-call concierge." },
-        { day: 6, title: "Seamless Departure Curated by Delhi Desk", description: "Private airport transfers, tax-refund (VAT) assistance, and smooth direct flights home." },
+        { day: 6, title: "Seamless Departure Curated by Concierge Desk", description: "Private airport transfers, tax-refund (VAT) assistance, and smooth direct flights home." },
       ],
-      inclusions: ["Custom Hotel Tier (Boutique 4-Star to Ultra-Luxury 5-Star)", "Private Chauffeured AC Fleet for all Transfers", "Custom Domestic Flight Bookings & Baggage", "Tailor-Made Sightseeing with Dedicated Private Guide", "Direct 24/7 Delhi Planning Desk Access", "Visa Guidance & Transparent Itemized Pricing"],
+      inclusions: ["Custom Hotel Tier (Boutique 4-Star to Ultra-Luxury 5-Star)", "Private Chauffeured AC Fleet for all Transfers", "Custom Domestic Flight Bookings & Baggage", "Tailor-Made Sightseeing with Dedicated Private Guide", "Direct 24/7 Concierge Desk Access", "Visa Guidance & Transparent Itemized Pricing"],
       exclusions: ["Specified transparently during quote drafting", "No hidden costs"],
     },
   ];
@@ -666,7 +666,7 @@ export default function ThailandClientPage() {
                 {/* Eyebrow Micro-caps */}
                 <div className="inline-flex items-center gap-2 self-start text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
                   <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Curated Southeast Asia Holidays • Connaught Place, Delhi Planning Desk</span>
+                  <span>Curated Southeast Asia Holidays • Dedicated Planning Desk</span>
                 </div>
 
                 {/* Dynamic Moving Accent Line */}
@@ -851,7 +851,7 @@ export default function ThailandClientPage() {
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8 md:mb-10">
               <div className="inline-flex items-center gap-2 self-center text-[11px] font-bold tracking-[0.22em] uppercase text-[#BFA13B]">
                 <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
-                <span>Specialized Planning from Delhi Desk</span>
+                <span>Specialized Concierge Planning</span>
               </div>
 
               {/* EXACT H2 */}
@@ -878,7 +878,7 @@ export default function ThailandClientPage() {
               <div className="p-3.5 bg-white rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">✈️</span>
                 <h4 className="text-xs font-serif font-bold text-stone-900">Direct Flights</h4>
-                <p className="text-[11px] text-stone-500">Non-stop from Delhi</p>
+                <p className="text-[11px] text-stone-500">Direct Flight Options</p>
               </div>
               <div className="p-3.5 bg-white rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🏨</span>
@@ -892,7 +892,7 @@ export default function ThailandClientPage() {
               </div>
               <div className="p-3.5 bg-white rounded-xl border border-[#E5E0D5] text-center space-y-1 shadow-2xs">
                 <span className="text-xl">🛡️</span>
-                <h4 className="text-xs font-serif font-bold text-stone-900">24/7 Delhi Care</h4>
+                <h4 className="text-xs font-serif font-bold text-stone-900">24/7 Concierge Care</h4>
                 <p className="text-[11px] text-stone-500">Dedicated Support Desk</p>
               </div>
             </div>
@@ -1355,7 +1355,7 @@ export default function ThailandClientPage() {
               </h2>
 
               <p className="text-base text-stone-600 leading-relaxed font-normal">
-                Real feedback from Delhi families, couples, and friends who experienced Thailand with guaranteed free time.
+                Real feedback from families, couples, and friends who experienced Thailand with guaranteed free time.
               </p>
             </div>
 
@@ -1412,7 +1412,7 @@ export default function ThailandClientPage() {
                   <div className="mt-4 pt-3 border-t border-[#E5E0D5] flex items-center justify-between text-xs text-stone-400">
                     <span className="font-medium">{t.date}</span>
                     <span className="text-[11px] font-semibold text-stone-900 bg-[#FBF7EE] px-2.5 py-0.5 rounded-full border border-[#BFA13B]/30 flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-[#BFA13B]" /> Verified Booking • Delhi Desk
+                      <ShieldCheck className="w-3 h-3 text-[#BFA13B]" /> Verified Booking • Concierge Desk
                     </span>
                   </div>
                 </div>
@@ -1513,7 +1513,7 @@ export default function ThailandClientPage() {
             <div className="mt-8 p-6 sm:p-8 lg:p-9 rounded-2xl bg-[#0C0A09] text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left border border-[#BFA13B]/30">
               <div className="space-y-1.5 lg:max-w-lg">
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#E8D08D] block">
-                  Connaught Place, Delhi Planning Desk
+                  Curated Concierge Planning Desk
                 </span>
                 <h3 className="text-xl sm:text-2xl lg:text-[26px] font-serif font-bold text-white tracking-tight leading-snug">
                   Get a Free Custom Thailand Quote

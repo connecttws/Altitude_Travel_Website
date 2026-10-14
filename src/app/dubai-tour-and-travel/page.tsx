@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Burj Khalifa tour",
     "Dubai desert safari",
     "Dubai Marina cruise",
-    "Dubai holiday packages from Delhi",
+    "Dubai holiday packages",
   ],
   alternates: {
     canonical: "https://altitudetravel.in/dubai-tour-and-travel",
