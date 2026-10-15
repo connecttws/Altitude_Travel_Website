@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { TourPackage } from "@/data/packages";
-import { MapPin, Clock, Star, ArrowRight, Heart, Sparkles } from "lucide-react";
+import { MapPin, Clock, Star, ArrowRight, Heart, Sparkles, MessageSquare } from "lucide-react";
 
 interface PackageCardProps {
   pkg: TourPackage;
@@ -116,15 +116,29 @@ export default function PackageCard({ pkg, onSelect, onInquire, featured = false
           </div>
 
           <div className="flex items-center gap-1.5">
+            <a
+              href={`https://wa.me/919639320101?text=${encodeURIComponent(
+                `Hi Altitude Travel! I want to inquire about the "${pkg.title}" package (${pkg.duration}). Please share the customized itinerary and quote!`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1 px-2.5 py-2 text-xs font-bold bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white rounded-xl transition-all duration-200 border border-emerald-300 shadow-2xs"
+              title="Inquire directly on WhatsApp"
+            >
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>Inquire</span>
+            </a>
+
             <button
               type="button"
               onClick={(e) => {
                 e.stopPropagation();
                 onSelect(pkg);
               }}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold bg-[#0C0A09] text-[#F5D77F] hover:bg-[#BFA13B] hover:text-stone-950 group-hover:border-[#BFA13B]/70 shining-sweep rounded-xl transition-all duration-200 border border-[#BFA13B]/30 cursor-pointer shadow-xs hover:shadow-[0_4px_16px_rgba(191,161,59,0.35)]"
+              className="inline-flex items-center gap-1 px-3 py-2 text-xs font-bold bg-[#0C0A09] text-[#F5D77F] hover:bg-[#BFA13B] hover:text-stone-950 group-hover:border-[#BFA13B]/70 shining-sweep rounded-xl transition-all duration-200 border border-[#BFA13B]/30 cursor-pointer shadow-xs hover:shadow-[0_4px_16px_rgba(191,161,59,0.35)]"
             >
-              <span>View Details</span>
+              <span>Details</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>

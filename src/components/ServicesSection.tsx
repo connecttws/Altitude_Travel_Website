@@ -33,7 +33,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
       image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=80",
       highlights: ["Multiple Itinerary Options", "Iconic Sights & Hidden Gems", "Free Time Built-In"],
       btnText: "Explore Custom Itineraries",
-      action: onOpenCustomModal,
+      anchor: "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20explore%20custom%20itineraries.",
     },
     {
       id: "international",
@@ -72,7 +72,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
       image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80",
       highlights: ["Tailored to Budget & Dates", "Honeymoon & Family Focus", "Flexible Revisions"],
       btnText: "Build Your Custom Plan",
-      action: onOpenCustomModal,
+      anchor: "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20build%20a%20custom%20tour%20package.",
     },
     {
       id: "support",
@@ -85,7 +85,7 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80",
       highlights: ["Dedicated Travel Desk", "Real-Time Trip Support", "Immediate Phone & WhatsApp"],
       btnText: "Connect With Our Team",
-      anchor: "#contact-footer",
+      anchor: "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20connect%20with%20your%20team%20for%20a%20travel%20inquiry.",
     },
   ];
 
@@ -228,24 +228,17 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
                 </div>
 
                 {/* Action CTA */}
-                {activeService.action ? (
-                  <button
-                    type="button"
-                    onClick={activeService.action}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-[#0C0A09] hover:bg-stone-800 text-[#BFA13B] transition-colors shadow-xs cursor-pointer whitespace-nowrap"
-                  >
-                    <span>{activeService.btnText}</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                ) : activeService.anchor ? (
+                {activeService.anchor && (
                   <a
                     href={activeService.anchor}
+                    target={activeService.anchor.startsWith("http") ? "_blank" : undefined}
+                    rel={activeService.anchor.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-[#0C0A09] hover:bg-stone-800 text-[#BFA13B] transition-colors shadow-xs cursor-pointer whitespace-nowrap"
                   >
                     <span>{activeService.btnText}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
-                ) : null}
+                )}
               </div>
             </div>
           </div>
@@ -296,24 +289,17 @@ export default function ServicesSection({ onOpenCustomModal }: ServicesSectionPr
                     </div>
 
                     <div className="pt-2.5 border-t border-[#E5E0D5]">
-                      {srv.action ? (
-                        <button
-                          type="button"
-                          onClick={srv.action}
-                          className="w-full py-2 rounded-lg text-xs font-bold bg-[#0C0A09] text-[#BFA13B] flex items-center justify-center gap-1.5"
-                        >
-                          <span>{srv.btnText}</span>
-                          <ArrowRight className="w-3 h-3" />
-                        </button>
-                      ) : srv.anchor ? (
+                      {srv.anchor && (
                         <a
                           href={srv.anchor}
+                          target={srv.anchor.startsWith("http") ? "_blank" : undefined}
+                          rel={srv.anchor.startsWith("http") ? "noopener noreferrer" : undefined}
                           className="w-full py-2 rounded-lg text-xs font-bold bg-[#0C0A09] text-[#BFA13B] flex items-center justify-center gap-1.5"
                         >
                           <span>{srv.btnText}</span>
                           <ArrowRight className="w-3 h-3" />
                         </a>
-                      ) : null}
+                      )}
                     </div>
                   </div>
                 </div>

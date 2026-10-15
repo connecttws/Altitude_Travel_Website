@@ -195,9 +195,11 @@ export default function VietnamClientPage() {
       <Navbar
         onOpenCustomModal={() => setIsCustomModalOpen(true)}
         onOpenInquiryModal={() => {
-          const formElem = document.getElementById("vietnam-inquiry-box");
-          if (formElem) {
-            formElem.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (typeof window !== "undefined") {
+            window.open(
+              "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Vietnam%20tour%20packages.",
+              "_blank"
+            );
           }
         }}
       />

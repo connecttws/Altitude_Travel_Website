@@ -39,15 +39,11 @@ export default function HomeClientPage() {
       <Navbar
         onOpenCustomModal={() => setIsCustomModalOpen(true)}
         onOpenInquiryModal={() => {
-          if (typeof window !== "undefined" && window.innerWidth < 1024) {
-            setIsCustomModalOpen(true);
-          } else {
-            const heroForm = document.getElementById("hero-inquiry-form");
-            if (heroForm) {
-              heroForm.scrollIntoView({ behavior: "smooth", block: "center" });
-            } else {
-              setIsCustomModalOpen(true);
-            }
+          if (typeof window !== "undefined") {
+            window.open(
+              "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20would%20like%20to%20inquire%20about%20a%20tour%20package.",
+              "_blank"
+            );
           }
         }}
       />

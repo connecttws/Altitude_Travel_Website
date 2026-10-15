@@ -629,9 +629,11 @@ export default function ThailandClientPage() {
       <Navbar
         onOpenCustomModal={() => setIsCustomModalOpen(true)}
         onOpenInquiryModal={() => {
-          const formElem = document.getElementById("thailand-inquiry-box");
-          if (formElem) {
-            formElem.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (typeof window !== "undefined") {
+            window.open(
+              "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Thailand%20tour%20packages.",
+              "_blank"
+            );
           }
         }}
       />
@@ -1032,13 +1034,14 @@ export default function ThailandClientPage() {
                 <Info className="w-4 h-4 text-[#BFA13B] shrink-0" />
                 <span>Need a different duration or combined multi-country itinerary? We create bespoke itineraries for any dates.</span>
               </div>
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
-                className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 transition-all shadow-xs shrink-0 cursor-pointer"
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20customize%20my%20Thailand%20package."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 transition-all shadow-xs shrink-0 cursor-pointer inline-flex items-center gap-1.5"
               >
-                Customize My Thailand Package
-              </button>
+                <span>Customize My Thailand Package</span>
+              </a>
             </div>
 
           </div>
@@ -1122,14 +1125,15 @@ export default function ThailandClientPage() {
               <p className="text-xs text-stone-500 font-semibold mb-3">
                 Also exploring Hua Hin, Koh Phangan, Pai, or Ayutthaya?
               </p>
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20explore%20more%20places%20and%20offbeat%20islands%20in%20Thailand."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-[#FAF9F6] text-stone-900 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
-                <span>Slider Option – Show More Places &amp; Offbeat Islands</span>
+                <span>Show More Places &amp; Offbeat Islands</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
-              </button>
+              </a>
             </div>
 
           </div>
@@ -1273,14 +1277,15 @@ export default function ThailandClientPage() {
 
             {/* Slider Option – Show More Packages */}
             <div className="mt-8 text-center">
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20inquire%20about%20more%20custom%20Thailand%20packages."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-[#FAF9F6] text-stone-900 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
-                <span>Slider Option – Show More Custom Thailand Packages</span>
+                <span>Show More Custom Thailand Packages</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
-              </button>
+              </a>
             </div>
 
           </div>
@@ -1524,14 +1529,15 @@ export default function ThailandClientPage() {
               </div>
 
               <div className="w-full lg:w-auto flex flex-col sm:flex-row lg:flex-col gap-2.5 shrink-0">
-                <button
-                  type="button"
-                  onClick={() => setIsCustomModalOpen(true)}
+                <a
+                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20Thailand%20tour%20package%20and%20get%20a%20customized%20quote."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Plan Your Thailand Trip / Get a Quote</span>
-                </button>
+                </a>
 
                 <div className="flex items-center gap-2.5 w-full">
                   <a

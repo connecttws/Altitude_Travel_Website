@@ -13,6 +13,7 @@ import {
   Globe2,
   Clock,
   CheckCircle2,
+  MessageSquare,
 } from "lucide-react";
 
 export default function HeroSection() {
@@ -124,11 +125,13 @@ export default function HeroSection() {
                 </a>
 
                 <a
-                  href="#about-agency"
-                  className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm text-stone-900 bg-white hover:bg-stone-50 border border-[#E5E0D5] hover:border-[#D4AF37] shadow-2xs transition-all flex items-center gap-2 cursor-pointer"
+                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20would%20like%20to%20inquire%20about%20a%20tour%20package."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm text-stone-900 bg-white hover:bg-emerald-50 hover:text-emerald-800 border border-[#E5E0D5] hover:border-emerald-500 shadow-2xs transition-all flex items-center gap-2 cursor-pointer"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Our Story &amp; Legacy</span>
+                  <MessageSquare className="w-4 h-4 text-emerald-600" />
+                  <span>Direct WhatsApp Inquiry</span>
                 </a>
               </div>
 

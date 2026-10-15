@@ -376,41 +376,30 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             </Link>
           </div>
 
-          {/* Right Action: Refined Gold "Inquiry Now" CTA Button - Responsive on all screens */}
+          {/* Right Action: Refined Gold "Inquiry Now" CTA Button - Direct WhatsApp Link */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
-            <button
-              type="button"
-              onClick={() => {
-                const heroForm = document.getElementById("hero-inquiry-form");
-                if (heroForm) {
-                  heroForm.scrollIntoView({ behavior: "smooth", block: "center" });
-                } else if (onOpenInquiryModal) {
-                  onOpenInquiryModal();
-                }
-              }}
+            <a
+              href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20would%20like%20to%20inquire%20about%20a%20tour%20package."
+              target="_blank"
+              rel="noopener noreferrer"
               className="h-9 px-3 xl:px-5 rounded-xl font-bold text-xs xl:text-[13px] whitespace-nowrap shrink-0 bg-shining-gold shining-sweep hover:brightness-105 active:scale-95 text-stone-950 shadow-[0_4px_16px_rgba(212,175,55,0.35)] hover:shadow-[0_6px_22px_rgba(212,175,55,0.5)] transition-all duration-200 flex items-center gap-1.5 border border-[#BFA13B]/40 cursor-pointer"
             >
-              <Calendar className="w-3.5 h-3.5 text-stone-950 shrink-0" />
+              <MessageSquare className="w-3.5 h-3.5 text-stone-950 shrink-0" />
               <span className="whitespace-nowrap">Inquiry Now</span>
-            </button>
+            </a>
           </div>
 
-          {/* Mobile Actions: Compact CTA and Hamburger */}
+          {/* Mobile Actions: Compact Direct WhatsApp CTA and Hamburger */}
           <div className="flex lg:hidden items-center gap-2 shrink-0">
-            <button
-              type="button"
-              onClick={() => {
-                const heroForm = document.getElementById("hero-inquiry-form");
-                if (heroForm) {
-                  heroForm.scrollIntoView({ behavior: "smooth" });
-                } else if (onOpenInquiryModal) {
-                  onOpenInquiryModal();
-                }
-              }}
-              className="h-8 px-3 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-shining-gold text-stone-950 shadow-xs border border-[#BFA13B]/40 flex items-center"
+            <a
+              href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20would%20like%20to%20inquire%20about%20a%20tour%20package."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-8 px-3 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-shining-gold text-stone-950 shadow-xs border border-[#BFA13B]/40 flex items-center gap-1"
             >
-              Inquiry Now
-            </button>
+              <MessageSquare className="w-3 h-3 text-stone-950 shrink-0" />
+              <span>Inquiry Now</span>
+            </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -536,12 +525,20 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 Contact Us
               </Link>
 
-              <div className="pt-2 border-t border-[#E5E0D5]">
+              <div className="pt-2 border-t border-[#E5E0D5] flex flex-col gap-2">
+                <a
+                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20would%20like%20to%20inquire%20about%20a%20tour%20package."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-xs transition-colors"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" /> WhatsApp +91 96393 20101
+                </a>
                 <a
                   href="tel:+919639320101"
-                  className="w-full py-2.5 bg-[#BFA13B] text-stone-950 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-xs border border-[#BFA13B]"
+                  className="w-full py-2 bg-[#FAF9F6] text-stone-900 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 border border-[#E5E0D5]"
                 >
-                  <Phone className="w-3.5 h-3.5" /> Call +91 96393 20101
+                  <Phone className="w-3.5 h-3.5 text-[#BFA13B]" /> Call +91 96393 20101
                 </a>
               </div>
             </div>

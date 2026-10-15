@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Playfair_Display, Amiri } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -113,6 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
+        <FloatingWhatsAppButton />
       </body>
     </html>
   );

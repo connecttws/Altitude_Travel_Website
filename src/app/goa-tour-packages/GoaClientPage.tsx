@@ -625,9 +625,11 @@ export default function GoaClientPage() {
       <Navbar
         onOpenCustomModal={() => setIsCustomModalOpen(true)}
         onOpenInquiryModal={() => {
-          const formElem = document.getElementById("goa-inquiry-box");
-          if (formElem) {
-            formElem.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (typeof window !== "undefined") {
+            window.open(
+              "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Goa%20tour%20packages.",
+              "_blank"
+            );
           }
         }}
       />
@@ -957,13 +959,14 @@ export default function GoaClientPage() {
                 <Info className="w-4 h-4 text-[#BFA13B] shrink-0" />
                 <span>Slider Option – Show More Goa Packages: Looking for offbeat stays in Divar Island, heritage villas in Aldona, or luxury yacht charters?</span>
               </div>
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
-                className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 transition-all shadow-xs shrink-0 cursor-pointer"
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20customize%20my%20Goa%20tour%20package."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#BFA13B] hover:bg-[#d4b54a] text-stone-950 transition-all shadow-xs shrink-0 cursor-pointer inline-flex items-center gap-1.5"
               >
-                Customize My Goa Package
-              </button>
+                <span>Customize My Goa Package</span>
+              </a>
             </div>
 
           </div>
@@ -1047,14 +1050,15 @@ export default function GoaClientPage() {
               <p className="text-xs text-stone-500 font-semibold mb-3">
                 Also interested in Morjim, Arambol, Cabo de Rama, or Divar Island?
               </p>
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20explore%20more%20places%20and%20beaches%20in%20Goa."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-[#FAF9F6] text-stone-900 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
-                <span>Slider Option – Show More Places in Goa</span>
+                <span>Show More Places in Goa</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
-              </button>
+              </a>
             </div>
 
           </div>
@@ -1193,14 +1197,15 @@ export default function GoaClientPage() {
 
             {/* Slider Option – Show More Goa Packages (Prompt verbatim requirement) */}
             <div className="mt-8 text-center">
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20inquire%20about%20more%20custom%20Goa%20packages."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-[#FAF9F6] text-stone-900 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
-                <span>Slider Option – Show More Goa Packages</span>
+                <span>Show More Goa Packages</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
-              </button>
+              </a>
             </div>
 
           </div>

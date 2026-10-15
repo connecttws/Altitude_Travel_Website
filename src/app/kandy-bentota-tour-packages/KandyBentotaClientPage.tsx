@@ -638,9 +638,11 @@ export default function KandyBentotaClientPage() {
       <Navbar
         onOpenCustomModal={() => setIsCustomModalOpen(true)}
         onOpenInquiryModal={() => {
-          const formElem = document.getElementById("kandy-inquiry-box");
-          if (formElem) {
-            formElem.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (typeof window !== "undefined") {
+            window.open(
+              "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Kandy%20Bentota%20tour%20packages.",
+              "_blank"
+            );
           }
         }}
       />
@@ -1049,13 +1051,14 @@ export default function KandyBentotaClientPage() {
                 <Info className="w-4 h-4 text-[#BFA13B] shrink-0" />
                 <span>Slider Option – Show More Kandy Bentota Packages: Want to include Nuwara Eliya tea country, Galle Dutch Fort, or Sigiriya Rock Fortress?</span>
               </div>
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
-                className="px-5 py-2.5 rounded-xl text-xs font-serif font-bold bg-[#0C0A09] hover:bg-stone-900 text-[#E8D08D] border border-[#BFA13B]/40 transition-all shadow-xs shrink-0 cursor-pointer"
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20customize%20my%20Sri%20Lanka%20Kandy%20Bentota%20package."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 rounded-xl text-xs font-serif font-bold bg-[#0C0A09] hover:bg-stone-900 text-[#E8D08D] border border-[#BFA13B]/40 transition-all shadow-xs shrink-0 cursor-pointer inline-flex items-center gap-1.5"
               >
-                Customize My Sri Lanka Package
-              </button>
+                <span>Customize My Sri Lanka Package</span>
+              </a>
             </div>
 
           </div>
@@ -1139,14 +1142,15 @@ export default function KandyBentotaClientPage() {
               <p className="text-xs text-stone-500 font-semibold mb-3">
                 Also exploring Sigiriya Rock, Nuwara Eliya Tea Hills, or Galle Dutch Fort?
               </p>
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20explore%20more%20places%20in%20Sri%20Lanka."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white hover:bg-[#FAF9F6] text-stone-800 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
-                <span>Slider Option – Show More Places</span>
+                <span>Show More Places in Sri Lanka</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
-              </button>
+              </a>
             </div>
 
           </div>
@@ -1290,14 +1294,15 @@ export default function KandyBentotaClientPage() {
 
             {/* Slider Option – Show More Packages (Prompt verbatim requirement) */}
             <div className="mt-8 text-center">
-              <button
-                type="button"
-                onClick={() => setIsCustomModalOpen(true)}
+              <a
+                href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20inquire%20about%20more%20custom%20Sri%20Lanka%20packages."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl text-xs font-serif font-bold bg-white hover:bg-[#FAF9F6] text-stone-900 border border-[#E5E0D5] shadow-2xs inline-flex items-center gap-2 cursor-pointer"
               >
-                <span>Slider Option – Show More Packages</span>
+                <span>Show More Sri Lanka Packages</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#BFA13B]" />
-              </button>
+              </a>
             </div>
 
           </div>

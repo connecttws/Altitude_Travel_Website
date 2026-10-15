@@ -15,6 +15,7 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  MessageSquare,
 } from "lucide-react";
 
 export default function WhyChooseUsSection() {
@@ -224,10 +225,13 @@ export default function WhyChooseUsSection() {
             <p className="text-xs sm:text-sm text-stone-300">Share your dates, budget and wishlist with our travel consultants.</p>
           </div>
           <a
-            href="#custom-tour"
+            href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20have%20a%20specific%20journey%20in%20mind%20and%20want%20to%20plan%20a%20custom%20tour%20package."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-bold bg-[#BFA13B] hover:bg-[#A6832A] text-stone-950 rounded-xl shadow-md transition-all shrink-0 cursor-pointer"
           >
-            <span>Plan Your Custom Trip</span>
+            <MessageSquare className="w-4 h-4 text-stone-950" />
+            <span>Plan on WhatsApp</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

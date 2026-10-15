@@ -201,9 +201,11 @@ export default function DubaiClientPage() {
       <Navbar
         onOpenCustomModal={() => setIsCustomModalOpen(true)}
         onOpenInquiryModal={() => {
-          const formElem = document.getElementById("dubai-inquiry-box");
-          if (formElem) {
-            formElem.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (typeof window !== "undefined") {
+            window.open(
+              "https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20interested%20in%20Dubai%20tour%20packages.",
+              "_blank"
+            );
           }
         }}
       />
@@ -1261,14 +1263,15 @@ export default function DubaiClientPage() {
                     <span>WhatsApp Itinerary</span>
                   </a>
 
-                  <button
-                    type="button"
-                    onClick={() => setIsCustomModalOpen(true)}
+                  <a
+                    href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20finalize%20a%20custom%20quote%20for%20my%20Dubai%20tour."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="px-5 py-2.5 rounded-xl text-xs font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
                   >
                     <span>Finalize Custom Quote</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </a>
                 </div>
               </div>
 
