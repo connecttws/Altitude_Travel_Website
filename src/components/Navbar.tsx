@@ -106,22 +106,22 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       
-      {/* 1. TOP ANNOUNCEMENT BAR: Refined, Understated Luxury (34px) */}
-      <div className="bg-[#0C0A09] text-stone-300 text-[11px] border-b border-[#BFA13B]/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[34px] flex items-center justify-between">
+      {/* 1. TOP ANNOUNCEMENT BAR: Refined, Understated Luxury (32px mobile / 34px desktop) */}
+      <div className="bg-[#0C0A09] text-stone-300 text-[10.5px] sm:text-[11px] border-b border-[#BFA13B]/20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-[32px] sm:h-[34px] flex items-center justify-between">
           
           {/* Left Agency Info */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            <span className="flex items-center gap-1.5 text-[#C9A84C] font-medium tracking-wide">
+          <div className="flex items-center gap-2 sm:gap-3 truncate">
+            <span className="flex items-center gap-1.5 text-[#C9A84C] font-medium tracking-wide shrink-0">
               <Sparkles className="w-3 h-3 text-[#BFA13B]" />
-              <span>Tour &amp; Travel Agency</span>
+              <span>Tour &amp; Travel<span className="hidden xs:inline"> Agency</span></span>
             </span>
 
             <span className="text-stone-700 hidden sm:inline">•</span>
 
-            <span className="hidden sm:flex items-center gap-1 text-stone-400">
-              <MapPin className="w-3 h-3 text-[#BFA13B]" />
-              <span>Bazpur, Nainital, Uttarakhand</span>
+            <span className="hidden sm:flex items-center gap-1 text-stone-400 truncate">
+              <MapPin className="w-3 h-3 text-[#BFA13B] shrink-0" />
+              <span>Bazpur, Uttarakhand</span>
             </span>
 
             <span className="text-stone-700 hidden lg:inline">•</span>
@@ -132,7 +132,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
           </div>
 
           {/* Right Direct Links */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <a
               href="https://wa.me/919639320101"
               target="_blank"
@@ -147,9 +147,9 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
 
             <a
               href="tel:+919639320101"
-              className="flex items-center gap-1.5 text-stone-100 hover:text-[#C9A84C] font-semibold transition-colors"
+              className="flex items-center gap-1 text-stone-100 hover:text-[#C9A84C] font-semibold text-[10.5px] sm:text-[11px] transition-colors whitespace-nowrap"
             >
-              <Phone className="w-3 h-3 text-[#BFA13B]" />
+              <Phone className="w-3 h-3 text-[#BFA13B] shrink-0" />
               <span>+91 96393 20101</span>
             </a>
           </div>
@@ -160,7 +160,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
         <div className="moving-line-beam" />
       </div>
 
-      {/* 2. MAIN NAVBAR: Balanced, Elegant, Perfectly Aligned Height (68px) */}
+      {/* 2. MAIN NAVBAR: Balanced, Elegant, Perfectly Aligned Height */}
       <nav
         className={`transition-all duration-300 ${
           isScrolled
@@ -168,11 +168,11 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             : "bg-white/95 backdrop-blur-md border-b border-[#E5E0D5]/70"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 xl:px-8 h-[68px] flex items-center justify-between gap-2 lg:gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-5 xl:px-8 h-[62px] sm:h-[68px] flex items-center justify-between gap-2 lg:gap-4">
           
           {/* Brand Logo: Clean, Proportional, Luxury Typographic Mark & Official Emblem */}
-          <Link href="/" className="flex items-center gap-2.5 group shrink-0" aria-label="Altitude Travel Co.">
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-white border border-[#E5E0D5] shadow-xs group-hover:scale-105 group-hover:border-[#BFA13B]/50 transition-all duration-200 flex items-center justify-center shrink-0">
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0" aria-label="Altitude Travel Co.">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 xl:w-11 xl:h-11 rounded-xl overflow-hidden bg-white border border-[#E5E0D5] shadow-xs group-hover:scale-105 group-hover:border-[#BFA13B]/50 transition-all duration-200 flex items-center justify-center shrink-0">
               <Image
                 src="/logo.jpg"
                 alt="Altitude Travel Co. Logo"
@@ -182,14 +182,14 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 priority
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col shrink-0">
               <div className="flex items-center leading-none">
-                <span className="text-[17px] xl:text-[19px] font-bold text-[#1C1917] tracking-tight group-hover:text-[#BFA13B] transition-colors whitespace-nowrap font-serif">
+                <span className="text-[16px] sm:text-[17px] xl:text-[19px] font-bold text-[#1C1917] tracking-tight group-hover:text-[#BFA13B] transition-colors whitespace-nowrap font-serif">
                   Altitude Travel
                 </span>
-                <span className="text-[#BFA13B] font-bold text-lg leading-none ml-0.5">.</span>
+                <span className="text-[#BFA13B] font-bold text-base sm:text-lg leading-none ml-0.5">.</span>
               </div>
-              <span className="text-[8px] xl:text-[8.5px] uppercase tracking-[0.2em] font-semibold text-stone-500 mt-1 whitespace-nowrap">
+              <span className="hidden xl:block text-[8px] xl:text-[8.5px] uppercase tracking-[0.2em] font-semibold text-stone-500 mt-1 whitespace-nowrap">
                 Travel Beyond The Tourist Trail
               </span>
             </div>
@@ -361,7 +361,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
 
             {/* About Us - Guaranteed 1 Line */}
             <Link
-              href="#about-agency"
+              href="/about-us"
               className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
             >
               About Us
@@ -390,31 +390,39 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
           </div>
 
           {/* Mobile Actions: Compact Direct WhatsApp CTA and Hamburger */}
-          <div className="flex lg:hidden items-center gap-2 shrink-0">
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
             <a
               href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20would%20like%20to%20inquire%20about%20a%20tour%20package."
               target="_blank"
               rel="noopener noreferrer"
-              className="h-8 px-3 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-shining-gold text-stone-950 shadow-xs border border-[#BFA13B]/40 flex items-center gap-1"
+              className="h-8 px-2.5 sm:px-3 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-shining-gold text-stone-950 shadow-xs border border-[#BFA13B]/40 flex items-center gap-1 active:scale-95 transition-transform"
             >
-              <MessageSquare className="w-3 h-3 text-stone-950 shrink-0" />
-              <span>Inquiry Now</span>
+              <MessageSquare className="w-3.5 h-3.5 text-stone-950 shrink-0" />
+              <span>Inquiry</span>
             </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 rounded-lg text-stone-700 hover:bg-stone-100 flex items-center justify-center cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-lg text-stone-800 hover:bg-stone-100 flex items-center justify-center cursor-pointer border border-stone-200/60"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 text-stone-950" /> : <Menu className="w-5 h-5 text-stone-950" />}
             </button>
           </div>
 
         </div>
 
+        {/* Mobile Backdrop Overlay */}
+        {mobileMenuOpen && (
+          <div
+            className="fixed inset-0 top-[94px] sm:top-[102px] bg-black/40 backdrop-blur-xs z-40 lg:hidden"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+        )}
+
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-b border-[#E5E0D5] px-4 pt-2 pb-5 max-h-[80vh] overflow-y-auto shadow-xl animate-in fade-in slide-in-from-top-1 duration-150">
+          <div className="relative z-50 lg:hidden bg-white border-b border-[#E5E0D5] px-4 pt-2.5 pb-6 max-h-[calc(100vh-100px)] overflow-y-auto shadow-2xl animate-in fade-in slide-in-from-top-1 duration-150">
             <div className="flex flex-col space-y-1">
               <Link
                 href="/"
@@ -510,7 +518,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
               </button>
 
               <Link
-                href="#about-agency"
+                href="/about-us"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-50 rounded-lg"
               >

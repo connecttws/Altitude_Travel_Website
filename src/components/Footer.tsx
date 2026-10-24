@@ -174,20 +174,28 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-bold text-[#BFA13B] uppercase tracking-wider flex items-center gap-2">
               <span className="w-1 h-3.5 bg-[#BFA13B] rounded-full inline-block" />
-              <span>Policies</span>
+              <span>Company &amp; Legal</span>
             </h4>
             <ul className="space-y-2.5 text-xs font-medium">
               <li>
                 <Link
-                  href="/terms"
-                  className="hover:text-[#BFA13B] transition-colors block text-stone-300"
+                  href="/about-us"
+                  className="hover:text-[#BFA13B] transition-colors block text-stone-300 font-semibold"
                 >
-                  Terms and Conditions
+                  About Altitude Travel
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/refund-policy"
+                  href="/terms-and-conditions"
+                  className="hover:text-[#BFA13B] transition-colors block text-stone-300"
+                >
+                  Terms &amp; Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/refund-cancellation-policy"
                   className="hover:text-[#BFA13B] transition-colors block text-stone-300"
                 >
                   Refund &amp; Cancellation Policy
