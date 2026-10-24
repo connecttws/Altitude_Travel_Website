@@ -179,8 +179,16 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs font-medium">
               <li>
                 <Link
-                  href="/about-us"
+                  href="/blog"
                   className="hover:text-[#BFA13B] transition-colors block text-stone-300 font-semibold"
+                >
+                  Travel Journal &amp; Blogs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about-us"
+                  className="hover:text-[#BFA13B] transition-colors block text-stone-300"
                 >
                   About Altitude Travel
                 </Link>

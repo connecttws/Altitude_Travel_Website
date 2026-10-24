@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { BLOG_POSTS } from "@/data/blogs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://altitudetravel.in";
@@ -59,6 +60,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...BLOG_POSTS.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
     {
       url: `${baseUrl}/refund-cancellation-policy`,
       lastModified,

@@ -359,6 +359,14 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
               </span>
             </button>
 
+            {/* Blog */}
+            <Link
+              href="/blog"
+              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
+            >
+              Blog
+            </Link>
+
             {/* About Us - Guaranteed 1 Line */}
             <Link
               href="/about-us"
@@ -516,6 +524,14 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                   Tailored
                 </span>
               </button>
+
+              <Link
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-50 rounded-lg"
+              >
+                Blog &amp; Travel Journal
+              </Link>
 
               <Link
                 href="/about-us"
