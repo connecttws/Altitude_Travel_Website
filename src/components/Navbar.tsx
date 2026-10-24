@@ -350,13 +350,10 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             <button
               type="button"
               onClick={onOpenCustomModal}
-              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0"
+              className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
               <span className="xl:hidden">Custom Trips</span>
               <span className="hidden xl:inline">Custom Tour Packages</span>
-              <span className="hidden xl:inline-block text-[9.5px] uppercase tracking-wide font-semibold text-[#7A5200] bg-[#FAF9F6] px-1.5 py-0.5 rounded-full border border-[#7A5200]/30 shrink-0">
-                Tailored
-              </span>
             </button>
 
             {/* Blog */}
@@ -520,9 +517,6 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 className="text-left px-3 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-50 rounded-lg flex items-center justify-between"
               >
                 <span>Custom Tour Packages</span>
-                <span className="text-[9.5px] bg-[#FAF9F6] text-[#BFA13B] px-1.5 py-0.5 rounded-full font-semibold border border-[#BFA13B]/30">
-                  Tailored
-                </span>
               </button>
 
               <Link
