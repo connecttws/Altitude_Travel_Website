@@ -93,7 +93,7 @@ export default function PackageCard({ pkg, onSelect, onInquire, featured = false
               {pkg.tag ? pkg.tag : pkg.destination}
             </span>
             <span className="text-[10.5px] font-semibold text-[#7A5200] bg-[#FBF7EE] px-2 py-0.5 rounded-md border border-[#7A5200]/30 shadow-2xs">
-              1 Free Day
+              Best Price &amp; Service
             </span>
           </div>
 

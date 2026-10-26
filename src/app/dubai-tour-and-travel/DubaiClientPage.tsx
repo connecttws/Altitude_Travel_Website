@@ -1215,7 +1215,7 @@ export default function DubaiClientPage() {
                       <ShoppingBag className="w-5 h-5 text-[#BFA13B]" />
                       <span>Tax-Free Shopping, Souks &amp; Gold Boutiques</span>
                     </h3>
-                    <span className="text-xs text-stone-400">Guaranteed 1 Free Day</span>
+                    <span className="text-xs text-stone-400">Best Price &amp; Service</span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {[

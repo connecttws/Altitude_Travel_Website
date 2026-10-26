@@ -31,7 +31,7 @@ export default function FaqSection() {
     },
     {
       q: "7 .Do you plan honeymoon, family, and group trips?",
-      a: "Yes. Altitude Travel plans honeymoon, family, friends', and group trips, as well as trips for senior citizens. Each itinerary includes stays and activities that suit the group, with a free day wherever possible.",
+      a: "Yes. Altitude Travel plans honeymoon, family, friends', and group trips, as well as trips for senior citizens. Each itinerary includes stays and activities that suit the group, with best price and service guaranteed.",
     },
   ];
 

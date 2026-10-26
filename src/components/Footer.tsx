@@ -57,7 +57,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs sm:text-[13px] text-stone-400 leading-relaxed max-w-sm font-normal">
-              Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. We combine iconic landmarks with hidden gems, local food, and a complete free day.
+              Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips. We combine iconic landmarks with hidden gems, local food, and best price and service.
             </p>
 
             {/* Travel badges */}
@@ -69,7 +69,7 @@ export default function Footer() {
                 <Palmtree className="w-3 h-3 text-[#BFA13B]" /> Beach Resorts
               </span>
               <span className="inline-flex items-center gap-1.5 text-[11px] font-medium bg-[#141210] border border-[#BFA13B]/20 text-stone-300 px-2.5 py-0.5 rounded-full">
-                <Clock className="w-3 h-3 text-[#BFA13B]" /> 1 Free Day Guaranteed
+                <ShieldCheck className="w-3 h-3 text-[#BFA13B]" /> Best Price &amp; Service
               </span>
             </div>
 

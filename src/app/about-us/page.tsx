@@ -261,8 +261,8 @@ export default function AboutUsPage() {
                     <span className="text-[11px] text-stone-600 font-medium">Happy Travellers</span>
                   </div>
                   <div className="bg-white p-3.5 rounded-xl border border-[#E5E0D5] shadow-xs text-center">
-                    <span className="text-xl sm:text-2xl font-black text-[#7A5200] block">1 Guaranteed</span>
-                    <span className="text-[11px] text-stone-600 font-medium">Free Day in Itineraries</span>
+                    <span className="text-xl sm:text-2xl font-black text-[#7A5200] block">100%</span>
+                    <span className="text-[11px] text-stone-600 font-medium">Best Price &amp; Service</span>
                   </div>
                 </div>
 

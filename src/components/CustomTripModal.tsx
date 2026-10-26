@@ -204,7 +204,7 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
 
           <div className="text-center text-[11px] text-stone-500 flex items-center justify-center gap-1.5 pt-1 border-t border-stone-200 font-medium">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-            <span>100% Free Custom Planning • 1 Guaranteed Free Day • 0 Hidden Costs</span>
+            <span>100% Free Custom Planning • Best Price &amp; Service • 0 Hidden Costs</span>
           </div>
 
         </div>

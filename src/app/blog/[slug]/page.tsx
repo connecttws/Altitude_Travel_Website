@@ -358,7 +358,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="space-y-2 pt-1 text-xs text-stone-700">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>1 Guaranteed Free Day</span>
+                    <span>Best Price &amp; Service</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />

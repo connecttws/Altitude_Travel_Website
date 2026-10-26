@@ -44,7 +44,7 @@ const jsonLd = {
   url: "https://altitudetravel.in",
   logo: "https://altitudetravel.in/logo.jpg",
   description:
-    "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips with 1 free day included.",
+    "Altitude Travel Co. is a premier tour and travel agency offering international tour packages, Indian tour packages, and custom trips with best price and service guaranteed.",
   telephone: "+919639320101",
   email: "Altitudetravelco@gmail.com",
   address: {

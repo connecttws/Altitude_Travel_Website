@@ -70,7 +70,7 @@ export default function TopDestinationsSection({
           {/* Eyebrow Micro-caps with High-Contrast Deep Bronze-Gold */}
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#7A5200] whitespace-nowrap">
             <Compass className="w-3.5 h-3.5 text-[#7A5200] shrink-0" />
-            <span>Curated Destinations • 1 Free Day Included</span>
+            <span>Curated Destinations • Best Price &amp; Service</span>
           </div>
 
           {/* Clean Modern Website Style Heading */}

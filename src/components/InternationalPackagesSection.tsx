@@ -62,7 +62,7 @@ export default function InternationalPackagesSection({
           {/* Eyebrow Micro-caps */}
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] sm:tracking-[0.22em] uppercase text-[#7A5200] whitespace-nowrap">
             <Globe2 className="w-3.5 h-3.5 text-[#7A5200] shrink-0" />
-            <span>Worldwide Holidays • Visa Assistance &amp; 1 Free Day</span>
+            <span>Worldwide Holidays • Visa Assistance &amp; Best Price &amp; Service</span>
           </div>
 
           {/* Clean Modern Website Style Heading */}

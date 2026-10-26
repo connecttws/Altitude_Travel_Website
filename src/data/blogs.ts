@@ -296,7 +296,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "thailand-tropical-escapes-phuket-islands-and-bangkok",
     title: "Thailand’s Dual Splendour: Private Island Coves in Phuket and Bangkok’s Michelin Street Secrets",
     metaTitle: "Thailand Travel Guide: Phuket Islands & Bangkok Secrets | Altitude Travel Co.",
-    metaDescription: "Discover Thailand with Altitude Travel Co. Island-hop in Phuket and Phi Phi, explore Bangkok's hidden temples and Michelin street food, with 1 free day included.",
+    metaDescription: "Discover Thailand with Altitude Travel Co. Island-hop in Phuket and Phi Phi, explore Bangkok's hidden temples and Michelin street food, with best price and service guaranteed.",
     excerpt: "How to balance turquoise Andaman Sea relaxation with the electric, aromatic night markets and hidden riverside temples of the vibrant Thai capital.",
     category: "International Guides",
     readTime: "6 min read",

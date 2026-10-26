@@ -51,7 +51,7 @@ export default function AboutAgencySection() {
                     Altitude Travel Co.
                   </h3>
                   <p className="text-xs text-stone-200 line-clamp-1 font-normal">
-                    Curated travel agency with guaranteed free days.
+                    Curated travel agency with best price and service.
                   </p>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function AboutAgencySection() {
                   }`}
                 >
                   <CalendarCheck2 className="w-3.5 h-3.5" />
-                  <span>Free Day Guarantee</span>
+                  <span>Best Price &amp; Service</span>
                 </button>
               </div>
 
@@ -201,7 +201,7 @@ export default function AboutAgencySection() {
                         100% Upfront Transparent Pricing
                       </span>
                       <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
-                        1 Guaranteed Free Day
+                        Best Price &amp; Service
                       </span>
                       <span className="text-[11px] font-semibold text-[#7A5200] bg-[#FAF9F6] px-2.5 py-0.5 rounded-md border border-[#7A5200]/20">
                         Honest Advice &amp; Personal Care
@@ -220,7 +220,7 @@ export default function AboutAgencySection() {
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                <span>One Free Day Guaranteed</span>
+                <span>Best Price &amp; Service Guaranteed</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />

@@ -188,7 +188,7 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
                 Custom Pricing on Request
               </div>
               <p className="text-[11px] text-stone-300">
-                Includes Handpicked Stays, Transfers, Sightseeing &amp; 1 Free Day
+                Includes Handpicked Stays, Transfers, Sightseeing &amp; Best Price &amp; Service
               </p>
             </div>
 
@@ -211,7 +211,7 @@ export default function PackageModal({ pkg, isOpen, onClose }: PackageModalProps
               <div className="bg-[#FAF9F6] p-3 rounded-xl border border-[#E5E0D5] flex items-center justify-between text-xs">
                 <div>
                   <span className="font-bold text-stone-900 block truncate max-w-[200px]">{pkg.title}</span>
-                  <span className="text-stone-500 text-[11px]">{pkg.duration} • 1 Free Day Guaranteed</span>
+                  <span className="text-stone-500 text-[11px]">{pkg.duration} • Best Price &amp; Service Guaranteed</span>
                 </div>
                 <div className="text-right">
                   <span className="text-[10px] uppercase text-stone-400 block font-semibold">Pricing</span>

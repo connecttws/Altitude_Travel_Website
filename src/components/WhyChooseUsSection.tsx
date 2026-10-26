@@ -46,11 +46,11 @@ export default function WhyChooseUsSection() {
       image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80",
     },
     {
-      icon: CalendarCheck2,
-      title: "A Free Day, Always",
+      icon: ShieldCheck,
+      title: "Best Price & Service Guaranteed",
       description:
-        "Wherever possible, we keep one complete free day in your itinerary to shop, eat, explore or simply relax.",
-      tag: "Signature Guarantee",
+        "Enjoy unbeatable value, transparent pricing, handpicked luxury accommodations, and dedicated personal assistance throughout your entire journey.",
+      tag: "Best Price & Service",
       featured: true,
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
     },

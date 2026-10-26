@@ -27,7 +27,7 @@ export default function HeroSection() {
       icon: Palmtree,
       title: "Maldives & Bali Private Atolls",
       tag: "Turquoise Lagoons & Overwater Stays",
-      subtitle: "Handpicked 5-Star luxury villas, private sunset catamarans & 1 guaranteed free day.",
+      subtitle: "Handpicked 5-Star luxury villas, private sunset catamarans & best price and service guaranteed.",
       image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=85",
       badge: "Signature Escapes",
     },
@@ -150,7 +150,7 @@ export default function HeroSection() {
                 </span>
                 <span className="flex items-center gap-1.5 text-stone-900">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                  <span>1 Guaranteed Free Day</span>
+                  <span>Best Price &amp; Service</span>
                 </span>
               </div>
 
@@ -208,8 +208,8 @@ export default function HeroSection() {
                   </span>
 
                   <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#D4AF37] text-stone-950 text-[9.5px] sm:text-[10px] font-extrabold uppercase tracking-wider shadow-sm shrink-0">
-                    <Clock className="w-3 h-3 text-stone-950" />
-                    1 Free Day
+                    <Sparkles className="w-3 h-3 text-stone-950" />
+                    Best Price &amp; Service
                   </span>
                 </div>
 

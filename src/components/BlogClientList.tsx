@@ -290,7 +290,7 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
               Ready to Turn These Stories Into Your Next Journey?
             </h3>
             <p className="text-xs sm:text-sm text-stone-300 max-w-xl font-normal">
-              Connect directly with our itinerary designers in Bazpur, Uttarakhand. We tailor every route with handpicked hotels, private drivers, and our signature guaranteed free day.
+              Connect directly with our itinerary designers in Bazpur, Uttarakhand. We tailor every route with handpicked hotels, private drivers, and the best price and service.
             </p>
           </div>
 
