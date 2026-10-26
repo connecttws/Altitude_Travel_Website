@@ -27,10 +27,12 @@ interface CustomTripModalProps {
 }
 
 export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProps) {
-  const [destination, setDestination] = useState("Kashmir & Ladakh");
+  // Empty by default: no pre-selected destination
+  const [destination, setDestination] = useState("");
   const [duration, setDuration] = useState("5 to 7 Days (Popular)");
   const [tripType, setTripType] = useState("Family Holiday");
   const [hotelTier, setHotelTier] = useState("4-Star Boutique (Recommended)");
+  const [customNotes, setCustomNotes] = useState("");
 
   if (!isOpen) return null;
 
@@ -45,7 +47,17 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
     "Rajasthan Havelis",
   ];
 
-  const whatsappMessage = `Hi Altitude Travel! I want to plan a custom trip to ${destination} for ${duration} (${tripType}, ${hotelTier}). Please share customized itinerary options and quotes!`;
+  // Dynamically build message with the exact custom text entered by the user
+  const chosenDest = destination.trim();
+  let whatsappMessage = chosenDest
+    ? `Hi Altitude Travel! I want to plan a custom trip to ${chosenDest} for ${duration} (${tripType}, ${hotelTier}).`
+    : `Hi Altitude Travel! I want to plan a custom tour package for ${duration} (${tripType}, ${hotelTier}).`;
+
+  if (customNotes.trim()) {
+    whatsappMessage += ` Special requests: ${customNotes.trim()}.`;
+  }
+  whatsappMessage += ` Please share customized itinerary options and quotes!`;
+
   const whatsappUrl = `https://wa.me/919639320101?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
@@ -74,42 +86,75 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
           </h2>
 
           <p className="text-xs sm:text-sm text-stone-600 max-w-md mx-auto font-normal leading-relaxed">
-            Select your preferences below to connect directly with our dedicated travel planners on WhatsApp with handcrafted itineraries and zero waiting time.
+            Select or write your custom destination below to connect directly with our dedicated travel planners on WhatsApp with handcrafted itineraries and zero waiting time.
           </p>
         </div>
 
         {/* 100% Form-Free Interactive Customizer */}
         <div className="space-y-4">
           
-          {/* Destination Selector */}
+          {/* Destination Selector: No pre-selection, custom text box with placeholder */}
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">
-              1. Choose or Enter Destination
-            </label>
-            <input
-              type="text"
-              value={destination}
-              onChange={(e) => setDestination(e.target.value)}
-              placeholder="e.g. Kashmir, Dubai, Switzerland, Maldives"
-              className="w-full px-3.5 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-xs sm:text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B]"
-            />
-            
-            {/* Quick chips */}
-            <div className="flex flex-wrap gap-1.5 mt-2">
-              {quickDests.map((q) => (
+            <div className="flex items-center justify-between mb-1.5">
+              <label className="block text-xs font-bold uppercase tracking-wider text-stone-700">
+                1. Choose or Write Custom Destination
+              </label>
+              {destination && (
                 <button
-                  key={q}
                   type="button"
-                  onClick={() => setDestination(q)}
-                  className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
-                    destination === q
-                      ? "bg-[#0C0A09] text-[#BFA13B] border-[#BFA13B]"
-                      : "bg-white text-stone-700 border-[#E5E0D5] hover:bg-[#FAF9F6]"
-                  }`}
+                  onClick={() => setDestination("")}
+                  className="text-[11px] font-semibold text-stone-500 hover:text-stone-800 transition-colors cursor-pointer"
                 >
-                  {q}
+                  Clear
                 </button>
-              ))}
+              )}
+            </div>
+
+            <div className="relative">
+              <input
+                type="text"
+                value={destination}
+                onChange={(e) => setDestination(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    window.open(whatsappUrl, "_blank");
+                  }
+                }}
+                placeholder="Select from below or write custom destination..."
+                className="w-full px-3.5 py-2.5 pr-9 bg-white border border-[#E5E0D5] rounded-xl text-xs sm:text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] shadow-2xs placeholder:text-stone-400 placeholder:font-normal"
+              />
+              {destination && (
+                <button
+                  type="button"
+                  onClick={() => setDestination("")}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700 p-1 cursor-pointer"
+                  aria-label="Clear destination"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+            
+            {/* Quick chips (toggles on/off) */}
+            <div className="flex flex-wrap gap-1.5 mt-2">
+              {quickDests.map((q) => {
+                const isSelected = destination.trim().toLowerCase() === q.toLowerCase();
+                return (
+                  <button
+                    key={q}
+                    type="button"
+                    onClick={() => setDestination(isSelected ? "" : q)}
+                    className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
+                      isSelected
+                        ? "bg-[#0C0A09] text-[#F5D77F] border-[#BFA13B] shadow-xs"
+                        : "bg-white text-stone-700 border-[#E5E0D5] hover:bg-[#FAF9F6] hover:border-[#D4AF37]/50"
+                    }`}
+                  >
+                    {q}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -124,10 +169,11 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
                 onChange={(e) => setDuration(e.target.value)}
                 className="w-full px-3 py-2 bg-white border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
               >
-                <option value="3 to 4 Days (Quick Getaway)">3 to 4 Days (Quick Getaway)</option>
                 <option value="5 to 7 Days (Popular)">5 to 7 Days (Popular)</option>
+                <option value="3 to 4 Days (Quick Getaway)">3 to 4 Days (Quick Getaway)</option>
                 <option value="8 to 10 Days (Comprehensive)">8 to 10 Days (Comprehensive)</option>
                 <option value="12+ Days (Grand Tour)">12+ Days (Grand Tour)</option>
+                <option value="Custom Duration (Flexible)">Custom Duration (Flexible)</option>
               </select>
             </div>
 
@@ -140,11 +186,12 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
                 onChange={(e) => setTripType(e.target.value)}
                 className="w-full px-3 py-2 bg-white border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
               >
-                <option value="Couple / Honeymoon">Couple / Honeymoon</option>
                 <option value="Family Holiday">Family Holiday</option>
+                <option value="Couple / Honeymoon">Couple / Honeymoon</option>
                 <option value="Friends Getaway">Friends Getaway</option>
                 <option value="Senior Citizens Trip">Senior Citizens Trip</option>
                 <option value="Solo Explorer">Solo Explorer</option>
+                <option value="Custom Group">Custom Group</option>
               </select>
             </div>
           </div>
@@ -159,18 +206,39 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
               onChange={(e) => setHotelTier(e.target.value)}
               className="w-full px-3 py-2 bg-white border border-[#E5E0D5] rounded-xl text-xs font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] cursor-pointer"
             >
-              <option value="3-Star Premium & Cozy">3-Star Premium &amp; Cozy</option>
               <option value="4-Star Boutique (Recommended)">4-Star Boutique (Recommended)</option>
+              <option value="3-Star Premium & Cozy">3-Star Premium &amp; Cozy</option>
               <option value="5-Star Luxury & Palaces">5-Star Luxury &amp; Palaces</option>
-              <option value="Heritage Havelis / Houseboats">Heritage Havelis / Unique Stays</option>
+              <option value="Heritage Havelis / Unique Stays">Heritage Havelis / Unique Stays</option>
+              <option value="Flexible / Budget Friendly">Flexible / Budget Friendly</option>
             </select>
           </div>
 
-          {/* WhatsApp Message Preview Pill */}
+          {/* Custom Notes / Special Requirements */}
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
+              5. Special Requests or Custom Details (Optional)
+            </label>
+            <input
+              type="text"
+              value={customNotes}
+              onChange={(e) => setCustomNotes(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  window.open(whatsappUrl, "_blank");
+                }
+              }}
+              placeholder="e.g. Travel dates, pool villa, vegetarian meals, flight assistance..."
+              className="w-full px-3.5 py-2.5 bg-white border border-[#E5E0D5] rounded-xl text-xs sm:text-sm font-semibold text-stone-900 focus:outline-none focus:border-[#BFA13B] shadow-2xs placeholder:text-stone-400 placeholder:font-normal"
+            />
+          </div>
+
+          {/* WhatsApp Message Live Preview Pill */}
           <div className="bg-[#FAF9F6] p-3 rounded-xl border border-[#E5E0D5] text-xs text-stone-600 flex items-start gap-2">
-            <span className="text-emerald-600 font-bold shrink-0">💬 Pre-filled Message:</span>
-            <span className="italic text-stone-700">
-              &quot;Hi Altitude Travel! I want to plan a custom trip to {destination} for {duration} ({tripType}, {hotelTier})...&quot;
+            <span className="text-emerald-600 font-bold shrink-0">💬 Message Preview:</span>
+            <span className="italic text-stone-700 line-clamp-3">
+              &quot;{whatsappMessage}&quot;
             </span>
           </div>
 
@@ -213,3 +281,4 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
     </div>
   );
 }
+
