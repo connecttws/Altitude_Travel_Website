@@ -92,7 +92,7 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
             <div className="lg:col-span-7 relative h-[280px] sm:h-[360px] lg:h-[440px] overflow-hidden bg-stone-950">
               <Image
                 src={featuredPost.coverImage}
-                alt={featuredPost.title}
+                alt={featuredPost.coverImageAlt || featuredPost.title}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 58vw"
@@ -210,7 +210,7 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
                   <Link href={`/blog/${post.slug}`} className="block relative h-52 overflow-hidden bg-stone-950">
                     <Image
                       src={post.coverImage}
-                      alt={post.title}
+                      alt={post.coverImageAlt || post.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"

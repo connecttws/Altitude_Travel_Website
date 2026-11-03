@@ -20,6 +20,7 @@ import {
   MapPin,
   ShieldCheck,
   ChevronRight,
+  HelpCircle,
 } from "lucide-react";
 
 interface BlogPostPageProps {
@@ -28,17 +29,57 @@ interface BlogPostPageProps {
   }>;
 }
 
+function renderFormattedText(text: string) {
+  if (!text) return "";
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const anchorText = match[1];
+    let url = match[2];
+    if (url.startsWith("https://www.altitudetravelco.com")) {
+      url = url.replace("https://www.altitudetravelco.com", "") || "/";
+    }
+    parts.push(
+      <Link
+        key={match.index}
+        href={url}
+        className="font-bold text-[#7A5200] hover:text-stone-950 underline underline-offset-2 decoration-[#D4AF37]/60 transition-colors"
+      >
+        {anchorText}
+      </Link>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
 export async function generateStaticParams() {
-  return BLOG_POSTS.map((post) => ({
-    slug: post.slug,
-  }));
+  const params: { slug: string }[] = [];
+  for (const post of BLOG_POSTS) {
+    params.push({ slug: post.slug });
+    if (post.slug.toLowerCase() !== post.slug) {
+      params.push({ slug: post.slug.toLowerCase() });
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = BLOG_POSTS.find((p) => p.slug === slug);
+  const post = BLOG_POSTS.find((p) => p.slug.toLowerCase() === slug.toLowerCase());
 
   if (!post) {
     return {
@@ -47,6 +88,9 @@ export async function generateMetadata({
   }
 
   const canonicalUrl = `https://www.altitudetravelco.com/blog/${post.slug}`;
+  const fullCoverImageUrl = post.coverImage.startsWith("http")
+    ? post.coverImage
+    : `https://www.altitudetravelco.com${post.coverImage}`;
 
   return {
     title: post.metaTitle,
@@ -66,10 +110,10 @@ export async function generateMetadata({
       tags: post.tags,
       images: [
         {
-          url: post.coverImage,
+          url: fullCoverImageUrl,
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: post.coverImageAlt || post.title,
         },
       ],
     },
@@ -77,29 +121,31 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.metaTitle,
       description: post.metaDescription,
-      images: [post.coverImage],
+      images: [fullCoverImageUrl],
     },
   };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = BLOG_POSTS.find((p) => p.slug === slug);
+  const post = BLOG_POSTS.find((p) => p.slug.toLowerCase() === slug.toLowerCase());
 
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const relatedPosts = BLOG_POSTS.filter((p) => p.slug.toLowerCase() !== post.slug.toLowerCase()).slice(0, 3);
 
-  const articleSchema = {
+  const articleSchema: any = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
-    image: post.coverImage,
+    image: post.coverImage.startsWith("http")
+      ? post.coverImage
+      : `https://www.altitudetravelco.com${post.coverImage}`,
     datePublished: "2026-10-24T09:00:00.000Z",
-    dateModified: "2026-10-24T09:00:00.000Z",
+    dateModified: "2026-11-03T09:00:00.000Z",
     author: {
       "@type": "Person",
       name: post.author.name,
@@ -118,6 +164,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
   };
 
+  const schemas: any[] = [articleSchema];
+
+  if (post.content.faqs && post.content.faqs.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: post.content.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question.replace(/^\d+\.\s*/, ""),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
   const whatsappMessage = encodeURIComponent(
     `Hello Altitude Travel Co., I just read your article "${post.title}" on your website and would like to inquire about planning a bespoke trip.`
   );
@@ -126,7 +189,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
       <Navbar />
 
@@ -222,7 +285,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="relative h-[280px] sm:h-[420px] lg:h-[500px] rounded-3xl overflow-hidden border border-[#E5E0D5] shadow-lg bg-stone-950">
             <Image
               src={post.coverImage}
-              alt={post.title}
+              alt={post.coverImageAlt || post.title}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 1000px"
@@ -239,7 +302,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               
               {/* Introduction */}
               <div className="text-base sm:text-lg text-stone-900 leading-relaxed font-normal first-letter:text-4xl first-letter:font-serif first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:text-[#7A5200]">
-                {post.content.introduction}
+                {renderFormattedText(post.content.introduction)}
               </div>
 
               {/* Dynamic Content Sections */}
@@ -251,7 +314,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                   {section.body.map((para, pIdx) => (
                     <p key={pIdx} className="text-stone-700 leading-relaxed">
-                      {para}
+                      {renderFormattedText(para)}
                     </p>
                   ))}
 
@@ -262,7 +325,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" /> Altitude Insider Note
                       </span>
                       <p className="text-xs sm:text-sm text-stone-800 font-medium">
-                        {section.tip}
+                        {renderFormattedText(section.tip)}
                       </p>
                     </div>
                   )}
@@ -273,7 +336,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       {section.subList.map((item, bIdx) => (
                         <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-700">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                          <span>{item}</span>
+                          <span>{renderFormattedText(item)}</span>
                         </li>
                       ))}
                     </ul>
@@ -296,13 +359,41 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </blockquote>
               )}
 
+              {/* FAQs Section */}
+              {post.content.faqs && post.content.faqs.length > 0 && (
+                <section className="space-y-4 pt-4 border-t border-[#E5E0D5]">
+                  <div className="flex items-center gap-2">
+                    <HelpCircle className="w-5 h-5 text-[#BFA13B]" />
+                    <h3 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif">
+                      Frequently Asked Questions
+                    </h3>
+                  </div>
+                  <div className="space-y-3">
+                    {post.content.faqs.map((faq, fIdx) => (
+                      <div
+                        key={fIdx}
+                        className="bg-[#FAF9F6] rounded-2xl p-4.5 sm:p-5 border border-[#E5E0D5] space-y-2 shadow-2xs hover:border-[#D4AF37]/50 transition-colors"
+                      >
+                        <h4 className="text-sm sm:text-base font-bold text-stone-900 flex items-start gap-2">
+                          <span className="text-[#7A5200] font-serif font-black">{fIdx + 1}.</span>
+                          <span>{faq.question.replace(/^\d+\.\s*/, "")}</span>
+                        </h4>
+                        <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pl-5">
+                          {renderFormattedText(faq.answer)}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
               {/* Conclusion */}
               <div className="space-y-3 pt-4 border-t border-[#E5E0D5]">
                 <h3 className="text-lg font-bold text-stone-950">
                   Planning Your Escape
                 </h3>
                 <p className="text-stone-700">
-                  {post.content.conclusion}
+                  {renderFormattedText(post.content.conclusion)}
                 </p>
               </div>
 
@@ -316,7 +407,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   {post.content.insiderTips.map((tip, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#BFA13B] mt-2 shrink-0" />
-                      <span>{tip}</span>
+                      <span>{renderFormattedText(tip)}</span>
                     </li>
                   ))}
                 </ul>
@@ -447,7 +538,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <Link href={`/blog/${related.slug}`} className="block relative h-44 overflow-hidden bg-stone-950">
                         <Image
                           src={related.coverImage}
-                          alt={related.title}
+                          alt={related.coverImageAlt || related.title}
                           fill
                           sizes="(max-width: 768px) 100vw, 33vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
