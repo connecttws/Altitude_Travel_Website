@@ -103,12 +103,16 @@ export default function BlogListingPage() {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-950 tracking-tight leading-tight">
-              Stories, Guides &amp; Slow Travel Notes
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+              <span className="text-stone-950">Stories, Guides </span>
+              <span className="text-[#BFA13B]">&amp;</span>{" "}
+              <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+                Slow Travel Notes
+              </span>
             </h1>
 
             {/* Laser Line Accent */}
-            <div className="moving-line-track max-w-[200px] h-[3px] rounded-full overflow-hidden shadow-[0_0_12px_rgba(212,175,55,0.5)]">
+            <div className="moving-line-track max-w-[220px] h-[3px] rounded-full overflow-hidden shadow-[0_0_12px_rgba(212,175,55,0.5)]">
               <div className="moving-line-beam" />
             </div>
 

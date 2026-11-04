@@ -64,6 +64,75 @@ function renderFormattedText(text: string) {
   return parts.length > 0 ? parts : text;
 }
 
+function renderStyledTitle(title: string): React.ReactNode {
+  if (!title) return null;
+
+  // Split by colon if present (e.g., "Tourist Places in Vietnam: 10 Best Destinations to Explore")
+  if (title.includes(":")) {
+    const colonIndex = title.indexOf(":");
+    const main = title.substring(0, colonIndex + 1);
+    const sub = title.substring(colonIndex + 1).trim();
+    return (
+      <>
+        <span className="text-stone-950 block sm:inline">{main} </span>
+        <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs block sm:inline">
+          {sub}
+        </span>
+      </>
+    );
+  }
+
+  // Split by dash or hyphen if present (e.g., "Tourist Places in Vietnam – 10 Best Places")
+  const dashMatch = title.match(/^(.*?)\s+[–—\-]\s+(.*)$/);
+  if (dashMatch) {
+    return (
+      <>
+        <span className="text-stone-950">{dashMatch[1]} – </span>
+        <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+          {dashMatch[2]}
+        </span>
+      </>
+    );
+  }
+
+  // Split by parenthesis if present (e.g., "Why the Best Journeys Include a Free Day (And Why We Insist On It)")
+  if (title.includes(" (") && title.endsWith(")")) {
+    const parenIndex = title.indexOf(" (");
+    const main = title.substring(0, parenIndex);
+    const sub = title.substring(parenIndex);
+    return (
+      <>
+        <span className="text-stone-950">{main} </span>
+        <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+          {sub}
+        </span>
+      </>
+    );
+  }
+
+  // Fallback: Split words so last portion has the gold color effect
+  const words = title.split(" ");
+  if (words.length > 3) {
+    const splitAt = Math.ceil(words.length * 0.55);
+    const firstPart = words.slice(0, splitAt).join(" ");
+    const secondPart = words.slice(splitAt).join(" ");
+    return (
+      <>
+        <span className="text-stone-950">{firstPart} </span>
+        <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+          {secondPart}
+        </span>
+      </>
+    );
+  }
+
+  return (
+    <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+      {title}
+    </span>
+  );
+}
+
 export async function generateStaticParams() {
   const params: { slug: string }[] = [];
   for (const post of BLOG_POSTS) {
@@ -249,10 +318,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </span>
             </div>
 
-            {/* H1 Article Title */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-bold text-stone-950 tracking-tight leading-[1.25]">
-              {post.title}
-            </h1>
+            {/* H1 Article Title with Prestige Color Effect & Laser Line Accent */}
+            <div className="space-y-4">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-extrabold tracking-tight leading-[1.25]">
+                {renderStyledTitle(post.title)}
+              </h1>
+
+              {/* Laser Gold Line Accent */}
+              <div className="moving-line-track max-w-[220px] h-[3px] rounded-full overflow-hidden shadow-[0_0_12px_rgba(212,175,55,0.5)]">
+                <div className="moving-line-beam" />
+              </div>
+            </div>
 
             {/* Excerpt Lead */}
             <p className="text-stone-800 text-base sm:text-[17px] leading-relaxed font-normal border-l-4 border-[#BFA13B] pl-4 sm:pl-5 py-2.5 bg-[#FAF9F6] rounded-r-2xl">

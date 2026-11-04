@@ -19,6 +19,71 @@ interface BlogClientListProps {
   posts: BlogPost[];
 }
 
+function renderStyledTitle(title: string): React.ReactNode {
+  if (!title) return null;
+
+  if (title.includes(":")) {
+    const colonIndex = title.indexOf(":");
+    const main = title.substring(0, colonIndex + 1);
+    const sub = title.substring(colonIndex + 1).trim();
+    return (
+      <>
+        <span className="text-stone-950">{main} </span>
+        <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+          {sub}
+        </span>
+      </>
+    );
+  }
+
+  const dashMatch = title.match(/^(.*?)\s+[–—\-]\s+(.*)$/);
+  if (dashMatch) {
+    return (
+      <>
+        <span className="text-stone-950">{dashMatch[1]} – </span>
+        <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+          {dashMatch[2]}
+        </span>
+      </>
+    );
+  }
+
+  if (title.includes(" (") && title.endsWith(")")) {
+    const parenIndex = title.indexOf(" (");
+    const main = title.substring(0, parenIndex);
+    const sub = title.substring(parenIndex);
+    return (
+      <>
+        <span className="text-stone-950">{main} </span>
+        <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+          {sub}
+        </span>
+      </>
+    );
+  }
+
+  const words = title.split(" ");
+  if (words.length > 3) {
+    const splitAt = Math.ceil(words.length * 0.55);
+    const firstPart = words.slice(0, splitAt).join(" ");
+    const secondPart = words.slice(splitAt).join(" ");
+    return (
+      <>
+        <span className="text-stone-950">{firstPart} </span>
+        <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+          {secondPart}
+        </span>
+      </>
+    );
+  }
+
+  return (
+    <span className="bg-gradient-to-r from-[#7A5200] via-[#D4AF37] to-[#7A5200] bg-clip-text text-transparent drop-shadow-xs">
+      {title}
+    </span>
+  );
+}
+
 export default function BlogClientList({ posts }: BlogClientListProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -124,8 +189,8 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
                 </div>
 
                 <Link href={`/blog/${featuredPost.slug}`}>
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-950 tracking-tight leading-tight group-hover:text-[#7A5200] transition-colors">
-                    {featuredPost.title}
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight leading-tight group-hover:opacity-90 transition-opacity">
+                    {renderStyledTitle(featuredPost.title)}
                   </h2>
                 </Link>
 
