@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import CustomTripModal from "@/components/CustomTripModal";
 import {
   Compass,
   ChevronDown,
@@ -22,29 +24,53 @@ interface NavbarProps {
 }
 
 export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: NavbarProps) {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
+  const [isInternalCustomOpen, setIsInternalCustomOpen] = useState(false);
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const navContainerRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseEnter = (dropdown: string) => {
+  const clearPendingTimeout = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+  };
+
+  const handleMouseEnter = (dropdown: string) => {
+    clearPendingTimeout();
     setActiveDropdown(dropdown);
   };
 
   const handleMouseLeave = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    clearPendingTimeout();
     timeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
-    }, 240); // 240ms grace period prevents dropdown from vanishing during cursor travel
+      timeoutRef.current = null;
+    }, 300); // 300ms smooth grace period prevents premature closing
+  };
+
+  const closeDropdown = () => {
+    clearPendingTimeout();
+    setActiveDropdown(null);
+  };
+
+  // Close dropdowns and cancel timers whenever page route changes
+  useEffect(() => {
+    closeDropdown();
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  const handleCustomModalOpen = () => {
+    if (onOpenCustomModal) {
+      onOpenCustomModal();
+    } else {
+      setIsInternalCustomOpen(true);
+    }
   };
 
   useEffect(() => {
@@ -53,7 +79,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
     };
     const handleClickOutside = (e: MouseEvent) => {
       if (navContainerRef.current && !navContainerRef.current.contains(e.target as Node)) {
-        setActiveDropdown(null);
+        closeDropdown();
       }
     };
 
@@ -63,7 +89,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      clearPendingTimeout();
     };
   }, []);
 
@@ -214,7 +240,13 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             >
               <button
                 type="button"
-                onClick={() => setActiveDropdown(activeDropdown === "indian" ? null : "indian")}
+                onClick={() => {
+                  if (activeDropdown === "indian") {
+                    closeDropdown();
+                  } else {
+                    handleMouseEnter("indian");
+                  }
+                }}
                 className={`px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium rounded-lg transition-colors flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
                   activeDropdown === "indian"
                     ? "text-[#7A5200] bg-[#FAF9F6] font-bold"
@@ -231,16 +263,11 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 />
               </button>
 
-              {/* Dropdown Panel with Zero-Gap Bridge */}
+              {/* Dropdown Panel with Seamless Hit Area */}
               {activeDropdown === "indian" && (
                 <div
-                  className="absolute top-full left-0 w-[360px] pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
-                  onMouseEnter={() => handleMouseEnter("indian")}
-                  onMouseLeave={handleMouseLeave}
+                  className="absolute top-full left-0 w-[360px] pt-1.5 z-50 animate-in fade-in duration-150"
                 >
-                  {/* Invisible Hover Bridge connecting button to dropdown panel */}
-                  <div className="absolute -top-3 inset-x-0 h-4 bg-transparent pointer-events-auto" />
-
                   <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-3.5 flex flex-col gap-1.5">
                     <div className="pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A5200]">
@@ -255,7 +282,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                       <Link
                         key={idx}
                         href={item.href}
-                        onClick={() => setActiveDropdown(null)}
+                        onClick={closeDropdown}
                         className="p-3 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
                       >
                         <div className="flex items-center justify-between">
@@ -284,7 +311,13 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             >
               <button
                 type="button"
-                onClick={() => setActiveDropdown(activeDropdown === "international" ? null : "international")}
+                onClick={() => {
+                  if (activeDropdown === "international") {
+                    closeDropdown();
+                  } else {
+                    handleMouseEnter("international");
+                  }
+                }}
                 className={`px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium rounded-lg transition-colors flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
                   activeDropdown === "international"
                     ? "text-[#7A5200] bg-[#FAF9F6] font-bold"
@@ -301,16 +334,11 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 />
               </button>
 
-              {/* Mega Dropdown Panel with Zero-Gap Bridge */}
+              {/* Mega Dropdown Panel with Seamless Hit Area */}
               {activeDropdown === "international" && (
                 <div
-                  className="absolute top-full left-0 w-[540px] pt-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
-                  onMouseEnter={() => handleMouseEnter("international")}
-                  onMouseLeave={handleMouseLeave}
+                  className="absolute top-full left-0 w-[540px] pt-1.5 z-50 animate-in fade-in duration-150"
                 >
-                  {/* Invisible Hover Bridge connecting button to dropdown panel */}
-                  <div className="absolute -top-3 inset-x-0 h-4 bg-transparent pointer-events-auto" />
-
                   <div className="bg-white rounded-2xl shadow-[0_24px_50px_-12px_rgba(28,25,23,0.18)] border border-[#E5E0D5] p-4 grid grid-cols-2 gap-2">
                     <div className="col-span-2 pb-2 mb-1 border-b border-[#E5E0D5] flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A5200]">
@@ -325,7 +353,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                       <Link
                         key={idx}
                         href={item.href}
-                        onClick={() => setActiveDropdown(null)}
+                        onClick={closeDropdown}
                         className="p-3 rounded-xl hover:bg-[#FAF9F6] border border-transparent hover:border-[#E5E0D5] transition-all flex flex-col group/item"
                       >
                         <div className="flex items-center justify-between">
@@ -349,7 +377,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
             {/* Custom Tour Packages */}
             <button
               type="button"
-              onClick={onOpenCustomModal}
+              onClick={handleCustomModalOpen}
               className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
               <span className="xl:hidden">Custom Trips</span>
@@ -512,9 +540,9 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
                 type="button"
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  if (onOpenCustomModal) onOpenCustomModal();
+                  handleCustomModalOpen();
                 }}
-                className="text-left px-3 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-50 rounded-lg flex items-center justify-between"
+                className="text-left px-3 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-50 rounded-lg flex items-center justify-between cursor-pointer w-full"
               >
                 <span>Custom Tour Packages</span>
               </button>
@@ -563,6 +591,12 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
           </div>
         )}
       </nav>
+
+      {/* Self-contained Custom Tour Modal for all pages across site */}
+      <CustomTripModal
+        isOpen={isInternalCustomOpen}
+        onClose={() => setIsInternalCustomOpen(false)}
+      />
     </header>
   );
 }

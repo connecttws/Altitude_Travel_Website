@@ -61,7 +61,7 @@ export default function CustomTripModal({ isOpen, onClose }: CustomTripModalProp
   const whatsappUrl = `https://wa.me/919639320101?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-[#0C0A09]/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[100] overflow-y-auto bg-[#0C0A09]/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 animate-in fade-in duration-200">
       <div className="relative bg-[#FAF9F6] rounded-2xl max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-[#E5E0D5] p-5 sm:p-7">
         
         {/* Close Button */}
