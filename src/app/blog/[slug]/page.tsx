@@ -185,6 +185,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     `Hello Altitude Travel Co., I just read your article "${post.title}" on your website and would like to inquire about planning a bespoke trip.`
   );
 
+  // Extract numbered destination sections for quick-jump navigation if present
+  const numberedSections = post.content.sections
+    .map((s, idx) => {
+      const match = s.heading.match(/^(\d+)\.\s*(.*)$/);
+      if (!match) return null;
+      const num = match[1];
+      const heading = match[2];
+      const shortName = heading.split("–")[0].trim().replace(/^\d+\.\s*/, "");
+      return { num, shortName, index: idx };
+    })
+    .filter(Boolean) as { num: string; shortName: string; index: number }[];
+
   return (
     <>
       <script
@@ -194,7 +206,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <Navbar />
 
       <main className="pt-28 sm:pt-32 pb-24 bg-[#FAF9F6] min-h-screen text-stone-900">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-stone-500 font-medium overflow-x-auto no-scrollbar py-1">
@@ -288,39 +300,179 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               alt={post.coverImageAlt || post.title}
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 1000px"
+              sizes="(max-width: 1024px) 100vw, 1200px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent" />
           </div>
 
-          {/* Main Layout: Article Body + Sticky Sidebar */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
-            {/* Article Content (8 Cols) */}
-            <article className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-10 border border-[#E5E0D5] shadow-xs space-y-8 text-stone-800 leading-relaxed text-sm sm:text-base font-normal">
+          {/* Quick Jump Bar for Multi-Destination Articles */}
+          {numberedSections.length > 0 && (
+            <div className="bg-white rounded-2xl p-3.5 sm:p-4 border border-[#E5E0D5] shadow-xs flex items-center gap-2 overflow-x-auto no-scrollbar">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#7A5200] shrink-0 flex items-center gap-1.5 pl-1">
+                <Compass className="w-3.5 h-3.5 text-[#BFA13B]" /> Quick Jump:
+              </span>
+              <div className="flex items-center gap-1.5 shrink-0">
+                {numberedSections.map((sec, idx) => (
+                  <a
+                    key={idx}
+                    href={`#destination-${sec.num}`}
+                    className="px-3 py-1 rounded-xl text-xs font-semibold bg-[#FAF9F6] hover:bg-[#0C0A09] hover:text-[#F5D77F] text-stone-700 border border-[#E5E0D5] hover:border-[#D4AF37]/50 transition-all whitespace-nowrap cursor-pointer shadow-2xs"
+                  >
+                    {sec.shortName}
+                  </a>
+                ))}
+                {post.content.faqs && (
+                  <a
+                    href="#faqs-section"
+                    className="px-3 py-1 rounded-xl text-xs font-semibold bg-[#FAF9F6] hover:bg-[#0C0A09] hover:text-[#F5D77F] text-stone-700 border border-[#E5E0D5] hover:border-[#D4AF37]/50 transition-all whitespace-nowrap cursor-pointer shadow-2xs"
+                  >
+                    FAQs
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Top Section: Introduction (Left 7 Cols) + Concierge Card (Right 5 Cols) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            {/* Left: Introduction */}
+            <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col justify-between space-y-4">
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-2 bg-[#FAF9F6] text-[#7A5200] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-[#D4AF37]/30">
+                  <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  <span>Destination Overview</span>
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif tracking-tight">
+                  Introduction &amp; Travel Overview
+                </h2>
+                <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal space-y-3">
+                  {renderFormattedText(post.content.introduction)}
+                </div>
+              </div>
               
-              {/* Introduction */}
-              <div className="text-base sm:text-lg text-stone-900 leading-relaxed font-normal first-letter:text-4xl first-letter:font-serif first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:text-[#7A5200]">
-                {renderFormattedText(post.content.introduction)}
+              <div className="pt-3 border-t border-stone-100 flex flex-wrap items-center gap-3 text-xs text-stone-500">
+                <span className="flex items-center gap-1 font-semibold text-stone-900">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Curated by {post.author.name}
+                </span>
+                <span>•</span>
+                <span>{post.readTime}</span>
+              </div>
+            </div>
+
+            {/* Right: Quick Concierge Booking Card */}
+            <div className="lg:col-span-5 bg-gradient-to-br from-[#0C0A09] to-[#1C1917] text-white rounded-3xl p-6 sm:p-8 border border-[#BFA13B]/40 shadow-lg flex flex-col justify-between space-y-4">
+              <div className="space-y-2.5">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-[#F5D77F] text-xs font-bold border border-[#D4AF37]/30">
+                  <Compass className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Custom Tour Planning</span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-white font-serif tracking-tight leading-snug">
+                  Planning a Trip to {post.destinationName || "This Destination"}?
+                </h3>
+                <p className="text-xs text-stone-300 leading-relaxed font-normal">
+                  Connect directly with Altitude Travel Co. in Bazpur, Uttarakhand. We tailor every itinerary to your travel dates, preferred budget, hotel category, and transfers.
+                </p>
+
+                <div className="space-y-1.5 pt-1 text-xs text-stone-200">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Best Price &amp; Service Guaranteed</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Handpicked 4-Star &amp; 5-Star Accommodations</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Complete Visa &amp; Flight Guidance</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Dynamic Content Sections */}
-              {post.content.sections.map((section, idx) => (
-                <section key={idx} className="space-y-4 pt-2">
-                  <h2 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight font-serif">
-                    {section.heading}
-                  </h2>
+              <div className="pt-2 space-y-2">
+                <a
+                  href={`https://wa.me/919639320101?text=${whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
+                >
+                  <MessageSquare className="w-4 h-4 fill-white" />
+                  <span>Chat on WhatsApp (+91 96393 20101)</span>
+                </a>
+                {post.destinationSlug && (
+                  <Link
+                    href={post.destinationSlug}
+                    className="w-full py-2.5 px-3 rounded-xl font-bold text-xs bg-white/10 hover:bg-white/15 text-[#F5D77F] border border-[#D4AF37]/30 flex items-center justify-center gap-1.5 transition-colors"
+                  >
+                    <span>View {post.destinationName || "Tour Package"}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
+              </div>
+            </div>
+          </div>
 
-                  {section.body.map((para, pIdx) => (
-                    <p key={pIdx} className="text-stone-700 leading-relaxed">
-                      {renderFormattedText(para)}
-                    </p>
-                  ))}
+          {/* Dynamic Content Sections: 2-Column Grid for Numbered Destinations, Full-Width for General Sections */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+            {post.content.sections.map((section, idx) => {
+              const match = section.heading.match(/^(\d+)\.\s*(.*)$/);
+              const isNumbered = Boolean(match);
+              const sectionNum = match ? match[1] : null;
+              const cleanHeading = match ? match[2] : section.heading;
+
+              return (
+                <section
+                  key={idx}
+                  id={isNumbered ? `destination-${sectionNum}` : undefined}
+                  className={`bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs space-y-4 hover:border-[#D4AF37]/50 transition-all ${
+                    isNumbered ? "lg:col-span-1" : "lg:col-span-2"
+                  }`}
+                >
+                  <div className="flex items-start justify-between gap-3 border-b border-stone-100 pb-3">
+                    <div className="flex items-start gap-2.5">
+                      {isNumbered && (
+                        <span className="w-8 h-8 rounded-xl bg-[#0C0A09] text-[#F5D77F] font-serif font-black text-xs flex items-center justify-center shrink-0 border border-[#D4AF37]/40 shadow-xs mt-0.5">
+                          {sectionNum?.padStart(2, "0")}
+                        </span>
+                      )}
+                      <h2 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight font-serif leading-snug">
+                        {cleanHeading}
+                      </h2>
+                    </div>
+                    {isNumbered && (
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A5200] bg-[#FAF9F6] px-2.5 py-1 rounded-full border border-[#7A5200]/20 shrink-0 hidden sm:inline-block">
+                        Top Destination
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="space-y-3 text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
+                    {section.body.map((para, pIdx) => (
+                      <p key={pIdx}>{renderFormattedText(para)}</p>
+                    ))}
+                  </div>
+
+                  {/* Optional Bullet Sublist */}
+                  {section.subList && (
+                    <div className="bg-[#FAF9F6] rounded-2xl p-4 sm:p-5 border border-[#E5E0D5] space-y-2.5">
+                      <span className="text-xs font-bold uppercase tracking-wider text-stone-900 flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" /> Key Highlights &amp; Activities:
+                      </span>
+                      <ul className="space-y-2">
+                        {section.subList.map((item, bIdx) => (
+                          <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-700">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                            <span>{renderFormattedText(item)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   {/* Optional Tip Callout */}
                   {section.tip && (
-                    <div className="bg-[#FAF9F6] rounded-2xl p-4 sm:p-5 border-l-4 border-[#BFA13B] shadow-2xs space-y-1">
+                    <div className="bg-[#FAF9F6] rounded-2xl p-4 border-l-4 border-[#BFA13B] shadow-2xs space-y-1">
                       <span className="text-xs font-bold uppercase tracking-wider text-[#7A5200] flex items-center gap-1.5">
                         <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" /> Altitude Insider Note
                       </span>
@@ -329,92 +481,79 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </p>
                     </div>
                   )}
-
-                  {/* Optional Bullet Sublist */}
-                  {section.subList && (
-                    <ul className="space-y-2 pt-1 pl-1">
-                      {section.subList.map((item, bIdx) => (
-                        <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-700">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                          <span>{renderFormattedText(item)}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </section>
-              ))}
+              );
+            })}
+          </div>
 
-              {/* Quote Block */}
-              {post.content.quote && (
-                <blockquote className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#0C0A09] to-[#1C1917] text-white space-y-3 relative overflow-hidden">
-                  <div className="text-[#D4AF37] font-serif text-5xl leading-none absolute top-4 left-4 opacity-20 pointer-events-none">
-                    “
-                  </div>
-                  <p className="text-base sm:text-lg font-serif italic text-[#FAF9F6] relative z-10 leading-snug">
-                    &ldquo;{post.content.quote.text}&rdquo;
-                  </p>
-                  <cite className="block text-xs font-bold uppercase tracking-wider text-[#F5D77F] not-italic relative z-10">
-                    — {post.content.quote.author}
-                  </cite>
-                </blockquote>
-              )}
+          {/* Quote Block (Full Width) */}
+          {post.content.quote && (
+            <blockquote className="my-2 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#0C0A09] to-[#1C1917] text-white space-y-3 relative overflow-hidden shadow-lg border border-[#BFA13B]/30">
+              <div className="text-[#D4AF37] font-serif text-5xl leading-none absolute top-4 left-4 opacity-20 pointer-events-none">
+                “
+              </div>
+              <p className="text-base sm:text-lg font-serif italic text-[#FAF9F6] relative z-10 leading-snug">
+                &ldquo;{post.content.quote.text}&rdquo;
+              </p>
+              <cite className="block text-xs font-bold uppercase tracking-wider text-[#F5D77F] not-italic relative z-10">
+                — {post.content.quote.author}
+              </cite>
+            </blockquote>
+          )}
 
-              {/* FAQs Section */}
-              {post.content.faqs && post.content.faqs.length > 0 && (
-                <section className="space-y-4 pt-4 border-t border-[#E5E0D5]">
-                  <div className="flex items-center gap-2">
-                    <HelpCircle className="w-5 h-5 text-[#BFA13B]" />
-                    <h3 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif">
-                      Frequently Asked Questions
-                    </h3>
-                  </div>
-                  <div className="space-y-3">
-                    {post.content.faqs.map((faq, fIdx) => (
-                      <div
-                        key={fIdx}
-                        className="bg-[#FAF9F6] rounded-2xl p-4.5 sm:p-5 border border-[#E5E0D5] space-y-2 shadow-2xs hover:border-[#D4AF37]/50 transition-colors"
-                      >
-                        <h4 className="text-sm sm:text-base font-bold text-stone-900 flex items-start gap-2">
-                          <span className="text-[#7A5200] font-serif font-black">{fIdx + 1}.</span>
-                          <span>{faq.question.replace(/^\d+\.\s*/, "")}</span>
-                        </h4>
-                        <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pl-5">
-                          {renderFormattedText(faq.answer)}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Conclusion */}
-              <div className="space-y-3 pt-4 border-t border-[#E5E0D5]">
-                <h3 className="text-lg font-bold text-stone-950">
-                  Planning Your Escape
-                </h3>
-                <p className="text-stone-700">
-                  {renderFormattedText(post.content.conclusion)}
-                </p>
+          {/* FAQs Section (2-Column Grid) */}
+          {post.content.faqs && post.content.faqs.length > 0 && (
+            <section id="faqs-section" className="bg-white rounded-3xl p-6 sm:p-10 border border-[#E5E0D5] shadow-xs space-y-6">
+              <div className="flex items-center justify-between border-b border-stone-100 pb-4">
+                <div className="flex items-center gap-2">
+                  <HelpCircle className="w-5 h-5 text-[#BFA13B]" />
+                  <h3 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif">
+                    Frequently Asked Questions
+                  </h3>
+                </div>
+                <span className="text-xs font-bold text-[#7A5200] bg-[#FAF9F6] px-3 py-1 rounded-full border border-[#D4AF37]/30">
+                  {post.content.faqs.length} Important FAQs
+                </span>
               </div>
 
-              {/* Key Takeaways Box */}
-              <div className="bg-[#FAF9F6] rounded-2xl p-6 border border-[#E5E0D5] space-y-3">
-                <h4 className="text-sm font-bold uppercase tracking-wider text-stone-950 flex items-center gap-2">
-                  <Bookmark className="w-4 h-4 text-[#BFA13B]" />
-                  <span>Key Travel Tips for this Journey</span>
-                </h4>
-                <ul className="space-y-2 text-xs sm:text-sm text-stone-700">
-                  {post.content.insiderTips.map((tip, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#BFA13B] mt-2 shrink-0" />
-                      <span>{renderFormattedText(tip)}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                {post.content.faqs.map((faq, fIdx) => (
+                  <div
+                    key={fIdx}
+                    className="bg-[#FAF9F6] rounded-2xl p-5 border border-[#E5E0D5] space-y-2.5 shadow-2xs hover:border-[#D4AF37]/50 transition-colors flex flex-col justify-between"
+                  >
+                    <h4 className="text-sm sm:text-base font-bold text-stone-900 flex items-start gap-2 leading-snug">
+                      <span className="text-[#7A5200] font-serif font-black">{fIdx + 1}.</span>
+                      <span>{faq.question.replace(/^\d+\.\s*/, "")}</span>
+                    </h4>
+                    <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pl-5">
+                      {renderFormattedText(faq.answer)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Conclusion & Key Takeaways Grid (Left 7 Cols, Right 5 Cols) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            {/* Left: Planning Your Escape & Conclusion */}
+            <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col justify-between space-y-5">
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-1.5 bg-[#FAF9F6] text-[#7A5200] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-[#D4AF37]/30">
+                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  <span>Trip Wrap-Up</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif">
+                  Planning Your Escape
+                </h3>
+                <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal space-y-3">
+                  {renderFormattedText(post.content.conclusion)}
+                </div>
               </div>
 
               {/* Tags */}
-              <div className="pt-4 border-t border-[#E5E0D5] flex flex-wrap items-center gap-2">
+              <div className="pt-4 border-t border-stone-100 flex flex-wrap items-center gap-2">
                 <span className="text-xs font-bold text-stone-500 mr-1">Tags:</span>
                 {post.tags.map((tag, idx) => (
                   <span
@@ -425,92 +564,35 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </span>
                 ))}
               </div>
+            </div>
 
-            </article>
-
-            {/* Sticky Sidebar (4 Cols) */}
-            <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
-              
-              {/* WhatsApp Booking Card */}
-              <div className="bg-white rounded-3xl p-6 border border-[#E5E0D5] shadow-xs space-y-4">
-                <div className="inline-flex items-center gap-2 bg-[#FAF9F6] text-[#7A5200] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-[#D4AF37]/30">
-                  <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Custom Itineraries</span>
-                </div>
-
-                <h3 className="text-lg font-bold text-stone-950 font-serif leading-snug">
-                  Inspired by This Story?
-                </h3>
-
-                <p className="text-xs text-stone-600 leading-relaxed">
-                  Connect with Altitude Travel Co. in Bazpur, Uttarakhand. We tailor every itinerary to your pace, preferences, and private dates.
-                </p>
-
-                <div className="space-y-2 pt-1 text-xs text-stone-700">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Best Price &amp; Service</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Private Chauffeurs &amp; Transfers</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Handpicked Boutique Resorts</span>
-                  </div>
-                </div>
-
-                <a
-                  href={`https://wa.me/919639320101?text=${whatsappMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>Chat on WhatsApp (+91 96393 20101)</span>
-                </a>
+            {/* Right: Key Travel Tips & Back to Journal */}
+            <div className="lg:col-span-5 bg-[#FAF9F6] rounded-3xl p-6 sm:p-8 border border-[#E5E0D5] shadow-xs flex flex-col justify-between space-y-4">
+              <div className="space-y-3">
+                <h4 className="text-sm font-bold uppercase tracking-wider text-stone-950 flex items-center gap-2">
+                  <Bookmark className="w-4 h-4 text-[#BFA13B]" />
+                  <span>Key Travel Tips for this Journey</span>
+                </h4>
+                <ul className="space-y-2.5 text-xs sm:text-sm text-stone-700">
+                  {post.content.insiderTips.map((tip, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
+                      <span className="w-2 h-2 rounded-full bg-[#BFA13B] mt-1.5 shrink-0" />
+                      <span>{renderFormattedText(tip)}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              {/* Linked Destination Package Card (If applicable) */}
-              {post.destinationSlug && (
-                <div className="bg-white rounded-3xl p-6 border border-[#E5E0D5] shadow-xs space-y-3">
-                  <div className="flex items-center gap-1.5 text-xs text-[#7A5200] font-bold uppercase tracking-wider">
-                    <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
-                    <span>Featured Package</span>
-                  </div>
-                  <h4 className="text-base font-bold text-stone-950 font-serif leading-snug">
-                    {post.destinationName}
-                  </h4>
-                  <p className="text-xs text-stone-600 leading-relaxed">
-                    View our complete curated itinerary, luxury stays, landmark visits, and inclusions.
-                  </p>
-                  <Link
-                    href={post.destinationSlug}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7A5200] hover:text-stone-950 transition-colors pt-1"
-                  >
-                    <span>View Curated Tour Details</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              )}
-
-              {/* Back to All Blogs Link */}
-              <div className="bg-[#FAF9F6] rounded-2xl p-5 border border-[#E5E0D5] text-center space-y-2">
-                <span className="text-xs text-stone-500 font-medium block">
-                  Looking for more travel inspiration?
-                </span>
+              <div className="pt-4 border-t border-[#E5E0D5]">
                 <Link
                   href="/blog"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7A5200] hover:text-stone-950 transition-colors"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
-                  <span>Browse All Published Stories</span>
+                  <span>Browse All Stories in Travel Journal</span>
                 </Link>
               </div>
-
-            </aside>
-
+            </div>
           </div>
 
           {/* Related Articles Row */}
