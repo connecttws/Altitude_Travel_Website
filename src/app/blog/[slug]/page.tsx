@@ -205,7 +205,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       />
       <Navbar />
 
-      <main className="pt-28 sm:pt-32 pb-24 bg-[#FAF9F6] min-h-screen text-stone-900">
+      <main className="pt-28 sm:pt-32 pb-24 bg-[#FAF9F6] min-h-screen text-stone-900 font-sans [font-feature-settings:'normal']">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           
           {/* Breadcrumb Navigation */}
@@ -250,12 +250,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
 
             {/* H1 Article Title */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-extrabold text-stone-950 tracking-tight font-serif leading-[1.2]">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-bold text-stone-950 tracking-tight leading-[1.25]">
               {post.title}
             </h1>
 
             {/* Excerpt Lead */}
-            <p className="text-stone-700 text-sm sm:text-base lg:text-lg leading-relaxed font-normal border-l-2 border-[#D4AF37] pl-4 italic">
+            <p className="text-stone-800 text-base sm:text-[17px] leading-relaxed font-normal border-l-4 border-[#BFA13B] pl-4 sm:pl-5 py-2.5 bg-[#FAF9F6] rounded-r-2xl">
               {post.excerpt}
             </p>
 
@@ -343,10 +343,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Destination Overview</span>
                 </div>
-                <h2 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif tracking-tight">
+                <h2 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight">
                   Introduction &amp; Travel Overview
                 </h2>
-                <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal space-y-3">
+                <div className="text-[15.5px] sm:text-[16.5px] text-stone-900 leading-[1.8] font-normal space-y-3.5">
                   {renderFormattedText(post.content.introduction)}
                 </div>
               </div>
@@ -367,7 +367,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Compass className="w-3.5 h-3.5 text-[#D4AF37]" />
                   <span>Custom Tour Planning</span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white font-serif tracking-tight leading-snug">
+                <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug">
                   Planning a Trip to {post.destinationName || "This Destination"}?
                 </h3>
                 <p className="text-xs text-stone-300 leading-relaxed font-normal">
@@ -432,11 +432,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <div className="flex items-start justify-between gap-3 border-b border-stone-100 pb-3">
                     <div className="flex items-start gap-2.5">
                       {isNumbered && (
-                        <span className="w-8 h-8 rounded-xl bg-[#0C0A09] text-[#F5D77F] font-serif font-black text-xs flex items-center justify-center shrink-0 border border-[#D4AF37]/40 shadow-xs mt-0.5">
+                        <span className="w-8 h-8 rounded-xl bg-[#0C0A09] text-[#F5D77F] font-bold text-xs flex items-center justify-center shrink-0 border border-[#D4AF37]/40 shadow-xs mt-0.5">
                           {sectionNum?.padStart(2, "0")}
                         </span>
                       )}
-                      <h2 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight font-serif leading-snug">
+                      <h2 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight leading-snug">
                         {cleanHeading}
                       </h2>
                     </div>
@@ -447,7 +447,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     )}
                   </div>
 
-                  <div className="space-y-3 text-sm sm:text-base text-stone-700 leading-relaxed font-normal">
+                  <div className="space-y-3.5 text-[15.5px] sm:text-[16px] text-stone-900 leading-[1.8] font-normal">
                     {section.body.map((para, pIdx) => (
                       <p key={pIdx}>{renderFormattedText(para)}</p>
                     ))}
@@ -461,7 +461,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </span>
                       <ul className="space-y-2">
                         {section.subList.map((item, bIdx) => (
-                          <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-700">
+                          <li key={bIdx} className="flex items-start gap-2.5 text-sm sm:text-[14.5px] text-stone-900 leading-relaxed font-normal">
                             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                             <span>{renderFormattedText(item)}</span>
                           </li>
@@ -476,7 +476,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <span className="text-xs font-bold uppercase tracking-wider text-[#7A5200] flex items-center gap-1.5">
                         <Sparkles className="w-3.5 h-3.5 text-[#BFA13B]" /> Altitude Insider Note
                       </span>
-                      <p className="text-xs sm:text-sm text-stone-800 font-medium">
+                      <p className="text-sm sm:text-[14.5px] text-stone-900 leading-relaxed font-normal">
                         {renderFormattedText(section.tip)}
                       </p>
                     </div>
@@ -489,10 +489,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Quote Block (Full Width) */}
           {post.content.quote && (
             <blockquote className="my-2 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#0C0A09] to-[#1C1917] text-white space-y-3 relative overflow-hidden shadow-lg border border-[#BFA13B]/30">
-              <div className="text-[#D4AF37] font-serif text-5xl leading-none absolute top-4 left-4 opacity-20 pointer-events-none">
+              <div className="text-[#D4AF37] font-sans text-5xl font-black leading-none absolute top-2 left-4 opacity-15 pointer-events-none">
                 “
               </div>
-              <p className="text-base sm:text-lg font-serif italic text-[#FAF9F6] relative z-10 leading-snug">
+              <p className="text-base sm:text-lg font-medium text-[#FAF9F6] relative z-10 leading-relaxed">
                 &ldquo;{post.content.quote.text}&rdquo;
               </p>
               <cite className="block text-xs font-bold uppercase tracking-wider text-[#F5D77F] not-italic relative z-10">
@@ -507,7 +507,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex items-center justify-between border-b border-stone-100 pb-4">
                 <div className="flex items-center gap-2">
                   <HelpCircle className="w-5 h-5 text-[#BFA13B]" />
-                  <h3 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif">
+                  <h3 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight">
                     Frequently Asked Questions
                   </h3>
                 </div>
@@ -522,11 +522,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     key={fIdx}
                     className="bg-[#FAF9F6] rounded-2xl p-5 border border-[#E5E0D5] space-y-2.5 shadow-2xs hover:border-[#D4AF37]/50 transition-colors flex flex-col justify-between"
                   >
-                    <h4 className="text-sm sm:text-base font-bold text-stone-900 flex items-start gap-2 leading-snug">
-                      <span className="text-[#7A5200] font-serif font-black">{fIdx + 1}.</span>
+                    <h4 className="text-base sm:text-[16.5px] font-bold text-stone-950 flex items-start gap-2 leading-snug">
+                      <span className="text-[#7A5200] font-bold">{fIdx + 1}.</span>
                       <span>{faq.question.replace(/^\d+\.\s*/, "")}</span>
                     </h4>
-                    <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pl-5">
+                    <p className="text-sm sm:text-[14.5px] text-stone-900 leading-relaxed font-normal pl-5">
                       {renderFormattedText(faq.answer)}
                     </p>
                   </div>
@@ -544,10 +544,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Trip Wrap-Up</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif">
+                <h3 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight">
                   Planning Your Escape
                 </h3>
-                <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-normal space-y-3">
+                <div className="text-[15.5px] sm:text-[16.5px] text-stone-900 leading-[1.8] font-normal space-y-3.5">
                   {renderFormattedText(post.content.conclusion)}
                 </div>
               </div>
@@ -573,7 +573,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Bookmark className="w-4 h-4 text-[#BFA13B]" />
                   <span>Key Travel Tips for this Journey</span>
                 </h4>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-stone-700">
+                <ul className="space-y-2.5 text-sm sm:text-[14.5px] text-stone-900 leading-relaxed font-normal">
                   {post.content.insiderTips.map((tip, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
                       <span className="w-2 h-2 rounded-full bg-[#BFA13B] mt-1.5 shrink-0" />
@@ -599,7 +599,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {relatedPosts.length > 0 && (
             <div className="pt-12 border-t border-[#E5E0D5] space-y-6">
               <div className="flex items-center justify-between">
-                <h3 className="text-xl sm:text-2xl font-extrabold text-stone-950 tracking-tight font-serif">
+                <h3 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight">
                   More Stories from Altitude Travel Journal
                 </h3>
                 <Link
@@ -636,7 +636,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                           <span>{related.publishDate}</span>
                         </div>
                         <Link href={`/blog/${related.slug}`}>
-                          <h4 className="text-sm font-bold text-stone-950 font-serif line-clamp-2 group-hover:text-[#7A5200] transition-colors leading-snug">
+                          <h4 className="text-sm sm:text-base font-bold text-stone-950 line-clamp-2 group-hover:text-[#7A5200] transition-colors leading-snug">
                             {related.title}
                           </h4>
                         </Link>

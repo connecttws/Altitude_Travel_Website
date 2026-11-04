@@ -76,7 +76,7 @@ export default function BlogListingPage() {
       />
       <Navbar />
 
-      <main className="pt-32 pb-24 bg-[#FAF9F6] min-h-screen text-stone-900">
+      <main className="pt-32 pb-24 bg-[#FAF9F6] min-h-screen text-stone-900 font-sans [font-feature-settings:'normal']">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           
           {/* Breadcrumb Navigation */}
@@ -103,7 +103,7 @@ export default function BlogListingPage() {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-950 tracking-tight font-serif leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-950 tracking-tight leading-tight">
               Stories, Guides &amp; Slow Travel Notes
             </h1>
 
@@ -112,7 +112,7 @@ export default function BlogListingPage() {
               <div className="moving-line-beam" />
             </div>
 
-            <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-normal pt-1">
+            <p className="text-stone-800 text-sm sm:text-base leading-relaxed font-normal pt-1">
               Curated perspectives on slow exploration, authentic cultural immersion, and why the best vacations always include room to breathe. Written with care by our travel designers in Bazpur, Uttarakhand.
             </p>
           </div>

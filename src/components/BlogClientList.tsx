@@ -124,12 +124,12 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
                 </div>
 
                 <Link href={`/blog/${featuredPost.slug}`}>
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-950 tracking-tight font-serif leading-tight group-hover:text-[#7A5200] transition-colors">
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-stone-950 tracking-tight leading-tight group-hover:text-[#7A5200] transition-colors">
                     {featuredPost.title}
                   </h2>
                 </Link>
 
-                <p className="text-stone-600 text-xs sm:text-sm leading-relaxed line-clamp-3">
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed line-clamp-3">
                   {featuredPost.excerpt}
                 </p>
               </div>
@@ -236,12 +236,12 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
                     </div>
 
                     <Link href={`/blog/${post.slug}`}>
-                      <h3 className="text-base sm:text-lg font-bold text-stone-950 tracking-tight leading-snug font-serif group-hover:text-[#7A5200] transition-colors line-clamp-2">
+                      <h3 className="text-base sm:text-lg font-bold text-stone-950 tracking-tight leading-snug group-hover:text-[#7A5200] transition-colors line-clamp-2">
                         {post.title}
                       </h3>
                     </Link>
 
-                    <p className="text-xs text-stone-600 leading-relaxed line-clamp-3">
+                    <p className="text-sm text-stone-700 leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
                   </div>
@@ -286,7 +286,7 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
               <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>Bespoke Travel Planning</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white font-serif">
+            <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
               Ready to Turn These Stories Into Your Next Journey?
             </h3>
             <p className="text-xs sm:text-sm text-stone-300 max-w-xl font-normal">
