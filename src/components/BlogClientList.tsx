@@ -148,89 +148,100 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
         </div>
       </div>
 
-      {/* Featured Story Spotlight (Only when All or matching is selected and no query) */}
+      {/* Featured Story Spotlight (Full-width frame that fits on screen, 100% visible, no corner cropping) */}
       {selectedCategory === "All" && searchQuery === "" && featuredPost && (
         <div className="group relative bg-white rounded-3xl overflow-hidden border border-[#E5E0D5] shadow-sm hover:shadow-xl transition-all duration-300">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-            
-            {/* Image Column */}
-            <div className="lg:col-span-7 relative h-[280px] sm:h-[360px] lg:h-[440px] overflow-hidden bg-stone-950">
-              <Image
-                src={featuredPost.coverImage}
-                alt={featuredPost.coverImageAlt || featuredPost.title}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent lg:hidden" />
-              
-              {/* Badge */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0C0A09]/90 text-[#F5D77F] text-xs font-bold border border-[#D4AF37]/50 shadow-sm backdrop-blur-md">
-                  <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>Featured Journal</span>
-                </span>
-              </div>
+          
+          {/* Top Panoramic Image Frame (Spans full width, matches 1.87:1 / 16:9 ratio, zero corner crop) */}
+          <Link
+            href={`/blog/${featuredPost.slug}`}
+            className="block relative w-full aspect-[16/9] sm:aspect-[1.87/1] max-h-[500px] bg-stone-950 overflow-hidden cursor-pointer"
+          >
+            <Image
+              src={featuredPost.coverImage}
+              alt={featuredPost.coverImageAlt || featuredPost.title}
+              fill
+              priority
+              sizes="(max-width: 1280px) 100vw, 1200px"
+              className="object-contain sm:object-cover w-full h-full group-hover:scale-[1.01] transition-transform duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
+
+            {/* Featured Badge */}
+            <div className="absolute top-4 left-4 z-10">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#0C0A09]/90 text-[#F5D77F] text-xs font-bold border border-[#D4AF37]/50 shadow-md backdrop-blur-md">
+                <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+                <span>Featured Journal</span>
+              </span>
             </div>
 
-            {/* Content Column */}
-            <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-white space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-xs text-stone-500 font-semibold">
-                  <span className="text-[#7A5200] font-bold uppercase tracking-wider bg-[#FAF9F6] px-2.5 py-0.5 rounded-full border border-[#D4AF37]/30">
-                    {featuredPost.category}
-                  </span>
-                  <span>•</span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-stone-400" />
-                    {featuredPost.readTime}
-                  </span>
-                </div>
+            <div className="absolute bottom-4 right-4 z-10 hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0C0A09]/80 backdrop-blur-md text-stone-200 text-xs font-medium border border-white/10">
+              <Clock className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <span>{featuredPost.readTime}</span>
+            </div>
+          </Link>
 
-                <Link href={`/blog/${featuredPost.slug}`}>
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight leading-tight group-hover:opacity-90 transition-opacity">
-                    {renderStyledTitle(featuredPost.title)}
-                  </h2>
-                </Link>
-
-                <p className="text-stone-700 text-sm sm:text-base leading-relaxed line-clamp-3">
-                  {featuredPost.excerpt}
-                </p>
+          {/* Story Content Below Full Image */}
+          <div className="p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-white">
+            <div className="space-y-3 max-w-3xl">
+              <div className="flex items-center gap-3 text-xs text-stone-500 font-semibold">
+                <span className="text-[#7A5200] font-bold uppercase tracking-wider bg-[#FAF9F6] px-2.5 py-0.5 rounded-full border border-[#D4AF37]/30">
+                  {featuredPost.category}
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-1 text-stone-600">
+                  <Calendar className="w-3.5 h-3.5 text-[#BFA13B]" />
+                  {featuredPost.publishDate}
+                </span>
+                <span className="sm:hidden">•</span>
+                <span className="sm:hidden flex items-center gap-1">
+                  <Clock className="w-3.5 h-3.5 text-stone-400" />
+                  {featuredPost.readTime}
+                </span>
               </div>
 
-              <div className="pt-4 border-t border-[#E5E0D5] flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <div className="relative w-8 h-8 rounded-full overflow-hidden bg-stone-100 border border-[#E5E0D5]">
-                    <Image
-                      src={featuredPost.author.avatar}
-                      alt={featuredPost.author.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold text-stone-900 block leading-tight">
-                      {featuredPost.author.name}
-                    </span>
-                    <span className="text-[10px] text-stone-500 block">
-                      {featuredPost.publishDate}
-                    </span>
-                  </div>
-                </div>
+              <Link href={`/blog/${featuredPost.slug}`}>
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight leading-tight group-hover:opacity-90 transition-opacity">
+                  {renderStyledTitle(featuredPost.title)}
+                </h2>
+              </Link>
 
-                <Link
-                  href={`/blog/${featuredPost.slug}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-[#0C0A09] text-[#F5D77F] hover:bg-[#7A5200] hover:text-white transition-all shadow-xs"
-                >
-                  <span>Read Article</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+              <p className="text-stone-700 text-sm sm:text-base leading-relaxed line-clamp-2 sm:line-clamp-3">
+                {featuredPost.excerpt}
+              </p>
+            </div>
+
+            <div className="flex md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-4 shrink-0 pt-4 md:pt-0 border-t md:border-t-0 border-[#E5E0D5]">
+              <div className="flex items-center gap-2.5">
+                <div className="relative w-9 h-9 rounded-full overflow-hidden bg-stone-100 border border-[#E5E0D5]">
+                  <Image
+                    src={featuredPost.author.avatar}
+                    alt={featuredPost.author.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-stone-900 block leading-tight">
+                    {featuredPost.author.name}
+                  </span>
+                  <span className="text-[10px] text-stone-500 block">
+                    {featuredPost.author.role}
+                  </span>
+                </div>
               </div>
 
+              <Link
+                href={`/blog/${featuredPost.slug}`}
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#0C0A09] text-[#F5D77F] hover:bg-[#7A5200] hover:text-white transition-all shadow-xs"
+              >
+                <span>Read Full Article</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
 
           </div>
+
         </div>
       )}
 
