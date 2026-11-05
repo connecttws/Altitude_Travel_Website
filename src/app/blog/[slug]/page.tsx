@@ -365,15 +365,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </header>
 
-            {/* 2. Panoramic Hero Cover Image (16:9 / 1.87:1, fits on screen, never cuts corners) */}
-            <div className="relative w-full aspect-[16/9] sm:aspect-[1.87/1] max-h-[520px] rounded-2xl overflow-hidden border border-[#E5E0D5] shadow-sm bg-stone-950">
+            {/* 2. Hero Cover Image (Fitted to 1717:916 aspect ratio, zero corner crop) */}
+            <div
+              className="relative w-full rounded-2xl overflow-hidden border border-[#E5E0D5] shadow-sm bg-stone-100"
+              style={{ aspectRatio: "1717 / 916" }}
+            >
               <Image
                 src={post.coverImage}
                 alt={post.coverImageAlt || post.title}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 1000px"
-                className="object-contain sm:object-cover w-full h-full"
+                className="object-cover w-full h-full"
               />
             </div>
 
