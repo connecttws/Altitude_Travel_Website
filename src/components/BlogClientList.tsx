@@ -90,10 +90,7 @@ export default function BlogClientList({ posts }: BlogClientListProps) {
 
   const categories = [
     "All",
-    "Travel Philosophy",
-    "International Guides",
-    "Indian Escapes",
-    "Luxury Escapes",
+    ...Array.from(new Set(posts.map((p) => p.category))),
   ];
 
   const filteredPosts = posts.filter((post) => {

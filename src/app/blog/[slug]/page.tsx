@@ -404,6 +404,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       FAQs
                     </a>
                   )}
+                  {post.content.conclusion && (
+                    <a
+                      href="#conclusion-section"
+                      className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white hover:bg-[#0C0A09] hover:text-[#F5D77F] text-stone-700 border border-[#E5E0D5] hover:border-[#D4AF37]/50 transition-all whitespace-nowrap cursor-pointer shadow-2xs"
+                    >
+                      Conclusion
+                    </a>
+                  )}
                 </div>
               </div>
             )}
@@ -535,14 +543,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             )}
 
             {/* 9. Conclusion & Practical Tips */}
-            <section className="pt-10 border-t border-stone-200/70 space-y-6">
+            <section id="conclusion-section" className="pt-10 border-t border-stone-200/70 space-y-6 scroll-mt-28">
               <div className="space-y-3">
                 <div className="inline-flex items-center gap-1.5 bg-[#FAF9F6] text-[#7A5200] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-[#D4AF37]/30">
                   <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
-                  <span>Trip Wrap-Up</span>
+                  <span>Conclusion</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold text-stone-950 tracking-tight">
-                  Planning Your Escape
+                  Conclusion
                 </h2>
                 <div className="text-[16px] sm:text-[17px] text-stone-900 leading-[1.8] font-normal space-y-4">
                   {renderFormattedText(post.content.conclusion)}
