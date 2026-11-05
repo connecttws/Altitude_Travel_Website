@@ -56,8 +56,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo.jpg",
-    apple: "/logo.jpg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/logo.jpg", type: "image/jpeg" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/logo.jpg" },
+    ],
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     title: "Tour and Travel Agency | Altitude Travel Co.",
