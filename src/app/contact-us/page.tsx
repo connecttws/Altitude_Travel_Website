@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ContactClientForm from "./ContactClientForm";
 import {
   Compass,
   Sparkles,
@@ -13,7 +12,6 @@ import {
   Clock,
   ShieldCheck,
   CheckCircle2,
-  CalendarCheck2,
   Globe2,
   HeartHandshake,
   ArrowRight,
@@ -296,72 +294,89 @@ export default function ContactUsPage() {
 
           </section>
 
-          {/* Main Interactive Form & Travel Guidance Grid */}
-          <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          {/* Let's Plan Your Next Journey & Visit Altitude Travel Co. (Balanced 2-Column Section) */}
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
             
-            {/* Left Column: Interactive Enquiry Form */}
-            <div className="lg:col-span-7">
-              <ContactClientForm />
-            </div>
-
-            {/* Right Column: Editorial Journey Planning Guidance & Office Spotlight */}
-            <div className="lg:col-span-5 space-y-6">
-              
-              {/* Let's Plan Your Next Journey Card */}
-              <div className="bg-white rounded-3xl border border-[#E5E0D5] p-6 sm:p-8 space-y-4 shadow-xs">
+            {/* Let's Plan Your Next Journey Card */}
+            <div className="bg-white rounded-3xl border border-[#E5E0D5] p-6 sm:p-8 lg:p-10 flex flex-col justify-between shadow-xs hover:border-[#D4AF37]/50 transition-all space-y-6">
+              <div className="space-y-4">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF9F6] border border-[#D4AF37]/30 text-[#7A5200] text-xs font-bold uppercase tracking-wider">
                   <Compass className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Let's Plan Your Next Journey</span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-extrabold text-stone-950 tracking-tight leading-snug">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-950 tracking-tight leading-snug">
                   Tailored Travel Designed Around You
-                </h3>
+                </h2>
 
-                <div className="space-y-3 text-stone-700 text-xs sm:text-sm font-normal leading-relaxed">
+                <div className="space-y-3 text-stone-700 text-sm sm:text-[15px] font-normal leading-relaxed">
                   <p>
                     Every traveller has a different idea of a perfect holiday. Tell us where you want to go, who you are travelling with and what kind of experience you are looking for.
                   </p>
                   <p>
                     Our team will assist you with suitable Indian and international tour packages, accommodation options, transportation, sightseeing and visa guidance.
                   </p>
-                  <p className="font-semibold text-stone-900">
+                  <p className="font-semibold text-stone-950 pt-1">
                     Whether you have a destination in mind or need help choosing one, we are happy to assist.
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-stone-100 grid grid-cols-2 gap-3 text-xs">
-                  <div className="flex items-center gap-2 text-stone-800">
+                {/* Service Highlights Pills */}
+                <div className="pt-3 grid grid-cols-2 gap-2.5 text-xs font-semibold text-stone-800">
+                  <div className="flex items-center gap-2 p-2.5 bg-[#FAF9F6] rounded-xl border border-stone-200">
                     <CheckCircle2 className="w-4 h-4 text-[#BFA13B] shrink-0" />
-                    <span>Indian Escapes</span>
+                    <span>Indian Holidays</span>
                   </div>
-                  <div className="flex items-center gap-2 text-stone-800">
+                  <div className="flex items-center gap-2 p-2.5 bg-[#FAF9F6] rounded-xl border border-stone-200">
                     <CheckCircle2 className="w-4 h-4 text-[#BFA13B] shrink-0" />
-                    <span>World Tours</span>
+                    <span>International Tours</span>
                   </div>
-                  <div className="flex items-center gap-2 text-stone-800">
+                  <div className="flex items-center gap-2 p-2.5 bg-[#FAF9F6] rounded-xl border border-stone-200">
                     <CheckCircle2 className="w-4 h-4 text-[#BFA13B] shrink-0" />
-                    <span>Private Drivers</span>
+                    <span>Private Cabs & Transfers</span>
                   </div>
-                  <div className="flex items-center gap-2 text-stone-800">
+                  <div className="flex items-center gap-2 p-2.5 bg-[#FAF9F6] rounded-xl border border-stone-200">
                     <CheckCircle2 className="w-4 h-4 text-[#BFA13B] shrink-0" />
-                    <span>Handpicked Hotels</span>
+                    <span>Visa & Booking Guidance</span>
                   </div>
                 </div>
               </div>
 
-              {/* Visit Altitude Travel Co. Card */}
-              <div className="bg-white rounded-3xl border border-[#E5E0D5] p-6 sm:p-8 space-y-4 shadow-xs">
+              {/* Direct WhatsApp Callout */}
+              <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row items-center gap-3">
+                <a
+                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20am%20ready%20to%20plan%20my%20next%20journey.%20Please%20guide%20me%20with%20destinations%20and%20itineraries."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-shining-gold text-stone-950 hover:brightness-105 active:scale-95 shadow-[0_4px_16px_rgba(212,175,55,0.35)] transition-all flex items-center justify-center gap-2 border border-[#D4AF37]/60 cursor-pointer"
+                >
+                  <MessageSquare className="w-4 h-4 text-stone-950" />
+                  <span>Start Planning on WhatsApp</span>
+                </a>
+
+                <a
+                  href="tel:+919639320101"
+                  className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-[#FAF9F6] hover:bg-stone-100 text-stone-900 border border-[#E5E0D5] transition-all flex items-center justify-center gap-2"
+                >
+                  <Phone className="w-4 h-4 text-[#7A5200]" />
+                  <span>Call Us Directly</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Visit Altitude Travel Co. Card */}
+            <div className="bg-white rounded-3xl border border-[#E5E0D5] p-6 sm:p-8 lg:p-10 flex flex-col justify-between shadow-xs hover:border-[#D4AF37]/50 transition-all space-y-6">
+              <div className="space-y-4">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF9F6] border border-[#D4AF37]/30 text-[#7A5200] text-xs font-bold uppercase tracking-wider">
                   <MapPin className="w-3.5 h-3.5 text-[#BFA13B]" />
                   <span>Visit Altitude Travel Co.</span>
                 </div>
 
-                <h3 className="text-xl font-extrabold text-stone-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-950 tracking-tight leading-snug">
                   Based in Bazpur, Uttarakhand
-                </h3>
+                </h2>
 
-                <div className="space-y-2.5 text-stone-700 text-xs sm:text-sm font-normal leading-relaxed">
+                <div className="space-y-3 text-stone-700 text-sm sm:text-[15px] font-normal leading-relaxed">
                   <p>
                     Our travel team is based in Bazpur, Uttarakhand. You can connect with us by phone, WhatsApp or email to discuss your upcoming holiday.
                   </p>
@@ -370,28 +385,47 @@ export default function ContactUsPage() {
                   </p>
                 </div>
 
-                {/* Quick Action Buttons */}
-                <div className="pt-2 flex flex-col sm:flex-row items-center gap-2.5">
-                  <a
-                    href="tel:+919639320101"
-                    className="w-full sm:w-auto py-2.5 px-4 rounded-xl font-bold text-xs bg-[#0C0A09] text-[#F5D77F] hover:bg-[#7A5200] hover:text-white transition-all flex items-center justify-center gap-2 shadow-xs"
-                  >
-                    <Phone className="w-3.5 h-3.5" />
-                    <span>Call +91 96393 20101</span>
-                  </a>
-
-                  <a
-                    href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20want%20to%20plan%20a%20trip."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto py-2.5 px-4 rounded-xl font-bold text-xs bg-[#25D366] hover:bg-[#20bd5a] text-white transition-all flex items-center justify-center gap-2 shadow-xs"
-                  >
-                    <MessageSquare className="w-3.5 h-3.5 fill-white" />
-                    <span>WhatsApp Desk</span>
-                  </a>
+                {/* Detail Summary Block */}
+                <div className="p-4 sm:p-5 bg-[#FAF9F6] rounded-2xl border border-[#E5E0D5] space-y-2.5 text-xs sm:text-sm">
+                  <div className="flex items-start gap-2.5 text-stone-800">
+                    <MapPin className="w-4 h-4 text-[#BFA13B] mt-0.5 shrink-0" />
+                    <span>Bazpur, near Rudrapur, Nainital, Uttarakhand 262401, India</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-stone-800">
+                    <Phone className="w-4 h-4 text-[#BFA13B] shrink-0" />
+                    <span>Hotline / WhatsApp: +91 96393 20101</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-stone-800">
+                    <Mail className="w-4 h-4 text-[#BFA13B] shrink-0" />
+                    <span>Email: Altitudetravelco@gmail.com</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-stone-800">
+                    <Clock className="w-4 h-4 text-[#BFA13B] shrink-0" />
+                    <span>Working Hours: Mon – Sat: 9:30 AM – 7:30 PM IST</span>
+                  </div>
                 </div>
               </div>
 
+              {/* Direct Connect Buttons */}
+              <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row items-center gap-3">
+                <a
+                  href="tel:+919639320101"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-[#0C0A09] text-[#F5D77F] hover:bg-[#7A5200] hover:text-white transition-all flex items-center justify-center gap-2 shadow-xs"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call +91 96393 20101</span>
+                </a>
+
+                <a
+                  href="https://wa.me/919639320101?text=Hello%20Altitude%20Travel,%20I%20would%20like%20to%20visit%20or%20connect%20with%20your%20office%20in%20Bazpur."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-[#25D366] hover:bg-[#20bd5a] text-white transition-all flex items-center justify-center gap-2 shadow-xs"
+                >
+                  <MessageSquare className="w-4 h-4 fill-white" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
             </div>
 
           </section>
