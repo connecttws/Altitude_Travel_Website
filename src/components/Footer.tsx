@@ -195,6 +195,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/contact-us"
+                  className="hover:text-[#BFA13B] transition-colors block text-stone-300 font-semibold text-[#F5D77F]"
+                >
+                  Contact Altitude Travel Co.
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/terms-and-conditions"
                   className="hover:text-[#BFA13B] transition-colors block text-stone-300"
                 >

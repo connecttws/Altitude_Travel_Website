@@ -402,7 +402,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
 
             {/* Contact Us */}
             <Link
-              href="#contact-footer"
+              href="/contact-us"
               className="px-2 xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] font-medium text-stone-700 hover:text-[#7A5200] rounded-lg hover:bg-stone-50 transition-colors whitespace-nowrap shrink-0"
             >
               Contact Us
@@ -564,7 +564,7 @@ export default function Navbar({ onOpenCustomModal, onOpenInquiryModal }: Navbar
               </Link>
 
               <Link
-                href="#contact-footer"
+                href="/contact-us"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-50 rounded-lg"
               >
